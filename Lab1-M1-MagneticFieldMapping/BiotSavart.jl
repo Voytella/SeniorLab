@@ -85,4 +85,34 @@ k(j,a,ρ,z) = (j == 1) ?
 
 # -----------END BIOT-SAVART OFF AXIS-----------
 
-println(B(0.2, 2, 70, .3, 0.1))
+# ----------BEGIN CONDITIONS----------
+
+# heights at which measurements were taken (meters)
+heightLevels = 3:2:33
+
+# current applied to the coils (amperes)
+current = 2
+
+# turns of wire in each coil
+turns = 73
+
+# radius of the coils (meters)
+radius = 0.332
+
+# radial distances at which measurements were taken (meters)
+rhos = -0.22:0.02:0.22
+
+# -----------END CONDITIONS-----------
+
+# ----------BEGIN CALCULATIONS----------
+
+# list of Biot-Savart functions for each height level
+BHeights = [ futureRho -> B(heightLevel, current, turns, radius, futureRho) 
+            for heightLevel in heightLevels ]
+
+# apply the list of radial distances to each height level's function
+allBs = [ map(heightLevelFunction, rhos) for heightLevelFunction in BHeights ]
+
+# -----------END CALCULATIONS-----------
+
+println(allBs)
