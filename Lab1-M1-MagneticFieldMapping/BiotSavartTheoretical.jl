@@ -176,4 +176,4 @@ plt3d = Plots.plot(tripleData[3], tripleData[2], tripleData[1],
                    ylabel = "Height Relative to Bottom Coil (cm)",
                    zlabel = "Radial Distance from Axis (cm)"
                    )
-savefig("3DPlot.png")
+savefig("3DPlotTheoretical.png")
