@@ -49,9 +49,20 @@ During this lab, the number of turns of wire inside a Helmholtz coil was determi
 % How a helmholtz coil produces a uniform field
 Recall for a straight current-carrying wire, circular magnetic field lines are generated around the wire in accordance with the curling right-hand rule. The Helmholtz coil contains two regions of circularly wound wires. Due to the the circular symmetry, all components of each infinitesimal segment of the wire will cancel \textit{except} for that in the axial direction. In summary, a circular current produces a linear magnetic field.
 % off-axis field point
-The field point of the system has before been typically placed along the axis of the direction of the magnetic field, we will call this the z-direction. This was due to the ease of solving the Biot-Savart Law under these simple conditions, as the direction and strength of the magnetic field will follow along the z-axis of the system, which is where the field point is placed. When this is applied to the co-axial coils of the Helmholtz apparatus the evaluation of the Biot-Savart Law becomes too trivial. One then chooses the field point to be placed off of the z-axis more information about the magnetic field of the coils can be determined. This is the more general scenario and more thus more complex. The off axis form can be used for any point that is off of the z-axis, while the on axis is a specific and simplified form of the general case. The general form is best represented by Smythe's derivation of the Biot-Savart Law. 
-\begin{equation} 
-B_z = \frac{$\mu_0$IN}{2$\pi$}\Big[\frac{1}{\sqrt{(a+$\rho$)^2 + (a-z)^2}}\big[K_1 + \big(\frac{a^2 -$\rho^2$ - (a - z)^2}{(a-$\rho$)^2 + (a - z)^2 \big) E_1 \big] + \frac{1}{\sqrt{(a = $\rho$)^2 + z^2}\big[K_2 + \big(\frac{a^2 - $\rho^2$ - z^2}{(a - $\rho$)^2 + z^2}\big) E_2 \big] \Big]
+The field point of the system has before been typically placed along the axis of the direction of the magnetic field, we will call this the z-direction. This was due to the ease of solving the Biot-Savart Law under these simple conditions, as the direction and strength of the magnetic field will follow along the z-axis of the system, which is where the field point is placed. When this is applied to the co-axial coils of the Helmholtz apparatus the evaluation of the Biot-Savart Law becomes too trivial. One then chooses the field point to be placed off of the z-axis as more information about the magnetic field of the coils can be determined. This is the more general scenario and thus more complex. The off axis form can be used for any point that is off of the z-axis, while the on axis is a specific and simplified form of the general case. The general form is best represented by Smythe's derivation of the Biot-Savart Law. 
+\begin{align*} 
+B_z = \frac{\mu_0IN}{2\pi}
+\Big[&
+    \frac{1}{\sqrt{(a+\rho)^2 + (a-z)^2}}
+    \big[
+        K_1 + \left(\frac{a^2 -\rho^2 - (a - z)^2}{(a-\rho)^2 + (a - z)^2} \right) E_1 
+    \big]\\
+    & + \frac{1}{\sqrt{(a + \rho)^2 + z^2}}
+    \big[
+        K_2 + \big(\frac{a^2 - \rho^2 - z^2}{(a - \rho)^2 + z^2}\big) E_2 
+    \big] 
+\Big]
+\end{align*}
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and serial number. When it may be important, list principal specifications of certain pieces of equipment (e.g. the focal length of an optical system, etc.)
 
