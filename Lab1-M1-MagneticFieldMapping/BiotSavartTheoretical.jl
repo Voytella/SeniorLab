@@ -1,3 +1,6 @@
+# Source code for calculating the theoretical data and plotting it in both 2D
+# and 3D.
+
 # ----------BEGIN PACKAGES----------
 
 # enable the addition of packages
@@ -7,17 +10,19 @@ using Pkg
 Pkg.add("QuadGK")
 using QuadGK
 
-# 3D plotting
+# plotting
 Pkg.add("Plots")
 using Plots
 
+# displaying data
+Pkg.add("Printf")
 using Printf
 
 # -----------END PACKAGES-----------
 
 # ----------BEGIN CONSTANTS----------
 
-# Permeability of Free Space (T*m)/A
+# Permeability of Free Space \( \frac{T m}{A} \)
 μ₀ = 1.256e-6
 
 # -----------END CONSTANTS-----------
@@ -165,7 +170,10 @@ function displayFormatedData(data)
     end
 
 end
+
+# apply the data printing function onto our data
 displayFormatedData(tripleData)
+
 # -----------END FORMAT DATA-----------
 
 # ----------BEGIN GENERATE 2D PLOT----------
