@@ -3,17 +3,15 @@
 # enable the addition of packages
 using Pkg
 
-# integration
-Pkg.add("QuadGK")
-using QuadGK
-
-# importing data
-Pkg.add("DataFrames")
-using DataFrames
+# interpreter for reading CSV files
 Pkg.add("CSV")
 using CSV
 
-# 3D plotting
+# convenient container for data extracted from CSV files
+Pkg.add("DataFrames")
+using DataFrames
+
+# plotting
 Pkg.add("Plots")
 using Plots
 

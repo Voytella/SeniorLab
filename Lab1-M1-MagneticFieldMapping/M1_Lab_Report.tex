@@ -26,7 +26,7 @@
 %apparatus used
 %what was measured
 %Results
-  In this experiment the magnetic field inside a Helmholtz coil was measured and
+  \qq In this experiment the magnetic field inside a Helmholtz coil was measured and
   compared to theoretical calculations determined from the Smythe derivation of
   the Biot-Sarvat Law for a plane displaced from the central axis, with
   coordinates z, $\rho$, and $\phi$.When determining the magnetic field inside a
@@ -44,7 +44,7 @@
 
 \section{Objective of the Experiment}
 %A brief statement on the main purpose of the experiment
-During this lab, the number of turns of wire inside a Helmholtz coil was
+\qq During this lab, the number of turns of wire inside a Helmholtz coil was
 determined for use in theoretical calculations. Then a 3-dimensional and
 2-dimensional mapping of the magnetic field inside the Helmholtz coil was
 created in order to investigate the presence of a uniform field, running along
@@ -54,7 +54,7 @@ its axial direction.
 %A short presentation of the concepts and formulas related to the experiment.
 
 % How a helmholtz coil produces a uniform field
-Recall for a straight current-carrying wire, circular magnetic field lines are
+\qq Recall for a straight current-carrying wire, circular magnetic field lines are
 generated around the wire in accordance with the curling right-hand rule. The
 Helmholtz coil contains two regions of circularly wound wires. Due to the the
 circular symmetry, all components of each infinitesimal segment of the wire will
@@ -62,7 +62,7 @@ cancel \textit{except} for that in the axial direction. In summary, a circular
 current produces a linear magnetic field.
 
 % off-axis field point
-The field point of the system has before been typically placed along the axis of
+\qq The field point of the system has before been typically placed along the axis of
 the direction of the magnetic field, we will call this the z-direction. This was
 due to the ease of solving the Biot-Savart Law under these simple conditions, as
 the direction and strength of the magnetic field will follow along the z-axis of
@@ -75,19 +75,19 @@ axis form can be used for any point that is off of the z-axis, while the on axis
 is a specific and simplified form of the general case. The general form is best
 represented by Smythe's derivation of the Biot-Savart Law.
 
-\begin{align*} 
-B_z = \frac{\mu_0IN}{2\pi}
-\Big[&
-    \frac{1}{\sqrt{(a+\rho)^2 + (a-z)^2}}
-    \big[
-        K_1 + \left(\frac{a^2 -\rho^2 - (a - z)^2}{(a-\rho)^2 + (a - z)^2} \right) E_1 
-    \big]\\
-    & + \frac{1}{\sqrt{(a + \rho)^2 + z^2}}
-    \big[
-        K_2 + \big(\frac{a^2 - \rho^2 - z^2}{(a - \rho)^2 + z^2}\big) E_2 
-    \big] 
-\Big]
-\end{align*}
+\begin{align} 
+    B_z = \frac{\mu_0IN}{2\pi}
+    \Big[&
+        \frac{1}{\sqrt{(a+\rho)^2 + (a-z)^2}}
+        \big[
+            K_1 + \left(\frac{a^2 -\rho^2 - (a - z)^2}{(a-\rho)^2 + (a - z)^2} \right) E_1 
+        \big] \label{eq:longBiotSavart} \\
+            & + \frac{1}{\sqrt{(a + \rho)^2 + z^2}}
+        \big[
+            K_2 + \big(\frac{a^2 - \rho^2 - z^2}{(a - \rho)^2 + z^2}\big) E_2 
+        \big] 
+    \Big] \nonumber
+\end{align}
 
 \section{Equipment Utilized}
 
@@ -98,7 +98,7 @@ B_z = \frac{\mu_0IN}{2\pi}
 \subsection{The Helmholtz coil}
 
 % circuit of the helmholtz coil
-The Helmholtz coil consists of two concentric sets of coils, each with the same
+\qq The Helmholtz coil consists of two concentric sets of coils, each with the same
 radius and separated by a distance equal to their radius. This configuration
 allows the contribution of each set of coils to produce a uniform field in the
 center of the coils. The current in each set of coils must be oriented in a
@@ -118,7 +118,7 @@ circuit is shown in figure \ref{helmholtz_circuit}.
 \subsection{The Hall Effect Probe}
 
 %How hall effect probe works
-A DC Gaussmeter (AlphaLab Model GM-1-HS) was connected to a Hall Effect Probe in
+\qq A DC Gaussmeter (AlphaLab Model GM-1-HS) was connected to a Hall Effect Probe in
 order to measure the field strength inside the Helmholtz coil. The Hall Effect
 Probe contains a semiconductor junction that, when exposed to a magnetic field,
 produces a voltage proportional to the field strength.
@@ -126,7 +126,7 @@ produces a voltage proportional to the field strength.
 \subsection{Position Controls}
 
 %Position Controls
-The position of the Hall Effect Probe can be modified in the $\rho$ direction by
+\qq The position of the Hall Effect Probe can be modified in the $\rho$ direction by
 sliding the ruler bar through the acrylic cube shown in figure
 \ref{helmholtz_diagram}. The position can be modified in the $\phi$ direction by
 rotation the ruler bar about the central pole. However, for the sake of this
@@ -150,19 +150,19 @@ acrylic cube and ruler bar up and down the central pole.
 % Describe the main steps in the experimental procedures. Be sure to include any
 % precautions. Sufficient details should be given such that another student can
 % follow and do the experiment.
-Note that, per suggestion of the laboratory manual, the procedural steps of this
+\qq Note that, per suggestion of the laboratory manual, the procedural steps of this
 experiment have been omitted. The discussion section provides sufficient detail
 on what actions were taken.
 
 \subsection{Measuring the External Field}
 % How the external field was measured
-The Helmholtz coil is oriented such that the Earth's magnetic field is parallel
+\qq The Helmholtz coil is oriented such that the Earth's magnetic field is parallel
 to the z-axis of the coils. This allows us to produce an applied magnetic field
 that is exactly anti-parallel to the Earth's field. From there, we can compute
 the applied field by subtracting the Earth's field from the total resultant
 field.
 
-Note that there was an apparent offset in the Gaussmeter reading, as the 0.36G
+\qq Note that there was an apparent offset in the Gaussmeter reading, as the 0.36G
 measurement for Earth's field was consistently higher than the expected value
 for Earth's field of 0.24G. However, if there truly exists such an offset in the
 measurement device, it would appear in both the measurement of Earth's field and
@@ -173,7 +173,7 @@ contribution from such an offset.
 \subsection{Procedural Modifications}
 
 % Misaligned axis
-Upon initial inspection of the equipment, it appeared the center pole running
+\qq Upon initial inspection of the equipment, it appeared the center pole running
 along the z axis of the Helmholtz coil was misaligned. In order to mitigate this
 error and ensure that coordinates were modified independently, a chord was used
 to realign the pole as closely as possible to the true z axis. However, since
@@ -184,7 +184,7 @@ experimentally recorded z-values are underestimated, causing the experimental
 field strengths to trend lower than the theoretical field strengths.
 
 % Day-to-day current offset
-The majority of field strength measurements collected for the 3-dimensional
+\qq The majority of field strength measurements collected for the 3-dimensional
 mapping were taken on the same day of experimentation. After resuming this data
 collection on the next day, the values appeared to be systematically
 higher. Possible causes of this offset were investigated. Before taking
@@ -199,7 +199,7 @@ measurement could be due to misalignment of the probe (a systematic error in
 measurement that would under-report the field strength) or simply a random error
 in measurement due to the limited performance of the probe.
 
-An ammeter was also used to ensure a 2A current was consistently applied on both
+\qq An ammeter was also used to ensure a 2A current was consistently applied on both
 days of data collection, thus a change in the applied current was eliminated as
 a source of error. Because the source of this error was ultimately not
 determined and eliminated, the effect had to be compensated for with a
@@ -208,7 +208,7 @@ lab session, the current from the power supply was modified until the field
 strength matched previous measurements in several locations. This ultimately
 required lowering the applied current from 2000mA to 1790mA.
 
-Upon further investigation, it appeared the current from the power supply was
+\qq Upon further investigation, it appeared the current from the power supply was
 unstable, as it would decrease and increase every few minutes. This produced a
 source of random intrinsic error, which was mitigated by fine tuning the current
 value before each measurement after the issue was discovered.
@@ -216,7 +216,7 @@ value before each measurement after the issue was discovered.
 \subsection{Additional Sources of Error}
 
 % Proximity to power supply
-Because the experimental set-up was restricted to a small area, the contribution
+\qq Because the experimental set-up was restricted to a small area, the contribution
 from the field produced by the power supply may be non-negligible. From the
 perspective of the experimenter, the power supply sits behind and to the right
 of the Helmholtz coil. Therefore, by the curling right hand rule, this would
@@ -235,24 +235,29 @@ orientation of such a field.
 
 \subsection{Calculating Supply Voltage}
 
-Using a multimeter, the resistance of a set of coils was measured to be
+\qq Using a multimeter, the resistance of a set of coils was measured to be
 $3.4 \Omega$. In order to determine the necessary voltage to send 3A of current
 through the coils, we make a simply calculation using Ohm's law.
 
 % Calculating voltage
 \begin{align*}
 V &= IR \\
-  &= (3A)(3.4 \Omega) \\
+  &= (\SI{3}{\ampere})(\SI{3.4}{\ohm}) \\
   &= 10.2V \\
 \end{align*}
 
 % Calculating number of turns
 \subsection{Determining the Number of Turns in a Coil}
 
-Further calculations will require knowing the number of turns of wire in each
+\qq Further calculations will require knowing the number of turns of wire in each
 set of coils. MORE TEXT TO COME HERE
 
 %Theoretical calculations of axial field strength
+\qq Theoretical values for what the strength of the magnetic field ought to be
+within the Helmholtz coils were determined by translating Equation
+\ref{eq:longBiotSavart} into Julia code, provided in Appendix B
+\ref{lst:BiotSavartTheoretical}.
+
 
 % 3D plot (theoretical)
 
@@ -278,7 +283,8 @@ set of coils. MORE TEXT TO COME HERE
 
 % Compare B field in different direction, can we say field is axial
 \subsection{Comparing the directions of the Magnetic Field}
-When measuring at a probe height of a/2 (16cm), where 'a' is the separation
+
+\qq When measuring at a probe height of a/2 (16cm), where 'a' is the separation
 distance between the coils, the strength of the magnetic field in the 'z'
 direction was measured to be -3.13 Gauss. When measuring t he magnetic field in
 the 'z' direction at a probe height of 5cm, the magnetic field strength was
@@ -302,5 +308,20 @@ axial. Furthermore, we can determine thatthe magnetic field is axial along the
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
+
+\section{Appendices}
+
+\subsection{Appendix A: Data}
+
+\subsection{Appendix B: Source Code}
+
+%\label{lst:BiotSavartTheoretical}
+\inputminted{julia}{BiotSavartTheoretical.jl}
+
+%\label{lst:BiotSavartExperimental}
+\inputminted{julia}{BiotSavartExperimental.jl}
+
+%\label{lst:TheoreticalVsExperimental}
+\inputminted{julia}{TheoreticalVsExperimental.jl}
 
 \end{document}

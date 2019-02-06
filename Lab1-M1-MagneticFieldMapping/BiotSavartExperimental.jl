@@ -1,7 +1,28 @@
-using DataFrames
+# Generate 2D and 3D plots of the experimental data collected during the
+# experiment.
+
+# ----------BEGIN PACKAGES----------
+
+# add other packages
+using Pkg
+
+# interpreter for reading CSV files
+Pkg.add("CSV")
 using CSV
-using Printf
+
+# convenient container for data extracted from CSV files
+Pkg.add("DataFrames")
+using DataFrames
+
+# plotting
+Pkg.add("Plots")
 using Plots
+
+# format data output
+Pkg.add("Printf")
+using Printf
+
+# -----------END PACKAGES-----------
 
 # ----------BEGIN EXTRACT DATA----------
 
@@ -45,7 +66,10 @@ function displayFormatedData(data)
     end
 
 end
+
+# apply the display function to the data
 displayFormatedData(tripleData)
+
 # -----------END FORMAT DATA-----------
 
 # ----------BEGIN GENERATE 2D PLOT----------
