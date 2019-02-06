@@ -117,7 +117,6 @@ BHeights = [ futureRho -> B(heightLevel, current, turns, radius, futureRho) * 1e
             for heightLevel in heightLevels ]
 
 # apply the list of radial distances to each height level's function (rhos are rows)
-#allBs = [ map(heightLevelFunction, map(abs, rhos)) for heightLevelFunction in BHeights ]
 allBs = [ map(heightLevelFunction, rhos) for heightLevelFunction in BHeights ]
 
 # -----------END CALCULATIONS-----------
@@ -146,13 +145,13 @@ formatRow(row) = ( [ coords[1] for coords in row ],
                    [ coords[2] for coords in row ],
                    [ coords[3] for coords in row ] )
 
-# format all rows
+# format all rows into form ([zs], [rs], [Bs])
 listOfRows = map(formatRow, allPts)
 
-# now, a "row" is of the form ([zs], [rs], [Bs]); all these lists must be combined
+# all these lists must be combined
 tripleData = ( foldl(hcat, map(x -> x[1], listOfRows)),
-                     foldl(hcat, map(x -> x[2], listOfRows)),
-                     foldl(hcat, map(x -> x[3], listOfRows)) )
+               foldl(hcat, map(x -> x[2], listOfRows)),
+               foldl(hcat, map(x -> x[3], listOfRows)) )
 
 # print the data in neat columns
 function displayFormatedData(data) 
@@ -166,14 +165,45 @@ function displayFormatedData(data)
     end
 
 end
-
+displayFormatedData(tripleData)
 # -----------END FORMAT DATA-----------
 
-plt3d = Plots.plot(tripleData[3], tripleData[2], tripleData[1], 
+# ----------BEGIN GENERATE 2D PLOT----------
+
+# extract the Bs from the list of row triples
+rowsBs = [ row[3] for row in listOfRows ]
+
+# generate height level labels for each line
+heightLevelLabels = map(string, 3:2:33)
+
+# generate the plot
+theoPlot2d = Plots.plot(listOfRows[1][2], rowsBs, label = heightLevelLabels,
+                        title = "Theoretical Magnetic Field 2D", 
+                        size = (550,550),
+                        legendtitle = "Height Levels (cm)",
+                        legend = :top,
+                        xlabel = "Radial Distance from Axis (cm)",
+                        ylabel = "Magnetic Field Strength (uT)"
+                        )
+
+# save the plot to disk
+savefig(theoPlot2d, "2DPlotTheoretical")
+
+# -----------END GENERATE 2D PLOT-----------
+
+# ----------BEGIN GENERATE 3D PLOT----------
+
+# generate the plot
+theoPlot3d = Plots.plot(tripleData[3], tripleData[2], tripleData[1], 
                    seriestype = :scatter, legend = :topright, legendtitle = "Rows",
-                   title = "Theoretical Magnetic Field", size = (550,550),
+                   title = "Theoretical Magnetic Field 3D", size = (550,550),
                    xlabel = "Magnetic Field Strength (uT)",
                    ylabel = "Height Relative to Bottom Coil (cm)",
                    zlabel = "Radial Distance from Axis (cm)"
                    )
-savefig("3DPlotTheoretical.png")
+
+# save the plot to disk
+savefig(theoPlot3d, "3DPlotTheoretical.png")
+
+# -----------END GENERATE 3D PLOT-----------
+

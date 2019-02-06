@@ -21,17 +21,17 @@ extractRow(row) = (
     [(Bval + 0.000024) * 1e6 for Bval in [data[ii][heightReversal(row)] for ii in 2:24]]
 )
 
-# list of triples, each representing a row
-extractData = map(extractRow, 1:16)
+# list of triples, each representing a row, of the form ([zs, [rs], [Bs])
+listOfRows = map(extractRow, 1:16)
 
 # -----------END EXTRACT DATA-----------
 
 # ----------BEGIN FORMAT DATA----------
 
 # now, a "row" is of the form ([zs], [rs], [Bs]); all these lists must be combined
-tripleData = ( foldl(hcat, map(x -> x[1], extractData)),
-               foldl(hcat, map(x -> x[2], extractData)),
-               foldl(hcat, map(x -> x[3], extractData)) )
+tripleData = ( foldl(hcat, map(x -> x[1], listOfRows)),
+               foldl(hcat, map(x -> x[2], listOfRows)),
+               foldl(hcat, map(x -> x[3], listOfRows)) )
 
 # print the data in neat columns (display only, does not need to be included)
 function displayFormatedData(data)
@@ -45,10 +45,36 @@ function displayFormatedData(data)
     end
 
 end
-
+displayFormatedData(tripleData)
 # -----------END FORMAT DATA-----------
 
-plt3d = Plots.plot(tripleData[3], tripleData[2], tripleData[1], 
+# ----------BEGIN GENERATE 2D PLOT----------
+
+# extract the Bs from the list of row triples
+rowsBs = [ row[3] for row in listOfRows ]
+
+# generate height level labels for each line
+heightLevelLabels = map(string, 3:2:33)
+
+# generate the plot
+expPlot2d = Plots.plot(listOfRows[1][2], rowsBs, label = heightLevelLabels,
+                       title = "Experimental Magnetic Field 2D",
+                       size = (550,550),
+                       legendtitle = "Height Levels (cm)",
+                       legend = :bottom,
+                       xlabel = "Radial Distance from Axis (cm)",
+                       ylabel = "Magnetic Field Strength (uT)"
+                       )
+
+# save the plot to disk
+savefig(expPlot2d, "2DPlotExperimental")
+
+# -----------END GENERATE 2D PLOT-----------
+
+# ----------BEGIN GENERATE 3D PLOT----------
+
+# generate the plot
+expPlot3d = Plots.plot(tripleData[3], tripleData[2], tripleData[1], 
                    seriestype = :scatter, legend = :topleft, 
                    legendtitle = "Rows",
                    title = "Experimental Magnetic Field", size = (550,550), 
@@ -56,4 +82,8 @@ plt3d = Plots.plot(tripleData[3], tripleData[2], tripleData[1],
                    ylabel = "Height Relative to Bottom Coil (cm)",
                    zlabel = "Radial Distance from Axis (cm)"
                    )
-savefig("3DPlotExperimental.png")
+
+# save the image to disk
+savefig(expPlot3d, "3DPlotExperimental.png")
+
+# -----------END GENERATE 3D PLOT-----------
