@@ -1,16 +1,13 @@
 \documentclass[a4paper]{article}
 
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{caption}
-\usepackage{pgfplots}
-\pgfplotsset{width=10cm,compat=1.9}
+%\pgfplotsset{width=10cm,compat=1.9}
 \renewcommand{\thetable}{\arabic{section}.\arabic{table}}
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\input{../reportPreamble}
 
 \title{PHY 4210-01 Senior Lab \\Lab M-1: Magnetic Field Mapping}
 
@@ -29,7 +26,14 @@
 %apparatus used
 %what was measured
 %Results
-In this experiment the magnetic field inside a Helmholtz coil was measured and compared to theoretical calculations determined from the Smythe derivation of the Biot-Sarvat Law for a plane displaced from the central axis, with coordinates z, $\rho$, and $\phi$.When determining the magnetic field inside a Helmholtz coil, a Hall probe is used to obtain the magnitude of the magnetic field at varying positions inside the coil. Theoretically the axial component of the magnetic field that is produced inside the Helmholtz coil is, to some extent, of uniform magnitude.    
+  In this experiment the magnetic field inside a Helmholtz coil was measured and
+  compared to theoretical calculations determined from the Smythe derivation of
+  the Biot-Sarvat Law for a plane displaced from the central axis, with
+  coordinates z, $\rho$, and $\phi$.When determining the magnetic field inside a
+  Helmholtz coil, a Hall probe is used to obtain the magnitude of the magnetic
+  field at varying positions inside the coil. Theoretically the axial component
+  of the magnetic field that is produced inside the Helmholtz coil is, to some
+  extent, of uniform magnitude.
 \end{abstract}
 
 \newpage
@@ -40,16 +44,36 @@ In this experiment the magnetic field inside a Helmholtz coil was measured and c
 
 \section{Objective of the Experiment}
 %A brief statement on the main purpose of the experiment
-During this lab, the number of turns of wire inside a Helmholtz coil was determined for use in theoretical calculations. Then a 3-dimensional and 2-dimensional mapping of the magnetic field inside the Helmholtz coil was created in order to investigate the presence of a uniform field, running along its axial direction.
+During this lab, the number of turns of wire inside a Helmholtz coil was
+determined for use in theoretical calculations. Then a 3-dimensional and
+2-dimensional mapping of the magnetic field inside the Helmholtz coil was
+created in order to investigate the presence of a uniform field, running along
+its axial direction.
 
 \section{Theory of the Experiment}
 %A short presentation of the concepts and formulas related to the experiment.
 
 % How a helmholtz coil produces a uniform field
-Recall for a straight current-carrying wire, circular magnetic field lines are generated around the wire in accordance with the curling right-hand rule. The Helmholtz coil contains two regions of circularly wound wires. Due to the the circular symmetry, all components of each infinitesimal segment of the wire will cancel \textit{except} for that in the axial direction. In summary, a circular current produces a linear magnetic field.
+Recall for a straight current-carrying wire, circular magnetic field lines are
+generated around the wire in accordance with the curling right-hand rule. The
+Helmholtz coil contains two regions of circularly wound wires. Due to the the
+circular symmetry, all components of each infinitesimal segment of the wire will
+cancel \textit{except} for that in the axial direction. In summary, a circular
+current produces a linear magnetic field.
 
 % off-axis field point
-The field point of the system has before been typically placed along the axis of the direction of the magnetic field, we will call this the z-direction. This was due to the ease of solving the Biot-Savart Law under these simple conditions, as the direction and strength of the magnetic field will follow along the z-axis of the system, which is where the field point is placed. When this is applied to the co-axial coils of the Helmholtz apparatus the evaluation of the Biot-Savart Law becomes too trivial. One then chooses the field point to be placed off of the z-axis as more information about the magnetic field of the coils can be determined. This is the more general scenario and thus more complex. The off axis form can be used for any point that is off of the z-axis, while the on axis is a specific and simplified form of the general case. The general form is best represented by Smythe's derivation of the Biot-Savart Law. 
+The field point of the system has before been typically placed along the axis of
+the direction of the magnetic field, we will call this the z-direction. This was
+due to the ease of solving the Biot-Savart Law under these simple conditions, as
+the direction and strength of the magnetic field will follow along the z-axis of
+the system, which is where the field point is placed. When this is applied to
+the co-axial coils of the Helmholtz apparatus the evaluation of the Biot-Savart
+Law becomes too trivial. One then chooses the field point to be placed off of
+the z-axis as more information about the magnetic field of the coils can be
+determined. This is the more general scenario and thus more complex. The off
+axis form can be used for any point that is off of the z-axis, while the on axis
+is a specific and simplified form of the general case. The general form is best
+represented by Smythe's derivation of the Biot-Savart Law.
 
 \begin{align*} 
 B_z = \frac{\mu_0IN}{2\pi}
