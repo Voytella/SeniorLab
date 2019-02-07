@@ -274,7 +274,10 @@ V &= IR \\
 % Calculating number of turns
 \subsection{Determining the Number of Turns in a Coil}
 
-\qq Further calculations will require knowing the number of turns of wire in each set of coils. When a known current $I$ is applied to a single coil, a field of strength $B_{loop}$ is produced. A value for $B_{loop}$ is calculated below, where $a$ is the radius of the loop.
+\qq Further calculations will require knowing the number of turns of wire in
+each set of coils. When a known current $I$ is applied to a single coil, a field
+of strength $B_{loop}$ is produced. A value for $B_{loop}$ is calculated below,
+where $a$ is the radius of the loop.
 
 \begin{align*}
 B_{loop} &= \frac{\mu_0 I}{2a} \\
@@ -283,7 +286,10 @@ B_{loop} &= \frac{\mu_0 I}{2a} \\
          &= 3.78 \times 10^{-2} \text{ G} \\
 \end{align*}
 
-The applied field strength was then measured across the top set of coils, with the applied current of 2A mentioned above. The number of loops $N$ could be determined by dividing the total measured field by the field calculated for a single turn of wire.
+\qq The applied field strength was then measured across the top set of coils, with
+the applied current of 2A mentioned above. The number of loops $N$ could be
+determined by dividing the total measured field by the field calculated for a
+single turn of wire.
 
 \begin{align*}
 N &= \frac{B_{measured}}{B_{loop}} \\
@@ -291,22 +297,23 @@ N &= \frac{B_{measured}}{B_{loop}} \\
   &= 72.66 \text{ G} \\
 \end{align*}
 
-The process was conducted on the top set of coils twice, for a parallel and anti-parallel field. These two measurements and calculations were then repeated for the bottom set of coils. Averaging these four values for $N$ and rounding to the nearest integer yields an average number of turns in a coil of $N=73$.
+\qq The process was conducted on the top set of coils twice, for a parallel and
+anti-parallel field. These two measurements and calculations were then repeated
+for the bottom set of coils. Averaging these four values for $N$ and rounding to
+the nearest integer yields an average number of turns in a coil of $N=73$.
 
 \subsection{The Resultant Plots}
 %Theoretical calculations of axial field strength
-\qq Theoretical values for what the strength of the magnetic field ought to be
-within the Helmholtz coils were determined by translating Equation
-\ref{eq:longBiotSavart} into Julia code, shown in lines 44-95 of the first
-program in Appendix B. 
 
 % 3D plot (theoretical)
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{3DPlotTheoretical.png}
 
-\captionof {figure}{The theoiretical three dimensional plot calculated by using
-  Symthe's deviation of the Biot-Savart Law.}
+\captionof {figure}{The theoretical three dimensional plot calculated by using
+  Symthe's deviation of the Biot-Savart Law. The source code that produced this
+  plot is provided in Appendix B. The translation of Equation
+  \ref{eq:longBiotSavart} into Julia code is shown in lines 44-95.}
 
 \label{Theoretical 3-D plot}
 \end{figure}
@@ -338,12 +345,21 @@ program in Appendix B.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{2DPlotExperimental.png}
-\captionof {figure}{The two dimensional plot witht the data obtained during the
+\captionof {figure}{The two dimensional plot with the data obtained during the
   experimentation. Where each line corresponds to a differing value along the
   z-axis of the Helmholtz coil as a function of the magnetic field strength in
-  $\mu$ Tesla and the radial distance from the z-axis in cm.}
+  $\mu$T and the radial distance from the z-axis in cm.}
 
 \label{Experimental 2-D plot}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{3DPlotDiff.png}
+  \end{center}
+  \caption{The plotted difference between the theoretical and experimental
+    values.}
+  \label{gph:diff}
 \end{figure}
 
 % Calculating discrepancies
@@ -357,7 +373,7 @@ program in Appendix B.
 %Compare results with theory
 %Approximations to theory
 \subsection{Comparing the Theoretical Plots to the Experimental Plots}
-The experimental three dimensional plot does follow the theoretical
+\qq The experimental three dimensional plot does follow the theoretical
 plot in the sense that the data in the mid region should be clustered
 closer together than the edge regions. This is due to the uniformity
 of the magnetic field in this region. Whereas the regions closest to
@@ -370,7 +386,7 @@ due to the fact the experiemental magnetic field was measured to be
 negative while the theoretical magnetic field was calculated to be
 positive.
 
-The experimental two dimensional plot does follow the theoretical plot
+\qq The experimental two dimensional plot does follow the theoretical plot
 in the sense that the data in the mid region is clustered close
 together. The derivatives of this area of the graph approach a
 plateu, this is recognized to be the center region of the coils where
@@ -388,7 +404,7 @@ the span of the region with a 5$\%$ margin. This is due to the data
 obtained from the experimentation process. This can be calculated by
 first taking the sample mean and then calculating the sample variance
 of the data. To determine the 5$\%$ margin of error we must determine
-the value range for which there is a 95$\%$ that the true mean
+the value range for which there is a 95$\%$ chance that the true mean
 resides, and the value range for which there is a 99$\%$ chance that
 the true mean redsides for the 1$\%$ margin. The 5$\%$ margin is the
 probability that the mean is within two standard deviations of the
@@ -412,7 +428,7 @@ where 'n' is the sample size or the number of data points.
 
 \qq When measuring at a probe height of a/2 (16cm), where 'a' is the separation
 distance between the coils, the strength of the magnetic field in the 'z'
-direction was measured to be -3.13 Gauss. When measuring t he magnetic field in
+direction was measured to be -3.13 Gauss. When measuring the magnetic field in
 the 'z' direction at a probe height of 5cm, the magnetic field strength was
 measure d to be -3.28 Gauss. These results follow with the theory as it is
 expected that the magnetic field is p ropagated in the 'z' direction. The
@@ -435,7 +451,18 @@ axial. Furthermore, we can determine thatthe magnetic field is axial along the
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
-\qq 
+\qq Unfortunately, our measured data is not at all consistent with the
+theoretical data. While the negative values of the measured field strength can
+perhaps be explained by the orientation of the Gaussmeter, the source of the
+staggering near-two order of magnitude deviation from the theoretical is more
+difficult to identify. Nonetheless, the effect of this deviation is most
+clearly seen in the plot of the difference between the two values, shown in
+Figure \ref{gph:diff}. The incredible resemblance of the difference plot to the
+theoretical plot, shown in Figure \ref{Theoretical 3D plot}, illustrates the
+dominance of the theoretical values over the experimental values for the field
+strength within the Helmholtz coil. Although several sources of error were
+identified, none, except perhaps catastrophic Gaussmeter malfunction, can
+explain the incredible inaccuracy in our results.
 
 \section{Appendices}
 
