@@ -7,8 +7,6 @@
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom stru
 
-\input{../reportPreamble}
-
 \title{PHY 4210-01 Senior Lab \\Lab M-1: Magnetic Field Mapping}
 
 \author{Sarah Arends \\ 
@@ -99,13 +97,13 @@ represented by Smythe's derivation of the Biot-Savart Law.
 \item Helmholtz coil \\
 \item Gauss meter \\
 \item Hall probe \\
-\ite Meterstick \\
+\item Meterstick \\
 \item Ruler \\
 \item Dipmeter \\
 \item Powersource \\
 \item Magnaprobe \\
 \item Multimeter\\
-\bigskip
+\end{itemize}
 
 
 \subsection{The Helmholtz coil}
@@ -323,7 +321,7 @@ program in Appendix B.
 % 2D plot (exp)
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{2_Dmapping_M_1.png}
+\includegraphics[width=0.5\textwidth]{2DPlotExperimental.png}
 \captionof {figure}{The two dimensional plot witht the data obtained during the
   experimentation. Where each line corresponds to a differing value along the
   z-axis of the Helmholtz coil as a function of the magnetic field strength in
@@ -398,10 +396,47 @@ axial. Furthermore, we can determine thatthe magnetic field is axial along the
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
+\qq 
 
 \section{Appendices}
 
 \subsection{Appendix A: Data}
+
+\begin{sidewaysfigure}
+  \caption{The collected experimental data in Gauss. The top row represents the
+    radial distance from the axis in centimeters, and the left column represents
+    height levels in centimeters.}
+  \begin{center}
+    \begin{adjustwidth}{-4cm}{}
+      \begin{tabular}{|r||r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+& -22 & -20 & -18 & -16 & -14 & -12 & -10 & -8 & -6 & -4 & -2 & 0 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\
+\hline
+\hline
+33 & -4.08 & -3.74 & -3.54 & -3.36 & -3.27 & -3.13 & -3.08 & -3.03 & -2.99 & -2.99 & -2.76 & -2.81 & -2.78 & -2.99 & -2.99 & -3.07 & -3.09 & -3.23 & -3.34 & -3.47 & -3.68 & -3.96 & -4.39 \\
+31 & -4.11 & -3.85 & -3.49 & -3.38 & -3.29 & -3.19 & -3.15 & -3.09 & -3.04 & -3.02 & -2.84 & -2.83 & -2.88 & -3.1 & -3.11 & -3.13 & -3.21 & -3.27 & -3.36 & -3.54 & -3.71 & -3.95 & -4.24 \\
+29 & -3.91 & -3.7 & -3.55 & -3.42 & -3.34 & -3.26 & -3.24 & -3.2 & -3.17 & -3.19 & -3.07 & -2.96 & -2.98 & -3.15 & -3.17 & -3.21 & -3.27 & -3.35 & -3.39 & -3.51 & -3.64 & -3.79 & -3.98 \\
+27 & -3.7 & -3.59 & -3.48 & -3.43 & -3.37 & -3.33 & -3.28 & -3.25 & -3.24 & -3.25 & -3.17 & -3.01 & -3.02 & -3.23 & -3.25 & -3.27 & -3.27 & -3.31 & -3.36 & -3.42 & -3.48 & -3.55 & -3.61 \\
+25 & -3.48 & -3.46 & -3.42 & -3.39 & -3.31 & -3.29 & -3.27 & -3.26 & -3.24 & -3.24 & -3.22 & -3.02 & -3.05 & -3.23 & -3.25 & -3.27 & -3.26 & -3.29 & -3.34 & -3.37 & -3.41 & -3.39 & -3.32 \\
+23 & -3.2 & -3.24 & -3.28 & -3.27 & -3.28 & -3.27 & -3.27 & -3.35 & -3.25 & -3.23 & -3.24 & -3.07 & -3.08 & -3.32 & -3.28 & -3.35 & -3.39 & -3.37 & -3.34 & -3.31 & -3.25 & -3.12 & -2.98 \\
+21 & -3.05 & -3.17 & -3.21 & -3.25 & -3.27 & -3.26 & -3.28 & -3.28 & -3.28 & -3.28 & -3.28 & -3.09 & -3.08 & -3.2 & -3.24 & -3.26 & -3.21 & -3.19 & -3.19 & -3.2 & -3.09 & -2.99 & -2.85 \\
+19 & -2.96 & -3.08 & -3.15 & -3.22 & -3.25 & -3.24 & -3.3 & -3.31 & -3.33 & -3.29 & -3.26 & -3.09 & -3.09 & -3.27 & -3.27 & -3.23 & -3.24 & -3.19 & -3.2 & -3.14 & -3.04 & -2.94 & -2.74 \\
+17 & -2.91 & -3.03 & -3.12 & -3.14 & -3.19 & -3.21 & -3.24 & -3.25 & -3.23 & -3.25 & -3.25 & -3.1 & -3.11 & -3.29 & -3.26 & -3.26 & -3.24 & -3.24 & -3.21 & -3.08 & -2.99 & -2.89 & -2.72 \\
+15 & -2.85 & -3.01 & -3.1 & -3.16 & -3.16 & -3.22 & -3.22 & -3.2 & -3.22 & -3.22 & -3.25 & -3.1 & -3.19 & -3.24 & -3.22 & -3.21 & -3.17 & -3.15 & -3.12 & -3.05 & -2.99 & -3.01 & -2.81 \\
+13 & -2.92 & -3.02 & -3.09 & -3.12 & -3.18 & -3.19 & -3.22 & -3.19 & -3.23 & -3.23 & -3.27 & -3.09 & -3.1 & -3.27 & -3.28 & -3.27 & -3.28 & -3.29 & -3.24 & -3.23 & -3.19 & -3.11 & -2.98 \\
+11 & -3.07 & -3.17 & -3.21 & -3.25 & -3.19 & -3.21 & -3.24 & -3.24 & -3.26 & -3.23 & -3.28 & -3.1 & -3.12 & -3.22 & -3.22 & -3.22 & -3.23 & -3.33 & -3.33 & -3.31 & -3.29 & -3.25 & -3.09 \\
+9 & -3.26 & -3.29 & -3.27 & -3.26 & -3.27 & -3.25 & -3.25 & -3.22 & -3.19 & -3.21 & -3.26 & -3.1 & -3.14 & -3.21 & -3.24 & -3.26 & -3.27 & -3.3 & -3.33 & -3.36 & -3.41 & -3.46 & -3.47 \\
+7 & -3.49 & -3.47 & -3.38 & -3.34 & -3.3 & -3.3 & -3.27 & -3.26 & -3.23 & -3.22 & -3.28 & -3.08 & -3.11 & -3.15 & -3.25 & -3.35 & -3.41 & -3.52 & -3.55 & -3.61 & -3.69 & -3.79 & -3.84 \\
+5 & -3.81 & -3.63 & -3.57 & -3.64 & -3.55 & -3.52 & -3.51 & -3.44 & -3.43 & -3.39 & -3.27 & -3.08 & -3.12 & -3.21 & -3.26 & -3.31 & -3.37 & -3.44 & -3.51 & -3.64 & -3.75 & -3.94 & -4.16 \\
+3 & -4.27 & -4.08 & -3.92 & -3.77 & -3.57 & -3.51 & -3.53 & -3.55 & -3.53 & -3.51 & -3.32 & -3.04 & -3.19 & -3.47 & -3.46 & -3.49 & -3.54 & -3.59 & -3.64 & -3.76 & -3.98 & -4.22 & -4.57 \\
+    \hline
+      \end{tabular}
+    \end{adjustwidth}
+  \end{center}
+\end{sidewaysfigure}
+
+% page number overlaps with table
+\thispagestyle{empty}
 
 \subsection{Appendix B: Source Code}
 
@@ -413,5 +448,6 @@ axial. Furthermore, we can determine thatthe magnetic field is axial along the
 
 %\label{lst:TheoreticalVsExperimental}
 \inputminted{julia}{TheoreticalVsExperimental.jl}
+
 
 \end{document}
