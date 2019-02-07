@@ -1,0 +1,73 @@
+% Includes packages relevant to Senior Lab
+
+% character set specifications
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% extra unicode characters
+\DeclareUnicodeCharacter{3BC}{\(\mu\)}
+\DeclareUnicodeCharacter{3C1}{\(\rho\)}
+\DeclareUnicodeCharacter{2080}{\(_0\)}
+\DeclareUnicodeCharacter{2081}{\(_1\)}
+\DeclareUnicodeCharacter{2082}{\(_2\)}
+
+% SI Units
+\usepackage{siunitx}
+
+% extra SI units
+\DeclareSIUnit\gauss{G}
+
+% enable scientific notation
+\sisetup{scientific-notation = engineering, exponent-to-prefix}
+
+% draw pretty lines
+\usepackage{tikz}
+\usetikzlibrary{datavisualization}
+\usepackage{circuitikz}
+
+% manual tabbing
+\setlength{\parindent}{0pt}
+\def\qq{\qquad}
+
+% include graphics
+\usepackage{graphicx}
+
+% increased control over figure placement
+\usepackage{float}
+
+% box answers
+\usepackage{tcolorbox}
+
+% enable multiple section levels
+\usepackage{titlesec}
+
+% define `\subsubsubsection` command
+\titleclass{\subsubsubsection}{straight}[\subsection]
+\newcounter{subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+\titleformat{\subsubsubsection}
+        {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
+\titlespacing*{\subsubsubsection}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\setcounter{secnumdepth}{4}
+
+% get align environment (among other things)
+\usepackage{amsmath}
+
+% bold in math mode
+\usepackage{bm}
+
+% get \mathbb (among other things)
+\usepackage{amssymb}
+
+\usepackage{array}
+
+% plotting
+\usepackage{pgfplots}
+
+% enable external references
+\usepackage{hyperref}
+
+% include code
+\usepackage{minted}
+\setminted{linenos, frame=lines, texcomments}

@@ -2,12 +2,12 @@
 
 \input{../reportPreamble}
 
-\usepackage[colorinlistoftodos]{todonotes}
 \usepackage{caption}
-\pgfplotsset{width=10cm,compat=1.9}
 \renewcommand{\thetable}{\arabic{section}.\arabic{table}}
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
-\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom stru
+
+\input{../reportPreamble}
 
 \title{PHY 4210-01 Senior Lab \\Lab M-1: Magnetic Field Mapping}
 
@@ -259,25 +259,33 @@ within the Helmholtz coils were determined by translating Equation
 program in Appendix B. 
 
 % 3D plot (theoretical)
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{3DPlotTheoretical.png}
-\captionof {figure}{The theoiretical three dimensional plot calculated by using Symthe's deviation of the Biot-Savart Law.}
+\captionof {figure}{The theoiretical three dimensional plot calculated by using
+  Symthe's deviation of the Biot-Savart Law.}
 \label{Theoretical 3-D plot}
-\end{figure} 
-% 2D plot (theoretical)
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{2DPlotTheoretical.png}
-\captionof {figure}{The theoretical two dimensional used for comparison to the data obtained during the experimentation.}
-\label{Theoretical 2-D plot}
 \end{figure}
+
+% 2D plot (theoretical)
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{2DPlotTheoretical.png}
+  \end{center}
+  \caption{The theoretical two dimensional used for comparison to the data
+    obtained during the experimentation.}
+  \label{Theoretical 2-D plot}
+\end{figure}
+
 % 3D plot (exp)
-\begin{figure}
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{3DPlotExperimental.png}
-\captionof {{figure}{The three dimensional plot with the data obtained during the experimentation. Where the magnetic field of the Helmhotz coil is mapped out to provide a visual of how the magnetic field is shaped and its strengths and differing areas. }
-\label{Experimental 3-D plot}
+\captionof {figure}{The three dimensional plot with the data obtained during
+    the experimentation. Where the magnetic field of the Helmhotz coil is mapped
+    out to provide a visual of how the magnetic field is shaped and its
+    strengths and differing areas. }
+  \label{Experimental 3-D plot}
 \end{figure}
 % 2D plot (exp)
 \begin{figure}[H]
