@@ -7,8 +7,6 @@
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom stru
 
-\input{../reportPreamble}
-
 \title{PHY 4210-01 Senior Lab \\Lab M-1: Magnetic Field Mapping}
 
 \author{Sarah Arends \\ 
@@ -30,8 +28,8 @@
   compared to theoretical calculations determined from the Smythe derivation of
   the Biot-Sarvat Law for a plane displaced from the central axis, with
   coordinates z, $\rho$, and $\phi$.When determining the magnetic field inside a
-  Helmholtz coil, a Hall probe is used to obtain the magnitude of the magnetic
-  field at varying positions inside the coil. Theoretically the axial component
+  Helmholtz coil, a Hall probe was used to obtain the magnitude of the magnetic
+  field at varying positions inside the coil. Theoretically, the axial component
   of the magnetic field that is produced inside the Helmholtz coil is, to some
   extent, of uniform magnitude.
 \end{abstract}
@@ -57,11 +55,11 @@ its axial direction.
 % How a helmholtz coil produces a uniform field
 
 
-\qq Recall for a straight current-carrying wire, circular magnetic field lines are
-generated around the wire in accordance with the curling right-hand rule. The
-itesimal segment of the wire will cancel \textit{except} for that
-in the axial direction. In summary, a circular current produces a
-linear magnetic field.
+\qq Recall for a straight current-carrying wire, circular magnetic field lines
+are generated around the wire in accordance with the curling right-hand
+rule. All the infinitesimal segments of the wire will cancel \textit{except} for
+that in the axial direction. In summary, a circular current produces a linear
+magnetic field.
 
 
 % off-axis field point
@@ -96,16 +94,16 @@ represented by Smythe's derivation of the Biot-Savart Law.
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and serial number. When it may be important, list principal specifications of certain pieces of equipment (e.g. the focal length of an optical system, etc.)
 \begin{itemize}
-\item Helmholtz coil \\
-\item Gauss meter \\
-\item Hall probe \\
-\ite Meterstick \\
-\item Ruler \\
-\item Dipmeter \\
-\item Powersource \\
-\item Magnaprobe \\
-\item Multimeter\\
-\bigskip
+\item Helmholtz coil
+\item Gauss meter
+\item Hall probe
+\item Meterstick
+\item Ruler
+\item Dipmeter
+\item Powersource 
+\item Magnaprobe 
+\item Multimeter
+\end{itemize}
 
 
 \subsection{The Helmholtz coil}
@@ -120,10 +118,10 @@ particular direction so that their contributions constructively interfere. The
 circuit is shown in figure \ref{helmholtz_circuit}.
 
 % circuit diagram of coils
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{IMAGE_NAME.png}
+\includegraphics[width=0.5\textwidth]{circuit.png}
 
 \captionof{figure}{Flow of current through the Helmholtz coil, oriented such
   that the produced fields are constructive.}
@@ -148,14 +146,14 @@ produces a voltage proportional to the field strength.
 \qq The position of the Hall Effect Probe can be modified in the $\rho$ direction by
 sliding the ruler bar through the acrylic cube shown in figure
 \ref{helmholtz_diagram}. The position can be modified in the $\phi$ direction by
-rotation the ruler bar about the central pole. However, for the sake of this
+rotating the ruler bar about the central pole. However, for the sake of this
 experiment, this did not have to be modified because measurements were taken in
 a single $\rho , z$ plane. The $z$ coordinate was modified by sliding the
 acrylic cube and ruler bar up and down the central pole.
 
 
 %Labeled sketch of the experimental setup
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 % uncomment the line below to add image
 \includegraphics[width=0.5\textwidth]{helmholtz_diagram.png}
@@ -198,7 +196,7 @@ contribution from such an offset.
 %malalligned axis
 \qq Upon initial inspection of the equipment, it appeared the center pole running
 along the z axis of the Helmholtz coil was misaligned. In order to mitigate this
-error and ensure that coordinates were modified independently, a chord was used
+error and ensure that coordinates were modified independently, a cord was used
 to realign the pole as closely as possible to the true z axis. However, since
 this alignment was not quantified, it is possible that there the pole is
 misaligned to some degree. This would result in a systematic error intrinsic to
@@ -263,7 +261,7 @@ orientation of such a field.
 
 \qq Using a multimeter, the resistance of a set of coils was measured to be
 $3.4 \Omega$. In order to determine the necessary voltage to send 3A of current
-through the coils, we make a simply calculation using Ohm's law.
+through the coils, we made a simple calculation using Ohm's law.
 
 
 % Calculating voltage
@@ -276,8 +274,24 @@ V &= IR \\
 % Calculating number of turns
 \subsection{Determining the Number of Turns in a Coil}
 
-\qq Further calculations will require knowing the number of turns of wire in each
-set of coils. MORE TEXT TO COME HERE
+\qq Further calculations will require knowing the number of turns of wire in each set of coils. When a known current $I$ is applied to a single coil, a field of strength $B_{loop}$ is produced. A value for $B_{loop}$ is calculated below, where $a$ is the radius of the loop.
+
+\begin{align*}
+B_{loop} &= \frac{\mu_0 I}{2a} \\
+         &= \frac{4 \pi \times 10^{-7} Tm/A \times 2A}{2\times 0.332m} \\
+         &= 3.78 \times 10^{-6} \text{ T} \\
+         &= 3.78 \times 10^{-2} \text{ G} \\
+\end{align*}
+
+The applied field strength was then measured across the top set of coils, with the applied current of 2A mentioned above. The number of loops $N$ could be determined by dividing the total measured field by the field calculated for a single turn of wire.
+
+\begin{align*}
+N &= \frac{B_{measured}}{B_{loop}} \\
+  &= \frac{2.75G}{3.78 \times 10^{-2}G} \\
+  &= 72.66 \text{ G} \\
+\end{align*}
+
+The process was conducted on the top set of coils twice, for a parallel and anti-parallel field. These two measurements and calculations were then repeated for the bottom set of coils. Averaging these four values for $N$ and rounding to the nearest integer yields an average number of turns in a coil of $N=73$.
 
 \subsection{The Resultant Plots}
 %Theoretical calculations of axial field strength
@@ -323,7 +337,7 @@ program in Appendix B.
 % 2D plot (exp)
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{2_Dmapping_M_1.png}
+\includegraphics[width=0.5\textwidth]{2DPlotExperimental.png}
 \captionof {figure}{The two dimensional plot witht the data obtained during the
   experimentation. Where each line corresponds to a differing value along the
   z-axis of the Helmholtz coil as a function of the magnetic field strength in
@@ -421,10 +435,47 @@ axial. Furthermore, we can determine thatthe magnetic field is axial along the
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
+\qq 
 
 \section{Appendices}
 
 \subsection{Appendix A: Data}
+
+\begin{sidewaysfigure}
+  \caption{The collected experimental data in Gauss. The top row represents the
+    radial distance from the axis in centimeters, and the left column represents
+    height levels in centimeters.}
+  \begin{center}
+    \begin{adjustwidth}{-4cm}{}
+      \begin{tabular}{|r||r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+& -22 & -20 & -18 & -16 & -14 & -12 & -10 & -8 & -6 & -4 & -2 & 0 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 \\
+\hline
+\hline
+33 & -4.08 & -3.74 & -3.54 & -3.36 & -3.27 & -3.13 & -3.08 & -3.03 & -2.99 & -2.99 & -2.76 & -2.81 & -2.78 & -2.99 & -2.99 & -3.07 & -3.09 & -3.23 & -3.34 & -3.47 & -3.68 & -3.96 & -4.39 \\
+31 & -4.11 & -3.85 & -3.49 & -3.38 & -3.29 & -3.19 & -3.15 & -3.09 & -3.04 & -3.02 & -2.84 & -2.83 & -2.88 & -3.1 & -3.11 & -3.13 & -3.21 & -3.27 & -3.36 & -3.54 & -3.71 & -3.95 & -4.24 \\
+29 & -3.91 & -3.7 & -3.55 & -3.42 & -3.34 & -3.26 & -3.24 & -3.2 & -3.17 & -3.19 & -3.07 & -2.96 & -2.98 & -3.15 & -3.17 & -3.21 & -3.27 & -3.35 & -3.39 & -3.51 & -3.64 & -3.79 & -3.98 \\
+27 & -3.7 & -3.59 & -3.48 & -3.43 & -3.37 & -3.33 & -3.28 & -3.25 & -3.24 & -3.25 & -3.17 & -3.01 & -3.02 & -3.23 & -3.25 & -3.27 & -3.27 & -3.31 & -3.36 & -3.42 & -3.48 & -3.55 & -3.61 \\
+25 & -3.48 & -3.46 & -3.42 & -3.39 & -3.31 & -3.29 & -3.27 & -3.26 & -3.24 & -3.24 & -3.22 & -3.02 & -3.05 & -3.23 & -3.25 & -3.27 & -3.26 & -3.29 & -3.34 & -3.37 & -3.41 & -3.39 & -3.32 \\
+23 & -3.2 & -3.24 & -3.28 & -3.27 & -3.28 & -3.27 & -3.27 & -3.35 & -3.25 & -3.23 & -3.24 & -3.07 & -3.08 & -3.32 & -3.28 & -3.35 & -3.39 & -3.37 & -3.34 & -3.31 & -3.25 & -3.12 & -2.98 \\
+21 & -3.05 & -3.17 & -3.21 & -3.25 & -3.27 & -3.26 & -3.28 & -3.28 & -3.28 & -3.28 & -3.28 & -3.09 & -3.08 & -3.2 & -3.24 & -3.26 & -3.21 & -3.19 & -3.19 & -3.2 & -3.09 & -2.99 & -2.85 \\
+19 & -2.96 & -3.08 & -3.15 & -3.22 & -3.25 & -3.24 & -3.3 & -3.31 & -3.33 & -3.29 & -3.26 & -3.09 & -3.09 & -3.27 & -3.27 & -3.23 & -3.24 & -3.19 & -3.2 & -3.14 & -3.04 & -2.94 & -2.74 \\
+17 & -2.91 & -3.03 & -3.12 & -3.14 & -3.19 & -3.21 & -3.24 & -3.25 & -3.23 & -3.25 & -3.25 & -3.1 & -3.11 & -3.29 & -3.26 & -3.26 & -3.24 & -3.24 & -3.21 & -3.08 & -2.99 & -2.89 & -2.72 \\
+15 & -2.85 & -3.01 & -3.1 & -3.16 & -3.16 & -3.22 & -3.22 & -3.2 & -3.22 & -3.22 & -3.25 & -3.1 & -3.19 & -3.24 & -3.22 & -3.21 & -3.17 & -3.15 & -3.12 & -3.05 & -2.99 & -3.01 & -2.81 \\
+13 & -2.92 & -3.02 & -3.09 & -3.12 & -3.18 & -3.19 & -3.22 & -3.19 & -3.23 & -3.23 & -3.27 & -3.09 & -3.1 & -3.27 & -3.28 & -3.27 & -3.28 & -3.29 & -3.24 & -3.23 & -3.19 & -3.11 & -2.98 \\
+11 & -3.07 & -3.17 & -3.21 & -3.25 & -3.19 & -3.21 & -3.24 & -3.24 & -3.26 & -3.23 & -3.28 & -3.1 & -3.12 & -3.22 & -3.22 & -3.22 & -3.23 & -3.33 & -3.33 & -3.31 & -3.29 & -3.25 & -3.09 \\
+9 & -3.26 & -3.29 & -3.27 & -3.26 & -3.27 & -3.25 & -3.25 & -3.22 & -3.19 & -3.21 & -3.26 & -3.1 & -3.14 & -3.21 & -3.24 & -3.26 & -3.27 & -3.3 & -3.33 & -3.36 & -3.41 & -3.46 & -3.47 \\
+7 & -3.49 & -3.47 & -3.38 & -3.34 & -3.3 & -3.3 & -3.27 & -3.26 & -3.23 & -3.22 & -3.28 & -3.08 & -3.11 & -3.15 & -3.25 & -3.35 & -3.41 & -3.52 & -3.55 & -3.61 & -3.69 & -3.79 & -3.84 \\
+5 & -3.81 & -3.63 & -3.57 & -3.64 & -3.55 & -3.52 & -3.51 & -3.44 & -3.43 & -3.39 & -3.27 & -3.08 & -3.12 & -3.21 & -3.26 & -3.31 & -3.37 & -3.44 & -3.51 & -3.64 & -3.75 & -3.94 & -4.16 \\
+3 & -4.27 & -4.08 & -3.92 & -3.77 & -3.57 & -3.51 & -3.53 & -3.55 & -3.53 & -3.51 & -3.32 & -3.04 & -3.19 & -3.47 & -3.46 & -3.49 & -3.54 & -3.59 & -3.64 & -3.76 & -3.98 & -4.22 & -4.57 \\
+    \hline
+      \end{tabular}
+    \end{adjustwidth}
+  \end{center}
+\end{sidewaysfigure}
+
+% page number overlaps with table
+\thispagestyle{empty}
 
 \subsection{Appendix B: Source Code}
 
@@ -436,5 +487,6 @@ axial. Furthermore, we can determine thatthe magnetic field is axial along the
 
 %\label{lst:TheoreticalVsExperimental}
 \inputminted{julia}{TheoreticalVsExperimental.jl}
+
 
 \end{document}
