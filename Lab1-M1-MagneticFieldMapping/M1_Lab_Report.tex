@@ -123,7 +123,7 @@ circuit is shown in figure \ref{helmholtz_circuit}.
 \begin{figure}[h]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{IMAGE_NAME.png}
+%\includegraphics[width=0.5\textwidth]{circuit.png}
 
 \captionof{figure}{Flow of current through the Helmholtz coil, oriented such
   that the produced fields are constructive.}
@@ -276,8 +276,24 @@ V &= IR \\
 % Calculating number of turns
 \subsection{Determining the Number of Turns in a Coil}
 
-\qq Further calculations will require knowing the number of turns of wire in each
-set of coils. MORE TEXT TO COME HERE
+\qq Further calculations will require knowing the number of turns of wire in each set of coils. When a known current $I$ is applied to a single coil, a field of strength $B_{loop}$ is produced. A value for $B_{loop}$ is calculated below, where $a$ is the radius of the loop.
+
+\begin{align*}
+B_{loop} &= \frac{\mu_0 I}{2a} \\
+         &= \frac{4 \pi \times 10^{-7} Tm/A \times 2A}{2\times 0.332m}
+         &= 3.78 \times 10^{-6} \text{ T} \\
+         &= 3.78 \times 10^{-2} \text{ G} \\
+\end{align*}
+
+The applied field strength was then measured across the top set of coils, with the applied current of 2A mentioned above. The number of loops $N$ could be determined by dividing the total measured field by the field calculated for a single turn of wire.
+
+\begin{align*}
+N &= \frac{B_{measured}}{B_{loop}} \\
+  &= \frac{2.75G}{3.78 \times 10^{-2}G} \\
+  &= 72.66 \text{ G} \\
+\end{align*}
+
+The process was conducted on the top set of coils twice, for a parallel and anti-parallel field. These two measurements and calculations were then repeated for the bottom set of coils. Averaging these four values for $N$ and rounding to the nearest integer yields an average number of turns in a coil of $N=73$.
 
 \subsection{The Resultant Plots}
 %Theoretical calculations of axial field strength
