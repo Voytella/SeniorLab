@@ -1,4 +1,15 @@
-% Includes packages relevant to Physics Lab
+% Includes packages relevant to Senior Lab
+
+% character set specifications
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% extra unicode characters
+\DeclareUnicodeCharacter{3BC}{\(\mu\)}
+\DeclareUnicodeCharacter{3C1}{\(\rho\)}
+\DeclareUnicodeCharacter{2080}{\(_0\)}
+\DeclareUnicodeCharacter{2081}{\(_1\)}
+\DeclareUnicodeCharacter{2082}{\(_2\)}
 
 % SI Units
 \usepackage{siunitx}
@@ -13,10 +24,6 @@
 \usepackage{tikz}
 \usetikzlibrary{datavisualization}
 \usepackage{circuitikz}
-
-% double space
-\usepackage{setspace}
-\doublespace
 
 % manual tabbing
 \setlength{\parindent}{0pt}
@@ -62,4 +69,5 @@
 \usepackage{hyperref}
 
 % include code
-\usepackage{verbatim}
+\usepackage{minted}
+\setminted{linenos, frame=lines, texcomments}
