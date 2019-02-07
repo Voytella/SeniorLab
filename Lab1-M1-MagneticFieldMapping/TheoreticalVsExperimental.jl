@@ -1,25 +1,25 @@
+# Plot the difference between the theoretical and experimental data.
+
 # ----------BEGIN PACKAGES----------
 
 # enable the addition of packages
 using Pkg
 
-# integration
-Pkg.add("QuadGK")
-using QuadGK
-
-# importing data
-Pkg.add("DataFrames")
-using DataFrames
+# interpreter for reading CSV files
 Pkg.add("CSV")
 using CSV
 
-# 3D plotting
+# convenient container for data extracted from CSV files
+Pkg.add("DataFrames")
+using DataFrames
+
+# plotting
 Pkg.add("Plots")
 using Plots
 
 # ----------BEGIN GENERATE THEORETICAL DATA----------
 
-# Permeability of Free Space (T*m)/A
+# Permeability of Free Space \( \frac{T m}{A} \)
 μ₀ = 1.256e-6
 
 # the full Biot-Savart equation (two loops, off axis)
@@ -146,6 +146,8 @@ diffPlot = Plots.plot(tripleData[3], tripleData[2], tripleData[1],
                    ylabel = "Height Relative to Bottom Coil (cm)",
                    zlabel = "Radial Distance from Axis (cm)"
                    )
+
+# save the plot to disk
 savefig("3DPlotDiff.png")
 
 # -----------END PLOT THE DIFFERENCE-----------
