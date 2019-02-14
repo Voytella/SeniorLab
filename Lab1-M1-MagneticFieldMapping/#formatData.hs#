@@ -1,5 +1,0 @@
-input :: String -> [[Float]]
-input s = lines s
-
-main :: IO()
-main = interact $ output . input

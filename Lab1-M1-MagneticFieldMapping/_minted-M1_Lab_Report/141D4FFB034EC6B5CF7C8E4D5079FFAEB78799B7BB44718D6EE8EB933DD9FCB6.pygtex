@@ -1,0 +1,155 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c}{\PYGZsh{} Plot the difference between the theoretical and experimental data.}
+
+\PYG{c}{\PYGZsh{} ----------BEGIN PACKAGES----------}
+
+\PYG{c}{\PYGZsh{} enable the addition of packages}
+\PYG{k}{using} \PYG{n}{Pkg}
+
+\PYG{c}{\PYGZsh{} interpreter for reading CSV files}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}CSV\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{using} \PYG{n}{CSV}
+
+\PYG{c}{\PYGZsh{} convenient container for data extracted from CSV files}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}DataFrames\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{using} \PYG{n}{DataFrames}
+
+\PYG{c}{\PYGZsh{} plotting}
+\PYG{n}{Pkg}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Plots\PYGZdq{}}\PYG{p}{)}
+\PYG{k}{using} \PYG{n}{Plots}
+
+\PYG{c}{\PYGZsh{} ----------BEGIN GENERATE THEORETICAL DATA----------}
+
+\PYG{c}{\PYGZsh{} Permeability of Free Space \( \frac{T m}{A} \)}
+\PYG{n}{μ₀} \PYG{o}{=} \PYG{l+m+mf}{1.256e\PYGZhy{}6}
+
+\PYG{c}{\PYGZsh{} the full Biot-Savart equation (two loops, off axis)}
+\PYG{n}{B}\PYG{p}{(}\PYG{n}{z}\PYG{p}{,}\PYG{n+nb}{I}\PYG{p}{,}\PYG{n}{N}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{)} \PYG{o}{=} 
+    \PYG{p}{((}\PYG{n}{μ₀} \PYG{o}{*} \PYG{n+nb}{I} \PYG{o}{*} \PYG{n}{N}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n+nb}{pi}\PYG{p}{)} \PYG{p}{)} \PYG{o}{*}
+    \PYG{p}{(} 
+        \PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{n}{sqrt}\PYG{p}{((} \PYG{p}{(}\PYG{n}{a} \PYG{o}{+} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{((}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{z}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)))} \PYG{o}{*}
+        \PYG{p}{(} 
+            \PYG{n}{K}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{)} \PYG{o}{+} 
+            \PYG{p}{(}
+                \PYG{p}{(((}\PYG{n}{a} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{ρ} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{p}{((}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{z}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{))} \PYG{o}{/} 
+                 \PYG{p}{(((}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{((}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{z}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)))} \PYG{o}{*} 
+                \PYG{n}{E}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{)}
+            \PYG{p}{)}
+        \PYG{p}{)} \PYG{o}{+}
+        \PYG{p}{(} 
+            \PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{/} \PYG{n}{sqrt}\PYG{p}{(((}\PYG{n}{a} \PYG{o}{+} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{z} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)))} \PYG{o}{*} 
+            \PYG{p}{(}
+                \PYG{n}{K}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{)} \PYG{o}{+} 
+                \PYG{p}{(}
+                    \PYG{p}{(((}\PYG{n}{a} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{ρ} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{z} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{))} \PYG{o}{/} 
+                     \PYG{p}{(((}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{z} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)))} \PYG{o}{*} 
+                    \PYG{n}{E}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{)}
+                \PYG{p}{)}
+            \PYG{p}{)} 
+        \PYG{p}{)} 
+    \PYG{p}{)}
+        
+\PYG{c}{\PYGZsh{} elliptic integrals of first kind (series expansion)}
+\PYG{n}{K}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{,} \PYG{n}{precision} \PYG{o}{=} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{=} 
+    \PYG{p}{(}\PYG{n+nb}{pi} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}
+        \PYG{l+m+mi}{1} \PYG{o}{+} \PYG{n}{sum}\PYG{p}{([} 
+            \PYG{p}{((}\PYG{n}{reduce}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{p}{[}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1} \PYG{k}{for} \PYG{n}{n} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{n}{precision}\PYG{p}{])} \PYG{o}{/} 
+              \PYG{n}{reduce}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{p}{[}\PYG{n}{n} \PYG{k}{for} \PYG{n}{n} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{n}{precision}\PYG{p}{]))} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*} 
+            \PYG{p}{(}\PYG{n}{k}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{ρ}\PYG{p}{),}\PYG{n}{z}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{n}{n}\PYG{p}{)} 
+            \PYG{k}{for} \PYG{n}{n} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{n}{precision}
+        \PYG{p}{])}
+    \PYG{p}{)}
+        
+\PYG{c}{\PYGZsh{} elliptic integrals of the second kind (series expansion)}
+\PYG{n}{E}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{,} \PYG{n}{precision} \PYG{o}{=} \PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{=}
+    \PYG{p}{(}\PYG{n+nb}{pi} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*} \PYG{p}{(}
+        \PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{n}{foldl}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{p}{,[}
+            \PYG{p}{((}\PYG{n}{reduce}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{p}{[}\PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{k}{for} \PYG{n}{n} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{n}{precision}\PYG{p}{])} \PYG{o}{/} 
+              \PYG{n}{reduce}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{p}{[}\PYG{n}{n} \PYG{k}{for} \PYG{n}{n} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{n}{precision}\PYG{p}{]))} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{*} 
+            \PYG{p}{((}\PYG{n}{k}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{abs}\PYG{p}{(}\PYG{n}{ρ}\PYG{p}{),}\PYG{n}{z}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{n}{n}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))}
+            \PYG{k}{for} \PYG{n}{n} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{n}{precision}
+        \PYG{p}{])}
+    \PYG{p}{)}
+    
+\PYG{c}{\PYGZsh{} the collections of variables k₁ and k₂}
+\PYG{n}{k}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{n}{a}\PYG{p}{,}\PYG{n}{ρ}\PYG{p}{,}\PYG{n}{z}\PYG{p}{)} \PYG{o}{=} \PYG{p}{(}\PYG{n}{j} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{?} 
+    \PYG{n}{sqrt}\PYG{p}{((}\PYG{l+m+mi}{4} \PYG{o}{*} \PYG{n}{a} \PYG{o}{*} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(((}\PYG{n}{a} \PYG{o}{+} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{((}\PYG{n}{a} \PYG{o}{\PYGZhy{}} \PYG{n}{z}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)))} \PYG{o}{:}
+    \PYG{n}{sqrt}\PYG{p}{((}\PYG{l+m+mi}{4} \PYG{o}{*} \PYG{n}{a} \PYG{o}{*} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(((}\PYG{n}{a} \PYG{o}{+} \PYG{n}{ρ}\PYG{p}{)} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{p}{(}\PYG{n}{z} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{2}\PYG{p}{)))}
+
+\PYG{c}{\PYGZsh{} heights at which measurements were taken (meters)}
+\PYG{n}{heightLevels} \PYG{o}{=} \PYG{l+m+mf}{0.03}\PYG{o}{:}\PYG{l+m+mf}{0.02}\PYG{o}{:}\PYG{l+m+mf}{0.33}
+
+\PYG{c}{\PYGZsh{} current applied to the coils (amperes)}
+\PYG{n}{current} \PYG{o}{=} \PYG{l+m+mi}{2}
+
+\PYG{c}{\PYGZsh{} turns of wire in each coil}
+\PYG{n}{turns} \PYG{o}{=} \PYG{l+m+mi}{73}
+
+\PYG{c}{\PYGZsh{} radius of the coils (meters)}
+\PYG{n}{radius} \PYG{o}{=} \PYG{l+m+mf}{0.332}
+
+\PYG{c}{\PYGZsh{} radial distances at which measurements were taken (meters)}
+\PYG{n}{rhos} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.22}\PYG{o}{:}\PYG{l+m+mf}{0.02}\PYG{o}{:}\PYG{l+m+mf}{0.22}
+
+\PYG{c}{\PYGZsh{} list of Biot-Savart functions for each height level}
+\PYG{n}{BHeights} \PYG{o}{=} \PYG{p}{[} \PYG{n}{futureRho} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{B}\PYG{p}{(}\PYG{n}{heightLevel}\PYG{p}{,} \PYG{n}{current}\PYG{p}{,} \PYG{n}{turns}\PYG{p}{,} \PYG{n}{radius}\PYG{p}{,} \PYG{n}{futureRho}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mf}{1e6}
+            \PYG{k}{for} \PYG{n}{heightLevel} \PYG{k+kp}{in} \PYG{n}{heightLevels} \PYG{p}{]}
+
+\PYG{c}{\PYGZsh{} apply the list of radial distances to each height level's function (rhos are rows)}
+\PYG{c}{\PYGZsh{} list of lists of Bs where each internal list is a row}
+\PYG{n}{theoBs} \PYG{o}{=} \PYG{p}{[} \PYG{n}{map}\PYG{p}{(}\PYG{n}{heightLevelFunction}\PYG{p}{,} \PYG{n}{rhos}\PYG{p}{)} \PYG{k}{for} \PYG{n}{heightLevelFunction} \PYG{k+kp}{in} \PYG{n}{BHeights} \PYG{p}{]}
+
+\PYG{c}{\PYGZsh{} -----------END GENERATE THEORETICAL DATA-----------}
+
+\PYG{c}{\PYGZsh{} ----------BEGIN EXTRACT EXPERIMENTAL DATA----------}
+
+\PYG{c}{\PYGZsh{} read data from CSV into a DataFrame}
+\PYG{n}{data} \PYG{o}{=} \PYG{n}{CSV}\PYG{o}{.}\PYG{n}{File}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}2dMappingTesla.csv\PYGZdq{}}\PYG{p}{)} \PYG{o}{|\PYGZgt{}} \PYG{n}{DataFrame}
+
+\PYG{c}{\PYGZsh{} convert row number (1:16) to height value (3:2:33)}
+\PYG{n}{rowNum2Height}\PYG{p}{(}\PYG{n}{row}\PYG{p}{)} \PYG{o}{=} \PYG{n}{row} \PYG{o}{+} \PYG{p}{(}\PYG{n}{row} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} reverse the order of the incoming heights}
+\PYG{n}{heightReversal}\PYG{p}{(}\PYG{n}{z}\PYG{p}{)} \PYG{o}{=} \PYG{n}{z} \PYG{o}{+} \PYG{p}{(}\PYG{l+m+mi}{16} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{z} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{z}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} apply corrections to data (Earth's magnetic field & correct units)}
+\PYG{n}{corrB}\PYG{p}{(}\PYG{n}{b}\PYG{p}{)} \PYG{o}{=} \PYG{p}{((}\PYG{n}{b} \PYG{o}{+} \PYG{l+m+mf}{0.000024}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mf}{1e6}\PYG{p}{)} 
+
+\PYG{c}{\PYGZsh{} extract the data from a row into a triple representing that row}
+\PYG{n}{extractRow}\PYG{p}{(}\PYG{n}{row}\PYG{p}{)} \PYG{o}{=} \PYG{p}{(}
+    \PYG{n}{fill}\PYG{p}{(}\PYG{n}{rowNum2Height}\PYG{p}{(}\PYG{n}{row}\PYG{p}{),} \PYG{l+m+mi}{23}\PYG{p}{),}
+    \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{22}\PYG{o}{:}\PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{22}\PYG{p}{,}
+    \PYG{p}{[} \PYG{n}{corrB}\PYG{p}{(}\PYG{n}{Bval}\PYG{p}{)} \PYG{k}{for} \PYG{n}{Bval} \PYG{k+kp}{in} \PYG{p}{[} \PYG{n}{data}\PYG{p}{[}\PYG{n}{ii}\PYG{p}{][}\PYG{n}{heightReversal}\PYG{p}{(}\PYG{n}{row}\PYG{p}{)} \PYG{p}{]} \PYG{k}{for} \PYG{n}{ii} \PYG{k+kp}{in} \PYG{l+m+mi}{2}\PYG{o}{:}\PYG{l+m+mi}{24} \PYG{p}{]} \PYG{p}{]}
+\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} list of triples, each representing a row}
+\PYG{n}{expRows} \PYG{o}{=} \PYG{n}{map}\PYG{p}{(}\PYG{n}{extractRow}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{o}{:}\PYG{l+m+mi}{16}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} -----------END EXTRACT EXPERIMENTAL DATA-----------}
+
+\PYG{c}{\PYGZsh{} ----------BEGIN PLOT THE DIFFERENCE----------}
+
+\PYG{c}{\PYGZsh{} list of triples, each representing a row, where the Bs are (theoB-expB)}
+\PYG{n}{diffRows} \PYG{o}{=} \PYG{p}{[} \PYG{p}{(}\PYG{n}{expRows}\PYG{p}{[}\PYG{n}{ii}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{expRows}\PYG{p}{[}\PYG{n}{ii}\PYG{p}{][}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{n}{theoBs}\PYG{p}{[}\PYG{n}{ii}\PYG{p}{]} \PYG{o}{.\PYGZhy{}} \PYG{n}{expRows}\PYG{p}{[}\PYG{n}{ii}\PYG{p}{][}\PYG{l+m+mi}{3}\PYG{p}{])} 
+             \PYG{k}{for} \PYG{n}{ii} \PYG{k+kp}{in} \PYG{l+m+mi}{1}\PYG{o}{:}\PYG{n}{length}\PYG{p}{(}\PYG{n}{expRows}\PYG{p}{)} \PYG{p}{]}
+
+\PYG{c}{\PYGZsh{} now, a "row" is of the form ([zs], [rs], [Bs]); all these lists must be combined}
+\PYG{n}{tripleData} \PYG{o}{=} \PYG{p}{(} \PYG{n}{foldl}\PYG{p}{(}\PYG{n}{hcat}\PYG{p}{,} \PYG{n}{map}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} \PYG{n}{diffRows}\PYG{p}{)),}
+               \PYG{n}{foldl}\PYG{p}{(}\PYG{n}{hcat}\PYG{p}{,} \PYG{n}{map}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{n}{diffRows}\PYG{p}{)),}
+               \PYG{n}{foldl}\PYG{p}{(}\PYG{n}{hcat}\PYG{p}{,} \PYG{n}{map}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{],} \PYG{n}{diffRows}\PYG{p}{))} \PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} plot the difference between the theoretical and experimental data}
+\PYG{n}{diffPlot} \PYG{o}{=} \PYG{n}{Plots}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{tripleData}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{],} \PYG{n}{tripleData}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],} \PYG{n}{tripleData}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],} 
+                   \PYG{n}{seriestype} \PYG{o}{=} \PYG{o}{:}\PYG{n}{scatter}\PYG{p}{,} \PYG{n}{legend} \PYG{o}{=} \PYG{o}{:}\PYG{n}{topright}\PYG{p}{,} \PYG{n}{legendtitle} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Rows\PYGZdq{}}\PYG{p}{,}
+                   \PYG{n}{title} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Difference Between Theoretical and Experimental Magnetic Field\PYGZdq{}}\PYG{p}{,} 
+                   \PYG{n}{size} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{550}\PYG{p}{,}\PYG{l+m+mi}{550}\PYG{p}{),}
+                   \PYG{n}{xlabel} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Magnetic Field Strength (uT)\PYGZdq{}}\PYG{p}{,}
+                   \PYG{n}{ylabel} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Height Relative to Bottom Coil (cm)\PYGZdq{}}\PYG{p}{,}
+                   \PYG{n}{zlabel} \PYG{o}{=} \PYG{l+s}{\PYGZdq{}Radial Distance from Axis (cm)\PYGZdq{}}
+                   \PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} save the plot to disk}
+\PYG{n}{savefig}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}3DPlotDiff.png\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{} -----------END PLOT THE DIFFERENCE-----------}
+\end{Verbatim}
