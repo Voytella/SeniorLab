@@ -4,8 +4,6 @@
 
 \usepackage{caption}
 \renewcommand{\thetable}{\arabic{section}.\arabic{table}}
-\newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
-\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} % Bottom stru
 
 \title{PHY 4210-01 Senior Lab \\Lab P5: Hall Effect in Semiconductors and Metals}
 
@@ -161,6 +159,8 @@
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 
+\newpage
+
 \section{Hall Effect in Pure Germanium}
 
 \subsection{Determining Band Gap in Pure Ge}
@@ -185,6 +185,37 @@
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
 %Compare results with theory
+In order to determine the Hall constant $\text{R}_\text{H}$, one can analyze the dependence of the Hall voltage on the applied field. This was done with a constant DC current applied across the Zn sample, with an associated random error due to the limited precision of the power supply. The error in the slope is obtained through linear regression, and the thickness prescribed by the sample specifications is assumed to have no error.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Slope, $b$ $\big[  \frac{\Omega \text{cm}}{\text{G}} \big] $ & $4.11 \times 10^{-13} \pm ERROR$ \topVspace \bottomVspace \\
+\hline
+Thickness, $d$ [m] & $2.5 \times 10^{-5} \pm 0$ \topVspace \bottomVspace \\
+\hline
+Sample Current, I [A] & $13.5 \pm 0.1$ \topVspace \bottomVspace \\
+\hline
+\end{tabular}
+\label{table:zinc_RH}
+\captionof{table}{Measurements and calculations used to determine the experimental Hall constant of pure Zinc}
+\end{center}
+
+The Hall constant of Zinc is calculated as follows.
+\begin{align*}
+R_H &= \big( \frac{\mu_H}{B} \big) \, \frac{d}{I} \\
+    &= (b) \, \frac{d}{I} \\
+    &= (4.11 \times 10^{-13}) \, \frac{2.5 \times 10^{-5}}{13.5} \\
+    &= 4.11 \times 10^{-11} \; \text{Vm/TA} \\
+    &\equiv 4.11 \times 10^{-13} \; \Omega \text{cm/G} \\
+\end{align*}
+
+A theoretical value for the Hall constant of Zinc, given by the third edition of the AIP handbook, is $R_H = 3.30 \times 10^{-13} \; \Omega \text{cm/G}$.
+
+% Propagate error in RH experimental
+
+% Compare theoretical and experimental
+
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
