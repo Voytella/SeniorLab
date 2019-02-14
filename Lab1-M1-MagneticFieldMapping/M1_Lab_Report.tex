@@ -28,8 +28,8 @@
   compared to theoretical calculations determined from the Smythe derivation of
   the Biot-Sarvat Law for a plane displaced from the central axis, with
   coordinates z, $\rho$, and $\phi$.When determining the magnetic field inside a
-  Helmholtz coil, a Hall probe was used to obtain the magnitude of the magnetic
-  field at varying positions inside the coil. Theoretically, the axial component
+  Helmholtz coil, a Hall probe is used to obtain the magnitude of the magnetic
+  field at varying positions inside the coil. Theoretically the axial component
   of the magnetic field that is produced inside the Helmholtz coil is, to some
   extent, of uniform magnitude.
 \end{abstract}
@@ -48,19 +48,16 @@ determined for use in theoretical calculations. Then a 3-dimensional and
 created in order to investigate the presence of a uniform field, running along
 its axial direction.
 
-
 \section{Theory of the Experiment}
 %A short presentation of the concepts and formulas related to the experiment.
 
 % How a helmholtz coil produces a uniform field
-
-
-\qq Recall for a straight current-carrying wire, circular magnetic field lines
-are generated around the wire in accordance with the curling right-hand
-rule. All the infinitesimal segments of the wire will cancel \textit{except} for
-that in the axial direction. In summary, a circular current produces a linear
-magnetic field.
-
+\qq Recall for a straight current-carrying wire, circular magnetic field lines are
+generated around the wire in accordance with the curling right-hand rule. The
+Helmholtz coil contains two regions of circularly wound wires. Due to the the
+circular symmetry, all components of each infinitesimal segment of the wire will
+cancel \textit{except} for that in the axial direction. In summary, a circular
+current produces a linear magnetic field.
 
 % off-axis field point
 \qq The field point of the system has before been typically placed along the axis of
@@ -90,7 +87,6 @@ represented by Smythe's derivation of the Biot-Savart Law.
     \Big] \nonumber
 \end{align}
 
-
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and serial number. When it may be important, list principal specifications of certain pieces of equipment (e.g. the focal length of an optical system, etc.)
 \begin{itemize}
@@ -109,7 +105,6 @@ represented by Smythe's derivation of the Biot-Savart Law.
 \subsection{The Helmholtz coil}
 
 % circuit of the helmholtz coil
-
 \qq The Helmholtz coil consists of two concentric sets of coils, each with the same
 radius and separated by a distance equal to their radius. This configuration
 allows the contribution of each set of coils to produce a uniform field in the
@@ -125,24 +120,20 @@ circuit is shown in figure \ref{helmholtz_circuit}.
 
 \captionof{figure}{Flow of current through the Helmholtz coil, oriented such
   that the produced fields are constructive.}
-
 \label{helmholtz_circuit}
 \end{figure}
 
 \subsection{The Hall Effect Probe}
 
 %How hall effect probe works
-
 \qq A DC Gaussmeter (AlphaLab Model GM-1-HS) was connected to a Hall Effect Probe in
 order to measure the field strength inside the Helmholtz coil. The Hall Effect
 Probe contains a semiconductor junction that, when exposed to a magnetic field,
 produces a voltage proportional to the field strength.
 
-
 \subsection{Position Controls}
 
 %Position Controls
-
 \qq The position of the Hall Effect Probe can be modified in the $\rho$ direction by
 sliding the ruler bar through the acrylic cube shown in figure
 \ref{helmholtz_diagram}. The position can be modified in the $\phi$ direction by
@@ -150,7 +141,6 @@ rotating the ruler bar about the central pole. However, for the sake of this
 experiment, this did not have to be modified because measurements were taken in
 a single $\rho , z$ plane. The $z$ coordinate was modified by sliding the
 acrylic cube and ruler bar up and down the central pole.
-
 
 %Labeled sketch of the experimental setup
 \begin{figure}[H]
@@ -160,12 +150,10 @@ acrylic cube and ruler bar up and down the central pole.
 \captionof{figure}{Two concentric Helmholtz coils separated by a distance equal
   to their radius. Rotating pole and sliding ruler allow for modification of the
   probe's position.}
-
 \label{helmholtz_diagram}
 \end{figure}
 
 \section{Procedure}
-
 
 % Describe the main steps in the experimental procedures. Be sure to include any
 % precautions. Sufficient details should be given such that another student can
@@ -189,7 +177,6 @@ measurement device, it would appear in both the measurement of Earth's field and
 in the measurement of the total field inside the Helmholtz coil. Subtracting
 these two to obtain the strength of the applied field would cancel any
 contribution from such an offset.
-
 
 \subsection{Procedural Modifications}
 
@@ -234,11 +221,9 @@ unstable, as it would decrease and increase every few minutes. This produced a
 source of random intrinsic error, which was mitigated by fine tuning the current
 value before each measurement after the issue was discovered.
 
-
 \subsection{Additional Sources of Error}
 
 % Proximity to power supply
-
 \qq Because the experimental set-up was restricted to a small area, the contribution
 from the field produced by the power supply may be non-negligible. From the
 perspective of the experimenter, the power supply sits behind and to the right
@@ -249,7 +234,6 @@ field measurements to be overestimated. Similarly, the power supply itself may
 be producing a small field that could also contribute a systematic error,
 although the exact effect could not be determined without knowing the
 orientation of such a field.
-
 
 \section{Data Analysis}
 %Graphs, figures, and tables with captions
@@ -262,7 +246,6 @@ orientation of such a field.
 \qq Using a multimeter, the resistance of a set of coils was measured to be
 $3.4 \Omega$. In order to determine the necessary voltage to send 3A of current
 through the coils, we made a simple calculation using Ohm's law.
-
 
 % Calculating voltage
 \begin{align*}
@@ -319,7 +302,6 @@ the nearest integer yields an average number of turns in a coil of $N=73$.
 \end{figure}
 
 % 2D plot (theoretical)
-
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=0.5\textwidth]{2DPlotTheoretical.png}
@@ -327,14 +309,12 @@ the nearest integer yields an average number of turns in a coil of $N=73$.
   \caption{The theoretical two dimensional used for comparison to the data
     obtained during the experimentation.}
   \label{Theoretical 2-D plot}
-
 \end{figure}
 
 % 3D plot (exp)
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{3DPlotExperimental.png}
-
 \captionof {figure}{The three dimensional plot with the data obtained during
     the experimentation. Where the magnetic field of the Helmhotz coil is mapped
     out to provide a visual of how the magnetic field is shaped and its
@@ -425,7 +405,6 @@ where 'n' is the sample size or the number of data points.
  % Compare B field in different direction, can we say field is axial
 \subsection{Comparing the directions of the Magnetic Field}
 
-
 \qq When measuring at a probe height of a/2 (16cm), where 'a' is the separation
 distance between the coils, the strength of the magnetic field in the 'z'
 direction was measured to be -3.13 Gauss. When measuring the magnetic field in
@@ -447,7 +426,6 @@ axis. These small measuredvalues f ollow the aforementioned theoryand we can
 determine that the magnetic field produced by the Helmholtz c oil is indeed
 axial. Furthermore, we can determine thatthe magnetic field is axial along the
 'z' direction.
-
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
