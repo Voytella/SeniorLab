@@ -1,16 +1,4 @@
 \babel@toc {english}{}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {1}Objective of the Experiment}{3}{section.1}% 
-\contentsline {section}{\numberline {2}Theory of the Experiment}{3}{section.2}% 
-\contentsline {section}{\numberline {3}Equipment Utilized}{3}{section.3}% 
-\contentsline {section}{\numberline {4}Procedure}{3}{section.4}% 
-\contentsline {section}{\numberline {5}Data Analysis}{3}{section.5}% 
-\contentsline {section}{\numberline {6}Results}{3}{section.6}% 
-\contentsline {section}{\numberline {7}Conclusion}{3}{section.7}% 
-\contentsline {section}{\numberline {8}Appendices}{3}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}Appendix A: Data}{3}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}Appendix B: Source Code}{3}{subsection.8.2}% 
-=======
 \contentsline {section}{\numberline {1}Theory of the Experiment}{4}{section.1}% 
 \contentsline {section}{\numberline {2}Hall Effect in P-Germanium}{4}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Task 1}{4}{subsection.2.1}% 
@@ -51,8 +39,7 @@
 \contentsline {section}{\numberline {5}Hall Effect in Pure Zinc}{5}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Determining Hall Constant in Pure Zn}{5}{subsection.5.1}% 
 \contentsline {subsubsection}{\numberline {5.1.1}Data Analysis and Results}{5}{subsubsection.5.1.1}% 
-\contentsline {subsubsection}{\numberline {5.1.2}Conclusion}{5}{subsubsection.5.1.2}% 
-\contentsline {section}{\numberline {6}Appendices}{5}{section.6}% 
-\contentsline {subsection}{\numberline {6.1}Appendix A: Data}{5}{subsection.6.1}% 
-\contentsline {subsection}{\numberline {6.2}Appendix B: Source Code}{5}{subsection.6.2}% 
->>>>>>> SarahBranch
+\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}% 
+\contentsline {section}{\numberline {7}Appendices}{5}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Appendix A: Data}{5}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Appendix B: Source Code}{5}{subsection.7.2}% 
