@@ -44,6 +44,40 @@ conclusion of each respective task.
 \section{Theory of the Experiment}
 %A short presentation of the concepts and formulas related to the experiment.
 
+\qq When an electric current flows through a conductor inside of a
+magnetic field, that field exerts a force on the charge carriers as
+they move. This force is the Lorentz force. The Lorentz force causes
+the charge carriers to accumulate on one side of the conductor, which
+will then balance the magnetic influence from the field and produce a
+voltage that can be measured across the conductor. This describes the
+Hall effect. The Hall voltage can be measured by a Hall probe that is
+placed in the magnetic field. Please note that the Hall effect is
+different for differing charge carriers, as the polarity of the Hall
+voltage differs for negative and positive charge carriers.
+
+\subsection{Deriving the Hall Voltage Equation}
+
+\begin{align*}
+V_(Hall) = \frac{I*B}{n*e*t}
+\end{align*}
+\qq  Please note that 'I' is the current through the sample, 'B' is the
+ applied magnetic field, 'n' is the charge carrier concentration, 'e'
+ is the elementary charge, and 't' is the sample thickness.
+
+\begin{align*}
+F_B = q*v*B
+F_E = E*q = \Big(\frac{V_H}{d}\Big)*q
+F_B = F_E
+q*v*B = \Big(\frac{V_H}{d}\Big)*q
+v*B = \frac{v_H}{d}
+v_H = B*v*d
+v = \frac{I}{n*e*A}
+v_H = \frac{B*I*d}{n*e*A}
+A = t*d
+v_H = \frac{B*I*d}{n*e*t*d}
+v_H = \frac{I*B}{n*e*t}
+\end{align*}
+
 \section{Hall Effect in P-Germanium}
 
 \subsection{Task 1}
@@ -285,7 +319,7 @@ field. The manual calls for the magnetic field to be held constant at
 300 mT. However, in order to avoid overheating the coils, we kept the
 magnetic field constant at 145 mT. The current was kept steady at 30
 mA for the entire task. The manual also states that the temperature
-should reach $140^o$ K, however our highest temperature was $90^o$K, \
+should reach $140^o$ K, however our highest temperature was $110^o$K, \
 this was done to prevent the overheating of the sample.
 
 
@@ -309,7 +343,15 @@ carries which causes the drift velocity of the charge to decrease.
 
 % Comment on the nature of the graph and different regions
 % Discuss shape expected by theory
-WORDS WORDS WORDS
+\qq The shape of the graph can be described by three differing
+regions. The first relatively flat area in the region of the lower
+temperatures depicts an extrinsic conduction. The middle section of
+the graph that is described by the slope shows the reduction in the
+drift velocity that is associated with the increase of charge carriers
+with an increase of temperature. The third area, which is once again
+relatively flat, described by the higher temperatures depicts the
+intrinsic conduction. While the graph as a whole shows the transition
+from extrinsic conduction to intrinsic conduction.
 
 
 \subsubsection{Conclusion}
@@ -536,7 +578,18 @@ The difference in experimental and theoretical Hall constant is calculated as fo
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
+
 %Compare results with theory
+% Discuss shape expected by theory                                                     
+\qq The shape of the graph can be described by three differing
+regions. The first relatively flat area in the region of the lower
+temperatures depicts an extrinsic conduction. The middle section of
+the graph that is described by the slope shows the reduction in the
+drift velocity that is associated with the increase of charge carriers
+with an increase of temperature. The third area, which is once again
+relatively flat, described by the higher temperatures depicts the
+intrinsic conduction. While the graph as a whole shows the transition
+from extrinsic conduction to intrinsic conduction.
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
