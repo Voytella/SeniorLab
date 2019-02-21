@@ -604,17 +604,49 @@ The field strength was limited to 290 mT.
 \end{figure}
 
 % Experimental calculation of hall constant
+\qq The experimental Hall constant is the slope, \( b =
+\SI{0.26}{\volt\per\tesla} \), of Figure \ref{task24plot}
+multiplied by \( \frac{d}{I} \), where \( d = \SI{1e-3}{\meter} \) is the
+thickness of the sample and \( I = \SI{30}{\milli\ampere} \) is the applied
+current. 
+
+\begin{align*}
+  R_{\text{H}} &= b \frac{d}{I} \\
+  R_{\text{H}} &= (0.65) \frac{(\num{1e-3})}{(\num{30e-3})} \\
+  R_{\text{H}} &= \num{0.00866}\si{\cubic\meter\per\ampere\per\second} \\
+\end{align*}
 
 % Error in experimental hall constant
+\qq Since the only variable, the slope \( b \), is being multiplied by the constant
+\( \frac{d}{I} = \num{0.0333} \), the error in the experimental hall constant is
+merely the error in the slope, \( \delta b = \SI{3.5e-3}{\volt\per\tesla} \),
+multiplied by the constant.
+
+\begin{align*}
+  \delta R_{\text{H}} &= \delta b \frac{d}{I} \\
+  \delta R_{\text{H}} &= (\num{3.5e-3}) (\num{0.0333}) \\
+  \delta R_{\text{H}} &= \SI{11.66e-5}{\cubic\meter\per\ampere\per\second} \\
+\end{align*}
 
 % Discrepancy compared to theory
+\qq The theoretical value of the Hall constant is
+\SI{4.8e-3}{\cubic\meter\per\ampere\per\second}. Therefore, the discrepancy
+between our experimental value and this theoretical value is
+
+\begin{align*}
+  \Delta_{R_{\text{H}}} &= | R_{\text{H}_{\text{theo}}} - R_{\text{H}_{\text{exp}}} | \\
+  \Delta_{R_{\text{H}}} &= | (\num{4.8e-3}) - (\num{8.66e-3}) | \\
+  \Delta_{R_{\text{H}}} &= \SI{3.86e-3}{\cubic\meter\per\ampere\per\second} \\
+\end{align*}
+
 
 % Experimental calculation of carrier concentration
 \qq The charge carrier concentration is calculated from the elementary
 charge and experimental Hall constant.
 \begin{align*}
 n_{exp} &= \frac{1}{e \times R_{H_{exp}}} \\
-	&= CALCULATION 
+	&= \frac{1}{(1.602 \times 10^{-19} As) \times (8.66 \times 10^{-3} 1/As)} \\
+	&=
 \end{align*}
 
 % Experimental error
@@ -706,8 +738,6 @@ E_g &= - \text{slope} \times 2k \\
        \Big(( 8.625 * 10^(-5)) \frac{eV}{K} \Big) \\
     &= 0.72 eV \\
 \end{align*}
-
-
 
 % Experimental error                                                                    
 The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
