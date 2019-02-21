@@ -73,7 +73,7 @@ in p-type Germanium. The linear fit has an $R^2$ value of 1.}
 From the equation defining the Hall Voltage, one can derive an expression for $V_{Hall}/I$, which represents the slope or proportionality constant $\alpha$. The expression is used to obtain a value for $\alpha_{theo}$ below, where $B$ is the applied magnetic field, $n$ is the density of charge carriers, $e$ is the elementary charge, and $t$ is the sample thickness.
 \begin{align*}
 \alpha_{theo} &= \frac{B}{net} \\
-			  &= CALCULATION \\
+			  &= 0.6 \\
 \end{align*}
 
 \subsubsection{Conclusion}
@@ -292,7 +292,7 @@ in p-type Germanium. The linear fit has an $R^2$ value of 1.}
 Once again, a value for $\alpha_{theo}$ is determined from the slope of the plot in figure \ref{task31plot}, where $B$ is the applied magnetic field, $n$ is the density of charge carriers, $e$ is the elementary charge, and $t$ is the sample thickness.
 \begin{align*}
 \alpha_{theo} &= \frac{B}{net} \\
-			  &= CALCULATION \\
+			  &= 0.6 \\
 \end{align*}
 
 \subsubsection{Conclusion}
@@ -363,10 +363,10 @@ The intrinsic conductivity is again approximated as the inverse voltage, and the
 % Compute Eg experimentally
 Again, an experimental value for the band gap energy is computed.
 \begin{align*}
-E_g &= - \text{slope} \times 2k \\
-    &= - (SLOPEVAL K) \times 2 
-       \Big( NUM \frac{eV}{K} \Big) \\
-    &= NUM eV \\
+E_g &= - \text{SLOPE} \times 2k \\
+    &= - (-3252) \times 2 
+       \Big( (8.63 *10^(-5) \frac{eV}{K} \Big) \\
+    &= 0.56 eV \\
 \end{align*}
 
 % Experimental error
@@ -465,8 +465,40 @@ The difference in experimental and theoretical Hall constant is calculated as fo
 
 \subsection{Determining Band Gap in Pure Ge}
 
+\qq For semiconductors the conductivity is a function of
+temperature. In this experiment, the current is held constant at 5 mA
+and the induced magnetic field willl remain off. The sample voltage
+was measured as a function of the temperature of the sample. The
+conductivity can be approximated as the inverse voltage. The
+conduc\ \ tivity is related to the inverse temperature by the relation
+$\sigma = \sigma_0 e^{-E_g/2kT}$.This will allow one to create a graph
+of the conductivity as a function of the inverse
+temperature. Furthermore, plotting the natural logarithmic of the
+conductivity versus the inverse temperature will result in a linear
+plot. Using the slope of this plot the energy band gap is then
+determined.
+
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
+\qq To calculate the energy band gap the following equation can be
+used, please note that 'k' represents the Boltzmann constant.
+
+% Compute Eg experimentally                              
+\begin{align*}
+E_g &= - \text{slope} \times 2k \\
+    &= - (-4187) \times 2
+       \Big(( 8.625 * 10^(-5)) \frac{eV}{K} \Big) \\
+    &= 0.72 eV \\
+\end{align*}
+
+
+
+% Experimental error                                                                    
+The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
+\begin{align*}
+\delta_{Eg_{exp}} &= \text{PROP ERROR IN SLOPE/2k} \\
+\end{align*}
+
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
