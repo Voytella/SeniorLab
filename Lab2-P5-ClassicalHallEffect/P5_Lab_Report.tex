@@ -375,8 +375,6 @@ The discrepancy between these two values is found with
 \end{align*}
 
 
-% SOURCES OF ERROR IN EXPERIMENT
-
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 \qq The experimental hall constant
@@ -403,9 +401,31 @@ this was done to prevent the overheating of the sample.
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
-\qq The graph demonstrates a decrease in the Hall voltage as the
-temperature increases due to an increase in the number of charge
-carries which causes the drift velocity of the charge to decrease.
+\qq Figure \ref{task25plot} showcases the Hall voltage's characteristic reaction
+to changing temperature. At lower temperatures, the Hall voltage is relatively
+stable; the slope of the graph is low. However, as the temperature begins to
+increase, the voltage drops dramatically before tapering off near zero. This
+incredible shift in voltage represents the semiconductor's shift from exhibiting
+intrinsic conductivity to extrinsic conductivity. 
+
+\qq The voltage is relatively constant at lower temperatures because, within
+this low range, the semiconductor exhibits intrinsic conductivity; the hole and
+electron concentrations are approximately the same. Because the concentrations
+are similar, there are fewer free charge carriers naturally being elevated to
+the conduction band. This implies that there is a great number of free charge
+carriers residing just below the conduction band. When a magnetic field is
+applied to the semiconductor those free charge carriers are elevated to the
+conduction band and can generate a potential difference; this effect is the Hall
+voltage.
+
+\qq At higher temperatures, the semiconductor exhibits greater extrinsic
+behavior; a greater number of charge carriers are being thermally excited into
+the conduction band. A greater number of charge carriers in the conduction band
+implies a lack of charge carriers below the conduction band. When a magnetic
+field is applied to an extrinsic semiconductor, far fewer additional charge
+carriers are available to be elevated to the conduction band, thus hindering the
+field's ability to induce a potential difference; the resultant Hall voltage is
+less than an intrinsic semiconductor.
 
 % Calculated data 
 \begin{figure}[H]
@@ -418,19 +438,12 @@ carries which causes the drift velocity of the charge to decrease.
 
 % Comment on the nature of the graph and different regions
 % Discuss shape expected by theory
-\qq The shape of the graph can be described by three differing
-regions. The first relatively flat area in the region of the lower
-temperatures depicts an extrinsic conduction. The middle section of
-the graph that is described by the slope shows the reduction in the
-drift velocity that is associated with the increase of charge carriers
-with an increase of temperature. The third area, which is once again
-relatively flat, described by the higher temperatures depicts the
-intrinsic conduction. While the graph as a whole shows the transition
-from extrinsic conduction to intrinsic conduction.
-
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+\qq This task was a success! The plot in Figure \ref{task25plot} clearly shows
+the Germanium's shift from acting as an intrinsic conductor at lower
+temperatures to acting as an extrinsic conductor at higher temperatures.
 
 \section{Hall Effect in N-Germanium}
 
@@ -611,16 +624,17 @@ The field strength was limited to 290 mT.
 \end{figure}
 
 % Experimental calculation of hall constant
-\qq The experimental Hall constant is the slope, \( b =
-\SI{0.26}{\volt\per\tesla} \), of Figure \ref{task24plot}
+\qq The experimental Hall constant is given by the slope, \( b =
+\SI{0.26}{\volt\per\tesla} \), of Figure \ref{task34plot}
 multiplied by \( \frac{d}{I} \), where \( d = \SI{1e-3}{\meter} \) is the
 thickness of the sample and \( I = \SI{30}{\milli\ampere} \) is the applied
-current. 
+current. The calculation is carried 
+out below.
 
 \begin{align*}
   R_{\text{H}} &= b \frac{d}{I} \\
   R_{\text{H}} &= (0.65) \frac{(\num{1e-3})}{(\num{30e-3})} \\
-  R_{\text{H}} &= \num{0.00866}\si{\cubic\meter\per\ampere\per\second} \\
+  R_{\text{H}} &= \num{0.022}\si{\cubic\meter\per\ampere\per\second} \\
 \end{align*}
 
 % Error in experimental hall constant
