@@ -311,7 +311,7 @@ current.
 % Error in experimental hall constant
 \qq Since the only variable, the slope \( b \), is begin multiplied by the constant
 \( \frac{d}{I} = \num{0.0333} \), the error in the experimental hall constant is
-merely the error in the slope, \( \delta b = \SI{1.14e-3}{\volt\per\tesls} \),
+merely the error in the slope, \( \delta b = \SI{1.14e-3}{\volt\per\tesla} \),
 multiplied by the constant.
 
 \begin{align*}
@@ -326,9 +326,9 @@ multiplied by the constant.
 between our experimental value and this theoretical value is
 
 \begin{align*}
-  \Delta &= | R_{\text{H_{theo}}} - R_{\text{H_{exp}}} | \\
-  \Delta &= | (\num{4.17e-3}) - (\num{8.33e-3}) | \\
-  \Delta &= \SI{4.16e-3}{\cubic\meter\per\ampere\per\second} \\
+  \Delta_{R_{\text{H}}} &= | R_{\text{H}_{\text{theo}}} - R_{\text{H}_{\text{exp}}} | \\
+  \Delta_{R_{\text{H}}} &= | (\num{4.17e-3}) - (\num{8.33e-3}) | \\
+  \Delta_{R_{\text{H}}} &= \SI{4.16e-3}{\cubic\meter\per\ampere\per\second} \\
 \end{align*}
 
 % Experimental calculation of carrier concentration
@@ -336,10 +336,44 @@ between our experimental value and this theoretical value is
 \frac{1}{\si{\elementarycharge} R_{\text{H}}} \), where \(
 \si{\elementarycharge} = \SI{1.60e-19}{\coulomb} \) is the elementary charge and
 \( R_{\text{H}} \) is either the theoretical or experimental value of the Hall constant.
+The experimental value of the carrier concentration is determined by using the
+experimental for the Hall constant.
+
+\begin{align*}
+  p_{\text{exp}} &= \frac{1}{\si{\elementarycharge} R_{\text{H}_{\text{exp}}}}
+  \\
+  p_{\text{exp}} &= \frac{1}{(\SI{1.60e-19}{\coulomb})
+      (\SI{8.33e-3}{\cubic\meter\per\ampere\per\second})} \\
+  p_{\text{exp}} &= \SI{7.50e20}{\per\cubic\meter} \\
+\end{align*}
+
+The error in the experimental value of the carrier concentration is determined
+with \( \delta p_{\text{exp}} = | p_{\text{exp}} | \frac{\delta
+  R_{\text{H}_{\text{exp}}}}{R_{\text{H}_{\text{exp}}}} \)
 
 % Theoretical carrier concentration
+\qq The theoretical carrier concentration, \( p_{\text{theo}} \), is determined in a
+similar manner; the theoretical value of the Hall constant is used rather than
+the experimental one.
+
+\begin{align*}
+  p_{\text{theo}} &= \frac{1}{\si{\elementarycharge} R_{\text{H}_{\text{theo}}}}
+  \\
+  p_{\text{theo}} &= \frac{1}{(\SI{1.60e-19}{\coulomb})
+                    (\SI{4.17e-3}{\cubic\meter\per\ampere\per\second})} \\
+  p_{\text{theo}} &= \num{1.50e21} \si{\per\cubic\meter} \\
+\end{align*}
 
 % Discrepancy
+The discrepancy between these two values is found with
+
+\begin{align*}
+  \Delta_p &= | p_{\text{exp}} - p_{\text{theo}} | \\
+  \Delta_p &= | (\SI{7.50e20}{\per\cubic\meter}) - (\num{1.50e21}
+             \si{\per\cubic\meter}) | \\
+  \Delta_p &= \SI{-7.5e20}{\per\cubic\meter} \\
+\end{align*}
+
 
 % SOURCES OF ERROR IN EXPERIMENT
 
