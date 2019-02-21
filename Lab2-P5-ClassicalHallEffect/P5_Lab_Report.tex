@@ -231,7 +231,7 @@ compute the band gap energy as follows.
 % Compute Eg experimentally
 \begin{align*}
 E_g &= - \text{slope} \times 2k \\
-    &= - (-2846 K) \times 2 
+    &= - (-2846 \; K) \times 2 
        \Big( 8.63 \times 10^{-5} \frac{eV}{K} \Big) \\
     &= 0.49 eV \\
 \end{align*}
@@ -239,8 +239,7 @@ E_g &= - \text{slope} \times 2k \\
 % Experimental error
 The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
 \begin{align*}
-\delta_{Eg_{exp}} &= \frac{\text{PROP ERROR IN SLOPE}}{2k} \\
-		
+\delta_{Eg_{exp}} &= \frac{\text{ERRORINSLOPE}}{2k} \\		
 \end{align*}
 
 % Difference and discrepancy
@@ -688,7 +687,22 @@ R_{H_{exp}} &= \big( \frac{\mu_H}{B} \big) \, \frac{d}{I} \\
 % Finding experimental aerror
 The uncertainty in the experimental Hall constant is propagated as follows.
 \begin{align*}
-\delta R_{H_{exp}} &= \text{PROPAGATED ERROR IN bd/I} \\
+\delta R_{H_{exp}} &= | R_{H_{exp}} | 
+                      \sqrt{
+                      	\Big( \frac{\delta b}{b} \Big) ^2
+                      	+
+                      	\Big( \frac{\delta d}{d} \Big) ^2
+                      	+
+                      	\Big( \frac{\delta I}{I} \Big) ^2
+                      } \\
+                       &=
+                   	 \sqrt{
+                      	\Big( \frac{SLOPERROR}{4.11 \times 10^{-13}} \Big) ^2
+                      	+
+                      	\Big( \frac{0}{2.5 \times 10^{-5}} \Big) ^2
+                      	+
+                      	\Big( \frac{0.1}{13.5} \Big) ^2
+                      } 
 \end{align*}
 
 % Getting theoretical hall constant and error
