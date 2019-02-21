@@ -1,0 +1,40 @@
+\documentclass{standalone}
+
+\input{../../../plotPream}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title=nGe Task 3 Conductivity,
+    ylabel=\( \ln (\sigma) \),
+    xlabel=Inverse Temperature (\si{\per\kelvin}),
+    width=15cm,
+    x tick label style={rotate=0},
+    y tick label style={rotate=0}
+    ]
+    \addplot table[
+    mark=none,
+    x=X,
+    y={create col/linear regression={y=Y}}
+    ] {lnInvVoltVsInvTemp.tsv};
+    \addlegendentry{%
+      \( \pgfmathprintnumber{\pgfplotstableregressiona} I
+      \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
+      \sigma_{\text{fit}} = 138.0 \)}%
+    \addplot+[only marks, 
+    error bars/.cd, 
+    x dir=both,
+    x explicit,
+    y dir=both,
+    y explicit
+    ] table[
+    x=X, 
+    y=Y, 
+    x error expr=\thisrow{Xerr}, 
+    y error expr=\thisrow{Yerr}
+    ] {lnInvVoltVsInvTemp.tsv};
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

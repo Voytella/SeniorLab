@@ -39,6 +39,12 @@ inverse(x) = 1 / x
 # natural log of inverse of data point
 lnInverse(x) = log(1 / x)
 
+# \( r_0 \) for a calculated resistance
+r0 = 4.67 
+
+#calculated resistance
+calcRes(rMea) = (rMea - r0) / r0
+
 # -----------END DATA PROCESSING FUNCTIONS-----------
 
 # ----------BEGIN UNCERTAINTIES----------
@@ -57,6 +63,6 @@ values(func) = map(y -> Measurements.value(y),
 # -----------END UNCERTAINTIES-----------
 
 # print the uncertainties
-for pt in uncertainties(lnInverse)
+for pt in uncertainties(inverse)
     @printf("%.4e\n", pt)
 end
