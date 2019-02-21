@@ -104,13 +104,13 @@ U_H = \alpha * I
 \end{align*}
 The data was plotted in figure \ref{task21plot}. Through the use of
 linear regression, the proportionality constant was determined to be
-$0.943 \pm ERROR$ V/A.
+$0.943 \pm \num{5.54e-3}$ V/A.
 
 % Experimental data 
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{PGePlots/Task1/pGeTask1.pdf}
 \captionof{figure}{Hall voltage as a function of sample current 
 in p-type Germanium. The linear fit has an $R^2$ value of 1.}
 \label{task21plot}
@@ -132,8 +132,10 @@ charge, and $t$ is the sample thickness.
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 The experimental constant of proportionality $\alpha = 0.943 $ V/A is
-within NUMBER $\sigma$ of the theoretical value $\alpha_{theo} =
-COPYFROMABOVE$ V/A.
+within 54 $\sigma$ of the theoretical value $\alpha_{theo} =
+0.6$ V/A. This discrepancy in the face of such a well fitting line is a sign of
+systematic rather than random error. Sources of systematic error include energy
+escaping the system or an offset in the power supply.
 
 \subsection{Task 2}
 
@@ -164,7 +166,7 @@ quantities.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{PGePlots/Task2/pGeTask2.pdf}
 \captionof{figure}{Normalized change in resistance against applied
   field strength. The determined $R^2$ value was 0.969}
 \label{task22plot}
@@ -200,7 +202,7 @@ minimum occurring around 3 $K^{-1}$.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{PGePlots/Task3/pGeTask3Tot.pdf}
 \captionof{figure}{Inverse voltage is plotted against inverse temperature.}
 \label{task23plot}
 \end{figure}
@@ -216,7 +218,7 @@ $$\sigma = \sigma_0 e^{-E_g/2kT}$$
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{PGePlots/Task3/pGeTask3Ln.pdf}
 \captionof{figure}{Natural logarithm of conductivity versus inverse temperature}
 \label{task23plotLINEAR}
 \end{figure}
@@ -224,22 +226,24 @@ $$\sigma = \sigma_0 e^{-E_g/2kT}$$
 \qq If the natural logarithm of conductivity is plotted against
 inverse temperature, as shown in figure \ref{task23plotLINEAR}, it
 will obey a linear relationship with slope equal to $-
-\frac{E_g}{2k}$. Linear regression yields a slope of $-2846 \pm
-ERRORINSLOPE$ K. Recalling that $k$ is Boltzmann's constant, we
+\frac{E_g}{2k}$. Linear regression yields a slope of $-2622 \pm
+147.5$ K. Recalling that $k$ is Boltzmann's constant, we
 compute the band gap energy as follows.
 
 % Compute Eg experimentally
 \begin{align*}
 E_g &= - \text{slope} \times 2k \\
-    &= - (-2846 \; K) \times 2 
+    &= - (-2622 \; K) \times 2 
        \Big( 8.63 \times 10^{-5} \frac{eV}{K} \Big) \\
-    &= 0.49 eV \\
+    &= 0.45 eV \\
 \end{align*}
 
 % Experimental error
 The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
 \begin{align*}
-\delta_{Eg_{exp}} &= \frac{\text{ERRORINSLOPE}}{2k} \\		
+  \delta_{Eg_{exp}} &= 2 k \sigma\\
+  \delta_{Eg_{exp}} &= 2 (\SI{8.63e-5}{\electronvolt\per\kelvin}) (\SI{148}{\kelvin}) \\
+  \delta_{Eg_{exp}} &= \SI{0.0255}{\electronvolt}
 \end{align*}
 
 % Difference and discrepancy
@@ -257,8 +261,8 @@ error.
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 \qq The experimental energy gap $E_{g_{exp}} = 0.49 eV$ is within
-SOMENUMBER $\sigma$ of the theoretical value $E_{g_{theo}} = 0.72 eV$,
-thus the values ARE / ARE NOT in agreement.
+\num{0.00182} $\sigma$ of the theoretical value $E_{g_{theo}} = 0.72 eV$,
+thus the values are in agreement.
 
 \subsection{Task 4}
 
@@ -285,19 +289,53 @@ value of 0.999.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{PGePlots/Task4/pGeTask4.pdf}
 \captionof{figure}{Hall voltage plotted as a function of applied
   magnetic field strength.}
 \label{task24plot}
 \end{figure}
 
 % Experimental calculation of hall constant
+\qq The experimental Hall constant is the slope, \( b =
+\SI{0.25}{\volt\per\tesla} \), of Figure (\ref{task24plot})
+multiplied by \( \frac{d}{I} \), where \( d = \SI{1e-3}{\meter} \) is the
+thickness of the sample and \( I = \SI{30}{\milli\ampere} \) is the applied
+current. 
+
+\begin{align*}
+  R_{\text{H}} &= b \frac{d}{I} \\
+  R_{\text{H}} &= (0.25) \frac{(\num{1e-3})}{(\num{30e-3})} \\
+  R_{\text{H}} &= \num{0.00833}\si{\cubic\meter\per\ampere\per\second} \\
+\end{align*}
 
 % Error in experimental hall constant
+\qq Since the only variable, the slope \( b \), is begin multiplied by the constant
+\( \frac{d}{I} = \num{0.0333} \), the error in the experimental hall constant is
+merely the error in the slope, \( \delta b = \SI{1.14e-3}{\volt\per\tesls} \),
+multiplied by the constant.
+
+\begin{align*}
+  \delta R_{\text{H}} &= \delta b \frac{d}{I} \\
+  \delta R_{\text{H}} &= (\num{1.14e-3}) (\num{0.0333}) \\
+  \delta R_{\text{H}} &= \SI{3.80e-5}{\cubic\meter\per\ampere\per\second} \\
+\end{align*}
 
 % Discrepancy compared to theory
+\qq The theoretical value of the Hall constant is
+\SI{4.17e-3}{\cubic\meter\per\ampere\per\second}. Therefore, the discrepancy
+between our experimental value and this theoretical value is
+
+\begin{align*}
+  \Delta &= | R_{\text{H_{theo}}} - R_{\text{H_{exp}}} | \\
+  \Delta &= | (\num{4.17e-3}) - (\num{8.33e-3}) | \\
+  \Delta &= \SI{4.16e-3}{\cubic\meter\per\ampere\per\second} \\
+\end{align*}
 
 % Experimental calculation of carrier concentration
+\qq The carrier concentration is found with \( p =
+\frac{1}{\si{\elementarycharge} R_{\text{H}}} \), where \(
+\si{\elementarycharge} = \SI{1.60e-19}{\coulomb} \) is the elementary charge and
+\( R_{\text{H}} \) is either the theoretical or experimental value of the Hall constant.
 
 % Theoretical carrier concentration
 
@@ -335,7 +373,7 @@ carries which causes the drift velocity of the charge to decrease.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{PGePlots/Task5/pGeTask5.pdf}
 \captionof{figure}{Hall voltage is plotted as a function of temperature.}
 \label{task25plot}
 \end{figure}
@@ -381,7 +419,7 @@ I$. This is shown in figure \ref{task31plot}.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{NGePlots/Task1/nGeTask1.pdf}
 \captionof{figure}{Hall voltage as a function of sample current 
 in n-type Germanium. The linear fit has an $R^2$ value of 1.}
 \label{task31plot}
@@ -424,7 +462,7 @@ magnetic field strength, as shown in figure \ref{task32plot}.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{NGePlots/Task2/nGeTask2.pdf}
 \captionof{figure}{Normalized change in resistance against applied field strength.}
 \label{task32plot}
 \end{figure}
@@ -455,7 +493,7 @@ represented by a quadratic function.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{NGePlots/Task3/nGeTask3Norm.pdf}
 \captionof{figure}{Inverse voltage is plotted against inverse
   temperature for n-type Germanium.}
 \label{task33plot}
@@ -471,7 +509,7 @@ of conductivity is computed to produce the linear relation in figure
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{NGePlots/Task3/nGeTask3Ln.pdf}
 \captionof{figure}{Natural logarithm of conductivity versus inverse
   temperature for n-type Germanium}
 \label{task33plotLINEAR}
@@ -525,7 +563,7 @@ The field strength was limited to 290 mT.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\includegraphics[width=0.7\textwidth]{NGePlots/Task4/nGeTask4.pdf}
 \captionof{figure}{Hall voltage plotted as a function of applied
   magnetic field strength for n-type Germanium.}
 \label{task34plot}
@@ -590,8 +628,18 @@ relatively flat, described by the higher temperatures depicts the
 intrinsic conduction. While the graph as a whole shows the transition
 from extrinsic conduction to intrinsic conduction.
 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.7]{NGePlots/Task5/nGeTask5.pdf}
+  \end{center}
+  \caption{The plot of Hall Voltage in millivolts versus temperature in Celsius
+    showing the three regions.}
+  \label{gph:nt5}
+\end{figure}
+
 \subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
+\qq The plot in Figure (\ref{gph:nt5}) closely resembles what is expected. It
+shows the three distinct trends in voltage as temperature increases.
 
 \newpage
 
