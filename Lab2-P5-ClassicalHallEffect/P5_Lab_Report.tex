@@ -379,8 +379,12 @@ The discrepancy between these two values is found with
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
-\qq The experimental hall constant NUM was withing NUM $\sigma$ of the
-theoretical value NUM, thus the values ARE/ARENT in agreement.
+\qq The experimental hall constant
+\SI{8.33e-3}{\cubic\meter\per\ampere\per\second} was within 109 $\sigma$ of the 
+theoretical value \SI{4.17e-3}{\cubic\meter\per\ampere\per\second}, thus the
+values aren't in agreement. Please note that this outrageous sigma does not take
+into account systematic error, such as power supply fluctuations or the ambient
+field surrounding the copper coils over which the experiment took place. 
 
 \subsection{Task 5}
 
@@ -699,6 +703,20 @@ determined.
 \qq To calculate the energy band gap the following equation can be
 used, please note that 'k' represents the Boltzmann constant.
 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.7]{PureGePlots/pureGeSamVoltVsTemp.pdf}
+  \end{center}
+  \caption{The plot of the voltage across the sample as its temperature changed.}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.7]{PureGePlots/pureGeCondVsInvTemp.pdf}
+  \end{center}
+  \caption{The plot of the conductivity versus the inverse temperature.}
+\end{figure}
+
 % Compute Eg experimentally                              
 \begin{align*}
 E_g &= - \text{slope} \times 2k \\
@@ -755,6 +773,12 @@ Sample Current, I [A] & $13.5 \pm 0.1$ \topVspace \bottomVspace \\
 \captionof{table}{Measurements and calculations used to determine the
   experimental Hall constant of pure Zinc}
 \end{center}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.7]{ZincPlot/zincPlot.pdf}
+  \end{center}
+\end{figure}
 
 % Finding experimental hall constant
 The Hall constant of Zinc is calculated as follows.

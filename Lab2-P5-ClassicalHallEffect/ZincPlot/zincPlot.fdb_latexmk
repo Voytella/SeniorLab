@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1550173863 "zincPlot.tex" "zincPlot.pdf" "zincPlot" 1550173864
-  "/dev/null" 1550173801 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1550773949 "zincPlot.tex" "zincPlot.pdf" "zincPlot" 1550773950
+  "/dev/null" 1550773946 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/opt/local/etc/texmf/texmf.cnf" 1526053094 30503 9a61e6893861ec0a56455c8e9c9c514e ""
   "/opt/local/share/texmf-texlive/fonts/tfm/public/cm/cmss10.tfm" 1467164723 1316 b636689f1933f24d1294acdf6041daaa ""
   "/opt/local/share/texmf-texlive/fonts/tfm/public/cm/cmss8.tfm" 1467164723 1296 d77f431d10d47c8ea2cc18cf45346274 ""
@@ -164,9 +164,9 @@
   "/opt/local/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty" 1438958880 325 2bcd023400636339210573e2b3ee298b ""
   "/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map" 1526053282 325361 6ec96feaf59b7aa88318abce1b15d893 ""
   "/opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt" 1526053119 723151 13059fc6e2f6e9a067c035a039dadbdb ""
-  "zincHall.dat" 1550003275 556 0f11907572c099aad7edd548e082e8b3 ""
-  "zincPlot.aux" 1550173864 8 a94a2480d3289e625eea47cd1b285758 ""
-  "zincPlot.tex" 1550173807 585 132800fdf8546edbecf97ebc27979e53 ""
+  "zincHall.dat" 1550773791 399 6a4a5202339dd1a5d0f82745180f3971 ""
+  "zincPlot.aux" 1550773950 8 a94a2480d3289e625eea47cd1b285758 ""
+  "zincPlot.tex" 1550773947 782 82ebbebb2e65e2174ad0d0d62c64f142 ""
   (generated)
   "zincPlot.log"
   "zincPlot.aux"

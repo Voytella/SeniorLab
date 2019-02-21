@@ -12,10 +12,14 @@
     xlabel=Magnetic Field (\si{\milli\tesla}),
     width=15cm
     ]
+    \addplot table[mark=none, y={create col/linear regression={y=Y}}] {zincHall.dat};
+    \addlegendentry{%
+      \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\milli\tesla}
+      \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
+      \sigma_{\text{fit}} = \num{1.49e-6} \)}%
     \addplot+[only marks, error bars/.cd,x dir=both, x explicit, y dir=both, y explicit] 
-    table[x=Bx(mT),y=Vy(mV),x error expr=\thisrow{xErr(mT)},y error expr=\thisrow{yErr(mV)}] 
+    table[x=X,y=Y,x error expr=\thisrow{xErr},y error expr=\thisrow{yErr}] 
     {zincHall.dat};
-    \addplot table[y={create col/linear regression={y=Vy(mV)}}] {zincHall.dat};
   \end{axis}
 \end{tikzpicture}
 
