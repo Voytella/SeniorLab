@@ -5,7 +5,7 @@
 \usepackage{caption}
 \renewcommand{\thetable}{\arabic{section}.\arabic{table}}
 
-\title{PHY 4210-01 Senior Lab \\Lab M-1: Magnetic Field Mapping}
+\title{PHY 4210-01 Senior Lab \\Lab P-5: Hall Effect in Semiconductors}
 
 \author{Sarah Arends \\
         Jacquelyne Miksanek \\
@@ -21,7 +21,17 @@
 %apparatus used
 %what was measured
 %Results
-\qq words words words abstract
+\qq The Hall Effect was investigated through a series of experiments
+using p-type, n-type, and pure Germanium, as well as pure
+Zinc. Experiments involved measurements and manipulation of the Hall
+voltage, sample voltage, current, magnetic field strength, and
+temperature. Temperature and current were monitored with the
+semiconductor mount, and field strength was measured using a Hall
+effect probe. Several parameters of the semiconductor materials were
+calculated, including the Hall constant and density of charge
+carriers. Because there were about 12 different experiments conducted,
+the results will not all be restated here. Instead, please refer to the
+conclusion of each respective task.
 \end{abstract}
 
 \newpage
@@ -34,97 +44,328 @@
 \section{Theory of the Experiment}
 %A short presentation of the concepts and formulas related to the experiment.
 
-<<<<<<< HEAD
+\qq When an electric current flows through a conductor inside of a
+magnetic field, that field exerts a force on the charge carriers as
+they move. This force is the Lorentz force. The Lorentz force causes
+the charge carriers to accumulate on one side of the conductor, which
+will then balance the magnetic influence from the field and produce a
+voltage that can be measured across the conductor. This describes the
+Hall effect. The Hall voltage can be measured by a Hall probe that is
+placed in the magnetic field. Please note that the Hall effect is
+different for differing charge carriers, as the polarity of the Hall
+voltage differs for negative and positive charge carriers.
+
+\subsection{Deriving the Hall Voltage Equation}
+
+\begin{align*}
+V_(Hall) = \frac{I*B}{n*e*t}
+\end{align*}
+\qq  Please note that 'I' is the current through the sample, 'B' is the
+ applied magnetic field, 'n' is the charge carrier concentration, 'e'
+ is the elementary charge, and 't' is the sample thickness.
+
+\begin{align*}
+F_B = q*v*B
+F_E = E*q = \Big(\frac{V_H}{d}\Big)*q
+F_B = F_E
+q*v*B = \Big(\frac{V_H}{d}\Big)*q
+v*B = \frac{v_H}{d}
+v_H = B*v*d
+v = \frac{I}{n*e*A}
+v_H = \frac{B*I*d}{n*e*A}
+A = t*d
+v_H = \frac{B*I*d}{n*e*t*d}
+v_H = \frac{I*B}{n*e*t}
+\end{align*}
 
 \section{Hall Effect in P-Germanium}
 
 \subsection{Task 1}
 
-\qq The Hall voltage dependence on the current was determined while
-holding the magnetic field and the temperature at a constant. Please
-note that the manual called for the constant magnetic field to be held
-at 250 mT, we kept our constant magnetic field at 144 mT in order to
-avoid reaching the maximum amperage on the coils. The corresponding
-coil current was 4 A.
+\qq The Hall voltage's dependence on the current through the sample
+was determined while holding the magnetic field and temperature
+constant. Please note that the manual called for the magnetic field to
+be held at 250 mT, but this corresponds to a current that exceeds the
+maximum allowed by the coils. The field was instead kept at 144 mT,
+which corresponds to a current of 4A.
 
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
-There is a linear relationship between the Hall Voltage and the
+
+% Discuss results
+\qq There is a linear relationship between the Hall Voltage and the sample 
 current, which is shown by the following equation, where $\alpha$ is
 the proportionality constant:
 \begin{align*}
 U_H = \alpha * I
 \end{align*}
-The obtained proportionality constant was determined to be 0.943 V/A,
-and the obtained R^2 value was 1.
-%Compare results with theory
+The data was plotted in figure \ref{task21plot}. Through the use of
+linear regression, the proportionality constant was determined to be
+$0.943 \pm ERROR$ V/A.
+
+% Experimental data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Hall voltage as a function of sample current 
+in p-type Germanium. The linear fit has an $R^2$ value of 1.}
+\label{task21plot}
+\end{figure}
+
+% Calculate theoretical proportionality constant
+\qq From the equation defining the Hall Voltage, one can derive an
+expression for $V_{Hall}/I$, which represents the slope or
+proportionality constant $\alpha$. The expression is used to obtain a
+value for $\alpha_{theo}$ below, where $B$ is the applied magnetic
+field, $n$ is the density of charge carriers, $e$ is the elementary
+charge, and $t$ is the sample thickness.
+\begin{align*}
+\alpha_{theo} &= \frac{B}{net} \\
+              &= \frac{0.144}{(1.5 * 10^(21))*(1.6 * 10^(-19))*(1.0 * 10^(-3))}
+			  &= 0.6 \\
+\end{align*}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+The experimental constant of proportionality $\alpha = 0.943 $ V/A is
+within NUMBER $\sigma$ of the theoretical value $\alpha_{theo} =
+COPYFROMABOVE$ V/A.
 
 \subsection{Task 2}
 
-\qq The sample volatge as a function of the posistive magnetic field
+\qq The sample voltage as a function of the positive magnetic field
 induction was determined. The control current was held at a constant
-30 mA. The change in resistance is to be compared to an increasing
-field strength.
+30 mA. The resistance was computed from the sample voltage, and
+expressed as a change in resistance relative to the resistance with no
+field.
 
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
-\qq The resultant graph shows a non-linear and quadratic change in the
-resistance as a function of the increasing induced magnetic field
-strength. The determined R^2 value was 0.978 representing a well-fit
-data line.
-%Compare results with theory
+\qq Instead of directly plotting the resistance against the field
+strength. A "normalized difference" was computed by dividing the total
+change in resistance by the resistance with no applied field,
+i.e. $\frac{R_m - R_0}{R_0}$, where $R_m$ represents the measured
+resistance and $R_0$ represent the resistance at $B=0$. The change in
+resistance associated with a changing magnetic field implies a change
+in the mean free path of the charge carriers (holes). The resultant
+graph in figure \ref{task22plot} shows a quadratic change in this
+expression as a function of the increasing induced magnetic field
+strength, which is the expected relationship between the given
+quantities.
+
+% Experimental data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Normalized change in resistance against applied
+  field strength. The determined $R^2$ value was 0.969}
+\label{task22plot}
+\end{figure}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+\qq The functional relationship between normalized change in resistance
+and the applied magnetic field strength was quadratic, as expected.
 
 \subsection{Task 3}
 
-\qq A constant current of 30 mA is applied and the sample voltage is
-measured as a function with its temperature. The magnetic field
-remains off for this task. The manuel states that the maximum
-temperature to be measured is 140^oC. In order to not overload the
-sample the maximum temperature we obtained was 90^oC. Note that the
-maximum temperature was reached then the sample voltage was taken as
-the temperature cooled.
+\qq A constant current of 30 mA is applied, and the sample voltage is
+measured as a function of temperature. The magnetic field remains off
+for this task. The manual states that the maximum applied temperature
+is $140^o$ C. In order to avoid damaging the sample, the temperature
+was instead limited to $110^o$ C. Note that the sample was heated to
+this maximum temperature, and then the sample voltage was taken as the
+temperature cooled.
 
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
-\qq The reciprocal of the voltage was plotted against the reciprocal
-of the temperature. The graph has a turn around point at about 3
-inverse temperature where it goes from decreasing to increasing.
-%Compare results with theory
+\qq Sample voltage and temperature were measured, with no external
+field applied. The reciprocal of the voltage was plotted against the
+reciprocal of the temperature. The data, shown in figure
+\ref{task23plot}, can be represented by a quadratic function, with a
+minimum occurring around 3 $K^{-1}$.
+
+% Experimental data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Inverse voltage is plotted against inverse temperature.}
+\label{task23plot}
+\end{figure}
+
+\qq In order to obtain meaningful information from the data in figure
+\ref{task23plot}, one can manipulate the data to uncover a linear
+relationship. The intrinsic conductivity can be approximated as the
+inverse voltage, since the temperature is constant. Conductivity is
+related to inverse temperature by the following function:
+$$\sigma = \sigma_0 e^{-E_g/2kT}$$
+
+% Calculated data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Natural logarithm of conductivity versus inverse temperature}
+\label{task23plotLINEAR}
+\end{figure}
+
+\qq If the natural logarithm of conductivity is plotted against
+inverse temperature, as shown in figure \ref{task23plotLINEAR}, it
+will obey a linear relationship with slope equal to $-
+\frac{E_g}{2k}$. Linear regression yields a slope of $-2846 \pm
+ERRORINSLOPE$ K. Recalling that $k$ is Boltzmann's constant, we
+compute the band gap energy as follows.
+
+% Compute Eg experimentally
+\begin{align*}
+E_g &= - \text{slope} \times 2k \\
+    &= - (-2846 \; K) \times 2 
+       \Big( 8.63 \times 10^{-5} \frac{eV}{K} \Big) \\
+    &= 0.49 eV \\
+\end{align*}
+
+% Experimental error
+The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
+\begin{align*}
+\delta_{Eg_{exp}} &= \frac{\text{ERRORINSLOPE}}{2k} \\		
+\end{align*}
+
+% Difference and discrepancy
+\qq The discrepancy is computed between the experimental value of
+$E_g$ and the theoretical value $E_{g_{theo}} = 0.72$ eV. The
+associated error in the discrepancy will be taken as the error in the
+experimental value, since the theoretical value has no associated
+error.
+\begin{align*}
+\delta_{E_g} &= | E_{g_{exp}} - E_{g_{theo}} | \\
+		     &= | 0.49 - 0.72 | \\
+		     &= 0.23 eV \\
+\end{align*}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+\qq The experimental energy gap $E_{g_{exp}} = 0.49 eV$ is within
+SOMENUMBER $\sigma$ of the theoretical value $E_{g_{theo}} = 0.72 eV$,
+thus the values ARE / ARE NOT in agreement.
 
+\subsection{Task 4}
+
+\qq The Hall voltage was measured as a function of the magnetic
+induction. This time the temperature is held constant at room
+temperature, and the current is held constant at 30 mA. The manual
+states that the applied magnetic field should reach 300 mT,
+however, the strength was limited to 290 mT. This was done in
+order to avoid applying excessive current and overheating the coils. 
+Note that the highest current applied to the coils was 5.98
+Amperes.
+
+\subsubsection{Data Analysis and Results}
+%Graphs, figures, and tables with captions
+%Results with error analysis
+%Calculate discrepancies from theory
+%Discuss results and uncertainties
+\qq The Hall voltage was plotted against the magnetic field strength
+with both positive and negative polarities. The resultant graph, shown
+in figure \ref{task24plot}, was given a linear fit, with an $R^2$
+value of 0.999.
+
+% Calculated data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Hall voltage plotted as a function of applied
+  magnetic field strength.}
+\label{task24plot}
+\end{figure}
+
+% Experimental calculation of hall constant
+
+% Error in experimental hall constant
+
+% Discrepancy compared to theory
+
+% Experimental calculation of carrier concentration
+
+% Theoretical carrier concentration
+
+% Discrepancy
+
+% SOURCES OF ERROR IN EXPERIMENT
+
+\subsubsection{Conclusion}
+%Brief summary, discussion of results and theory
+\qq The experimental hall constant NUM was withing NUM $\sigma$ of the
+theoretical value NUM, thus the values ARE/ARENT in agreement.
+
+\subsection{Task 5}
+
+\qq The relationship between the Hall voltage and the temperature is
+determined, this time using an induced and constant magnetic
+field. The manual calls for the magnetic field to be held constant at
+300 mT. However, in order to avoid overheating the coils, we kept the
+magnetic field constant at 145 mT. The current was kept steady at 30
+mA for the entire task. The manual also states that the temperature
+should reach $140^o$ K, however our highest temperature was $110^o$K, \
+this was done to prevent the overheating of the sample.
+
+
+\subsubsection{Data Analysis and Results}
+%Graphs, figures, and tables with captions
+%Results with error analysis
+%Calculate discrepancies from theory
+%Discuss results and uncertainties
+\qq The graph demonstrates a decrease in the Hall voltage as the
+temperature increases due to an increase in the number of charge
+carries which causes the drift velocity of the charge to decrease.
+
+% Calculated data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Hall voltage is plotted as a function of temperature.}
+\label{task25plot}
+\end{figure}
+
+% Comment on the nature of the graph and different regions
+% Discuss shape expected by theory
+\qq The shape of the graph can be described by three differing
+regions. The first relatively flat area in the region of the lower
+temperatures depicts an extrinsic conduction. The middle section of
+the graph that is described by the slope shows the reduction in the
+drift velocity that is associated with the increase of charge carriers
+with an increase of temperature. The third area, which is once again
+relatively flat, described by the higher temperatures depicts the
+intrinsic conduction. While the graph as a whole shows the transition
+from extrinsic conduction to intrinsic conduction.
+
+
+\subsubsection{Conclusion}
+%Brief summary, discussion of results and theory
 
 \section{Hall Effect in N-Germanium}
 
 \subsection{Task 1}
 
-\qq The Hall voltage dependenceon the current was determined while
-holding the magnetic field and the temperature at a constant. Please
-note that the manual called for the constant magnetic field to be held
-at 250 mT, we kept our constant magnetic field at 144 mT in order to
+\qq The dependence of the Hall voltage on the current was determined 
+by modulating current and holding the magnetic field and temperature 
+constant. Please note that the manual called for the magnetic field to 
+be held at 250 mT, but it was instead kept at 144 mT in order to 
 avoid reaching the maximum amperage on the coils. The corresponding
-coil current was 4 A.
-
-=======
-\section{Hall Effect in P-Germanium}
-
-\subsection{Task 1}
+applied coil current was 4 A.
 
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
@@ -132,23 +373,73 @@ coil current was 4 A.
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
 %Compare results with theory
+\qq The Hall voltage and sample current maintain a linear
+relationship, as seen in section 1.1, such that $U_H = \alpha *
+I$. This is shown in figure \ref{task31plot}.
+
+% Experimental data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Hall voltage as a function of sample current 
+in n-type Germanium. The linear fit has an $R^2$ value of 1.}
+\label{task31plot}
+\end{figure}
+
+% Calculate theoretical proportionality constant
+\qq Once again, a value for $\alpha_{theo}$ is determined from the
+slope of the plot in figure \ref{task31plot}, where $B$ is the applied
+magnetic field, $n$ is the density of charge carriers, $e$ is the
+elementary charge, and $t$ is the sample thickness.
+\begin{align*}
+\alpha_{theo} &= \frac{B}{net} \\
+              &= \frac{(0.144)}{(1.5 * 10^(21))*(1.6 * 10^(-19))*(1.0 * 10^(-3))} \\
+			  &= 0.6 \\
+\end{align*}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+The experimental constant of proportionality $\alpha = 1.46 $ V/A is within NUMBER $\sigma$ of the theoretical value $\alpha_{theo} = COPYFROMABOVE$ V/A.
 
 \subsection{Task 2}
 
+\qq The dependence of the sample voltage on magnetic induction was
+determined. The control current was held at a constant 30 mA. The
+resistance was computed from the sample voltage and expressed as a
+change in resistance relative to the resistance with no field.
+
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
 %Compare results with theory
+\qq Analysis was carried out in the same manner as the p-Germanium
+experiment. The change is resistance was normalized against the
+resistance with no applied field, and this was plotted against the
+magnetic field strength, as shown in figure \ref{task32plot}.
+
+% Experimental data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Normalized change in resistance against applied field strength.}
+\label{task32plot}
+\end{figure}
+
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+\qq There is a quadratic relationship between the normalized change in
+resistance and the magnetic field strength.
 
 \subsection{Task 3}
+\qq A constant current of 30 mA is applied, and the sample voltage is
+ measured as a function of temperature. The magnetic field remains off
+ for this task. Note the maximum temperature was again limited to
+ $110^o$ C.
 
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
@@ -156,18 +447,125 @@ coil current was 4 A.
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
 %Compare results with theory
+\qq The reciprocal of the voltage was plotted against the reciprocal
+of the temperature. The data, shown in figure \ref{task33plot}, is
+represented by a quadratic function.
+
+% Experimental data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Inverse voltage is plotted against inverse
+  temperature for n-type Germanium.}
+\label{task33plot}
+\end{figure}
+
+\qq The intrinsic conductivity is again approximated as the inverse
+voltage, and the conductivity is related to the inverse temperature by
+the relation $\sigma = \sigma_0 e^{-E_g/2kT}$. The natural logarithm
+of conductivity is computed to produce the linear relation in figure
+\ref{task33plotLINEAR}
+
+% Calculated data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Natural logarithm of conductivity versus inverse
+  temperature for n-type Germanium}
+\label{task33plotLINEAR}
+\end{figure}
+
+% Compute Eg experimentally
+Again, an experimental value for the band gap energy is computed.
+\begin{align*}
+E_g &= - \text{SLOPE} \times 2k \\
+    &= - (-3252) \times 2 
+       \Big( (8.63 *10^(-5) \frac{eV}{K} \Big) \\
+    &= 0.56 eV \\
+\end{align*}
+
+% Experimental error
+The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
+\begin{align*}
+\delta_{Eg_{exp}} &= \text{PROP ERROR IN SLOPE/2k} \\
+\end{align*}
+
+% Difference and discrepancy
+\qq The discrepancy is computed between the experimental and the
+theoretical value band gap energy. The associated error is taken as
+the error in the experimental value.
+\begin{align*}
+\delta_{E_g} &= | E_{g_{exp}} - E_{g_{theo}} | \\
+		     &= | NUM - NUM| \\
+		     &= NUM eV \\
+\end{align*}\\
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+\qq The experimental energy gap $E_{g_{exp}} = NUM eV$ is within
+SOMENUMBER $\sigma$ of the theoretical value $E_{g_{theo}} = NUM eV$,
+thus the values ARE / ARE NOT in agreement.
 
 \subsection{Task 4}
 
+\qq The Hall voltage was measured as a function of the magnetic
+induction, with constant temperature and current held at 30 mA. 
+The field strength was limited to 290 mT. 
+
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
 %Compare results with theory
+
+% Calculated data 
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+%\includegraphics[width=0.5\textwidth]{FILENAME.png}
+\captionof{figure}{Hall voltage plotted as a function of applied
+  magnetic field strength for n-type Germanium.}
+\label{task34plot}
+\end{figure}
+
+% Experimental calculation of hall constant
+
+% Error in experimental hall constant
+
+% Discrepancy compared to theory
+
+% Experimental calculation of carrier concentration
+\qq The charge carrier concentration is calculated from the elementary
+charge and experimental Hall constant.
+\begin{align*}
+n_{exp} &= \frac{1}{e \times R_{H_{exp}}} \\
+	&= CALCULATION 
+\end{align*}
+
+% Experimental error
+The associated error in $n_{exp}$ is calculated as follows.
+\begin{align*}
+\delta_n &= CALCULATION \\
+\end{align*}
+
+% Theoretical carrier concentration
+A similar calculation is performed with the theoretical Hall constant.
+\begin{align*}
+n_{theo} &= \frac{1}{e \times R_{H_{theo}}} \\
+	&= CALCULATION \\
+\end{align*}
+
+% Discrepancy
+The difference in experimental and theoretical Hall constant is calculated as follows.
+\begin{align*}
+\Delta &= | R_{H_{exp}} - R_{H_{theo}} | \\
+	   &= CALCULATION \\
+\end{align*}
+
+% SOURCES OF ERROR IN EXPERIMENT
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
@@ -179,76 +577,18 @@ coil current was 4 A.
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
+
 %Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\section{Hall Effect in N-Germanium}
-
-\subsection{Task 1}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\subsection{Task 2}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\subsection{Task 3}
-
->>>>>>> 15025d410f5fc1bf44744501d8951dad4336263c
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-<<<<<<< HEAD
-\subsection{Task 2}
-=======
-\subsection{Task 4}
->>>>>>> 15025d410f5fc1bf44744501d8951dad4336263c
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-<<<<<<< HEAD
-=======
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\subsection{Task 5}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
+% Discuss shape expected by theory                                                     
+\qq The shape of the graph can be described by three differing
+regions. The first relatively flat area in the region of the lower
+temperatures depicts an extrinsic conduction. The middle section of
+the graph that is described by the slope shows the reduction in the
+drift velocity that is associated with the increase of charge carriers
+with an increase of temperature. The third area, which is once again
+relatively flat, described by the higher temperatures depicts the
+intrinsic conduction. While the graph as a whole shows the transition
+from extrinsic conduction to intrinsic conduction.
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
@@ -259,8 +599,40 @@ coil current was 4 A.
 
 \subsection{Determining Band Gap in Pure Ge}
 
+\qq For semiconductors the conductivity is a function of
+temperature. In this experiment, the current is held constant at 5 mA
+and the induced magnetic field willl remain off. The sample voltage
+was measured as a function of the temperature of the sample. The
+conductivity can be approximated as the inverse voltage. The
+conduc\ \ tivity is related to the inverse temperature by the relation
+$\sigma = \sigma_0 e^{-E_g/2kT}$.This will allow one to create a graph
+of the conductivity as a function of the inverse
+temperature. Furthermore, plotting the natural logarithmic of the
+conductivity versus the inverse temperature will result in a linear
+plot. Using the slope of this plot the energy band gap is then
+determined.
+
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
+\qq To calculate the energy band gap the following equation can be
+used, please note that 'k' represents the Boltzmann constant.
+
+% Compute Eg experimentally                              
+\begin{align*}
+E_g &= - \text{slope} \times 2k \\
+    &= - (-4187) \times 2
+       \Big(( 8.625 * 10^(-5)) \frac{eV}{K} \Big) \\
+    &= 0.72 eV \\
+\end{align*}
+
+
+
+% Experimental error                                                                    
+The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
+\begin{align*}
+\delta_{Eg_{exp}} &= \text{PROP ERROR IN SLOPE/2k} \\
+\end{align*}
+
 %Results with error analysis
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
@@ -279,7 +651,13 @@ coil current was 4 A.
 %Calculate discrepancies from theory
 %Discuss results and uncertainties
 %Compare results with theory
-In order to determine the Hall constant $\text{R}_\text{H}$, one can analyze the dependence of the Hall voltage on the applied field. This was done with a constant DC current applied across the Zn sample, with an associated random error due to the limited precision of the power supply. The error in the slope is obtained through linear regression, and the thickness prescribed by the sample specifications is assumed to have no error.
+\qq In order to determine the Hall constant $\text{R}_\text{H}$, one can
+analyze the dependence of the Hall voltage on the applied field. This
+was done with a constant DC current applied across the Zinc sample, with
+an associated random error due to the limited precision of the power
+supply. The error in the slope is obtained through linear regression,
+and the thickness prescribed by the sample specifications is assumed
+to have no error.
 
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -292,87 +670,68 @@ Sample Current, I [A] & $13.5 \pm 0.1$ \topVspace \bottomVspace \\
 \hline
 \end{tabular}
 \label{table:zinc_RH}
-\captionof{table}{Measurements and calculations used to determine the experimental Hall constant of pure Zinc}
+\captionof{table}{Measurements and calculations used to determine the
+  experimental Hall constant of pure Zinc}
 \end{center}
 
+% Finding experimental hall constant
 The Hall constant of Zinc is calculated as follows.
 \begin{align*}
-R_H &= \big( \frac{\mu_H}{B} \big) \, \frac{d}{I} \\
+R_{H_{exp}} &= \big( \frac{\mu_H}{B} \big) \, \frac{d}{I} \\
     &= (b) \, \frac{d}{I} \\
     &= (4.11 \times 10^{-13}) \, \frac{2.5 \times 10^{-5}}{13.5} \\
     &= 4.11 \times 10^{-11} \; \text{Vm/TA} \\
     &\equiv 4.11 \times 10^{-13} \; \Omega \text{cm/G} \\
 \end{align*}
 
-A theoretical value for the Hall constant of Zinc, given by the third edition of the AIP handbook, is $R_H = 3.30 \times 10^{-13} \; \Omega \text{cm/G}$.
+% Finding experimental aerror
+The uncertainty in the experimental Hall constant is propagated as follows.
+\begin{align*}
+\delta R_{H_{exp}} &= | R_{H_{exp}} | 
+                      \sqrt{
+                      	\Big( \frac{\delta b}{b} \Big) ^2
+                      	+
+                      	\Big( \frac{\delta d}{d} \Big) ^2
+                      	+
+                      	\Big( \frac{\delta I}{I} \Big) ^2
+                      } \\
+                       &=
+                   	 \sqrt{
+                      	\Big( \frac{SLOPERROR}{4.11 \times 10^{-13}} \Big) ^2
+                      	+
+                      	\Big( \frac{0}{2.5 \times 10^{-5}} \Big) ^2
+                      	+
+                      	\Big( \frac{0.1}{13.5} \Big) ^2
+                      } 
+\end{align*}
 
-% Propagate error in RH experimental
+% Getting theoretical hall constant and error
+\qq A theoretical value for the Hall constant of Zinc, given by the
+third edition of the AIP handbook, is $R_H = 3.30 \times 10^{-13} \;
+\Omega \text{cm/G}$. This theoretical Hall constant has no given
+associated error, so the associated discrepancy, $\Delta$, will simply
+equal that of the experimental Hall constant. The following
+computations are thus performed.
 
-% Compare theoretical and experimental
+% Finding discrepancy
+\begin{align*}
+\Delta &= | R_{H_{exp}} - R_{H_{theo}} | \\
+	   &= | (4.11 \times 10^{-13}) - (3.30 \times 10^{-13}) | \\
+\end{align*}
 
->>>>>>> 15025d410f5fc1bf44744501d8951dad4336263c
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\subsection{Task 3}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\subsection{Task 4}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\subsection{Task 5}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
+% Finding error in discrepancy
+\begin{align*}
+\delta_{\Delta} &= \delta R_{H_{exp}} \\
+				&= \text{COPY VALUE FROM ABOVE} \\
+\end{align*}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
-
-\section{Hall Effect in Pure Germanium}
-
-\subsection{Determining Band Gap in Pure Ge}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
-%Discuss results and uncertainties
-%Compare results with theory
-
-\subsubsection{Conclusion}
-%Brief summary, discussion of results and theory
-
-\section{Hall Effect in Pure Zinc}
-
-\subsection{Determining Hall Constant in Pure Zn}
-
-\subsubsection{Data Analysis and Results}
-%Graphs, figures, and tables with captions
-%Results with error analysis
-%Calculate discrepancies from theory
+\qq It is evident that the discrepancy is within SOMENUMBER $\sigma$,
+so the experimental Hall constant $R_{H_{exp}} = 4.11 \times 10^{-13}
+\Omega \text{cm/G}$ (AGREES / DOES NOT AGREE) with the reported
+theoretical value $R_{H_{theo}} = 3.30 \times 10^{-13} \Omega
+\text{cm/G}$.
 
 \section{Appendices}
 
