@@ -13,15 +13,28 @@
     x tick label style={rotate=0},
     y tick label style={rotate=60}
     ]
-    \addplot table[
-    mark=none,
-    x=X,
-    y={create col/linear regression={y=Y}}
-    ] {calcRVsPosMagInd.tsv};
-    \addlegendentry{%
-      \( \pgfmathprintnumber{\pgfplotstableregressiona} I
-      \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
-      \sigma_{\text{fit}} = \num{3.39e-5} \)}%
+%    \addplot table[
+%    mark=none,
+%    x=X,
+%    y={create col/linear regression={y=Y}}
+%    ] {calcRVsPosMagInd.tsv};
+%    \addlegendentry{%
+%      \( \pgfmathprintnumber{\pgfplotstableregressiona} B
+%      \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
+%      \sigma_{\text{fit}} = \num{3.39e-5} \)}%
+    \addplot [no markers, blue] gnuplot [raw gnuplot] {
+      f(x) = (a * x**2) + (b * x);
+      a = 0.001; b = 0.01;
+      fit f(x) 'xVy.dat' u 1:2 via a,b;
+      plot [x=0:220] f(x);
+      set print ``task2.out'';
+      print a,b;
+    };
+    \addlegendentry{
+      \( y = \pgfmathprintnumber{9.87e-7} x^2
+      \pgfmathprintnumber[print sign]{0.000188} x ;
+        \sigma_a = \num{3.24e-7}, \sigma_b = \num{5.77e-5} \)
+    }
     \addplot+[only marks, 
     error bars/.cd, 
     x dir=both,
