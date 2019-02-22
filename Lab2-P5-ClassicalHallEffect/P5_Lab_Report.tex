@@ -50,7 +50,7 @@ they move. This force is the Lorentz force. The Lorentz force causes
 the charge carriers to accumulate on one side of the conductor, which
 will then balance the magnetic influence from the field and produce a
 voltage that can be measured across the conductor. This describes the
-Hall effect. The Hall voltage can be measured by a Hall probe that is
+Hall effect. The Hall voltage can be measured with a Hall probe that is
 placed in the magnetic field. Please note that the Hall effect is
 different for differing charge carriers, as the polarity of the Hall
 voltage differs for negative and positive charge carriers.
@@ -58,25 +58,27 @@ voltage differs for negative and positive charge carriers.
 \subsection{Deriving the Hall Voltage Equation}
 
 \begin{align*}
-V_(Hall) = \frac{I*B}{n*e*t}
+V_{Hall} = \frac{IB}{net}
 \end{align*}
-\qq  Please note that 'I' is the current through the sample, 'B' is the
- applied magnetic field, 'n' is the charge carrier concentration, 'e'
- is the elementary charge, and 't' is the sample thickness.
+\qq  In this derivation, $I$ is the current through the sample, $B$ is the
+ applied magnetic field, $n$ is the charge carrier concentration, $e$
+ is the elementary charge, and $t$ is the sample thickness.
 
 \begin{align*}
-F_B = q*v*B
-F_E = E*q = \Big(\frac{V_H}{d}\Big)*q
-F_B = F_E
-q*v*B = \Big(\frac{V_H}{d}\Big)*q
-v*B = \frac{v_H}{d}
-v_H = B*v*d
-v = \frac{I}{n*e*A}
-v_H = \frac{B*I*d}{n*e*A}
-A = t*d
-v_H = \frac{B*I*d}{n*e*t*d}
-v_H = \frac{I*B}{n*e*t}
+F_B &= qvB & \text {This gives the Lorentz force} \\
+F_E &= Eq = \Big(\frac{V_H}{d}\Big)qb\\
+F_B &= F_E & \text{We equate the two forces, for equilibrium case} \\
+qvB &= \Big(\frac{V_H}{d}\Big)q \\
+vB &= \frac{V_H}{d} \\
+V_H &= Bvd \\
+v &= \frac{I}{neA} & \text{Substitute an expression for drift velocity}\\
+V_H &= \frac{BId}{neA} \\
+A &= td & \text{Substitute an expression for the sample area} \\
+V_H &= \frac{BId}{netd} \\
+V_H &= \frac{IB}{net} & \text{We arrive at the Hall voltage equation}\\
 \end{align*}
+
+\newpage
 
 \section{Hall Effect in P-Germanium}
 
@@ -100,7 +102,7 @@ which corresponds to a current of 4A.
 current, which is shown by the following equation, where $\alpha$ is
 the proportionality constant:
 \begin{align*}
-U_H = \alpha * I
+U_H = \alpha I
 \end{align*}
 The data was plotted in figure \ref{task21plot}. Through the use of
 linear regression, the proportionality constant was determined to be
@@ -112,9 +114,11 @@ $0.943 \pm \num{5.54e-3}$ V/A.
 % uncomment the line below to add image
 \includegraphics[width=0.7\textwidth]{PGePlots/Task1/pGeTask1.pdf}
 \captionof{figure}{Hall voltage as a function of sample current 
-in p-type Germanium. The linear fit has an $R^2$ value of 1.}
+in p-type Germanium.}
 \label{task21plot}
 \end{figure}
+
+\newpage 
 
 % Calculate theoretical proportionality constant
 \qq From the equation defining the Hall Voltage, one can derive an
@@ -125,8 +129,8 @@ field, $n$ is the density of charge carriers, $e$ is the elementary
 charge, and $t$ is the sample thickness.
 \begin{align*}
 \alpha_{theo} &= \frac{B}{net} \\
-              &= \frac{0.144}{(1.5 * 10^(21))*(1.6 * 10^(-19))*(1.0 * 10^(-3))}
-			  &= 0.6 \\
+              &= \frac{0.144}{(1.5 * 10^(21))*(1.6 * 10^(-19))*(1.0 * 10^(-3))} \\
+			  &= 0.6 \Omega \\
 \end{align*}
 
 \subsubsection{Conclusion}
@@ -134,8 +138,7 @@ charge, and $t$ is the sample thickness.
 The experimental constant of proportionality $\alpha = 0.943 $ V/A is
 within 54 $\sigma$ of the theoretical value $\alpha_{theo} =
 0.6$ V/A. This discrepancy in the face of such a well fitting line is a sign of
-systematic rather than random error. Sources of systematic error include energy
-escaping the system or an offset in the power supply.
+systematic rather than random error. Sources of systematic error include energy lost due to internal resistance of the sample holder or an offset in the power supply.
 
 \subsection{Task 2}
 
@@ -175,7 +178,7 @@ quantities.
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 \qq The functional relationship between normalized change in resistance
-and the applied magnetic field strength was quadratic, as expected.
+and the applied magnetic field strength was somewhat quadratic, as expected. However, the data was not able to span a large range of magnetic field values due to safety concerns associated with a high current through the coils
 
 \subsection{Task 3}
 
@@ -222,6 +225,8 @@ $$\sigma = \sigma_0 e^{-E_g/2kT}$$
 \captionof{figure}{Natural logarithm of conductivity versus inverse temperature}
 \label{task23plotLINEAR}
 \end{figure}
+
+\newpage
 
 \qq If the natural logarithm of conductivity is plotted against
 inverse temperature, as shown in figure \ref{task23plotLINEAR}, it
@@ -320,6 +325,8 @@ multiplied by the constant.
   \delta R_{\text{H}} &= \SI{3.80e-5}{\cubic\meter\per\ampere\per\second} \\
 \end{align*}
 
+\newpage
+
 % Discrepancy compared to theory
 \qq The theoretical value of the Hall constant is
 \SI{4.17e-3}{\cubic\meter\per\ampere\per\second}. Therefore, the discrepancy
@@ -349,10 +356,9 @@ experimental for the Hall constant.
 
 The error in the experimental value of the carrier concentration is determined
 with \( \delta p_{\text{exp}} = | p_{\text{exp}} | \frac{\delta
-  R_{\text{H}_{\text{exp}}}}{R_{\text{H}_{\text{exp}}}} \)
-
+  R_{\text{H}_{\text{exp}}}}{R_{\text{H}_{\text{exp}}}} \).
 % Theoretical carrier concentration
-\qq The theoretical carrier concentration, \( p_{\text{theo}} \), is determined in a
+The theoretical carrier concentration, \( p_{\text{theo}} \), is determined in a
 similar manner; the theoretical value of the Hall constant is used rather than
 the experimental one.
 
@@ -374,7 +380,7 @@ The discrepancy between these two values is found with
   \Delta_p &= \SI{-7.5e20}{\per\cubic\meter} \\
 \end{align*}
 
-
+\newpage
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 \qq The experimental hall constant
@@ -382,7 +388,7 @@ The discrepancy between these two values is found with
 theoretical value \SI{4.17e-3}{\cubic\meter\per\ampere\per\second}, thus the
 values aren't in agreement. Please note that this outrageous sigma does not take
 into account systematic error, such as power supply fluctuations or the ambient
-field surrounding the copper coils over which the experiment took place. 
+field surrounding the copper coils over which the experiment took place. The proximity of the Hall effect probe was also limited because it had to be fixed outside the sample holder, rather than within its designated cavity.
 
 \subsection{Task 5}
 
@@ -463,7 +469,7 @@ applied coil current was 4 A.
 %Discuss results and uncertainties
 %Compare results with theory
 \qq The Hall voltage and sample current maintain a linear
-relationship, as seen in section 1.1, such that $U_H = \alpha *
+relationship, as seen in section 1.1, such that $U_H = \alpha 
 I$. This is shown in figure \ref{task31plot}.
 
 % Experimental data 
@@ -484,14 +490,15 @@ elementary charge, and $t$ is the sample thickness.
 \begin{align*}
 \alpha_{theo} &= \frac{B}{net} \\
               &= \frac{(0.144)}{(1.5 * 10^(21))*(1.6 * 10^(-19))*(1.0 * 10^(-3))} \\
-			  &= 0.6 \\
+			  &= 0.6 \Omega \\
 \end{align*}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 The experimental constant of proportionality $\alpha = 1.46 $ V/A is
-within 2 $\sigma$ of the theoretical value $\alpha_{theo} = 0.6 $ V/A.
+within 2 $\sigma$ of the theoretical value $\alpha_{theo} = 0.6 $ V/A, thus well within the acceptable range of error. Note the apparent presence of a step function was due to the limited range of the voltmeter being of a similar order of magnitude as the measurements. Thus is was difficult to obtain a smooth and continuous curve.
 
+\newpage
 \subsection{Task 2}
 
 \qq The dependence of the sample voltage on magnetic induction was
@@ -555,7 +562,7 @@ represented by a quadratic function.
 voltage, and the conductivity is related to the inverse temperature by
 the relation $\sigma = \sigma_0 e^{-E_g/2kT}$. The natural logarithm
 of conductivity is computed to produce the linear relation in figure
-\ref{task33plotLINEAR}
+\ref{task33plotLINEAR}.
 
 % Calculated data 
 \begin{figure}[H]
@@ -579,8 +586,8 @@ E_g &= - \text{SLOPE} \times 2k \\
 % Experimental error
 The associated error in $E_{g_{exp}}$ can be computed from the error in the slope.
 \begin{align*}
-\delta_{Eg_{exp}} &= {138}*{2k} \\
-                  &= {138}*{2*(8.63 *10^(-5))} \\
+\delta_{Eg_{exp}} &= {138}\times {2k} \\
+                  &= {138}\times {2 \times (8.63 \times 10^(-5))} \\
                   &= 0.024 eV \\
 \end{align*}
 
@@ -592,19 +599,20 @@ the error in the experimental value.
 \delta_{E_g} &= | E_{g_{exp}} - E_{g_{theo}} | \\
 		     &= | 0.56 - 0.50| \\
 		     &= 0.06 eV \\
-\end{align*}\\
-
+\end{align*}
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
 \qq The experimental energy gap $E_{g_{exp}} = 0.56 eV$ is within
 3 $\sigma$ of the theoretical value $E_{g_{theo}} = 0.50  eV$,
 thus the values are in agreement.
 
+%\newpage
 \subsection{Task 4}
 
 \qq The Hall voltage was measured as a function of the magnetic
 induction, with constant temperature and current held at 30 mA. 
-The field strength was limited to 290 mT. 
+The field strength was limited to 290 mT. Recall the following relationship for this task.
+$$R_H = \frac{U_H}{B} \times \frac{d}{I}$$
 
 \subsubsection{Data Analysis and Results}
 %Graphs, figures, and tables with captions
@@ -633,8 +641,8 @@ out below.
 
 \begin{align*}
   R_{\text{H}} &= b \frac{d}{I} \\
-  R_{\text{H}} &= (0.65) \frac{(\num{1e-3})}{(\num{30e-3})} \\
-  R_{\text{H}} &= \num{0.022}\si{\cubic\meter\per\ampere\per\second} \\
+  R_{\text{H}} &= (0.26) \frac{(\num{1e-3})}{(\num{30e-3})} \\
+  R_{\text{H}} &= \num{0.0087}\si{\cubic\meter\per\ampere\per\second} \\
 \end{align*}
 
 % Error in experimental hall constant
@@ -646,18 +654,18 @@ multiplied by the constant.
 \begin{align*}
   \delta R_{\text{H}} &= \delta b \frac{d}{I} \\
   \delta R_{\text{H}} &= (\num{3.5e-3}) (\num{0.0333}) \\
-  \delta R_{\text{H}} &= \SI{11.66e-5}{\cubic\meter\per\ampere\per\second} \\
+  \delta R_{\text{H}} &= 1.2 \times 10^{-4} \text{m}^3 \text{A}^{-1} \text{s}^{-1} \\
 \end{align*}
 
+\newpage
 % Discrepancy compared to theory
-\qq The theoretical value of the Hall constant is
-\SI{4.8e-3}{\cubic\meter\per\ampere\per\second}. Therefore, the discrepancy
-between our experimental value and this theoretical value is
+\qq The theoretical value of the Hall constant is $4.8 \times 10^{-3}$ m$^3$/As. Therefore, the discrepancy
+between our experimental and this theoretical value follows as shown below.
 
 \begin{align*}
   \Delta_{R_{\text{H}}} &= | R_{\text{H}_{\text{theo}}} - R_{\text{H}_{\text{exp}}} | \\
-  \Delta_{R_{\text{H}}} &= | (\num{4.8e-3}) - (\num{8.66e-3}) | \\
-  \Delta_{R_{\text{H}}} &= \SI{3.86e-3}{\cubic\meter\per\ampere\per\second} \\
+  \Delta_{R_{\text{H}}} &= | (\num{4.8e-3}) - (\num{8.7e-3}) | \\
+  \Delta_{R_{\text{H}}} &= 3.9 \times 10^{-3} m^3 /As \\
 \end{align*}
 
 
@@ -666,36 +674,40 @@ between our experimental value and this theoretical value is
 charge and experimental Hall constant.
 \begin{align*}
 n_{exp} &= \frac{1}{e \times R_{H_{exp}}} \\
-	&= \frac{1}{(1.602 \times 10^{-19} As) \times (8.66 \times 10^{-3} 1/As)} \\
-	&= 7.21 * 10^(20)
+	&= \frac{1}{(1.6 \times 10^{-19} As) \times (8.7 \times 10^{-3} A^{-1}s^{-1})} \\
+	&= 7.2 * 10^{20}
 \end{align*}
 
 % Experimental error
-The associated error in $n_{exp}$ is calculated as follows.
+The associated error in $n_{exp}$ is calculated as follows. This will also yield the value of $\sigma$, since the theoretical value used has no associated uncertainty.
 \begin{align*}
-\delta_n &= NEEEDDD \\
+\delta_n &= n_{exp} \times \frac{\delta R_{H{exp}}}{R_{H{exp}}} \\
+&= (7.2 \times 10^{20}) \times \frac{1.2 \times 10^{-4}}{8.7 \times 10^{-3}} \\
+&= 9.9 \times 10^{18} 
 \end{align*}
 
 % Theoretical carrier concentration
 A similar calculation is performed with the theoretical Hall constant.
 \begin{align*}
 n_{theo} &= \frac{1}{e \times R_{H_{theo}}} \\
-	&= \frac{1}{(1.602 * 10^(-19)) * (4.8 * 10^(-3))} \\
-         &= 1.30*10^(21)
+	&= \frac{1}{(1.602 \times 10^{-19}) * (4.8 \times 10^{-3})} \\
+         &= 1.30 \times 10^{21}
 \end{align*}
 
 % Discrepancy
 The difference in experimental and theoretical Hall constant is calculated as follows.
 \begin{align*}
-\Delta &= | n_{exp}} - n_{theo}} | \\
-       &= | 7.21* 10^(20) - 1.30*10^(21)|
-       &= 5.79 * 10^(20)
+\Delta &= | n_{exp} - n_{theo} | \\
+       &= | 7.21 \times 10^{20} - 1.30 \times 10^{21}| \\
+       &= 5.79 \times 10^{20} 
 \end{align*}
 
 % SOURCES OF ERROR IN EXPERIMENT
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
+The experimental value of $R_{\text{H}} = \num{0.0087}\si{\cubic\meter\per\ampere\per\second}$ is within 33 $\sigma$ of the theoretical value $R_{\text{H}} 4.8 \times 10^{-3}$ m$^3$/As. After using these values to calculate carrier concentration, the propagated error reached 58 $\sigma$. The tight linear fit indicates this is a consequence of not random errors but systematic errors, including but not limited to the increased  distance of the Hall probe that would not fit in the holder, and the latent field of the coils, having warmed up during previous experiments.
+
 
 \subsection{Task 5}
 
@@ -727,7 +739,7 @@ from extrinsic conduction to intrinsic conduction.
 \end{figure}
 
 \subsubsection{Conclusion}
-\qq The plot in Figure (\ref{gph:nt5}) closely resembles what is expected. It
+\qq The plot in Figure (\ref{gph:nt5}) closely resembles the expected distribution. It
 shows the three distinct trends in voltage as temperature increases.
 
 \newpage
@@ -736,15 +748,15 @@ shows the three distinct trends in voltage as temperature increases.
 
 \subsection{Determining Band Gap in Pure Ge}
 
-\qq For semiconductors the conductivity is a function of
+\qq For semiconductors, the conductivity is a function of
 temperature. In this experiment, the current is held constant at 5 mA
-and the induced magnetic field willl remain off. The sample voltage
+and the induced magnetic field will remain off. The sample voltage
 was measured as a function of the temperature of the sample. The
 conductivity can be approximated as the inverse voltage. The
-conduc\ \ tivity is related to the inverse temperature by the relation
+conductivity is related to the inverse temperature by the relation
 $\sigma = \sigma_0 e^{-E_g/2kT}$.This will allow one to create a graph
 of the conductivity as a function of the inverse
-temperature. Furthermore, plotting the natural logarithmic of the
+temperature. Furthermore, plotting the natural logarithm of the
 conductivity versus the inverse temperature will result in a linear
 plot. Using the slope of this plot the energy band gap is then
 determined.
@@ -899,20 +911,21 @@ so the experimental Hall constant $R_{H_{exp}} = 4.11 \times 10^{-13}
 theoretical value $R_{H_{theo}} = 3.30 \times 10^{-13} \Omega
 \text{cm/G}$.
 
+\newpage
 \section{Sources of Error}
-\qq Some sources of error can be found in this experiment. One such
+\qq Several sources of error can be found in this experiment. One such
 source is that the coils produce a latent magnetic field when they are
 turned off, which is a systematic error. There is also a systematic
 error due to the thermal energy loss during the tasks that are
 dependent on temperature. Some random errors occurred due to the
 equipment. One such error was the multimeter which varied our results
 when the was movement around the meter. Another such error was the
-power supply did not keep a steady AC current.
+power supply did not keep a steady AC current. The voltmeter had was limited to 1 $\mu$V, which left an uncertainty of the same order of magnitude as the measurements being taken. Thus, some data trends resembled a step function, rather than a continuous curve. Note that random sources of error can be accounted for by propagating error in a linear fit, for example. However, systematic errors were largely unaccounted for in calculations, resulting in some large $\sigma$ discrepancies.
 
-\section{Appendices}
+%\section{Appendices}
 
-\subsection{Appendix A: Data}
+%\subsection{Appendix A: Data}
 
-\subsection{Appendix B: Source Code}
+%\subsection{Appendix B: Source Code}
 
 \end{document}
