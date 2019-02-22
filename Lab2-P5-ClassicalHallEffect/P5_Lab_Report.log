@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  22 FEB 2019 08:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  22 FEB 2019 08:43
 entering extended mode
 **./P5_Lab_Report.tex
 (P5_Lab_Report.tex
@@ -1345,7 +1345,7 @@ Package pdftex.def Info: PGePlots/Task3/pGeTask3Tot.pdf  used on input line 208
 .
 (pdftex.def)             Requested size: 241.49895pt x 209.85956pt.
  [6 <./PGePlots/Task2/pGeTask2.pdf>]
-<PGePlots/Task3/pGeTask3Ln.pdf, id=203, 425.32301pt x 377.37085pt>
+<PGePlots/Task3/pGeTask3Ln.pdf, id=206, 425.32301pt x 377.37085pt>
 File: PGePlots/Task3/pGeTask3Ln.pdf Graphic file (type pdf)
 <use PGePlots/Task3/pGeTask3Ln.pdf>
 Package pdftex.def Info: PGePlots/Task3/pGeTask3Ln.pdf  used on input line 224.
@@ -1358,64 +1358,64 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 252.
 ("C:\Users\Sarah\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<PGePlots/Task4/pGeTask4.pdf, id=244, 435.7871pt x 376.73045pt>
+<PGePlots/Task4/pGeTask4.pdf, id=247, 435.7871pt x 376.73045pt>
 File: PGePlots/Task4/pGeTask4.pdf Graphic file (type pdf)
 <use PGePlots/Task4/pGeTask4.pdf>
 Package pdftex.def Info: PGePlots/Task4/pGeTask4.pdf  used on input line 297.
 (pdftex.def)             Requested size: 241.49895pt x 208.77171pt.
 
 [8] [9 <./PGePlots/Task4/pGeTask4.pdf>] [10]
-<PGePlots/Task5/pGeTask5.pdf, id=282, 426.10893pt x 376.73045pt>
+<PGePlots/Task5/pGeTask5.pdf, id=285, 426.10893pt x 376.73045pt>
 File: PGePlots/Task5/pGeTask5.pdf Graphic file (type pdf)
 <use PGePlots/Task5/pGeTask5.pdf>
 Package pdftex.def Info: PGePlots/Task5/pGeTask5.pdf  used on input line 440.
 (pdftex.def)             Requested size: 241.49895pt x 213.51991pt.
  [11]
-<NGePlots/Task1/nGeTask1.pdf, id=292, 425.32301pt x 374.7842pt>
+<NGePlots/Task1/nGeTask1.pdf, id=295, 425.32301pt x 374.7842pt>
 File: NGePlots/Task1/nGeTask1.pdf Graphic file (type pdf)
 <use NGePlots/Task1/nGeTask1.pdf>
 Package pdftex.def Info: NGePlots/Task1/nGeTask1.pdf  used on input line 479.
 (pdftex.def)             Requested size: 241.49895pt x 212.8057pt.
  [12 <./PGePlots/Task5/pGeTask5.pdf>] [13 <./NGePlots/Task1/nGeTask1.pdf>]
-<NGePlots/Task2/nGeTask2.pdf, id=340, 433.0348pt x 374.79121pt>
+<NGePlots/Task2/nGeTask2.pdf, id=343, 433.0348pt x 374.79121pt>
 File: NGePlots/Task2/nGeTask2.pdf Graphic file (type pdf)
 <use NGePlots/Task2/nGeTask2.pdf>
 Package pdftex.def Info: NGePlots/Task2/nGeTask2.pdf  used on input line 524.
 (pdftex.def)             Requested size: 241.49895pt x 209.0181pt.
-<NGePlots/Task3/nGeTask3Norm.pdf, id=342, 425.6432pt x 375.4286pt>
+<NGePlots/Task3/nGeTask3Norm.pdf, id=345, 425.6432pt x 375.4286pt>
 File: NGePlots/Task3/nGeTask3Norm.pdf Graphic file (type pdf)
 <use NGePlots/Task3/nGeTask3Norm.pdf>
 Package pdftex.def Info: NGePlots/Task3/nGeTask3Norm.pdf  used on input line 55
 5.
 (pdftex.def)             Requested size: 241.49895pt x 213.00548pt.
  [14 <./NGePlots/Task2/nGeTask2.pdf>]
-<NGePlots/Task3/nGeTask3Ln.pdf, id=377, 425.32399pt x 377.37888pt>
+<NGePlots/Task3/nGeTask3Ln.pdf, id=380, 425.32399pt x 377.37888pt>
 File: NGePlots/Task3/nGeTask3Ln.pdf Graphic file (type pdf)
 <use NGePlots/Task3/nGeTask3Ln.pdf>
 Package pdftex.def Info: NGePlots/Task3/nGeTask3Ln.pdf  used on input line 571.
 
 (pdftex.def)             Requested size: 241.49895pt x 214.27899pt.
  [15 <./NGePlots/Task3/nGeTask3Norm.pdf> <./NGePlots/Task3/nGeTask3Ln.pdf>]
-<NGePlots/Task4/nGeTask4.pdf, id=415, 425.32703pt x 374.79323pt>
+<NGePlots/Task4/nGeTask4.pdf, id=418, 425.32703pt x 374.79323pt>
 File: NGePlots/Task4/nGeTask4.pdf Graphic file (type pdf)
 <use NGePlots/Task4/nGeTask4.pdf>
 Package pdftex.def Info: NGePlots/Task4/nGeTask4.pdf  used on input line 628.
 (pdftex.def)             Requested size: 241.49895pt x 212.81082pt.
 
 [16] [17 <./NGePlots/Task4/nGeTask4.pdf>] [18]
-<NGePlots/Task5/nGeTask5.pdf, id=452, 425.319pt x 374.79022pt>
+<NGePlots/Task5/nGeTask5.pdf, id=455, 425.319pt x 374.79022pt>
 File: NGePlots/Task5/nGeTask5.pdf Graphic file (type pdf)
 <use NGePlots/Task5/nGeTask5.pdf>
 Package pdftex.def Info: NGePlots/Task5/nGeTask5.pdf  used on input line 734.
 (pdftex.def)             Requested size: 297.72125pt x 262.35136pt.
  [19 <./NGePlots/Task5/nGeTask5.pdf>]
-<PureGePlots/pureGeSamVoltVsTemp.pdf, id=475, 425.32301pt x 376.73248pt>
+<PureGePlots/pureGeSamVoltVsTemp.pdf, id=478, 425.32301pt x 376.73248pt>
 File: PureGePlots/pureGeSamVoltVsTemp.pdf Graphic file (type pdf)
 <use PureGePlots/pureGeSamVoltVsTemp.pdf>
 Package pdftex.def Info: PureGePlots/pureGeSamVoltVsTemp.pdf  used on input lin
 e 771.
 (pdftex.def)             Requested size: 297.72406pt x 263.71092pt.
-<PureGePlots/pureGeCondVsInvTemp.pdf, id=476, 434.692pt x 377.37486pt>
+<PureGePlots/pureGeCondVsInvTemp.pdf, id=479, 434.692pt x 377.37486pt>
 File: PureGePlots/pureGeCondVsInvTemp.pdf Graphic file (type pdf)
 <use PureGePlots/pureGeCondVsInvTemp.pdf>
 Package pdftex.def Info: PureGePlots/pureGeCondVsInvTemp.pdf  used on input lin
@@ -1432,7 +1432,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 844.
 See the caption package documentation for explanation.
 
-<ZincPlot/zincPlot.pdf, id=514, 425.325pt x 374.6768pt>
+<ZincPlot/zincPlot.pdf, id=517, 425.325pt x 374.6768pt>
 File: ZincPlot/zincPlot.pdf Graphic file (type pdf)
 <use ZincPlot/zincPlot.pdf>
 Package pdftex.def Info: ZincPlot/zincPlot.pdf  used on input line 849.
@@ -1473,9 +1473,9 @@ arah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 m/cmr9.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on P5_Lab_Report.pdf (24 pages, 390436 bytes).
+Output written on P5_Lab_Report.pdf (24 pages, 391429 bytes).
 PDF statistics:
- 612 PDF objects out of 1000 (max. 8388607)
+ 615 PDF objects out of 1000 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
  240 words of extra memory for PDF output out of 10000 (max. 10000000)
 
