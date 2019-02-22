@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  21 FEB 2019 04:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  22 FEB 2019 08:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -471,7 +471,7 @@ Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \NC@list=\toks32
 \extratabsurround=\skip43
 \backup@length=\skip44
-)))
+))
 (/opt/local/share/texmf-texlive/tex/latex/siunitx/siunitx.sty
 (/opt/local/share/texmf-texlive/tex/latex/l3kernel/expl3.sty
 Package: expl3 2017/05/13 L3 programming layer (loader) 
@@ -759,7 +759,48 @@ Package: l3keys2e 2017/05/13 LaTeX2e option processing using LaTeX3 keys
 Package: translator 2010/06/12 ver 1.10
 
 (/opt/local/share/texmf-texlive/tex/latex/beamer/translator/translator-language
--mappings.tex))) (./pGeTask2.aux)
+-mappings.tex))))
+(/opt/local/share/texmf-texlive/tex/latex/gnuplottex/gnuplottex.sty
+Package: gnuplottex 2016/08/21 v0.9.2 gnuplot graphs in LaTeX
+
+(/opt/local/share/texmf-texlive/tex/latex/moreverb/moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+
+(/opt/local/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks34
+\verbatim@line=\toks35
+\verbatim@in@stream=\read3
+)
+\tab@position=\count176
+\tab@size=\count177
+\listing@line=\count178
+)
+(/opt/local/share/texmf-texlive/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))
+\verbatim@out=\write4
+runsystem(touch w18-test-2019222516.tex)...executed.
+
+runsystem(rm -f w18-test-2019222516.tex)...executed.
+
+runsystem(rm -f "pGeTask2.gnuploterrors")...executed.
+
+Package gnuplottex Info: Automatically converting gnuplot files. on input line 
+110.
+\c@fignum=\count179
+)
+(./pGeTask2.aux)
 \openout1 = `pGeTask2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -777,17 +818,17 @@ LaTeX Font Info:    ... okay on input line 5.
 
 (/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count176
+\scratchcounter=\count180
 \scratchdimen=\dimen267
 \scratchbox=\box62
-\nofMPsegments=\count177
-\nofMParguments=\count178
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count179
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count183
 \MPscratchDim=\dimen268
-\MPnumerator=\count180
-\makeMPintoPDFobject=\count181
-\everyMPtoPDFconversion=\toks35
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks37
 ) (/opt/local/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -810,14 +851,7 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
 (/opt/local/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -844,13 +878,17 @@ Dictionary: translator-basic-dictionary, Language: English
 (/opt/local/share/texmf-texlive/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/05/19 v2.7g siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count182
+\c__siunitx_mathsf_int=\count186
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
-\c__siunitx_mathtt_int=\count183
-PGFPlots: reading {calcRVsPosMagInd.tsv}
+\c__siunitx_mathtt_int=\count187
+\openout3 = `pGeTask2.pgf-plot.gnuplot'.
+
+runsystem(gnuplot pGeTask2.pgf-plot.gnuplot)...executed.
+
+PGFPlots: reading {pGeTask2.pgf-plot.table}
 PGFPlots: reading {calcRVsPosMagInd.tsv}
 
 [1
@@ -858,22 +896,23 @@ PGFPlots: reading {calcRVsPosMagInd.tsv}
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./pGeTask2.aux) 
 ) 
 Here is how much of TeX's memory you used:
- 32109 strings out of 494936
- 814277 string characters out of 6180785
- 958629 words of memory out of 5000000
- 34997 multiletter control sequences out of 15000+600000
+ 32258 strings out of 494936
+ 815740 string characters out of 6180785
+ 974413 words of memory out of 5000000
+ 35125 multiletter control sequences out of 15000+600000
  5049 words of font info for 20 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,21n,103p,10359b,2374s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,21n,103p,10386b,2375s stack positions out of 5000i,500n,10000p,200000b,80000s
 </opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></op
-t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/loca
-l/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share
-/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on pGeTask2.pdf (1 page, 52708 bytes).
+t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/loca
+l/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on pGeTask2.pdf (1 page, 61228 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 35 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
