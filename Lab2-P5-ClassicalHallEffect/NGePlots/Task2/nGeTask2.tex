@@ -13,15 +13,19 @@
     x tick label style={rotate=0},
     y tick label style={rotate=0}
     ]
-%    \addplot table[
-%    mark=none,
-%    x=X,
-%    y={create col/linear regression={y=Y}}
-%    ] {calcRVsPosMagInd.tsv};
-%    \addlegendentry{%
-%      \( \pgfmathprintnumber{\pgfplotstableregressiona} I
-%      \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
-%      \sigma_{\text{fit}} = \num{2.95e-2} \)}%
+    \addplot [no markers, blue] gnuplot [raw gnuplot] {
+      f(x) = (a * x**2) + (b * x);
+      a = 20; b = 1;
+      fit f(x) 'calcRVsPosMagInd.tsv' u 1:2 via a,b;
+      plot [x=0:220] f(x);
+      set print ``task2.out'';
+      print a,b;
+    };
+    \addlegendentry{
+      \( y = \pgfmathprintnumber{-1.30e-6} x^2
+      \pgfmathprintnumber[print sign]{0.000530} x ;
+        \sigma_a = \num{1.87e-7}, \sigma_b = \num{3.33e-5} \)
+    }
     \addplot+[only marks, 
     error bars/.cd, 
     x dir=both,
