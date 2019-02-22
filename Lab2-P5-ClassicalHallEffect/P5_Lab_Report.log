@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  22 FEB 2019 08:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  22 FEB 2019 08:37
 entering extended mode
 **./P5_Lab_Report.tex
 (P5_Lab_Report.tex
@@ -1445,15 +1445,11 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 931.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 931.
 Package rerunfilecheck Info: File `P5_Lab_Report.out' has not changed.
 (rerunfilecheck)             Checksum: B6CB871E4E6261E8A2FCF222C8485CA8;1182.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  50397 strings out of 492946
  1250250 string characters out of 3126266
- 1468800 words of memory out of 3000000
+ 1468760 words of memory out of 3000000
  53580 multiletter control sequences out of 15000+200000
  549553 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1477,7 +1473,7 @@ arah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
 m/cmr9.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on P5_Lab_Report.pdf (24 pages, 390365 bytes).
+Output written on P5_Lab_Report.pdf (24 pages, 390436 bytes).
 PDF statistics:
  612 PDF objects out of 1000 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
