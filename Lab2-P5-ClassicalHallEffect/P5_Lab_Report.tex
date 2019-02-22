@@ -821,8 +821,8 @@ to have no error.
 
 \begin{center}
 \begin{tabular}{|c|c|}
-\hline Slope, $b$ $\big[ \frac{\Omega \text{cm}}{\text{G}} \big] $ &
-$4.11 \times 10^{-13} \pm ERROR$ \topVspace \bottomVspace \\ \hline
+\hline Slope, $b$ $\big[ \frac{V}{T} \big] $ &
+$2.22 \times 10^{-5} \pm 1.49 \times 10^{-6}$ \topVspace \bottomVspace \\ \hline
 Thickness, $d$ [m] & $2.5 \times 10^{-5} \pm
 0$ \topVspace \bottomVspace \\ \hline Sample Current, I [A] & $13.5
 \pm 0.1$ \topVspace \bottomVspace \\ \hline
@@ -843,7 +843,7 @@ The Hall constant of Zinc is calculated as follows.
 \begin{align*}
 R_{H_{exp}} &= \big( \frac{\mu_H}{B} \big) \, \frac{d}{I} \\
     &= (b) \, \frac{d}{I} \\
-    &= (4.11 \times 10^{-13}) \, \frac{2.5 \times 10^{-5}}{13.5} \\
+    &= (2.22 \times 10^{-5}) \, \frac{2.5 \times 10^{-5}}{13.5} \\
     &= 4.11 \times 10^{-11} \; \text{Vm/TA} \\
     &\equiv 4.11 \times 10^{-13} \; \Omega \text{cm/G} \\
 \end{align*}
@@ -859,14 +859,15 @@ The uncertainty in the experimental Hall constant is propagated as follows.
                       	+
                       	\Big( \frac{\delta I}{I} \Big) ^2
                       } \\
-                       &=
+                       &= | 4.11 \times 10^{-13} | 
                    	 \sqrt{
-                      	\Big( \frac{SLOPERROR}{4.11 \times 10^{-13}} \Big) ^2
+                      	\Big( \frac{1.49 \times 10^{-6}}{2.22 \times 10^{-5}} \Big) ^2
                       	+
                       	\Big( \frac{0}{2.5 \times 10^{-5}} \Big) ^2
                       	+
                       	\Big( \frac{0.1}{13.5} \Big) ^2
-                      } 
+                      }  \\
+                      &= 2.8 \times 10^{-14} \Omega \text{cm/G}
 \end{align*}
 
 % Getting theoretical hall constant and error
@@ -881,19 +882,20 @@ computations are thus performed.
 \begin{align*}
 \Delta &= | R_{H_{exp}} - R_{H_{theo}} | \\
 	   &= | (4.11 \times 10^{-13}) - (3.30 \times 10^{-13}) | \\
+	   &= 0.81 \times 10^{-13} \Omega \text{cm/G} \\
 \end{align*}
 
 % Finding error in discrepancy
 \begin{align*}
-\delta_{\Delta} &= \delta R_{H_{exp}} \\
-				&= \text{COPY VALUE FROM ABOVE} \\
+\sigma &= \delta R_{H_{exp}} \\
+				&= 2.8 \times 10^{-14} \Omega \text{cm/G} \\
 \end{align*}
 
 \subsubsection{Conclusion}
 %Brief summary, discussion of results and theory
-\qq It is evident that the discrepancy is within SOMENUMBER $\sigma$,
+\qq It is evident that the discrepancy is within 3 $\sigma$,
 so the experimental Hall constant $R_{H_{exp}} = 4.11 \times 10^{-13}
-\Omega \text{cm/G}$ (AGREES / DOES NOT AGREE) with the reported
+\Omega \text{cm/G}$ agrees with the reported
 theoretical value $R_{H_{theo}} = 3.30 \times 10^{-13} \Omega
 \text{cm/G}$.
 
@@ -902,8 +904,8 @@ theoretical value $R_{H_{theo}} = 3.30 \times 10^{-13} \Omega
 source is that the coils produce a latent magnetic field when they are
 turned off, which is a systematic error. There is also a systematic
 error due to the thermal energy loss during the tasks that are
-dependent on temperature. Some random errors occured due to the
-equipment. One such error was the multimeter which varried our results
+dependent on temperature. Some random errors occurred due to the
+equipment. One such error was the multimeter which varied our results
 when the was movement around the meter. Another such error was the
 power supply did not keep a steady AC current.
 
