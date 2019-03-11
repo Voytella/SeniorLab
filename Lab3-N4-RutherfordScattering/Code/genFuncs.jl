@@ -1,7 +1,20 @@
-# ----------BEGIN AUXILIARY FUNCTIONS----------
+# ----------BEGIN CONSTANTS----------
 
 # avogadro's number
 avoNum = 6.022e23
+
+# elementary charge (Coulombs)
+eleChg = 1.6021e-19
+
+# dielectric constant ( \( \frac{A s}{V m} \) )
+ε = 8.8524e-12
+
+# theoretical energy of alpha decay of Americium (eV)
+AmAlphaDecayEng = 5.486e6
+
+# -----------END CONSTANTS-----------
+
+# ----------BEGIN AUXILIARY FUNCTIONS----------
 
 # get the mean of a numeric list
 getAvg(list) =  sum(list) / length(list)
@@ -45,7 +58,7 @@ crossSecArea(scatRate, incidentRate, scatDensity, solidAngle) =
 # ----------BEGIN SPECIFIC FUNCTIONS----------
 
 # the scattering density of our piece of gold
-scatDenGold = scatDensity(19.3e6, 2e-6, 197)
+scatDenGold = scatDensity(19.3e4, 2e-6, 197)
 
 # the solid angle for our detector
 solidAngle = findSolidAngle(9.13e-6, 1.97e-2)
@@ -57,3 +70,19 @@ getCrossSecArea(angle, data, time) =
 
 # -----------END SPECIFIC FUNCTIONS-----------
 
+# ----------BEGIN THEORETICAL FUNCTIONS----------
+
+# Rutherford Scattering Formula
+scatRateTheo(scatDen, atomicNum, αEng, angle) =
+    (incidentRate * scatDen * (atomicNum ^ 2) * (eleChg ^ 4)) /
+    ( ((8 * pi * ε * αEng) ^ 2) * (sin(deg2rad(angle / 2)) ^ 4) )
+
+# theoretical cross section by throwing in the theoretical scattering rate
+crossSecAreaTheo(scatDen, atomicNum, αEng, angle) =
+    crossSecArea(scatRateTheo(scatDen, atomicNum, αEng, angle),
+                 incidentRate, scatDen, solidAngle)
+
+# -----------END THEORETICAL FUNCTIONS-----------
+
+# alpha particle for Americium-241 in Joules
+αEngAm241 = 8.789541e-13
