@@ -6,8 +6,8 @@
 
 \begin{tikzpicture}
   \begin{axis}[
-    title=Experimental Scattering Rates,
-    ylabel=Scattering Rate (\si{\per\second}),
+    title=Experimental Differential Cross Section,
+    ylabel=Differential Cross Section (\si{\square\meter}),
     xlabel=Angle (deg),
     width=15cm,
     ]
@@ -22,7 +22,7 @@
     y=Y,
     x error expr=\thisrow{xErr},
     y error expr=\thisrow{yErr}
-    ] {expScatRates.tsv};
+    ] {expCrossSec.tsv};
   \end{axis}
 \end{tikzpicture}
 

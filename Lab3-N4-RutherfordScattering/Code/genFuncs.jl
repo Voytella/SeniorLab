@@ -53,6 +53,12 @@ findSolidAngle(incidentArea, distTraveled) = incidentArea / (distTraveled ^ 2)
 crossSecArea(scatRate, incidentRate, scatDensity, solidAngle) =
     scatRate / (incidentRate * scatDensity * solidAngle)
 
+# differential cross section
+diffCrossSec(atomicNumProj, atomicNumTarget, αEng, angle) =
+    (((atomicNumProj * atomicNumTarget * (eleChg ^ 2)) / (4 * pi * ε)) ^ 2) * 
+    ((1 / (4 * αEng)) ^ 2) * 
+    ( 1 / (sin(deg2rad(angle)) ^ 4))
+
 # -----------END GENERAL FUNCTIONS-----------
 
 # ----------BEGIN SPECIFIC FUNCTIONS----------
@@ -63,10 +69,13 @@ scatDenGold = scatDensity(19.3e4, 2e-6, 197)
 # the solid angle for our detector
 solidAngle = findSolidAngle(9.13e-6, 1.97e-2)
 
-# get cross sectional area for our setup
-getCrossSecArea(angle, data, time) = 
-    crossSecArea(getScatRate(angle, data, time), 
+# get cross sectional area for our setup with Gold
+getCrossSecArea(counts, time, angle) = 
+    crossSecArea(getScatRate(angle, counts, time), 
                  incidentRate, scatDenGold, solidAngle)
+
+# differential cross section for our setup with Gold
+getDiffCrossSecGold(angle) = diffCrossSec(2, 79, αEngAm241, angle)
 
 # -----------END SPECIFIC FUNCTIONS-----------
 

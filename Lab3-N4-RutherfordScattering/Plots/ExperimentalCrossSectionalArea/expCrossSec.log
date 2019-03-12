@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 MAR 2019 21:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 MAR 2019 22:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**expScatRates.tex
-(./expScatRates.tex
+**expCrossSec.tex
+(./expCrossSec.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 3 language(s) loaded.
 (/opt/local/share/texmf-texlive/tex/latex/standalone/standalone.cls
@@ -790,18 +790,18 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write4
-runsystem(touch w18-test-20193111317.tex)...executed.
+runsystem(touch w18-test-20193111369.tex)...executed.
 
-runsystem(rm -f w18-test-20193111317.tex)...executed.
+runsystem(rm -f w18-test-20193111369.tex)...executed.
 
-runsystem(rm -f "expScatRates.gnuploterrors")...executed.
+runsystem(rm -f "expCrossSec.gnuploterrors")...executed.
 
 Package gnuplottex Info: Automatically converting gnuplot files. on input line 
 110.
 \c@fignum=\count179
 )
-(./expScatRates.aux)
-\openout1 = `expScatRates.aux'.
+(./expCrossSec.aux)
+\openout1 = `expCrossSec.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -884,28 +884,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
 \c__siunitx_mathtt_int=\count187
-PGFPlots: reading {expScatRates.tsv}
+PGFPlots: reading {expCrossSec.tsv}
 
 [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(./expScatRates.aux) ) 
+(./expCrossSec.aux) ) 
 Here is how much of TeX's memory you used:
- 32239 strings out of 494936
- 815391 string characters out of 6180785
- 957526 words of memory out of 5000000
- 35110 multiletter control sequences out of 15000+600000
+ 32238 strings out of 494936
+ 815349 string characters out of 6180785
+ 957472 words of memory out of 5000000
+ 35109 multiletter control sequences out of 15000+600000
  5049 words of font info for 20 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,15n,103p,10390b,2369s stack positions out of 5000i,500n,10000p,200000b,80000s
-</opt/local/share/texmf-texlive/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on expScatRates.pdf (1 page, 41668 bytes).
+ 71i,15n,103p,10389b,2369s stack positions out of 5000i,500n,10000p,200000b,80000s
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on expCrossSec.pdf (1 page, 48269 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 31 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
