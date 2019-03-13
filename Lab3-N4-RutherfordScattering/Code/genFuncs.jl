@@ -66,16 +66,27 @@ diffCrossSec(atomicNumProj, atomicNumTarget, αEng, angle) =
 # the scattering density of our piece of gold
 scatDenGold = scatDensity(19.3e4, 2e-6, 197)
 
+# the scattering density of our piece of aluminum
+scatDenAl = scatDensity(2.7e4, 1.5e-5, 27)
+
 # the solid angle for our detector
 solidAngle = findSolidAngle(9.13e-6, 1.97e-2)
 
 # get cross sectional area for our setup with Gold
-getCrossSecArea(counts, time, angle) = 
+getCrossSecAreaGold(counts, time, angle) = 
     crossSecArea(getScatRate(angle, counts, time), 
                  incidentRate, scatDenGold, solidAngle)
 
 # differential cross section for our setup with Gold
 getDiffCrossSecGold(angle) = diffCrossSec(2, 79, αEngAm241, angle)
+
+# get cross sectional area for our setup with Aluminum
+getCrossSecAreaAl(counts, time, angle) =
+    crossSecArea(getScatRate(angle, counts, time), 
+                 incidentRate, scatDenAl, solidAngle)
+
+# differential cross section of our setup with Aluminum
+getDiffCrossSecAl(angle) = diffCrossSec(2, 13, αEngAm241, angle)
 
 # -----------END SPECIFIC FUNCTIONS-----------
 

@@ -1,0 +1,21 @@
+\documentclass{standalone}
+
+\input{../../../plotPream}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title=Theoretical Scattering Rates (Al),
+    ylabel=Scattering Rate (\si{\per\second}),
+    xlabel=Angle (deg),
+    width=15cm,
+    ]
+    \addplot+ [only marks] table[
+    x=X,
+    y=Y,
+    ] {theoScatRatesAl.tsv};
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}
