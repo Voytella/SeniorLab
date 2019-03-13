@@ -1,22 +1,15 @@
 \BOOKMARK [1][-]{section.1}{Objective of the Experiment}{}% 1
 \BOOKMARK [1][-]{section.2}{Theory of the Experiment}{}% 2
 \BOOKMARK [1][-]{section.3}{Equipment Utilized}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{The Helmholtz coil}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{The Hall Effect Probe}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Position Controls}{section.3}% 6
-\BOOKMARK [1][-]{section.4}{Procedure}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{Measuring the External Field}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{Procedural Modifications}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.3}{Additional Sources of Error}{section.4}% 10
-\BOOKMARK [1][-]{section.5}{Data Analysis}{}% 11
-\BOOKMARK [2][-]{subsection.5.1}{Calculating Supply Voltage}{section.5}% 12
-\BOOKMARK [2][-]{subsection.5.2}{Determining the Number of Turns in a Coil}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.3}{The Resultant Plots}{section.5}% 14
-\BOOKMARK [1][-]{section.6}{Results}{}% 15
-\BOOKMARK [2][-]{subsection.6.1}{Comparing the Theoretical Plots to the Experimental Plots}{section.6}% 16
-\BOOKMARK [2][-]{subsection.6.2}{Determining the Span of the Uniform Region with Margins}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.3}{Comparing the directions of the Magnetic Field}{section.6}% 18
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 19
-\BOOKMARK [1][-]{section.8}{Appendices}{}% 20
-\BOOKMARK [2][-]{subsection.8.1}{Appendix A: Data}{section.8}% 21
-\BOOKMARK [2][-]{subsection.8.2}{Appendix B: Source Code}{section.8}% 22
+\BOOKMARK [1][-]{section.4}{Procedure}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Procedural Modifications}{section.4}% 5
+\BOOKMARK [1][-]{section.5}{Data Analysis}{}% 6
+\BOOKMARK [2][-]{subsection.5.1}{Data Analysis I: Gold}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.2}{Data Analysis II: Aluminum}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Results}{}% 9
+\BOOKMARK [2][-]{subsection.6.1}{Results I: Gold}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.2}{Results II: Aluminum}{section.6}% 11
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 12
+\BOOKMARK [1][-]{section.8}{Appendices}{}% 13
+\BOOKMARK [2][-]{subsection.8.1}{Appendix A: Data}{section.8}% 14
+\BOOKMARK [2][-]{subsection.8.2}{Appendix B: Source Code}{section.8}% 15

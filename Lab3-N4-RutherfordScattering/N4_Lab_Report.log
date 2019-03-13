@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  25 FEB 2019 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  12 MAR 2019 21:37
 entering extended mode
 **./N4_Lab_Report.tex
 (N4_Lab_Report.tex
@@ -1151,8 +1151,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
-)
-No file N4_Lab_Report.aux.
+) (N4_Lab_Report.aux)
 \openout1 = `N4_Lab_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1171,6 +1170,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
+
 ("C:\Users\Sarah\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
 File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
@@ -1304,6 +1304,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
+ (N4_Lab_Report.out) (N4_Lab_Report.out)
 \@outlinefile=\write6
 \openout6 = `N4_Lab_Report.out'.
 
@@ -1320,241 +1321,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Sarah/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(N4_Lab_Report.toc)
 \tf@toc=\write7
 \openout7 = `N4_Lab_Report.toc'.
 
  [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
 
 ("C:\Users\Sarah\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
 
-[3]
-
-LaTeX Warning: Reference `helmholtz_circuit' on page 4 undefined on input line 
-113.
-
-
-LaTeX Warning: File `circuit.png' not found on input line 119.
-
-
-! Package pdftex.def Error: File `circuit.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 ...raphics[width=0.5\textwidth]{circuit.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `helmholtz_diagram' on page 4 undefined on input line 
-139.
-
-
-LaTeX Warning: File `helmholtz_diagram.png' not found on input line 149.
-
-
-! Package pdftex.def Error: File `helmholtz_diagram.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.149 ...dth=0.5\textwidth]{helmholtz_diagram.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[4] [5] [6]
-
-LaTeX Warning: File `3DPlotTheoretical.png' not found on input line 294.
-
-
-! Package pdftex.def Error: File `3DPlotTheoretical.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.294 ...dth=0.5\textwidth]{3DPlotTheoretical.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `eq:longBiotSavart' on page 7 undefined on input line 
-299.
-
-
-LaTeX Warning: Reference `eq:longBiotSavart' on page 7 undefined on input line 
-299.
-
-[7]
-
-LaTeX Warning: File `2DPlotTheoretical.png' not found on input line 307.
-
-
-! Package pdftex.def Error: File `2DPlotTheoretical.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.307 ...dth=0.5\textwidth]{2DPlotTheoretical.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `3DPlotExperimental.png' not found on input line 317.
-
-
-! Package pdftex.def Error: File `3DPlotExperimental.png' not found: using draf
-t setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.317 ...th=0.5\textwidth]{3DPlotExperimental.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `2DPlotExperimental.png' not found on input line 327.
-
-
-! Package pdftex.def Error: File `2DPlotExperimental.png' not found: using draf
-t setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 ...th=0.5\textwidth]{2DPlotExperimental.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[8]
-
-LaTeX Warning: File `3DPlotDiff.png' not found on input line 338.
-
-
-! Package pdftex.def Error: File `3DPlotDiff.png' not found: using draft settin
-g.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.338 ...hics[width=0.5\textwidth]{3DPlotDiff.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[9] [10]
-
-LaTeX Warning: Reference `gph:diff' on page 11 undefined on input line 438.
-
-
-LaTeX Warning: Reference `Theoretical 3D plot' on page 11 undefined on input li
-ne 439.
-
-[11]
-Overfull \hbox (84.1459pt too wide) in paragraph at lines 455--478
-[][] 
- []
-
-! Undefined control sequence.
-l.488 \inputminted
-                  {julia}{BiotSavartTheoretical.jl}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.491 \inputminted
-                  {julia}{BiotSavartExperimental.jl}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.494 \inputminted
-                  {julia}{TheoreticalVsExperimental.jl}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
+[3] [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (N4_Lab_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
-
-
-Package rerunfilecheck Warning: File `N4_Lab_Report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `N4_Lab_Report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8D6B8FA3BC29B37224D77F5A91FCD9E4;1537.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
+Package rerunfilecheck Info: File `N4_Lab_Report.out' has not changed.
+(rerunfilecheck)             Checksum: 980596FAA03AC8A2D0A6CF72DD2B4571;907.
  ) 
 Here is how much of TeX's memory you used:
- 50253 strings out of 492946
- 1245798 string characters out of 3126266
- 1481322 words of memory out of 3000000
- 53495 multiletter control sequences out of 15000+200000
- 551218 words of font info for 95 fonts, out of 3000000 for 9000
+ 50216 strings out of 492946
+ 1245653 string characters out of 3126266
+ 1462485 words of memory out of 3000000
+ 53492 multiletter control sequences out of 15000+200000
+ 548540 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,18n,96p,844b,878s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 64i,6n,96p,844b,737s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Sarah/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Sarah/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Sar
-ah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi9.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Sarah/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Sarah/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/
-Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on N4_Lab_Report.pdf (13 pages, 222284 bytes).
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Sarah/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Sarah
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb>
+Output written on N4_Lab_Report.pdf (4 pages, 108244 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 21 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
