@@ -206,7 +206,7 @@ is:
                   \sin{(\theta)} d\theta \\
 \end{align*} 
 
-from Equation \ref{eqn:deltaSigma}:
+From Equation \ref{eqn:deltaSigma}:
 
 \begin{align*}
   - \frac{d\sigma}{d\Omega} (\theta) 2 \pi \sin{(\theta)} d\theta &= 2 \pi b db
@@ -293,7 +293,7 @@ cross-section:
 
 
 % Distribution of scattering function vs angle shape
-\qq 
+\qq !!!!!!!!!!!!!!!!!!!!! WORDS ABOUT THE 1/SIN4 DISTRIBUTION SHAPE
 
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and
@@ -357,7 +357,8 @@ scattered particles are detected using a photodiode. In order to determine the
 dependence of the scattering rate on the incident angle, the rotating arm was
 moved through a range of $-30$ degrees to $30$ degrees using a knob on top of
 the vacuum chamber. Here, an angle of 0 degrees represents the arm oriented
-along the same line as the photodiode.
+along the same line as the photodiode. Because the Gold foil is 
+incredibly thin, any air movement resulting from the utilization of the vacuum pump can potentially damage the foil. To mitigate this risk, the pump must be opened and closed slowly. The plane of the Gold foil is also oriented parallel to the valve's tube during this process so that the foil does not impede air flow and result in a tear of the foil.
 
 % Readout electronics
 \qq The photodiode is connected via an external BNC port to a pre-amplifier that
@@ -383,6 +384,25 @@ true vacuum throughout the course of data taking, the pump was continually
 operated throughout the experiment.  \qq
 
 \subsection{Visualization of Detection Chain}
+Before inserting the Gold foil, the performance of the readout electronics was investigated by observing the output of each module on an oscilloscope. The signal from the photodiode was observed via the output of the pre-amplifier. As shown in figure \ref{preamp_amp}, the signal seen on the pre-amplifier is a falling pulse. The pre-amplifier signal is then fed to the amplifier, where it undergoes a prescribed gain and is inverted. These two pulses are shown together in figure \ref{preamp_amp}. Here, the gain is set to 10, so the ampltiude of the amplifier pulse in 10 times that of the pre-amplifier pulse.
+
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+\includegraphics[width=0.7\textwidth]{gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png}
+\captionof{figure}{Signal pulse from the pre-amplifier and amplifier, as seen on the oscilloscope display}
+\label{preamp_amp}
+\end{figure}
+
+The amplifier signal is fed to the discriminator module. If the amplifier signal has an amplitude greater than the threshold prescribed by the discriminator, then the discriminator outputs a digital pule. Figure \ref{preamp_discrim} shows this digital discriminator pulse displayed over the pre-amplifier pulse. Every pulse output by the discriminator corresponds to a count on the counter module.
+
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+\includegraphics[width=0.75\textwidth]{ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png}
+\captionof{figure}{Signal pulse from the pre-amplifier and discriminator, as seen on the oscilloscope display}
+\label{preamp_discrim}
+\end{figure}
 
 \section{Data Analysis}
 
