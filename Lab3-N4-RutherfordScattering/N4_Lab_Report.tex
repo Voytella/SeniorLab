@@ -673,37 +673,14 @@ The difference between experimental and theoretical cross-section values has an 
 %nonuniform -> random error Other stuff
 
 \qq The Rutherford scattering chamber does not hold a perfect vacuum
-seal when the valve is fully closed, this is due to a bad seal also
-the closing valve was extremely tight and failed to close easily if at
-all. Alpha particles have a very short lifetime in air compared to a
-vacuum, when air enters the chamber the particles reach the ender of
-the lifetime quicker. This poses a problem as a vacuum chamber that
-leaks would systematically lower the rate of counts. This issue was
-combated by maintaining the vacuum inside the chamber which was
-accomplished by keeping the vacuum pump on for the duration of each
-data set. Equipment noise will systematically increase the rate
-through what is known as a false count. False counts occur when a
-signal comprised of noise is counted as an alpha particle, due to the
-fact that the equipment cannot tell the difference between the
-signals. This issue is overcome by raising the threshold on the
-dsicriminator to above the noise baseline which will help to avoid
-including any noise in the rate. On the fourth day of data taking the
-baseline for the background noise increased from the previous
-days. This occurred without the setup being altered. This was most
-likely due to a bad cable connection and the threshold was raised to
-account for the increased baseline. It is important to note that the
-signal to noise ratio was still sufficiently high enough where alpha
-particle counts were not being discriminated out of the rate. There
-was a risk that this threshold would discriminate against alpha
-particles counts, if that occurred the rate would have been
-systematically lowered as less of the true counts would appear in the
-rate. The rate of the scatterers is dependent on the density of the
-scatterers, which in turn is dependent on the thickness of the
-foil. This parameter is assumed to be constant and if an error occurs
-in the thickness of the foil then it would cause an error in the
-density of scatterers and thus an error in the rate would occur as
-well. A nonuniform foil would show the rate to be altered as a result
-of these random fluctuations.
+seal when the valve is fully closed, potentially due to a bad o-ring. The closing valve also had some issues opening and closing, so for this reason it was decided that the valve would be left open and the vacuum pump left on. Alpha particles have a much shorter lifetime in air than in a vacuum. For this reason, a poor vacuum seal that allows air to enter the chamber would result in alpha particles that decay before reaching the detector, and this would systematically lower the measured count rate. Again, this issue was
+combated by maintaining the vacuum inside the chamber. \\
+\qq Electronic noise can systematically increase the measured rate if an appropriate threshold is not set. If the threshold is too low, higher amplitude noise could be counted as "signals". The amplitude of the baseline noise was observed, and a threshold was set to remove signals below this amplitude. On the final day of data collection, the amplitude of the background noise seemed to increase from the previous
+sessions, even though no characteristics of the set-up were altered. While still unclear, it was suspected that a poor cable connection was responsible for the noise. The threshold was increased to account for this increased noise level. However, the
+signal-to-noise ratio was still sufficiently high so that, even with the increased threshold, there was little risk of true counts falling below this threshold. However, if any lower energy alpha particles fell below this increased threshold, data taken on this data would show systematically lower rates due to the decreased counts. \\
+\qq The rate of scattering is dependent on the area density of the
+scatterers (gold nuclei), which in turn is dependent on the thickness of the foil. This parameter is assumed to be constant throughout experimentation. Any fluctuation in the thickness of the foil would therefore contribute a random intrinsic error in the
+density of scatterers, and by extension in the scattering rate. 
 
 \section{Conclusion}
 %Brief summary, discussion of theory
