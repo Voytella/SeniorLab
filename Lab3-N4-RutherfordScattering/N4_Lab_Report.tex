@@ -35,7 +35,12 @@
 
 \section{Objective of the Experiment}
 %A brief statement on the main purpose of the experiment
-\qq During this experiment, the differential cross-section for a scattering process will be determined. Researchers will measure the counting rate for alpha particles scattered by a Gold or Aluminum foil as a function of the angle at which it is scattered. Using this information, one can calculate a counting rate corrected with respect to the scattering distribution. The following Rutherford scattering formula can then be validated:
+\qq During this experiment, the differential cross-section for a scattering
+process will be determined. Researchers will measure the counting rate for alpha
+particles scattered by a Gold or Aluminum foil as a function of the angle at
+which it is scattered. Using this information, one can calculate a counting rate
+corrected with respect to the scattering distribution. The following Rutherford
+scattering formula can then be validated:
 \begin{equation}
 N(\theta) = N_0 \times c_F \times d_f \times 
             \frac {Z^2 \times e^4}
@@ -49,8 +54,26 @@ N(\theta) = N_0 \times c_F \times d_f \times
 %A short presentation of the concepts and formulas related to the experiment. 
 
 % How Rutherford scattering works (Coulomb repulsion etc)
-\qq Rutherford scattering describes the process in which charged particles article undergo elastic scattering due to a Coulomb force interaction. When the positively charged
-alpha particles approach the positively charged gold nuclei, the like charges cause a repulsive force that deflects the alpha particles at varying angles. This deflection/scattering angle depends on the distance of closest approach between the alpha particles and nuclei, since the Coulomb force is a function of distance. Because the gold atoms consist of mostly empty space, the majority of alpha particles are sufficiently far away from the gold nuclei that they experience minimal Coulomb repulsion and are only scattered at angles of less than one degree. However, there are still some alpha particles that approach the gold nuclei close enough to experience stronger Coulomb repulsion and scattering at greater angles. If one were to observe the number of scattered alpha particles as a function of the angle at which they are scattered, the resultant distribution would show a large rate at small angles, but the distribution would quickly drop off as the angle increases. Note, however, that this distribution does not account for particles that are back-scattered, meaning that they are close enough to the gold nuclei to be deflected backwards towards the alpha source. Accounting for these measurements would show a spike in the rate curve at an angle of 180 degrees, in what is otherwise a monotonically decreasing distribution. 
+\qq Rutherford scattering describes the process in which charged particles
+article undergo elastic scattering due to a Coulomb force interaction. When the
+positively charged alpha particles approach the positively charged gold nuclei,
+the like charges cause a repulsive force that deflects the alpha particles at
+varying angles. This deflection/scattering angle depends on the distance of
+closest approach between the alpha particles and nuclei, since the Coulomb force
+is a function of distance. Because the gold atoms consist of mostly empty space,
+the majority of alpha particles are sufficiently far away from the gold nuclei
+that they experience minimal Coulomb repulsion and are only scattered at angles
+of less than one degree. However, there are still some alpha particles that
+approach the gold nuclei close enough to experience stronger Coulomb repulsion
+and scattering at greater angles. If one were to observe the number of scattered
+alpha particles as a function of the angle at which they are scattered, the
+resultant distribution would show a large rate at small angles, but the
+distribution would quickly drop off as the angle increases. Note, however, that
+this distribution does not account for particles that are back-scattered,
+meaning that they are close enough to the gold nuclei to be deflected backwards
+towards the alpha source. Accounting for these measurements would show a spike
+in the rate curve at an angle of 180 degrees, in what is otherwise a
+monotonically decreasing distribution.
 
 % Physical meaning and derivation of differential cross section
 \qq 
@@ -119,20 +142,43 @@ through the readout system.
 % follow and do the experiment.
 
 % Production in gas chamber
-\qq Alpha particles are produced from an $^{241}$Am source mounted inside the vacuum chamber on a rotating arm. Also mounted on this arm, directly in front of the source, is a collimating slit followed by a thin gold foil. With this configuration, one is able to strike the gold foil with a uniform, collimated beam of alpha particles. The chamber must be evacuated using an external vacuum pump, since alpha particles have a very short lifetime in air.
+\qq Alpha particles are produced from an $^{241}$Am source mounted inside the
+vacuum chamber on a rotating arm. Also mounted on this arm, directly in front of
+the source, is a collimating slit followed by a thin gold foil. With this
+configuration, one is able to strike the gold foil with a uniform, collimated
+beam of alpha particles. The chamber must be evacuated using an external vacuum
+pump, since alpha particles have a very short lifetime in air.
 
 % Changing angle and measuring effect
-\qq Alpha particles are scattered by Gold nuclei at varying angles, and the scattered particles are detected using a photodiode. In order to determine the dependence of the scattering rate on the incident angle, the rotating arm was moved through a range of $-30$ degrees to $30$ degrees using a knob on top of the vacuum chamber. Here, an angle of 0 degrees represents the arm oriented along the same line as the photodiode.
+\qq Alpha particles are scattered by Gold nuclei at varying angles, and the
+scattered particles are detected using a photodiode. In order to determine the
+dependence of the scattering rate on the incident angle, the rotating arm was
+moved through a range of $-30$ degrees to $30$ degrees using a knob on top of
+the vacuum chamber. Here, an angle of 0 degrees represents the arm oriented
+along the same line as the photodiode.
 
 % Readout electronics
-\qq The photodiode is connected via an external BNC port to a pre-amplifier that shapes the measurement signal. This is then connected to an amplifier, which amplifies the signal in accordance with a prescribed gain. This amplified signal is fed to a discriminator, which sets a minimum/threshold voltage in order to differentiate meaningful signals from electronic noise. Signals that meet this threshold are output in the form of a digital pulse. These pulses are fed to a counter module, which reads out the number of pulses over a given time interval.
+\qq The photodiode is connected via an external BNC port to a pre-amplifier that
+shapes the measurement signal. This is then connected to an amplifier, which
+amplifies the signal in accordance with a prescribed gain. This amplified signal
+is fed to a discriminator, which sets a minimum/threshold voltage in order to
+differentiate meaningful signals from electronic noise. Signals that meet this
+threshold are output in the form of a digital pulse. These pulses are fed to a
+counter module, which reads out the number of pulses over a given time interval.
 
 % Acquisition time
-The count rate decreases dramatically as the scattering angle increases. For this reason, the acquisition time was increased for larger angles in order to obtain sufficient statistics. The experimental scattering rate can be used to calculate the differential cross-section.
+The count rate decreases dramatically as the scattering angle increases. For
+this reason, the acquisition time was increased for larger angles in order to
+obtain sufficient statistics. The experimental scattering rate can be used to
+calculate the differential cross-section.
 
 \subsection{Procedural Modifications}
-\qq The manual dictates that the chamber be evacuated using the vacuum pump before conducting trials. However, it was determined that the seal of the vacuum chamber was not sufficient, and the detected rate of alpha particles would dramatically decrease after a few minutes. Therefore, in order to maintain a true vacuum throughout the course of data taking, the pump was continually operated throughout the experiment.
-\qq 
+\qq The manual dictates that the chamber be evacuated using the vacuum pump
+before conducting trials. However, it was determined that the seal of the vacuum
+chamber was not sufficient, and the detected rate of alpha particles would
+dramatically decrease after a few minutes. Therefore, in order to maintain a
+true vacuum throughout the course of data taking, the pump was continually
+operated throughout the experiment.  \qq
 
 \section{Data Analysis}
 
