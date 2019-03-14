@@ -293,7 +293,11 @@ cross-section:
 
 
 % Distribution of scattering function vs angle shape
-\qq 
+\qq As you can see from equation \ref{eqn:diffCrossSec}, the angluar
+dependence of the function is $\frac{1}{\sin^4 \left( \frac{\theta}{2}
+  \right)}$. This implies that the curve of the function drops off
+rather quickly at larger angles due to this term, therefore, the rate
+drops off quickly as well.
 
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and
@@ -332,9 +336,9 @@ through the aforementioned readout electronics. A more detailed description of t
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{figure.png}
-\captionof{figure}{Description of schematic here}
-\label{name}
+\includegraphics[width=0.5\textwidth]{diagram.png}
+\captionof{figure}{Schematic for circuit diagram }
+\label{Circuit_Diagram}
 \end{figure}
 
 \section{Procedure}
@@ -628,18 +632,58 @@ The difference between experimental and theoretical cross-section values has an 
 \qq
 
 \subsection{Source of Error}
-% Describe sources of error, what type of error they are, and how they would affect measurements (what we did about them if possible)
-%i.e. leaky vacuum would kill off alphas and systematically lower rate, but we kept pump on to mitigate this
-%i.e. if threshold was too low we would have "false counts" which would systematically increase rate. Note that our baseline noise seemed to increase on last day without changing any other factors, an d we're not sure of the source but we thinking maybe bad cable connection, but we had to reassess the baseline noise and increase threshold. BUT signal-to-noise ration was still sufficiently high that increasing threshold should not run risk of cutting out "real counts"
-% Thickness of foil could be nonuniform -> random error
-% Other stuff
+% Describe sources of error, what type of error they are, and how they
+%would affect measurements (what we did about them if possible)
+%i.e. leaky vacuum would kill off alphas and systematically lower
+%rate, but we kept pump on to mitigate this i.e. if threshold was too
+%low we would have "false counts" which would systematically increase
+%rate. Note that our baseline noise seemed to increase on last day
+%without changing any other factors, an d we're not sure of the source
+%but we thinking maybe bad cable connection, but we had to reassess
+%the baseline noise and increase threshold. BUT signal-to-noise ration
+%was still sufficiently high that increasing threshold should not run
+%risk of cutting out "real counts" Thickness of foil could be
+%nonuniform -> random error Other stuff
+
+\qq The Rutherford scattering chamber does not hold a perfect vacuum
+seal when the valve is fully closed, this is due to a bad seal also
+the closing valve was extremely tight and failed to close easily if at
+all. Alpha particles have a very short lifetime in air compared to a
+vacuum, when air enters the chamber the particles reach the ender of
+the lifetime quicker. This poses a problem as a vacuum chamber that
+leaks would systematically lower the rate of counts. This issue was
+combated by maintaining the vacuum inside the chamber which was
+accomplished by keeping the vacuum pump on for the duration of each
+data set. Equipment noise will systematically increase the rate
+through what is known as a false count. False counts occur when a
+signal comprised of noise is counted as an alpha particle, due to the
+fact that the equipment cannot tell the difference between the
+signals. This issue is overcome by raising the threshold on the
+dsicriminator to above the noise baseline which will help to avoid
+including any noise in the rate. On the fourth day of data taking the
+baseline for the background noise increased from the previous
+days. This occurred without the setup being altered. This was most
+likely due to a bad cable connection and the threshold was raised to
+account for the increased baseline. It is important to note that the
+signal to noise ratio was still sufficiently high enough where alpha
+particle counts were not being discriminated out of the rate. There
+was a risk that this threshold would discriminate against alpha
+particles counts, if that occurred the rate would have been
+systematically lowered as less of the true counts would appear in the
+rate. The rate of the scatterers is dependent on the density of the
+scatterers, which in turn is dependent on the thickness of the
+foil. This parameter is assumed to be constant and if an error occurs
+in the thickness of the foil then it would cause an error in the
+density of scatterers and thus an error in the rate would occur as
+well. A nonuniform foil would show the rate to be altered as a result
+of these random fluctuations.
 
 \section{Conclusion}
 %Brief summary, discussion of theory
 
 % Results for gold
 % Note the number of sigmas (discrepancy) and what that means statistically
-\qq 
+\qq
 
 % Results for aluminum
 % Note the number of sigmas (discrepancy) and what that means statistically
