@@ -302,20 +302,8 @@ cross-section:
 %of an optical system, etc.)
 
 % Description of set-up in prose
-\qq The readout electronics system is set-up in series beginning at
-the Rutherford scattering chamber's photodiode which is connected
-directly to the preamplifier which connects to the amplifier then the
-discriminator followed by the counter. The oscilloscope is essentially
-connected in parallel, and was moved around in the set-up to check
-signals at all points in the circuit design. The Rutherford scattering
-chamber is also connected to the vacuum pump, which is utilized to
-place the contents of the chamber under vacuum. Rutherford's chamber
-is comprised of several components. The first component is the
-americium 241 which is closely followed by the collimating slit and
-gold ( or aluminum ) foil, the final component being the
-photodiode. The photodiode detects the energy of the alpha particle
-and converts it into an electrical signal, which is then transmitted
-through the readout system.
+\qq A series of readout electronics are used to process the signal from a photodiode detector, including: a pre-amplifier, an amplifier, a discriminator, and a counter. An oscilloscope was used to verify the signal behavior at various points in the circuit. The scattering chamber, where the Rutherford scattering process was performed, required evacuation with a vacuum pump. A rotating arm inside the chamber contains an Americium 241 source, a collimating slit, a Gold or Aluminum foil, and the photodiode. A photodiode detects the energy of the alpha particle and returns an electrical signal, which is then transmitted
+through the aforementioned readout electronics. A more detailed description of the experimental process and implementation of this equipment can be found in the Procedure section of this report. The following list summarizes the pieces of equipment used and some relevant specifications:
 
 % List of specs
 \begin{itemize}
@@ -393,6 +381,8 @@ chamber was not sufficient, and the detected rate of alpha particles would
 dramatically decrease after a few minutes. Therefore, in order to maintain a
 true vacuum throughout the course of data taking, the pump was continually
 operated throughout the experiment.  \qq
+
+\subsection{Visualization of Detection Chain}
 
 \section{Data Analysis}
 
@@ -564,7 +554,39 @@ of the aluminum's nuclear charge was calculated using the code shown in Section
 
 % Calculate the uncertainty in the discrepancy
 % Quantify how many sigmas the discrepancy is
-\qq
+\qq The differential cross-section is calculated using equation \ref{eq:expCrossSec}, shown below.
+
+\begin{equation} \label{eq:expCrossSec}
+ \frac{d \sigma}{d \Omega} = \frac
+                                 {
+								  \frac{dN}{dt} ( \theta )
+								}
+								{
+								  \frac{dN_0}{dt} 
+								  \times n
+								  \times \Delta \Omega
+                                 }
+\end{equation}
+
+The uncertainty in this differential cross-section measurement is propagated as follows:
+\begin{equation} \label{eq:expCrossSecUncert}
+ \delta \left( \frac{d \sigma}{d \Omega} \right) 
+   = \left\lvert \frac{d \sigma}{d \Omega} \right\rvert
+   \sqrt
+   {
+        \left( \frac{\delta dN/dt}{dN/dt} \right) ^2
+        +
+        \left( \frac{\delta dN_0/dt}{dN_0/dt} \right) ^2
+        +
+        \left( \frac{\delta n}{n} \right) ^2
+        +
+        \left( \frac{\delta \Delta \Omega}{\Delta \Omega} \right) ^2
+   }
+\end{equation}
+Note that in equation \ref{eq:expCrossSecUncert}, $\delta dN/dt$ and $\delta dN_0/dt$ are uncertainties in measured rates, $n$ is a given value that can be assumed to have no uncertainty, and $\delta \Delta \Omega$ is propagated from the distance to the photodiode and the height and width of the photodiode windows as follows:
+SARAH IS WORKING HERE
+
+The difference between experimental and theoretical cross-section values has an associated uncertainty. If the theoretical value is assumed to have no uncertainty, then the uncertainty associated with the difference will be that calculated in equation \ref{eq:expCrossSecUncert}.
 
 \subsection{Results II: Aluminum}
 %Discuss results and uncertainties
