@@ -422,6 +422,8 @@ The amplifier signal is fed to the discriminator module. If the amplifier signal
 %Results with error analysis
 %Calculate discrepancies from theory
 
+\subsubsection{Scattering Rate}
+
 % Direct counting rate as a function of angle (gold)
 \qq While performing the experiment, the direct rate of scattered alpha
 particles for a particular angle over a certain period of time was determined
@@ -504,10 +506,63 @@ of this calculation can be seen in Figure \ref{tab:scatRatesGold}.
   \label{gph:theoScatRatesGold}
 \end{figure}
 
+\subsubsection{Differential Cross Section}
+
+\qq The equation for finding the theoretical value of the differential
+cross-section is Equation \ref{eqn:diffCrossSec},
+\( \frac{d\sigma}{d\Omega} (\theta) = \left( \frac{Z Z^{\prime} e^2}{4 \pi
+    \epsilon_0} \right)^2 \left( \frac{1}{4 E_{\alpha}} \right)^2
+\frac{1}{\sin^4 \left( \frac{\theta}{2} \right)} \). The theoretical differential
+cross-section of an alpha particle emitted from an Americium-241 source
+incident on a gold nucleus at \SI{15}{\degree} may be calculated in the
+following manner:
+
+\begin{align*}
+  \frac{d\sigma}{d\Omega} (\theta) &= \left( \frac{Z Z^{\prime} e^2}{4 \pi
+                                     \epsilon_0} \right)^2 \left( \frac{1}{4 E_{\alpha}} \right)^2
+                                     \frac{1}{\sin^4 \left( \frac{\theta}{2} \right)} \\
+  \frac{d\sigma}{d\Omega} (\SI{15}{\degree}) 
+                                   &= \left( \frac{(79) (2) e^2}{4 \pi \epsilon_0} \right)^2 
+                                     \left( \frac{1}{4 (\SI{8.79e-13}{\joule})} \right)^2
+                                     \frac{1}{\sin^4 \left( \frac{(\SI{15}{\degree})}{2} \right)} \\
+  \frac{d\sigma}{d\Omega} (\SI{15}{\degree}) &=
+                                               \SI{239.6}{\barn\per\steradian}
+  \\
+\end{align*}
+
+Similar calculations were performed for the other incident angles using the
+Julia function found on line 110 in Section \ref{cod:genFuncs}, and the
+results are displayed in Figure \ref{gph:theoCrossSecAu}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/TheoreticalCrossSectionalArea/theoCrossSec.pdf}
+  \end{center}
+  \caption{The theoretical values of the differential cross section of
+    alpha particles incident on a gold nucleus at several angles.}
+  \label{gph:theoCrossSecAu}
+\end{figure}
+  
+\qq The equation for finding the experimental value of the differential
+cross-section is Equation \ref{eqn:expDiffCrossSec}, \( \frac{d\sigma}{d\Omega}
+(\theta) = \frac{\frac{dN}{dt} (\theta)}{\frac{dN_0}{dt} n \Delta \Omega}
+\). Information collected for \( \theta = \SI{15}{\degree} \) was used to
+perform the calculation.
+
+\begin{align*}
+  \frac{d\sigma}{d\Omega} (\theta) &= \frac{\frac{dN}{dt}
+                                     (\theta)}{\frac{dN_0}{dt} n \Delta \Omega}
+  \\
+  \frac{d\sigma}{d\Omega} (\SI{15}{\degree}) 
+   &= \frac{(\num{0.0195})}{(30.8) (\num{1.18e21}) (}
+\end{align*}
+
 \subsection{Data Analysis II: Aluminum}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
+
+\subsubsection{Scattering Rate}
 
 \qq The nuclear charge number of aluminum can be determined with \\
 \( Z_{\text{Al}} = \sqrt{\frac{N_{\text{Al}} (\theta) n_{\text{Al}}
@@ -883,6 +938,10 @@ density of scatterers, and by extension in the scattering rate.
 %\label{cod:theoScatRateAl}
 %\inputminted{julia}{Code/getTheoScatRatesAl.jl}
 %
+%\subsubsection{Error Propagation for Differential Cross Section through Gold}
+%\label{cod:uncertCrossSecAu}
+%\inputminted{julia}{Code/getUncertCrossSec}
+
 %\subsubsection{Error Propagation for Nuclear Number of Aluminum}
 %\label{cod:uncertNucNumAl}
 %\inputminted{julia}{Code/getUncertNucNumAl.jl}
