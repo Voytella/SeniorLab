@@ -9,7 +9,7 @@
 
 \title{PHY 4210-01 Senior Lab \\Lab N4: Rutherford Scattering}
 
-\author{Sarah Arends \\ 
+\author{Sarah Arends \\
         Jacquelyne Miksanek \\
         Ryan Wojtyla \\ \\
         Instructor: Dr. Marcus Hohlmann}
@@ -17,14 +17,21 @@
 \date{March 14, 2019}
 
 \begin{document}
-\maketitle 
+\maketitle
 
 \begin{abstract}
 %physics of experiment
 %apparatus used
 %what was measured
 %Results
-  \qq 
+\qq A Rutherford scattering chamber with an Americium 241 source under
+a vacuum seal is studied to determine the differential cross-section
+for an alpha particle scattering process, as well as the counting rate
+for particles. Furthermore, the corrected counting rate with respect
+to the scattering distribution is calculated. The result is the
+validation of the Rutherford scattering formula for positively charged
+particles that have a Coulomb force interation with a positively
+charged nucleus.
 \end{abstract}
 
 \newpage
@@ -42,20 +49,20 @@ which it is scattered. Using this information, one can calculate a counting rate
 corrected with respect to the scattering distribution. The following Rutherford
 scattering formula can then be validated:
 \begin{equation}
-N(\theta) = N_0 \times c_F \times d_f \times 
+N(\theta) = N_0 \times c_F \times d_f \times
             \frac {Z^2 \times e^4}
                   {
-                  \left( 8\pi \times \epsilon_0\times E_{\alpha} \right) ^2 
+                  \left( 8\pi \times \epsilon_0\times E_{\alpha} \right) ^2
                    \times  sin^4 \left( \frac{\theta}{2} \right)
-                  }      
+                  }
 \end{equation}
 
 \section{Theory of the Experiment}
-%A short presentation of the concepts and formulas related to the experiment. 
+%A short presentation of the concepts and formulas related to the experiment.
 
 % How Rutherford scattering works (Coulomb repulsion etc)
 \qq Rutherford scattering describes the process in which charged particles
-article undergo elastic scattering due to a Coulomb force interaction. When the
+ undergo elastic scattering due to a Coulomb force interaction. When the
 positively charged alpha particles approach the positively charged gold nuclei,
 the like charges cause a repulsive force that deflects the alpha particles at
 varying angles. This deflection/scattering angle depends on the distance of
@@ -80,7 +87,7 @@ monotonically decreasing distribution.
 it is scattered at an angle \( \theta \). If the impact parameter is given an
 infinitesimal range of [ \( b \), \( b + db \) ], the resulting scattering angle
 then has a range of [ \( \theta - d\theta \), \( \theta \) ]; the impact
-parameter and scattering angle are inversely proportional. 
+parameter and scattering angle are inversely proportional.
 
 \qq Because the alpha particle can be incident within a defined range at any
 angle relative to the nucleus, a ring of possible incident locations is created
@@ -122,7 +129,7 @@ zero. Therefore, the area of the incident ring, \( \Delta \sigma \), is
 %infinitesimal angular portion of that ring, \( d\phi \), may be represented by
 %\( \Delta \sigma (\phi) = b db d\phi \). Additionally, because the impact
 %parameter \( b \) is related to the scattering angle \( \theta \), \( \Delta
-%\sigma \) is also a function of \( \theta \). Hence, 
+%\sigma \) is also a function of \( \theta \). Hence,
 %
 %\begin{equation*}
 %  \Delta \sigma (\theta, \phi) = b db d\phi
@@ -132,10 +139,10 @@ zero. Therefore, the area of the incident ring, \( \Delta \sigma \), is
 the cross section and the scattering angle \( \theta \) is inversely
 proportional to the impact parameter, the size of the cross section decreases as
 the scattering angle increases. Therefore, the cross section experiences a
-negative rate of change as \( \theta \) increases. Hence, 
+negative rate of change as \( \theta \) increases. Hence,
 
 \begin{equation}
-  \Delta \sigma (\theta) = - d\sigma (\theta) 
+  \Delta \sigma (\theta) = - d\sigma (\theta)
 \end{equation}
 \label{eqn:dSigma}
 
@@ -149,25 +156,25 @@ particle was scattered and the edge of the ring.
 \begin{figure}[H]
   \begin{center}
     \begin{tikzpicture}
-      
+
       % nucleus
       \fill (0,0) circle (2pt) node[anchor=north] {nucleus};
       \draw [dotted] (0,0) -- (0,2);
 
       % axis
       \draw [thick] (-2,0) -- (5,0);
-      
+
       % circle
       \draw (4,1.5) -- (4,-1.5);
       \draw [dotted] (4,1.5) -- (4,2);
 
       % particle path
-      \draw [dashed] (-1,0.5) -- (-0.5,0.5); 
+      \draw [dashed] (-1,0.5) -- (-0.5,0.5);
       \draw [dashed] (-0.5,0.5) arc[start angle=0, end angle=20] --
       (0.5,0.7) arc[start angle=20, end angle=60];
       \draw [dashed] (0.5,0.7) -- (4,1.5);
       \draw (2,1.4) node[rotate=15] {R};
-      
+
     \end{tikzpicture}
   \end{center}
   \caption{The path of the alpha particle as it is scattered by a nucleus. \( R
@@ -181,7 +188,7 @@ the alpha particle is incident within a range whose minimum is \( \theta -
 d\theta \), however, the ring has a thickness of \( R d\theta \). Since the
 thickness of the ring is infinitesimal, the ring's area can be approximated to
 be that of a rectangle. Therefore, the area of the ring is \( A = 2 \pi R
-\sin{(\theta)} R d\theta \). 
+\sin{(\theta)} R d\theta \).
 
 \qq The solid angle of the scattered alpha particles at an angle \( \theta \)
 is:
@@ -192,7 +199,7 @@ is:
 \end{align*}
 
 \begin{equation}
-  d\Omega = 2 \pi \sin{(\theta)} 
+  d\Omega = 2 \pi \sin{(\theta)}
 \end{equation}
 \label{eqn:dOmega}
 
@@ -201,12 +208,12 @@ is:
 \ref{eqn:dOmega} divided by itself.
 
 \begin{align*}
-  \Delta \sigma &=- \frac{d\sigma}{d\Omega} (\theta) d\Omega \\ 
-                &= - \frac{d\sigma}{d\Omega} (\theta) 2 \pi 
+  \Delta \sigma &=- \frac{d\sigma}{d\Omega} (\theta) d\Omega \\
+                &= - \frac{d\sigma}{d\Omega} (\theta) 2 \pi
                   \sin{(\theta)} d\theta \\
-\end{align*} 
+\end{align*}
 
-from Equation \ref{eqn:deltaSigma}:
+From Equation \ref{eqn:deltaSigma}:
 
 \begin{align*}
   - \frac{d\sigma}{d\Omega} (\theta) 2 \pi \sin{(\theta)} d\theta &= 2 \pi b db
@@ -214,8 +221,8 @@ from Equation \ref{eqn:deltaSigma}:
 \end{align*}
 
 \begin{equation}
-  \frac{d\sigma}{d\Omega} (\theta) = 
-  - \frac{b}{\sin{(\theta)}} \frac{db}{d\theta} 
+  \frac{d\sigma}{d\Omega} (\theta) =
+  - \frac{b}{\sin{(\theta)}} \frac{db}{d\theta}
 \end{equation}
 \label{eqn:diffCrossSecB}
 
@@ -232,17 +239,17 @@ Since it is known that \( b = \frac{Z Z^{\prime} e^2}{2 E}
                        \right) \right) \\
   \frac{db}{d\theta} &= - \frac{Z Z^{\prime} e^2}{4 E} \text{csc}^2 \left(
                        \frac{\theta}{2} \right) \\
-\end{align*} 
+\end{align*}
 
 \qq Now that \( b \) and \( db \) have been found, the full expression for the
 differential cross section \( \frac{d\sigma}{d\Omega} \) can be determined:
 
 \begin{align*}
-  \frac{d\sigma}{d\Omega} (\theta) 
+  \frac{d\sigma}{d\Omega} (\theta)
   &= - \frac{b}{\sin{(\theta)}} \frac{db}{d\theta} \\
   &= - \left( \frac{Z Z^{\prime} e^2}{2 E} \text{cot} \left( \frac{\theta}{2}
     \right) \right)
-    \frac{1}{\sin{(\theta)}} 
+    \frac{1}{\sin{(\theta)}}
     \left( - \frac{Z Z^{\prime} e^2}{4 E} \text{csc}^2 \left( \frac{\theta}{2}
     \right) \right) \\
   &= 2 \left( \frac{Z Z^{\prime} e^2}{4 E} \right)^2
@@ -253,7 +260,7 @@ differential cross section \( \frac{d\sigma}{d\Omega} \) can be determined:
   &= 2 \left( \frac{Z Z^{\prime} e^2}{4 E} \right)^2
     \cos{\left( \frac{\theta}{2} \right)}
     \frac{1}{\left( 2 \sin{\left( \frac{\theta}{2} \right)} \cos{\left(
-    \frac{\theta}{2} \right)} \right)} 
+    \frac{\theta}{2} \right)} \right)}
     \frac{1}{\sin^3 \left( \frac{\theta}{2} \right)} \\
 \end{align*}
 
@@ -264,7 +271,7 @@ differential cross section \( \frac{d\sigma}{d\Omega} \) can be determined:
 \label{eqn:diffCrossSec}
 
 Equation \ref{eqn:diffCrossSec} is the equation for calculating the
-theoretical differential cross-section. 
+theoretical differential cross-section.
 
 \qq The differential cross-section can also be found experimentally using a
 found alpha particle scattering rate at a particular angle \( \theta \). First,
@@ -293,7 +300,11 @@ cross-section:
 
 
 % Distribution of scattering function vs angle shape
-\qq 
+\qq As you can see from equation \ref{eqn:diffCrossSec}, the angluar
+dependence of the function is $\frac{1}{\sin^4 \left( \frac{\theta}{2}
+  \right)}$. This implies that the curve of the function drops off
+rather quickly at larger angles due to this term, therefore, the rate
+drops off quickly as well.
 
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and
@@ -307,15 +318,15 @@ through the aforementioned readout electronics. A more detailed description of t
 
 % List of specs
 \begin{itemize}
-\item Rutherford scattering chamber 
+\item Rutherford scattering chamber
 \item Aluminum foil in frame:  \\
       Molar mass 27 g/mol \\
       Thickness $1.50 \times 10^{-7}$ m \\
-      Density $2.70 \times 10^6$ g/m$^3$ 
+      Density $2.70 \times 10^6$ g/m$^3$
 \item Gold foil in frame: \\
       Molar mass 197 g/mol \\
       Thickness $2.00 \times 10^{-8}$ m \\
-      Density $1.93 \times 10^7$ g/m$^3$ 
+      Density $1.93 \times 10^7$ g/m$^3$
 \item Vacuum pump, for evacuating scattering chamber
 \item Readout modules: \\
       Discriminator, Amplifier, Preamplifier, Counter
@@ -323,18 +334,18 @@ through the aforementioned readout electronics. A more detailed description of t
 \item Oscilloscope, for monitoring signals on readout modules
 \item Photodiode detector \\
 	  Width $2.22 \times 10^{-3}$ m \\
-	  Height $4.12 \times 10^{-3}$ m 
+	  Height $4.12 \times 10^{-3}$ m
 \item Collimating slit \\
-      Width 0.005 m 
+      Width 0.005 m
 \end{itemize}
 
 %Labeled sketch of the experimental setup
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=0.5\textwidth]{figure.png}
-\captionof{figure}{Description of schematic here}
-\label{name}
+\includegraphics[width=0.5\textwidth]{diagram.png}
+\captionof{figure}{Schematic for circuit diagram }
+\label{Circuit_Diagram}
 \end{figure}
 
 \section{Procedure}
@@ -357,7 +368,8 @@ scattered particles are detected using a photodiode. In order to determine the
 dependence of the scattering rate on the incident angle, the rotating arm was
 moved through a range of $-30$ degrees to $30$ degrees using a knob on top of
 the vacuum chamber. Here, an angle of 0 degrees represents the arm oriented
-along the same line as the photodiode.
+along the same line as the photodiode. Because the Gold foil is
+incredibly thin, any air movement resulting from the utilization of the vacuum pump can potentially damage the foil. To mitigate this risk, the pump must be opened and closed slowly. The plane of the Gold foil is also oriented parallel to the valve's tube during this process so that the foil does not impede air flow and result in a tear of the foil.
 
 % Readout electronics
 \qq The photodiode is connected via an external BNC port to a pre-amplifier that
@@ -383,6 +395,25 @@ true vacuum throughout the course of data taking, the pump was continually
 operated throughout the experiment.  \qq
 
 \subsection{Visualization of Detection Chain}
+Before inserting the Gold foil, the performance of the readout electronics was investigated by observing the output of each module on an oscilloscope. The signal from the photodiode was observed via the output of the pre-amplifier. As shown in figure \ref{preamp_amp}, the signal seen on the pre-amplifier is a falling pulse. The pre-amplifier signal is then fed to the amplifier, where it undergoes a prescribed gain and is inverted. These two pulses are shown together in figure \ref{preamp_amp}. Here, the gain is set to 10, so the ampltiude of the amplifier pulse in 10 times that of the pre-amplifier pulse.
+
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+\includegraphics[width=0.7\textwidth]{gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png}
+\captionof{figure}{Signal pulse from the pre-amplifier and amplifier, as seen on the oscilloscope display}
+\label{preamp_amp}
+\end{figure}
+
+The amplifier signal is fed to the discriminator module. If the amplifier signal has an amplitude greater than the threshold prescribed by the discriminator, then the discriminator outputs a digital pule. Figure \ref{preamp_discrim} shows this digital discriminator pulse displayed over the pre-amplifier pulse. Every pulse output by the discriminator corresponds to a count on the counter module.
+
+\begin{figure}[H]
+\centering
+% uncomment the line below to add image
+\includegraphics[width=0.75\textwidth]{ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png}
+\captionof{figure}{Signal pulse from the pre-amplifier and discriminator, as seen on the oscilloscope display}
+\label{preamp_discrim}
+\end{figure}
 
 \section{Data Analysis}
 
@@ -425,7 +456,7 @@ scattering rate \( N (\theta) \):
 \begin{align*}
   N (\theta) &= d\Omega N_d (\theta) \\
   N (\theta) &= 2 \pi \sin{(\theta)} N_d (\theta) \\
-\end{align*} 
+\end{align*}
 
 \qq For the gold foil, a direct scattering rate of \( N_d (\SI{15}{\degree}) =
 \num{0.012} \) yields a spacial scattering rate of:
@@ -451,7 +482,7 @@ displayed in Section \ref{cod:uncertScatRateGold}.
 \end{figure}
 
 % Experimental uncertainty (\delta)
-\qq 
+\qq
 
 % Theoretical results for rutherford formula
 \qq The theoretical values for the scattering rates of the alpha particles
@@ -548,7 +579,7 @@ the same manner as for gold. The results of the experiment are displayed in
 Figure \ref{tab:scatRatesAl}.
 
 % Corrected counting rate (wrt. distribution in space)
-\qq 
+\qq
 
 % Experimental results for rutherford formula
 \qq Since the nuclear charge formula requires the scattering rates of both gold
@@ -560,7 +591,7 @@ Section \ref{cod:uncertScatRateAl}. The plots for those two calculations are
 shown in Figures \ref{gph:expScatRatesGold} and \ref{gph:expScatRatesAl}
 respectively. The experimental value for the nuclear number of aluminum was
 calculated using the code shown in Section \ref{cod:uncertNucNumAl}, and it was
-determined to be \( 62.7 \pm 3.216 \). 
+determined to be \( 62.7 \pm 3.216 \).
 
 \begin{figure}[H]
   \begin{center}
@@ -572,7 +603,7 @@ determined to be \( 62.7 \pm 3.216 \).
 \end{figure}
 
 % Experimental uncertainty (\delta)
-\qq 
+\qq
 
 % Theoretical results for rutherford formula
 \qq The theoretical value of aluminum's nuclear charge was calculated in much
@@ -602,10 +633,10 @@ of the aluminum's nuclear charge was calculated using the code shown in Section
 %Approximations to theory
 
 % Tabulate theo and exp values/uncertainties
-\qq 
+\qq
 
 % Calculate the difference/discrepancy (\Delta)
-\qq 
+\qq
 
 % Calculate the uncertainty in the discrepancy
 % Quantify how many sigmas the discrepancy is
@@ -617,7 +648,7 @@ of the aluminum's nuclear charge was calculated using the code shown in Section
 								  \frac{dN}{dt} ( \theta )
 								}
 								{
-								  \frac{dN_0}{dt} 
+								  \frac{dN_0}{dt}
 								  \times n
 								  \times \Delta \Omega
                                  }
@@ -625,7 +656,7 @@ of the aluminum's nuclear charge was calculated using the code shown in Section
 
 The uncertainty in this differential cross-section measurement is propagated as follows:
 \begin{equation} \label{eq:expCrossSecUncert}
- \delta \left( \frac{d \sigma}{d \Omega} \right) 
+ \delta \left( \frac{d \sigma}{d \Omega} \right)
    = \left\lvert \frac{d \sigma}{d \Omega} \right\rvert
    \sqrt
    {
@@ -647,20 +678,20 @@ Note that in equation \ref{eq:expCrossSecUncert}, $\delta dN/dt$ and $\delta dN_
 \end{align*}
 The uncertainties in the height, width, and distance were taken to be the standard deviation of a set of three measurements taken for each quantity.
 \begin{align*}
- \delta \left( \Delta \Omega  \right) 
+ \delta \left( \Delta \Omega  \right)
    &= | \Delta \Omega |
-   \sqrt{ 
+   \sqrt{
         \left( \frac{\delta h}{h} \right) ^2
         +
-         \left( \frac{\delta w}{w} \right) ^2  
-        + 2 \left( \frac{\delta r}{r} \right) ^2  
+         \left( \frac{\delta w}{w} \right) ^2
+        + 2 \left( \frac{\delta r}{r} \right) ^2
    } \\
    &= | 0.02 \text{ sterad} |
-   \sqrt{ 
+   \sqrt{
         \left( \frac{4.75 \times 10^{-4}}{4.12 \times 10^{-3}} \right) ^2
         +
-         \left( \frac{7.64 \times 10^{-5}}{2.22 \times 10^{-3}} \right) ^2  
-        + 2 \left( \frac{5.01 \times 10^{-4}}{1.97 \times 10^{-2}} \right) ^2  
+         \left( \frac{7.64 \times 10^{-5}}{2.22 \times 10^{-3}} \right) ^2
+        + 2 \left( \frac{5.01 \times 10^{-4}}{1.97 \times 10^{-2}} \right) ^2
    } \\
    &= 0.0025 \text{ sterad}
 \end{align*}
@@ -682,10 +713,10 @@ The difference between experimental and theoretical cross-section values has an 
 %Approximations to theory
 
 % Tabulate theo and exp values/uncertainties
-\qq 
+\qq
 
 % Calculate the difference/discrepancy (\Delta)
-\qq 
+\qq
 
 % Calculate the uncertainty in the discrepancy
 % Quantify how many sigmas the discrepancy is
@@ -701,11 +732,28 @@ The difference between experimental and theoretical cross-section values has an 
 \end{figure}
 
 \subsection{Source of Error}
-% Describe sources of error, what type of error they are, and how they would affect measurements (what we did about them if possible)
-%i.e. leaky vacuum would kill off alphas and systematically lower rate, but we kept pump on to mitigate this
-%i.e. if threshold was too low we would have "false counts" which would systematically increase rate. Note that our baseline noise seemed to increase on last day without changing any other factors, an d we're not sure of the source but we thinking maybe bad cable connection, but we had to reassess the baseline noise and increase threshold. BUT signal-to-noise ration was still sufficiently high that increasing threshold should not run risk of cutting out "real counts"
-% Thickness of foil could be nonuniform -> random error
-% Other stuff
+% Describe sources of error, what type of error they are, and how they
+%would affect measurements (what we did about them if possible)
+%i.e. leaky vacuum would kill off alphas and systematically lower
+%rate, but we kept pump on to mitigate this i.e. if threshold was too
+%low we would have "false counts" which would systematically increase
+%rate. Note that our baseline noise seemed to increase on last day
+%without changing any other factors, an d we're not sure of the source
+%but we thinking maybe bad cable connection, but we had to reassess
+%the baseline noise and increase threshold. BUT signal-to-noise ration
+%was still sufficiently high that increasing threshold should not run
+%risk of cutting out "real counts" Thickness of foil could be
+%nonuniform -> random error Other stuff
+
+\qq The Rutherford scattering chamber does not hold a perfect vacuum
+seal when the valve is fully closed, potentially due to a bad o-ring. The closing valve also had some issues opening and closing, so for this reason it was decided that the valve would be left open and the vacuum pump left on. Alpha particles have a much shorter lifetime in air than in a vacuum. For this reason, a poor vacuum seal that allows air to enter the chamber would result in alpha particles that decay before reaching the detector, and this would systematically lower the measured count rate. Again, this issue was
+combated by maintaining the vacuum inside the chamber. \\
+\qq Electronic noise can systematically increase the measured rate if an appropriate threshold is not set. If the threshold is too low, higher amplitude noise could be counted as "signals". The amplitude of the baseline noise was observed, and a threshold was set to remove signals below this amplitude. On the final day of data collection, the amplitude of the background noise seemed to increase from the previous
+sessions, even though no characteristics of the set-up were altered. While still unclear, it was suspected that a poor cable connection was responsible for the noise. The threshold was increased to account for this increased noise level. However, the
+signal-to-noise ratio was still sufficiently high so that, even with the increased threshold, there was little risk of true counts falling below this threshold. However, if any lower energy alpha particles fell below this increased threshold, data taken on this data would show systematically lower rates due to the decreased counts. \\
+\qq The rate of scattering is dependent on the area density of the
+scatterers (gold nuclei), which in turn is dependent on the thickness of the foil. This parameter is assumed to be constant throughout experimentation. Any fluctuation in the thickness of the foil would therefore contribute a random intrinsic error in the
+density of scatterers, and by extension in the scattering rate. 
 
 \section{Conclusion}
 %Brief summary, discussion of theory
@@ -716,10 +764,11 @@ The difference between experimental and theoretical cross-section values has an 
 sections was calculated along with an associated uncertainty for both gold and
 aluminum. The difference was within one sigma, very nearly zero! Therefore, the
 data was in agreement with theory.
+\qq
 
 % Results for aluminum
 % Note the number of sigmas (discrepancy) and what that means statistically
-\qq 
+\qq
 
 \section{Appendices}
 
@@ -905,7 +954,7 @@ data was in agreement with theory.
 %
 %\subsubsection{Compute the Theoretical Scattering Rates through Gold}
 %\label{cod:theoScatRateGold}
-%\inputminted{julia}{Code/getTheoScatRatesGold.jl} 
+%\inputminted{julia}{Code/getTheoScatRatesGold.jl}
 %
 %\subsubsection{Compute the Theoretical Scattering Rates through Aluminum}
 %\label{cod:theoScatRateAl}
