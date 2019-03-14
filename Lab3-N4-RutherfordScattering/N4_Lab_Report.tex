@@ -44,6 +44,68 @@
 \qq
 
 % Physical meaning and derivation of differential cross section
+\qq When an alpha particle with impact parameter \( b \) approaches a nucleus,
+it is scattered at an angle \( \theta \). If the impact parameter is given an
+infinitesimal range of [ \( b \), \( b + db \) ], the resulting scattering angle
+then has a range of [ \( \theta - d\theta \), \( \theta \) ]; the impact
+parameter and scattering angle are inversely proportional. 
+
+\qq Because the alpha particle can be incident within a defined range at any
+angle relative to the nucleus, a ring of possible incident locations is created
+in front of the nucleus. This ring is illustrated in Figure
+\ref{fig:crossSecRing}.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0,0) circle [radius=2.0];
+      \draw (0,0) circle [radius=1.8];
+      \draw (0,0) -- (1,0) node[anchor=north] {\( b + db \)} -- (2,0);
+      \draw (0,0) -- (0,-1.0) node[anchor=east] {\( b \)} -- (0,-1.8);
+    \end{tikzpicture}
+  \end{center}
+  \caption{The ring whose area represents the possible region in which alpha
+    particles may be incident on a target nucleus.}
+  \label{fig:crossSecRing}
+\end{figure}
+
+The area of this ring is found as the area of any ring is found:
+
+\begin{align*}
+  A &= \pi (b + db)^2 - \pi b^2 \\
+    &= \pi (b^2 + 2 b db + db^2) - \pi b^2 \\
+    &= \pi b^2 + 2 \pi b db + \pi db^2 - \pi b^2 \\
+    &= 2 \pi b db + \pi db^2 \\
+\end{align*}
+
+Since \( db \) is infinitesimally small, it can be approximated to be
+zero. Therefore, the area of the incident ring, \( \Delta \sigma \), is
+
+\begin{equation*}
+  \Delta \sigma = 2 \pi b db
+\end{equation*}
+
+\qq Since \( \Delta \sigma \) is the area of the full incident ring, an
+infinitesimal angular portion of that ring, \( d\phi \), may be represented by
+\( \Delta \sigma (\phi) = b db d\phi \). Additionally, because the impact
+parameter \( b \) is related to the scattering angle \( \theta \), \( \Delta
+\sigma \) is also a function of \( \theta \). Hence, 
+
+\begin{equation*}
+  \Delta \sigma (\theta, \phi) = b db d\phi
+\end{equation*}
+
+\qq Since the impact parameter \( b \) is directly proportional to the size of
+the cross section and the scattering angle \( \theta \) is inversely
+proportional to the impact parameter, the size of the cross section decreases as
+the scattering angle increases. Therefore, the cross section experiences a
+negative rate of change as \( \theta \) increases. Hence, 
+
+\begin{equation}
+  \Delta \sigma (\theta, \phi) = - d\sigma (\theta, \phi) 
+\end{equation}
+\label{eqn:dSigma}
+
 \qq 
 
 \section{Equipment Utilized}
