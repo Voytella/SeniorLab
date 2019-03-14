@@ -584,7 +584,31 @@ The uncertainty in this differential cross-section measurement is propagated as 
    }
 \end{equation}
 Note that in equation \ref{eq:expCrossSecUncert}, $\delta dN/dt$ and $\delta dN_0/dt$ are uncertainties in measured rates, $n$ is a given value that can be assumed to have no uncertainty, and $\delta \Delta \Omega$ is propagated from the distance to the photodiode and the height and width of the photodiode windows as follows:
-SARAH IS WORKING HERE
+\begin{align*}
+\Delta \Omega &= \frac{A}{r^2} \\
+              &= \frac{h \times w}{r^2} \\
+              &= \frac{(4.12 \times 10^{-3}m) \times (2.22 \times 10^{-3}m)}{(1.97 \times 10^{-2} m)^2} \\
+              &= 0.02 \text{ sterad}
+\end{align*}
+The uncertainties in the height, width, and distance were taken to be the standard deviation of a set of three measurements taken for each quantity.
+\begin{align*}
+ \delta \left( \Delta \Omega  \right) 
+   &= | \Delta \Omega |
+   \sqrt{ 
+        \left( \frac{\delta h}{h} \right) ^2
+        +
+         \left( \frac{\delta w}{w} \right) ^2  
+        + 2 \left( \frac{\delta r}{r} \right) ^2  
+   } \\
+   &= | 0.02 \text{ sterad} |
+   \sqrt{ 
+        \left( \frac{4.75 \times 10^{-4}}{4.12 \times 10^{-3}} \right) ^2
+        +
+         \left( \frac{7.64 \times 10^{-5}}{2.22 \times 10^{-3}} \right) ^2  
+        + 2 \left( \frac{5.01 \times 10^{-4}}{1.97 \times 10^{-2}} \right) ^2  
+   } \\
+   &= 0.0025 \text{ sterad}
+\end{align*}
 
 The difference between experimental and theoretical cross-section values has an associated uncertainty. If the theoretical value is assumed to have no uncertainty, then the uncertainty associated with the difference will be that calculated in equation \ref{eq:expCrossSecUncert}.
 
@@ -602,6 +626,13 @@ The difference between experimental and theoretical cross-section values has an 
 % Calculate the uncertainty in the discrepancy
 % Quantify how many sigmas the discrepancy is
 \qq
+
+\subsection{Source of Error}
+% Describe sources of error, what type of error they are, and how they would affect measurements (what we did about them if possible)
+%i.e. leaky vacuum would kill off alphas and systematically lower rate, but we kept pump on to mitigate this
+%i.e. if threshold was too low we would have "false counts" which would systematically increase rate. Note that our baseline noise seemed to increase on last day without changing any other factors, an d we're not sure of the source but we thinking maybe bad cable connection, but we had to reassess the baseline noise and increase threshold. BUT signal-to-noise ration was still sufficiently high that increasing threshold should not run risk of cutting out "real counts"
+% Thickness of foil could be nonuniform -> random error
+% Other stuff
 
 \section{Conclusion}
 %Brief summary, discussion of theory
