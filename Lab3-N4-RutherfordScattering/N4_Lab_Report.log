@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  14 MAR 2019 03:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  14 MAR 2019 05:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1511,11 +1511,7 @@ runsystem(which pygmentize && touch N4_Lab_Report.aex)...executed.
 runsystem(rm N4_Lab_Report.aex)...executed.
 
 
-(./N4_Lab_Report.aux
-
-LaTeX Warning: Label `gph:scatRatesGold' multiply defined.
-
-)
+(./N4_Lab_Report.aux)
 \openout1 = `N4_Lab_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1716,7 +1712,7 @@ LaTeX Warning: Reference `tab:scatRatesGold' on page 9 undefined on input line
 447.
 
 
-<Plots/ExperimentalScatteringRates/expScatRates.pdf, id=165, 429.03589pt x 376.
+<Plots/ExperimentalScatteringRates/expScatRates.pdf, id=186, 429.03589pt x 376.
 7365pt>
 File: Plots/ExperimentalScatteringRates/expScatRates.pdf Graphic file (type pdf
 )
@@ -1730,7 +1726,7 @@ LaTeX Warning: Reference `tab:scatRatesGold' on page 10 undefined on input line
  475.
 
 
-<Plots/TheoreticalScatteringRates/theoScatRates.pdf, id=171, 428.47076pt x 376.
+<Plots/TheoreticalScatteringRates/theoScatRates.pdf, id=192, 428.47076pt x 376.
 73346pt>
 File: Plots/TheoreticalScatteringRates/theoScatRates.pdf Graphic file (type pdf
 )
@@ -1738,12 +1734,42 @@ File: Plots/TheoreticalScatteringRates/theoScatRates.pdf Graphic file (type pdf
 Package pdftex.def Info: Plots/TheoreticalScatteringRates/theoScatRates.pdf use
 d on input line 479.
 (pdftex.def)             Requested size: 342.77707pt x 301.38716pt.
- [10 <./Plots/ExperimentalScatteringRates/expScatRates.pdf>] [11 <./Plots/Theor
-eticalScatteringRates/theoScatRates.pdf>]
+ [10 <./Plots/ExperimentalScatteringRates/expScatRates.pdf>]
+
+LaTeX Warning: Reference `tab:scatRatesAl' on page 11 undefined on input line 5
+03.
+
+
+<Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf, id=224, 426.42914pt x 
+377.84764pt>
+File: Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf Graphic file (type
+ pdf)
+ <use Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf>
+Package pdftex.def Info: Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf
+ used on input line 522.
+(pdftex.def)             Requested size: 341.14377pt x 302.27852pt.
+
+[11 <./Plots/TheoreticalScatteringRates/theoScatRates.pdf>]
+
+LaTeX Warning: Reference `gph:theoScatRateGold' on page 12 undefined on input l
+ine 539.
+
+
+<Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf, id=248, 428.47076pt x 
+377.83658pt>
+File: Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf Graphic file (type
+ pdf)
+ <use Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf>
+Package pdftex.def Info: Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf
+ used on input line 545.
+(pdftex.def)             Requested size: 342.77707pt x 302.26967pt.
+
+[12 <./Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf>]
 runsystem(pygmentize -S default -f latex -P commandprefix=PYG > N4_Lab_Report.o
 ut.pyg)...executed.
 
- (./N4_Lab_Report.out.pyg)
+
+(./N4_Lab_Report.out.pyg)
 runsystem(pygmentize -S default -f latex -P commandprefix=PYGdefault > N4_Lab_R
 eport.out.pyg)...executed.
 
@@ -1751,42 +1777,60 @@ eport.out.pyg)...executed.
 runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
 xcomments=True -o N4_Lab_Report.out.pyg Code/genFuncs.jl)...executed.
 
-(./N4_Lab_Report.out.pyg [12] [13])
+ (./N4_Lab_Report.out.pyg
+[13 <./Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf>] [14] [15])
 runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
 xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertScatRate.jl)...executed.
 
- (./N4_Lab_Report.out.pyg
+
+(./N4_Lab_Report.out.pyg
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
- [14])
+ [16])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertScatRateAl.jl)...executed
+.
+
+ (./N4_Lab_Report.out.pyg [17])
 runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
 xcomments=True -o N4_Lab_Report.out.pyg Code/getTheoScatRatesGold.jl)...execute
 d.
 
 
-(./N4_Lab_Report.out.pyg [15]) [16]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 567.
- (./N4_Lab_Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 567.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 567.
+(./N4_Lab_Report.out.pyg)
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getTheoScatRatesAl.jl)...executed.
+
+ (./N4_Lab_Report.out.pyg [18])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertNucNumAl.jl)...executed.
+
+
+(./N4_Lab_Report.out.pyg [19])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getTheoNucNumAl.jl)...executed.
+
+ (./N4_Lab_Report.out.pyg) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 629.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 629.
+
+(./N4_Lab_Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 629.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 629.
 Package rerunfilecheck Info: File `N4_Lab_Report.out' has not changed.
-(rerunfilecheck)             Checksum: E65E13D5EBE3ABC9C57F1C456B9090C0;1193.
+(rerunfilecheck)             Checksum: DC9B0BE6AA1A03605EDF76508BD54519;1643.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 runsystem(rm N4_Lab_Report.out.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 50448 strings out of 494936
- 1241098 string characters out of 6180785
- 1507481 words of memory out of 5000000
- 53036 multiletter control sequences out of 15000+600000
+ 50491 strings out of 494936
+ 1242257 string characters out of 6180785
+ 1508211 words of memory out of 5000000
+ 53057 multiletter control sequences out of 15000+600000
  20356 words of font info for 77 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  64i,14n,96p,10390b,953s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1806,10 +1850,10 @@ r7.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></op
 t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/loca
 l/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on N4_Lab_Report.pdf (16 pages, 239796 bytes).
+Output written on N4_Lab_Report.pdf (20 pages, 259414 bytes).
 PDF statistics:
- 303 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

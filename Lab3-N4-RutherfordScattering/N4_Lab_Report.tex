@@ -455,7 +455,7 @@ displayed in Section \ref{cod:uncertScatRateGold}.
   \end{center}
   \caption{The plot of the experimental values for the scattering rates of the
     alpha particles through the foil measured at different angles.}
-  \label{gph:scatRatesGold}
+  \label{gph:expScatRatesGold}
 \end{figure}
 
 % Experimental uncertainty (\delta)
@@ -480,7 +480,7 @@ of this calculation can be seen in Figure \ref{tab:scatRatesGold}.
   \end{center}
   \caption{The plot of the theoretical values for the scattering rates of the
     alpha particles through the foil at different angles.}
-  \label{gph:scatRatesGold}
+  \label{gph:theoScatRatesGold}
 \end{figure}
 
 \subsection{Data Analysis II: Aluminum}
@@ -488,20 +488,66 @@ of this calculation can be seen in Figure \ref{tab:scatRatesGold}.
 %Results with error analysis
 %Calculate discrepancies from theory
 
+\qq The nuclear charge number of aluminum can be determined with \\
+\( Z_{\text{Al}} = \sqrt{\frac{N_{\text{Al}} (\theta) n_{\text{Al}}
+    Z^2_{\text{Al}}}{N_{\text{Au}} (\theta) n_{\text{Au}}}} \), where
+\( N_x (\theta) \) is the spacial scattering rate of alpha particles through a
+foil of material \( x \) at an angle \( \theta \), \( n_x \) is the nuclear
+density of the foil of material \( x \) (found by multiplying the foil
+material's atomic concentration by the foil's thickness), and \( Z_x \) is the
+nuclear number of material \( x \).
+
 % Direct counting rate as a function of angle (gold)
-\qq
+\qq The direct counting rate and the spacial counting rate were calculated in
+the same manner as for gold. The results of the experiment are displayed in
+Figure \ref{tab:scatRatesAl}.
 
 % Corrected counting rate (wrt. distribution in space)
 \qq 
 
 % Experimental results for rutherford formula
-\qq 
+\qq Since the nuclear charge formula requires the scattering rates of both gold
+and aluminum, the uncertainty for both measurements needed to be propagated
+through it. The uncertainty for the scattering rates through gold was calculated
+in the code shown in Section \ref{cod:uncertScatRateGold}, and the uncertainty
+for the scattering rates through aluminum was calculated in the code shown in
+Section \ref{cod:uncertScatRateAl}. The plots for those two calculations are
+shown in Figures \ref{gph:expScatRatesGold} and \ref{gph:expScatRatesAl}
+respectively. The experimental value for the nuclear number of aluminum was
+calculated using the code shown in Section \ref{cod:uncertNucNumAl}, and it was
+determined to be \( 62.7 \pm 3.216 \). 
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf}
+  \end{center}
+  \caption{The plot for the experimental scattering rates of alpha particles
+    through an aluminum foil.}
+  \label{gph:expScatRatesAl}
+\end{figure}
 
 % Experimental uncertainty (\delta)
 \qq 
 
 % Theoretical results for rutherford formula
-\qq 
+\qq The theoretical value of aluminum's nuclear charge was calculated in much
+the same way as the experimental, except the theoretical values of the
+scattering rates of the two foils were used. The theoretical values of the
+scattering rates through both gold and aluminum were calculated using the code
+shown in Sections \ref{cod:theoScatRateGold} and \ref{cod:theoScatRateAl}
+respectively, and the data is represented graphically in Figures
+\ref{gph:theoScatRateGold} and \ref{gph:theoScatRateAl}. The theoretical value
+of the aluminum's nuclear charge was calculated using the code shown in Section
+\ref{cod:theoNucNumAl}, and it's value was found to be 13.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf}
+  \end{center}
+  \caption{The plot for the theoretical scattering rates of alpha particles
+    through an aluminum foil.}
+  \label{gph:theoScatRateAl}
+\end{figure}
 
 \section{Results}
 
@@ -552,16 +598,32 @@ of this calculation can be seen in Figure \ref{tab:scatRatesGold}.
 
 \subsection{Appendix B: Source Code}
 
-\subsubsection{General Functions}
-\label{cod:genFuncs}
-\inputminted{julia}{Code/genFuncs.jl}
-
-\subsubsection{Error Propagation for Scattering Rates through Gold}
-\label{cod:uncertScatRateGold}
-\inputminted{julia}{Code/getUncertScatRate.jl}
-
-\subsubsection{Compute the Theoretical Scattering Rates through Gold}
-\label{cod:theoScatRateGold}
-\inputminted{julia}{Code/getTheoScatRatesGold.jl} 
-
+%\subsubsection{General Functions}
+%\label{cod:genFuncs}
+%\inputminted{julia}{Code/genFuncs.jl}
+%
+%\subsubsection{Error Propagation for Scattering Rates through Gold}
+%\label{cod:uncertScatRateGold}
+%\inputminted{julia}{Code/getUncertScatRate.jl}
+%
+%\subsubsection{Error Propagation for Scattering Rates through Aluminum}
+%\label{cod:uncertScatRateAl}
+%\inputminted{julia}{Code/getUncertScatRateAl.jl}
+%
+%\subsubsection{Compute the Theoretical Scattering Rates through Gold}
+%\label{cod:theoScatRateGold}
+%\inputminted{julia}{Code/getTheoScatRatesGold.jl} 
+%
+%\subsubsection{Compute the Theoretical Scattering Rates through Aluminum}
+%\label{cod:theoScatRateAl}
+%\inputminted{julia}{Code/getTheoScatRatesAl.jl}
+%
+%\subsubsection{Error Propagation for Nuclear Number of Aluminum}
+%\label{cod:uncertNucNumAl}
+%\inputminted{julia}{Code/getUncertNucNumAl.jl}
+%
+%\subsubsection{Compute the Theoretical Nuclear Number of Aluminum}
+%\label{cod:theoNucNumAl}
+%\inputminted{julia}{Code/getTheoNucNumAl.jl}
+%
 \end{document}

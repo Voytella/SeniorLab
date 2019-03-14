@@ -93,6 +93,10 @@ getCrossSecAreaAl(counts, time, angle) =
 # differential cross section of our setup with Aluminum
 getDiffCrossSecAl(angle) = diffCrossSec(2, 13, αEngAm241, angle)
 
+# find the nuclear number of aluminum when compared to gold
+nucNumAl(scatRateAl, scatRateAu, matDenAl, matDenAu) =
+    sqrt( (scatRateAl * matDenAu * (79 ^ 2)) / (scatRateAu * matDenAl) )
+
 # -----------END SPECIFIC FUNCTIONS-----------
 
 # ----------BEGIN THEORETICAL FUNCTIONS----------

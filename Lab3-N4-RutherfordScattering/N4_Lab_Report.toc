@@ -7,13 +7,17 @@
 \contentsline {section}{\numberline {5}Data Analysis}{8}{section.5}
 \contentsline {subsection}{\numberline {5.1}Data Analysis I: Gold}{8}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Data Analysis II: Aluminum}{11}{subsection.5.2}
-\contentsline {section}{\numberline {6}Results}{11}{section.6}
-\contentsline {subsection}{\numberline {6.1}Results I: Gold}{11}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Results II: Aluminum}{11}{subsection.6.2}
-\contentsline {section}{\numberline {7}Conclusion}{12}{section.7}
-\contentsline {section}{\numberline {8}Appendices}{12}{section.8}
-\contentsline {subsection}{\numberline {8.1}Appendix A: Data}{12}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Appendix B: Source Code}{12}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}General Functions}{12}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Error Propagation for Scattering Rates through Gold}{14}{subsubsection.8.2.2}
-\contentsline {subsubsection}{\numberline {8.2.3}Compute the Theoretical Scattering Rates through Gold}{15}{subsubsection.8.2.3}
+\contentsline {section}{\numberline {6}Results}{13}{section.6}
+\contentsline {subsection}{\numberline {6.1}Results I: Gold}{13}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Results II: Aluminum}{13}{subsection.6.2}
+\contentsline {section}{\numberline {7}Conclusion}{13}{section.7}
+\contentsline {section}{\numberline {8}Appendices}{14}{section.8}
+\contentsline {subsection}{\numberline {8.1}Appendix A: Data}{14}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Appendix B: Source Code}{14}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}General Functions}{14}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Error Propagation for Scattering Rates through Gold}{16}{subsubsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.3}Error Propagation for Scattering Rates through Aluminum}{17}{subsubsection.8.2.3}
+\contentsline {subsubsection}{\numberline {8.2.4}Compute the Theoretical Scattering Rates through Gold}{18}{subsubsection.8.2.4}
+\contentsline {subsubsection}{\numberline {8.2.5}Compute the Theoretical Scattering Rates through Aluminum}{18}{subsubsection.8.2.5}
+\contentsline {subsubsection}{\numberline {8.2.6}Error Propagation for Nuclear Number of Aluminum}{19}{subsubsection.8.2.6}
+\contentsline {subsubsection}{\numberline {8.2.7}Compute the Theoretical Nuclear Number of Aluminum}{20}{subsubsection.8.2.7}
