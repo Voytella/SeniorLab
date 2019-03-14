@@ -1,3 +1,5 @@
+# a collection of useful functions used by other pieces of code
+
 # ----------BEGIN CONSTANTS----------
 
 # avogadro's number
@@ -9,8 +11,11 @@ eleChg = 1.6021e-19
 # dielectric constant ( \( \frac{A s}{V m} \) )
 ε = 8.8524e-12
 
-# theoretical energy of alpha decay of Americium (eV)
+# alpha particle for Americium-241 in eV
 AmAlphaDecayEng = 5.486e6
+
+# alpha particle for Americium-241 in Joules
+αEngAm241 = 8.789541e-13
 
 # -----------END CONSTANTS-----------
 
@@ -103,6 +108,3 @@ crossSecAreaTheo(scatDen, atomicNum, αEng, angle) =
                  incidentRate, scatDen, solidAngle)
 
 # -----------END THEORETICAL FUNCTIONS-----------
-
-# alpha particle for Americium-241 in Joules
-αEngAm241 = 8.789541e-13

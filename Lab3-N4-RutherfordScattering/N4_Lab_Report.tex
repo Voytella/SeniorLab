@@ -402,19 +402,86 @@ operated throughout the experiment.  \qq
 %Calculate discrepancies from theory
 
 % Direct counting rate as a function of angle (gold)
-\qq
+\qq While performing the experiment, the direct rate of scattered alpha
+particles for a particular angle over a certain period of time was determined
+from data straight from the counter. The direct rate, \( N_d (\theta) \), was
+determined simply by dividing the mean number of counts by the number of seconds
+the counter was allowed to run. For the gold foil at an angle of
+\( \theta = \SI{15}{\degree} \) and a time of \( t = \SI{100}{\second} \), the
+direct rate was:
+
+\begin{align*}
+  N_d (\SI{15}{\degree}) &= \frac{n_m}{t} \\
+  N_d (\SI{15}{\degree}) &= \frac{(1.2)}{(100)} \\
+  N_d (\SI{15}{\degree}) &= \num{0.012} \\
+\end{align*}
+
+Similar calculations were performed for the remaining angles, and the results of
+those calculations, as well as the collected data, can be viewed in Figure
+\ref{tab:scatRatesGold}.
 
 % Corrected counting rate (wrt. distribution in space)
-\qq 
+\qq The direct scattering rate \( N_d (\theta) \), however, is only relevant to
+a two-dimensional plane scattering geometry, not the sought-after
+three-dimensional geometry. Therefore, \( N_d (\theta) \) must be extrapolated
+into three dimensions. In three dimensions, the alpha particles are scattered
+across a solid angle \( d\Omega \) rather than across a two-dimensional
+plane. In order to take into account the third dimension, the direct scattering
+rate must be multiplied by the scattering angle. The result is the spacial
+scattering rate \( N (\theta) \):
+
+\begin{align*}
+  N (\theta) &= d\Omega N_d (\theta) \\
+  N (\theta) &= 2 \pi \sin{(\theta)} N_d (\theta) \\
+\end{align*} 
+
+\qq For the gold foil, a direct scattering rate of \( N_d (\SI{15}{\degree} =
+\num{0.012} \) yields a spacial scattering rate of:
+
+\begin{align*}
+  N (\SI{15}{\degree} &= 2 \pi \sin{(\SI{15}{\degree})} (\num{0.012}) \\
+  N (\SI{15}{\degree} &= \num{0.0195} \\
+\end{align*}
+
+Similar calculations were performed for the remaining angles, and the results of
+those calculations can be viewed in Figure \ref{tab:scatRatesGold}. The
+uncertainties in the scattering rates were found by executing the Julia program
+displayed in Section \ref{cod:uncertScatRateGold}.
 
 % Experimental results for rutherford formula
-\qq 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/ExperimentalScatteringRates/expScatRates.pdf}
+  \end{center}
+  \caption{The plot of the experimental values for the scattering rates of the
+    alpha particles through the foil measured at different angles.}
+  \label{gph:scatRatesGold}
+\end{figure}
 
 % Experimental uncertainty (\delta)
 \qq 
 
 % Theoretical results for rutherford formula
-\qq 
+\qq The theoretical values for the scattering rates of the alpha particles
+through the gold foil were determined using Rutherford's scattering formula, \(
+N (\theta) = N_0 n \frac{Z^2 e^4}{(8 \pi \epsilon_0 E_{\alpha})^2 \sin^4
+  \left( \frac{\theta}{2} \right)} \), where \( N_0 \) is the incident particle
+rate, \( n \) is the nuclear density of the foil (found by multiplying the
+foil material's atomic concentration by the foil's thickness), \( Z \) is the
+nuclear number of the foil's material, \( E_{\alpha} \) is the energy of the
+incident alpha particles, \( e \) is the elementary charge, and \( \epsilon_0 \)
+is the dielectric constant. This formula is implemented on line 101 of the
+general functions source file found in Section \ref{cod:genFuncs}. The results
+of this calculation can be seen in Figure \ref{tab:scatRatesGold}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/TheoreticalScatteringRates/theoScatRates.pdf}
+  \end{center}
+  \caption{The plot of the theoretical values for the scattering rates of the
+    alpha particles through the foil at different angles.}
+  \label{gph:scatRatesGold}
+\end{figure}
 
 \subsection{Data Analysis II: Aluminum}
 %Graphs, figures, and tables with captions
@@ -484,5 +551,17 @@ operated throughout the experiment.  \qq
 \subsection{Appendix A: Data}
 
 \subsection{Appendix B: Source Code}
+
+\subsubsection{General Functions}
+\label{cod:genFuncs}
+\inputminted{julia}{Code/genFuncs.jl}
+
+\subsubsection{Error Propagation for Scattering Rates through Gold}
+\label{cod:uncertScatRateGold}
+\inputminted{julia}{Code/getUncertScatRate.jl}
+
+\subsubsection{Compute the Theoretical Scattering Rates through Gold}
+\label{cod:theoScatRateGold}
+\inputminted{julia}{Code/getTheoScatRatesGold.jl} 
 
 \end{document}
