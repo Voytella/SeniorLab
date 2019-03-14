@@ -81,19 +81,20 @@ The area of this ring is found as the area of any ring is found:
 Since \( db \) is infinitesimally small, it can be approximated to be
 zero. Therefore, the area of the incident ring, \( \Delta \sigma \), is
 
-\begin{equation*}
+\begin{equation}
   \Delta \sigma = 2 \pi b db
-\end{equation*}
+\end{equation}
+\label{eqn:deltaSigma}
 
-\qq Since \( \Delta \sigma \) is the area of the full incident ring, an
-infinitesimal angular portion of that ring, \( d\phi \), may be represented by
-\( \Delta \sigma (\phi) = b db d\phi \). Additionally, because the impact
-parameter \( b \) is related to the scattering angle \( \theta \), \( \Delta
-\sigma \) is also a function of \( \theta \). Hence, 
-
-\begin{equation*}
-  \Delta \sigma (\theta, \phi) = b db d\phi
-\end{equation*}
+%\qq Since \( \Delta \sigma \) is the area of the full incident ring, an
+%infinitesimal angular portion of that ring, \( d\phi \), may be represented by
+%\( \Delta \sigma (\phi) = b db d\phi \). Additionally, because the impact
+%parameter \( b \) is related to the scattering angle \( \theta \), \( \Delta
+%\sigma \) is also a function of \( \theta \). Hence, 
+%
+%\begin{equation*}
+%  \Delta \sigma (\theta, \phi) = b db d\phi
+%\end{equation*}
 
 \qq Since the impact parameter \( b \) is directly proportional to the size of
 the cross section and the scattering angle \( \theta \) is inversely
@@ -102,11 +103,162 @@ the scattering angle increases. Therefore, the cross section experiences a
 negative rate of change as \( \theta \) increases. Hence, 
 
 \begin{equation}
-  \Delta \sigma (\theta, \phi) = - d\sigma (\theta, \phi) 
+  \Delta \sigma (\theta) = - d\sigma (\theta) 
 \end{equation}
 \label{eqn:dSigma}
 
-\qq 
+\qq The circumference of a circle is equal to \( 2 \pi r \), where \( r \) is
+the radius of the circle. In the experiment, the radius of the ring onto which
+the alpha particle is projected after it is scattered is \( R \sin{(\theta)} \),
+where \( \theta \) is the scattering angle and \( R \), described in Figure
+\ref{fig:alphaDist}, is the distance between the point at which the alpha
+particle was scattered and the edge of the ring.
+
+\begin{figure}[H]
+  \begin{center}
+    \begin{tikzpicture}
+      
+      % nucleus
+      \fill (0,0) circle (2pt) node[anchor=north] {nucleus};
+      \draw [dotted] (0,0) -- (0,2);
+
+      % axis
+      \draw [thick] (-2,0) -- (5,0);
+      
+      % circle
+      \draw (4,1.5) -- (4,-1.5);
+      \draw [dotted] (4,1.5) -- (4,2);
+
+      % particle path
+      \draw [dashed] (-1,0.5) -- (-0.5,0.5); 
+      \draw [dashed] (-0.5,0.5) arc[start angle=0, end angle=20] --
+      (0.5,0.7) arc[start angle=20, end angle=60];
+      \draw [dashed] (0.5,0.7) -- (4,1.5);
+      \draw (2,1.4) node[rotate=15] {R};
+      
+    \end{tikzpicture}
+  \end{center}
+  \caption{The path of the alpha particle as it is scattered by a nucleus. \( R
+    \) is the path length between the nucleus and the ring of the solid
+    angle.}
+  \label{fig:alphaDist}
+\end{figure}
+
+\qq The outer circumference of this ring is \( 2 \pi R \sin{(\theta)} \). Since
+the alpha particle is incident within a range whose minimum is \( \theta -
+d\theta \), however, the ring has a thickness of \( R d\theta \). Since the
+thickness of the ring is infinitesimal, the ring's area can be approximated to
+be that of a rectangle. Therefore, the area of the ring is \( A = 2 \pi R
+\sin{(\theta)} R d\theta \). 
+
+\qq The solid angle of the scattered alpha particles at an angle \( \theta \)
+is:
+
+\begin{align*}
+  \Delta \Omega &= \frac{A}{R^2} \\
+                &= \frac{(2 \pi R \sin{(\theta)} R d\theta)}{R^2} \\
+\end{align*}
+
+\begin{equation}
+  d\Omega = 2 \pi \sin{(\theta)} 
+\end{equation}
+\label{eqn:dOmega}
+
+\qq An expression for the differential cross section \( \frac{d\sigma}{d\Omega}
+(\theta) \) can be found by multiplying Equation \ref{eqn:dSigma} by Equation
+\ref{eqn:dOmega} divided by itself.
+
+\begin{align*}
+  \Delta \sigma &=- \frac{d\sigma}{d\Omega} (\theta) d\Omega \\ 
+                &= - \frac{d\sigma}{d\Omega} (\theta) 2 \pi 
+                  \sin{(\theta)} d\theta \\
+\end{align*} 
+
+from Equation \ref{eqn:deltaSigma}:
+
+\begin{align*}
+  - \frac{d\sigma}{d\Omega} (\theta) 2 \pi \sin{(\theta)} d\theta &= 2 \pi b db
+  \\
+\end{align*}
+
+\begin{equation}
+  \frac{d\sigma}{d\Omega} (\theta) = 
+  - \frac{b}{\sin{(\theta)}} \frac{db}{d\theta} 
+\end{equation}
+\label{eqn:diffCrossSecB}
+
+Since it is known that \( b = \frac{Z Z^{\prime} e^2}{2 E}
+\text{cot} \left( \frac{\theta}{2} \right) \), it can be inserted into Equation
+\ref{eqn:diffCrossSecB}. Furthermore, since \( b \) is a function of \( \theta
+\), \( \frac{db}{d\theta} \) can also be found:
+
+\begin{align*}
+  b &= \frac{Z Z^{\prime} e^2}{2 E} \text{cot} \left( \frac{\theta}{2} \right)
+  \\
+  \frac{db}{d\theta} &= \frac{Z Z^{\prime} e^2}{2 E}
+                       \left( - \frac{1}{2} \text{csc}^2 \left( \frac{\theta}{2}
+                       \right) \right) \\
+  \frac{db}{d\theta} &= - \frac{Z Z^{\prime} e^2}{4 E} \text{csc}^2 \left(
+                       \frac{\theta}{2} \right) \\
+\end{align*} 
+
+\qq Now that \( b \) and \( db \) have been found, the full expression for the
+differential cross section \( \frac{d\sigma}{d\Omega} \) can be determined:
+
+\begin{align*}
+  \frac{d\sigma}{d\Omega} (\theta) 
+  &= - \frac{b}{\sin{(\theta)}} \frac{db}{d\theta} \\
+  &= - \left( \frac{Z Z^{\prime} e^2}{2 E} \text{cot} \left( \frac{\theta}{2}
+    \right) \right)
+    \frac{1}{\sin{(\theta)}} 
+    \left( - \frac{Z Z^{\prime} e^2}{4 E} \text{csc}^2 \left( \frac{\theta}{2}
+    \right) \right) \\
+  &= 2 \left( \frac{Z Z^{\prime} e^2}{4 E} \right)^2
+    \frac{\cos{\left( \frac{\theta}{2} \right)}}{\sin{\left(
+    \frac{\theta}{2} \right)}}
+    \frac{1}{\sin{(\theta)}}
+    \frac{1}{\sin^2 \left( \frac{\theta}{2} \right)} \\
+  &= 2 \left( \frac{Z Z^{\prime} e^2}{4 E} \right)^2
+    \cos{\left( \frac{\theta}{2} \right)}
+    \frac{1}{\left( 2 \sin{\left( \frac{\theta}{2} \right)} \cos{\left(
+    \frac{\theta}{2} \right)} \right)} 
+    \frac{1}{\sin^3 \left( \frac{\theta}{2} \right)} \\
+\end{align*}
+
+\begin{equation}
+  \frac{d\sigma}{d\Omega} (\theta) = \left( \frac{Z Z^{\prime} e^2}{4 E}
+  \right)^2 \frac{1}{\sin^4 \left( \frac{\theta}{2} \right)}
+\end{equation}
+\label{eqn:diffCrossSec}
+
+Equation \ref{eqn:diffCrossSec} is the equation for calculating the
+theoretical differential cross-section. 
+
+\qq The differential cross-section can also be found experimentally using a
+found alpha particle scattering rate at a particular angle \( \theta \). First,
+this relation must be constructed. The collimated beam of alpha particles begins
+its journey with an incident rate of \( \frac{dN_0}{dt} \). This beam is then
+incident on a thin foil with an atomic density of
+\( n = \frac{\rho N_A d}{A} \), where \( \rho \) is the density of the foil
+material, \( d \) is the thickness of the foil, and \( A \) is the atomic number
+of the foil material. By being incident on the foil, the alpha particles are
+exposed to a differential cross-section at the particular angle of
+\( \frac{d\sigma}{d\Omega} (\theta) \). The alpha particles are scattered by the
+nuclei across a solid angle \( \Delta \Omega = {A_{\text{detector}}}{r^2} \),
+where \( A_{\text{detector}} \) is the area of the detector and \( r \) is the
+distance between the foil and detector. Multiplying these factors together
+results in the scattering rate of the alpha particles incident on a particular
+foil at a particular angle: \( \frac{dN}{dt} (\theta) = \frac{dN_0}{dt} n
+\frac{d\sigma}{d\Omega} (\theta) \Delta \Omega \). Since the scattering rate is
+determined experimentally, the equation can be rearranged for the differential
+cross-section:
+
+\begin{equation}
+  \frac{d\sigma}{d\Omega} (\theta) = \frac{\frac{dN}{dt}
+    (\theta)}{\frac{dN_0}{dt} n \Delta \Omega}
+\end{equation}
+\label{eqn:expDiffCrossSec}
+
 
 \section{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and serial number. When it may be important, list principal specifications of certain pieces of equipment (e.g. the focal length of an optical system, etc.)
