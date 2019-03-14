@@ -12,11 +12,6 @@
 \BOOKMARK [1][-]{section.7}{Conclusion}{}% 12
 \BOOKMARK [1][-]{section.8}{Appendices}{}% 13
 \BOOKMARK [2][-]{subsection.8.1}{Appendix A: Data}{section.8}% 14
-\BOOKMARK [2][-]{subsection.8.2}{Appendix B: Source Code}{section.8}% 15
-\BOOKMARK [3][-]{subsubsection.8.2.1}{General Functions}{subsection.8.2}% 16
-\BOOKMARK [3][-]{subsubsection.8.2.2}{Error Propagation for Scattering Rates through Gold}{subsection.8.2}% 17
-\BOOKMARK [3][-]{subsubsection.8.2.3}{Error Propagation for Scattering Rates through Aluminum}{subsection.8.2}% 18
-\BOOKMARK [3][-]{subsubsection.8.2.4}{Compute the Theoretical Scattering Rates through Gold}{subsection.8.2}% 19
-\BOOKMARK [3][-]{subsubsection.8.2.5}{Compute the Theoretical Scattering Rates through Aluminum}{subsection.8.2}% 20
-\BOOKMARK [3][-]{subsubsection.8.2.6}{Error Propagation for Nuclear Number of Aluminum}{subsection.8.2}% 21
-\BOOKMARK [3][-]{subsubsection.8.2.7}{Compute the Theoretical Nuclear Number of Aluminum}{subsection.8.2}% 22
+\BOOKMARK [3][-]{subsubsection.8.1.1}{Gold Scattering Rates}{subsection.8.1}% 15
+\BOOKMARK [3][-]{subsubsection.8.1.2}{Scattering Rates Aluminum}{subsection.8.1}% 16
+\BOOKMARK [2][-]{subsection.8.2}{Appendix B: Source Code}{section.8}% 17
