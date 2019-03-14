@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  14 MAR 2019 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.1.28)  14 MAR 2019 12:44
 entering extended mode
 **./N4_Lab_Report.tex
 (N4_Lab_Report.tex
@@ -1153,11 +1153,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
-) (N4_Lab_Report.aux
-
-LaTeX Warning: Label `preamp_discrim' multiply defined.
-
-)
+) (N4_Lab_Report.aux)
 \openout1 = `N4_Lab_Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1176,7 +1172,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
- ("C:\Users\Sarah\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
+
+("C:\Users\Sarah\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu"
 File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1341,21 +1338,15 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 310.
 
 [7]
-
-LaTeX Warning: Reference `preamp_amp' on page 8 undefined on input line 387.
-
-
-LaTeX Warning: Reference `preamp_amp' on page 8 undefined on input line 387.
-
-<gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png, id=163, 459.21562pt x 367.3725
+<gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png, id=165, 459.21562pt x 367.3725
 pt>
 File: gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png Graphic file (type png)
 <use gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png>
 Package pdftex.def Info: gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png  used o
 n input line 392.
 (pdftex.def)             Requested size: 241.49895pt x 193.19856pt.
-[8]
-<ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png, id=169, 530.
+ [8]
+<ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png, id=172, 530.
 73282pt x 408.77719pt>
 File: ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png Graphic 
 file (type png)
@@ -1375,7 +1366,7 @@ m/n/10 (\OML/cmm/m/it/10 \OT1/cmr/m/n/10 )$, how-ever, is only rel-e-vant to a
 LaTeX Warning: Reference `cod:uncertScatRateGold' on page 10 undefined on input
  line 459.
 
-<Plots/ExperimentalScatteringRates/expScatRates.pdf, id=180, 429.03589pt x 376.
+<Plots/ExperimentalScatteringRates/expScatRates.pdf, id=182, 429.03589pt x 376.
 7365pt>
 File: Plots/ExperimentalScatteringRates/expScatRates.pdf Graphic file (type pdf
 )
@@ -1388,7 +1379,7 @@ ed on input line 464.
 LaTeX Warning: Reference `cod:genFuncs' on page 11 undefined on input line 484.
 
 
-<Plots/TheoreticalScatteringRates/theoScatRates.pdf, id=187, 428.47076pt x 376.
+<Plots/TheoreticalScatteringRates/theoScatRates.pdf, id=189, 428.47076pt x 376.
 73346pt>
 File: Plots/TheoreticalScatteringRates/theoScatRates.pdf Graphic file (type pdf
 )
@@ -1409,7 +1400,7 @@ ine 524.
 LaTeX Warning: Reference `cod:uncertNucNumAl' on page 12 undefined on input lin
 e 527.
 
-<Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf, id=217, 426.42914pt x 
+<Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf, id=219, 426.42914pt x 
 377.84764pt>
 File: Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf Graphic file (type
  pdf)
@@ -1434,7 +1425,7 @@ ine 549.
 LaTeX Warning: Reference `cod:theoNucNumAl' on page 13 undefined on input line 
 551.
 
-<Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf, id=239, 428.47076pt x 
+<Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf, id=241, 428.47076pt x 
 377.83658pt>
 File: Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf Graphic file (type
  pdf)
@@ -1479,14 +1470,11 @@ Package rerunfilecheck Info: File `N4_Lab_Report.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
  50421 strings out of 492946
  1250951 string characters out of 3126266
- 1483286 words of memory out of 3000000
+ 1482364 words of memory out of 3000000
  53646 multiletter control sequences out of 15000+200000
  548540 words of font info for 85 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1509,9 +1497,9 @@ Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy5.pfb><C:/Users/Sarah/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy7.pfb>
-Output written on N4_Lab_Report.pdf (18 pages, 446959 bytes).
+Output written on N4_Lab_Report.pdf (18 pages, 447224 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
+ 358 PDF objects out of 1000 (max. 8388607)
  59 named destinations out of 1000 (max. 500000)
  195 words of extra memory for PDF output out of 10000 (max. 10000000)
 
