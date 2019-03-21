@@ -688,7 +688,16 @@ The uncertainties in the height, width, and distance were taken to be the standa
    &= 0.0025 \text{ sterad}
 \end{align*}
 
-The difference between experimental and theoretical cross-section values has an associated uncertainty. If the theoretical value is assumed to have no uncertainty, then the uncertainty associated with the difference will be that calculated in equation \ref{eq:expCrossSecUncert}.
+The difference between experimental and theoretical cross-section values has an associated uncertainty. If the theoretical value is assumed to have no uncertainty, then the uncertainty associated with the difference will be that calculated in equation \ref{eq:expCrossSecUncertGold}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/DiscrepencyCrossSectionAu/discCrossSecAu.pdf}
+  \end{center}
+  \caption{The discrepancy of the differential cross section between the
+    theoretical and experimental values for gold.}
+  \label{gph:expCrossSecUncertGold}
+\end{figure}
 
 \subsection{Results II: Aluminum}
 %Discuss results and uncertainties
@@ -703,7 +712,16 @@ The difference between experimental and theoretical cross-section values has an 
 
 % Calculate the uncertainty in the discrepancy
 % Quantify how many sigmas the discrepancy is
-\qq
+\qq The experimental values very closely agreed with the theoretical calculations.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[scale=0.8]{Plots/DiscrepencyCrossSectionAl/discCrossSecAl.pdf}
+  \end{center}
+  \caption{The discrepancy of the differential cross section between the
+    theoretical and experimental values for aluminum.}
+  \label{gph:expCrossSecUncertAl}
+\end{figure}
 
 \subsection{Source of Error}
 % Describe sources of error, what type of error they are, and how they
@@ -734,6 +752,10 @@ density of scatterers, and by extension in the scattering rate.
 
 % Results for gold
 % Note the number of sigmas (discrepancy) and what that means statistically
+\qq The difference between the theoretical and experimental differential cross
+sections was calculated along with an associated uncertainty for both gold and
+aluminum. The difference was within one sigma, very nearly zero! Therefore, the
+data was in agreement with theory.
 \qq
 
 % Results for aluminum
@@ -910,36 +932,36 @@ density of scatterers, and by extension in the scattering rate.
 
 \subsection{Appendix B: Source Code}
 
-%\subsubsection{General Functions}
-%\label{cod:genFuncs}
-%\inputminted{julia}{Code/genFuncs.jl}
-%
-%\subsubsection{Error Propagation for Scattering Rates through Gold}
-%\label{cod:uncertScatRateGold}
-%\inputminted{julia}{Code/getUncertScatRate.jl}
-%
-%\subsubsection{Error Propagation for Scattering Rates through Aluminum}
-%\label{cod:uncertScatRateAl}
-%\inputminted{julia}{Code/getUncertScatRateAl.jl}
-%
-%\subsubsection{Compute the Theoretical Scattering Rates through Gold}
-%\label{cod:theoScatRateGold}
-%\inputminted{julia}{Code/getTheoScatRatesGold.jl}
-%
-%\subsubsection{Compute the Theoretical Scattering Rates through Aluminum}
-%\label{cod:theoScatRateAl}
-%\inputminted{julia}{Code/getTheoScatRatesAl.jl}
-%
-%\subsubsection{Error Propagation for Differential Cross Section through Gold}
-%\label{cod:uncertCrossSecAu}
-%\inputminted{julia}{Code/getUncertCrossSec}
+\subsubsection{General Functions}
+\label{cod:genFuncs}
+\inputminted{julia}{Code/genFuncs.jl}
 
-%\subsubsection{Error Propagation for Nuclear Number of Aluminum}
-%\label{cod:uncertNucNumAl}
-%\inputminted{julia}{Code/getUncertNucNumAl.jl}
-%
-%\subsubsection{Compute the Theoretical Nuclear Number of Aluminum}
-%\label{cod:theoNucNumAl}
-%\inputminted{julia}{Code/getTheoNucNumAl.jl}
+\subsubsection{Error Propagation for Scattering Rates through Gold}
+\label{cod:uncertScatRateGold}
+\inputminted{julia}{Code/getUncertScatRate.jl}
+
+\subsubsection{Error Propagation for Scattering Rates through Aluminum}
+\label{cod:uncertScatRateAl}
+\inputminted{julia}{Code/getUncertScatRateAl.jl}
+
+\subsubsection{Compute the Theoretical Scattering Rates through Gold}
+\label{cod:theoScatRateGold}
+\inputminted{julia}{Code/getTheoScatRatesGold.jl}
+
+\subsubsection{Compute the Theoretical Scattering Rates through Aluminum}
+\label{cod:theoScatRateAl}
+\inputminted{julia}{Code/getTheoScatRatesAl.jl}
+
+\subsubsection{Error Propagation for Differential Cross Section through Gold}
+\label{cod:uncertCrossSecAu}
+\inputminted{julia}{Code/getUncertCrossSec}
+
+\subsubsection{Error Propagation for Nuclear Number of Aluminum}
+\label{cod:uncertNucNumAl}
+\inputminted{julia}{Code/getUncertNucNumAl.jl}
+
+\subsubsection{Compute the Theoretical Nuclear Number of Aluminum}
+\label{cod:theoNucNumAl}
+\inputminted{julia}{Code/getTheoNucNumAl.jl}
 %
 \end{document}
