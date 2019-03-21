@@ -1,0 +1,12 @@
+# ----------BEGIN PACKAGES----------
+
+using Measurements
+
+using CSV
+
+using DataFrames
+
+# -----------END PACKAGES-----------
+
+dataRaw = CSV.File("../Plots/ExpFreqVsVolt/freq_depen.csv") |> DataFrame
+
