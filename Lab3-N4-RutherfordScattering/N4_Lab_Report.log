@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  14 MAR 2019 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  14 MAR 2019 13:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1361,22 +1361,131 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip60
 )
-(/opt/local/share/texmf-texlive/tex/latex/changepage/changepage.sty
-Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count273
-\cp@tempcnt=\count274
-))
-(/opt/local/share/texmf-texlive/tex/latex/graphics/rotating.sty
-Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+(/opt/local/share/texmf-texlive/tex/latex/minted/minted.sty
+Package: minted 2016/10/31 v2.4.1 Yet another Pygments shim for LaTeX
+
+(/opt/local/share/texmf-texlive/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+b
 
 (/opt/local/share/texmf-texlive/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count275
-\rotFPtop=\skip61
-\rotFPbot=\skip62
-\rot@float@box=\box76
-\rot@mess@toks=\toks46
+(/opt/local/share/texmf-texlive/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count273
+\FV@InFile=\read4
+\FV@TabBox=\box76
+\c@FancyVerbLine=\count274
+\FV@StepNumber=\count275
+\FV@OutFile=\write6
+)
+(/opt/local/share/texmf-texlive/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/opt/local/share/texmf-texlive/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count276
+\output=\toks46
+\linenoprevgraf=\count277
+\linenumbersep=\dimen296
+\linenumberwidth=\dimen297
+\c@linenumber=\count278
+\c@pagewiselinenumber=\count279
+\c@LN@truepage=\count280
+\c@internallinenumber=\count281
+\c@internallinenumbers=\count282
+\quotelinenumbersep=\dimen298
+\bframerule=\dimen299
+\bframesep=\dimen300
+\bframebox=\box77
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count283
+\c@FV@TrueTabCounter=\count284
+\FV@TabBox@Group=\box78
+\FV@TmpLength=\skip61
+\c@FV@HighlightLinesStart=\count285
+\c@FV@HighlightLinesStop=\count286
+\FV@BreakIndent=\dimen301
+\FV@BreakSymbolSepLeft=\dimen302
+\FV@BreakSymbolSepRight=\dimen303
+\FV@BreakSymbolIndentLeft=\dimen304
+\FV@BreakSymbolIndentRight=\dimen305
+\c@FancyVerbLineBreakLast=\count287
+\FV@LineBox=\box79
+\FV@LineIndentBox=\box80
+)
+(/opt/local/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count288
+\calc@Bcount=\count289
+\calc@Adimen=\dimen306
+\calc@Bdimen=\dimen307
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count290
+\calc@Cskip=\skip64
+)
+(/opt/local/share/texmf-texlive/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+)
+(/opt/local/share/texmf-texlive/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+
+(/opt/local/share/texmf-texlive/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "N4_Lab_Report.w18")...executed.
+
+
+(./N4_Lab_Report.w18)
+runsystem(rm -- "N4_Lab_Report.w18")...executed.
+
+)
+(/opt/local/share/texmf-texlive/tex/generic/xstring/xstring.sty
+(/opt/local/share/texmf-texlive/tex/generic/xstring/xstring.tex
+\@xs@message=\write7
+\integerpart=\count291
+\decimalpart=\count292
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/opt/local/share/texmf-texlive/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip65
+\fb@frw=\dimen308
+\fb@frh=\dimen309
+\FrameRule=\dimen310
+\FrameSep=\dimen311
+)
+\minted@appexistsfile=\read5
+\minted@bgbox=\box81
+\minted@code=\write8
+\c@minted@FancyVerbLineTemp=\count293
+\c@minted@pygmentizecounter=\count294
+\@float@every@listing=\toks47
+\c@listing=\count295
+)
+(/opt/local/share/texmf-texlive/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count296
+\cp@tempcnt=\count297
+))
+(/opt/local/share/texmf-texlive/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count298
+\rotFPtop=\skip66
+\rotFPbot=\skip67
+\rot@float@box=\box82
+\rot@mess@toks=\toks48
 )
 (/opt/local/share/texmf-texlive/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
@@ -1384,19 +1493,24 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/opt/local/share/texmf-texlive/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen296
-\captionmargin@=\dimen297
-\captionwidth=\dimen298
-\caption@tempdima=\dimen299
-\caption@indent=\dimen300
-\caption@parindent=\dimen301
-\caption@hangindent=\dimen302
+\captionmargin=\dimen312
+\captionmargin@=\dimen313
+\captionwidth=\dimen314
+\caption@tempdima=\dimen315
+\caption@indent=\dimen316
+\caption@parindent=\dimen317
+\caption@hangindent=\dimen318
 )
-\c@ContinuedFloat=\count276
+\c@ContinuedFloat=\count299
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
 )
+runsystem(which pygmentize && touch N4_Lab_Report.aex)...executed.
+
+runsystem(rm N4_Lab_Report.aex)...executed.
+
+
 (./N4_Lab_Report.aux)
 \openout1 = `N4_Lab_Report.aux'.
 
@@ -1498,17 +1612,17 @@ File: siunitx-abbreviations.cfg 2017/05/19 v2.7g siunitx: Abbreviated units
 ABD: EveryShipout initializing macros
 (/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen303
-\scratchbox=\box77
-\nofMPsegments=\count278
-\nofMParguments=\count279
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen304
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count300
+\scratchdimen=\dimen319
+\scratchbox=\box83
+\nofMPsegments=\count301
+\nofMParguments=\count302
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen320
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
+\everyMPtoPDFconversion=\toks50
 ) (/opt/local/share/texmf-texlive/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1532,7 +1646,7 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into
 your preamble.
  on input line 19.
 
-\AtBeginShipoutBox=\box78
+\AtBeginShipoutBox=\box84
 Package hyperref Info: Link coloring OFF on input line 19.
 (/opt/local/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1540,19 +1654,19 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/opt/local/share/texmf-texlive/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count283
+\c@section@level=\count306
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
 
 (./N4_Lab_Report.out) (./N4_Lab_Report.out)
-\@outlinefile=\write6
-\openout6 = `N4_Lab_Report.out'.
+\@outlinefile=\write9
+\openout9 = `N4_Lab_Report.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\c__siunitx_mathsf_int=\count284
+\c__siunitx_mathsf_int=\count307
 LaTeX Font Info:    Try loading font information for U+msa on input line 19.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
@@ -1563,68 +1677,251 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count285
+\c__siunitx_mathtt_int=\count308
  [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./N4_Lab_Report.
 toc)
-\tf@toc=\write7
-\openout7 = `N4_Lab_Report.toc'.
+\tf@toc=\write10
+\openout10 = `N4_Lab_Report.toc'.
 
  [2] [3]
 [4] [5] [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 310.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 321.
 
  (/opt/local/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 310.
- [7]
-[8]
-Overfull \hbox (12.587pt too wide) in paragraph at lines 416--424
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 321.
+
+<diagram.png, id=218, 165.86969pt x 321.2pt>
+File: diagram.png Graphic file (type png)
+ <use diagram.png>
+Package pdftex.def Info: diagram.png used on input line 346.
+(pdftex.def)             Requested size: 172.5pt x 334.05482pt.
+ [7] [8 <./diagram.png>]
+<gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png, id=231, 459.21562pt x 367.3725
+pt>
+File: gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png Graphic file (type png)
+ <use gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png>
+Package pdftex.def Info: gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png used on
+ input line 403.
+(pdftex.def)             Requested size: 241.49895pt x 193.19856pt.
+ [9]
+<ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png, id=238, 530.
+73282pt x 408.77719pt>
+File: ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png Graphic 
+file (type png)
+
+<use ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_discrim.png>
+Package pdftex.def Info: ch2preamp_ch1discrim_gain20_maybe4mVthreshold/preamp_d
+iscrim.png used on input line 413.
+(pdftex.def)             Requested size: 258.75pt x 199.2921pt.
+ [10 <./gain20_th400mV_ch1amp_ch2preamp/preamp_amp.png> <./ch2preamp_ch1discrim
+_gain20_maybe4mVthreshold/preamp_discrim.png>]
+Overfull \hbox (12.587pt too wide) in paragraph at lines 447--455
 [] \OT1/cmr/m/n/10 The di-rect scat-ter-ing rate $\OML/cmm/m/it/10 N[]\OT1/cmr/
 m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )$, how-ever, is only rel-e-vant to
  a two-dimensional
  []
 
 
-LaTeX Warning: Reference `cod:uncertScatRateGold' on page 9 undefined on input 
-line 441.
-
-
-<Plots/ExperimentalScatteringRates/expScatRates.pdf, id=186, 429.03589pt x 376.
+<Plots/ExperimentalScatteringRates/expScatRates.pdf, id=249, 429.03589pt x 376.
 7365pt>
 File: Plots/ExperimentalScatteringRates/expScatRates.pdf Graphic file (type pdf
 )
  <use Plots/ExperimentalScatteringRates/expScatRates.pdf>
 Package pdftex.def Info: Plots/ExperimentalScatteringRates/expScatRates.pdf use
-d on input line 446.
+d on input line 477.
 (pdftex.def)             Requested size: 343.22917pt x 301.38959pt.
- [9]
-
-LaTeX Warning: Reference `cod:genFuncs' on page 10 undefined on input line 466.
-
-
-
-<Plots/TheoreticalScatteringRates/theoScatRates.pdf, id=193, 428.47076pt x 376.
+ [11]
+<Plots/TheoreticalScatteringRates/theoScatRates.pdf, id=257, 428.47076pt x 376.
 73346pt>
 File: Plots/TheoreticalScatteringRates/theoScatRates.pdf Graphic file (type pdf
 )
  <use Plots/TheoreticalScatteringRates/theoScatRates.pdf>
 Package pdftex.def Info: Plots/TheoreticalScatteringRates/theoScatRates.pdf use
-d on input line 471.
+d on input line 502.
 (pdftex.def)             Requested size: 342.77707pt x 301.38716pt.
- [10 <./Plots/ExperimentalScatteringRates/expScatRates.pdf>]
-
-LaTeX Warning: Reference `cod:genFuncs' on page 11 undefined on input line 503.
-
-
-
-<Plots/TheoreticalCrossSectionalArea/theoCrossSec.pdf, id=222, 428.47076pt x 37
+ [12 <./Plots/ExperimentalScatteringRates/expScatRates.pdf>]
+<Plots/TheoreticalCrossSectionalArea/theoCrossSec.pdf, id=287, 428.47076pt x 37
 4.78821pt>
 File: Plots/TheoreticalCrossSectionalArea/theoCrossSec.pdf Graphic file (type p
 df)
  <use Plots/TheoreticalCrossSectionalArea/theoCrossSec.pdf>
 Package pdftex.def Info: Plots/TheoreticalCrossSectionalArea/theoCrossSec.pdf u
-sed
+sed on input line 539.
+(pdftex.def)             Requested size: 342.77707pt x 299.83096pt.
+ [13 <./Plots/TheoreticalScatteringRates/theoScatRates.pdf>] [14 <./Plots/Theor
+eticalCrossSectionalArea/theoCrossSec.pdf>]
+<Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf, id=338, 426.42914pt x 
+377.84764pt>
+File: Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf Graphic file (type
+ pdf)
+ <use Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf>
+Package pdftex.def Info: Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf
+ used on input line 598.
+(pdftex.def)             Requested size: 341.14377pt x 302.27852pt.
+
+
+LaTeX Warning: Reference `gph:theoScatRateGold' on page 15 undefined on input l
+ine 615.
+
+[15 <./Plots/ExperimentalScatteringRatesAl/expScatRatesAl.pdf>]
+<Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf, id=363, 428.47076pt x 
+377.83658pt>
+File: Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf Graphic file (type
+ pdf)
+ <use Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf>
+Package pdftex.def Info: Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf
+ used on input line 621.
+(pdftex.def)             Requested size: 342.77707pt x 302.26967pt.
+
+[16 <./Plots/TheoreticalScatteringRatesAl/theoScatRatesAl.pdf>]
+Overfull \hbox (9.71753pt too wide) in paragraph at lines 697--697
+[] 
+ []
+
+
+LaTeX Warning: Reference `eq:expCrossSecUncertGold' on page 17 undefined on inp
+ut line 699.
+
+
+<Plots/DiscrepencyCrossSectionAu/discCrossSecAu.pdf, id=385, 428.1044pt x 376.7
+3148pt>
+File: Plots/DiscrepencyCrossSectionAu/discCrossSecAu.pdf Graphic file (type pdf
+)
+ <use Plots/DiscrepencyCrossSectionAu/discCrossSecAu.pdf>
+Package pdftex.def Info: Plots/DiscrepencyCrossSectionAu/discCrossSecAu.pdf use
+d on input line 703.
+(pdftex.def)             Requested size: 342.48398pt x 301.38557pt.
+ [17]
+<Plots/DiscrepencyCrossSectionAl/discCrossSecAl.pdf, id=390, 439.54613pt x 376.
+73447pt>
+File: Plots/DiscrepencyCrossSectionAl/discCrossSecAl.pdf Graphic file (type pdf
+)
+ <use Plots/DiscrepencyCrossSectionAl/discCrossSecAl.pdf>
+Package pdftex.def Info: Plots/DiscrepencyCrossSectionAl/discCrossSecAl.pdf use
+d on input line 727.
+(pdftex.def)             Requested size: 351.63737pt x 301.38799pt.
+
+Overfull \hbox (6.63737pt too wide) in paragraph at lines 727--728
+ [] 
+ []
+
+[18 <./Plots/DiscrepencyCrossSectionAu/discCrossSecAu.pdf>] [19 <./Plots/Discre
+pencyCrossSectionAl/discCrossSecAl.pdf>]
+Overfull \hbox (108.2391pt too wide) in paragraph at lines 784--847
+[][] 
+ []
+
+[20] [21]
+Overfull \vbox (59.4193pt too high) has occurred while \output is active []
+
+
+[22]
+Overfull \hbox (112.128pt too wide) in paragraph at lines 855--875
+[][] 
+ []
+
+
+Overfull \hbox (112.128pt too wide) in paragraph at lines 887--936
+[][] 
+ []
+
+runsystem(pygmentize -S default -f latex -P commandprefix=PYG > N4_Lab_Report.o
+ut.pyg)...executed.
+
+(./N4_Lab_Report.out.pyg)
+runsystem(pygmentize -S default -f latex -P commandprefix=PYGdefault > N4_Lab_R
+eport.out.pyg)...executed.
+
+ (./N4_Lab_Report.out.pyg)
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/genFuncs.jl)...executed.
+
+ (./N4_Lab_Report.out.pyg
+[23] [24] [25])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertScatRate.jl)...executed.
+
+ (./N4_Lab_Report.out.pyg
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
+ [26])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertScatRateAl.jl)...executed
+.
+
+ (./N4_Lab_Report.out.pyg
+[27])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getTheoScatRatesGold.jl)...execute
+d.
+
+ (./N4_Lab_Report.out.pyg)
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getTheoScatRatesAl.jl)...executed.
+
+ (./N4_Lab_Report.out.pyg [28])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertCrossSec)...executed.
+
+
+(./N4_Lab_Report.out.pyg)
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getUncertNucNumAl.jl)...executed.
+
+ (./N4_Lab_Report.out.pyg [29])
+runsystem(pygmentize -l julia -f latex -P commandprefix=PYG -F tokenmerge -P te
+xcomments=True -o N4_Lab_Report.out.pyg Code/getTheoNucNumAl.jl)...executed.
+
+
+(./N4_Lab_Report.out.pyg [30]) [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 975.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 975.
+ (./N4_Lab_Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 975.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 975.
+Package rerunfilecheck Info: File `N4_Lab_Report.out' has not changed.
+(rerunfilecheck)             Checksum: D678EA27E11E7A7ECE2A1088C97AD3C2;2313.
+
+
+LaTeX Warning: There were undefined references.
+
+runsystem(rm N4_Lab_Report.out.pyg)...executed.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 50577 strings out of 494936
+ 1244569 string characters out of 6180785
+ 1517448 words of memory out of 5000000
+ 53100 multiletter control sequences out of 15000+600000
+ 20356 words of font info for 77 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 64i,19n,96p,10390b,1095s stack positions out of 5000i,500n,10000p,200000b,80000s
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></o
+pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/lo
+cal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/local/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/local/share/t
+exmf-texlive/fonts/type1/public/amsfonts/cm/cmitt10.pfb></opt/local/share/texmf
+-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmmi5.pfb></opt/local/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></opt/local/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt
+/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy5.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on N4_Lab_Report.pdf (31 pages, 522523 bytes).
+PDF statistics:
+ 553 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+
