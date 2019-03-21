@@ -41,10 +41,36 @@
 \qq
 
 \subsection{Experimental Value of Gyromagnetic Ratio}
-\qq 
+\qq The gyromagnetic ratio is calculated using the following equation, where $\nu$ is the frequency, $h$ is Planck's constant, $\mu_B$ is the Bohr magneton, and $B_0$ is the magnetic field strength.
+\begin{equation}
+\label{eq:exp_gs}
+g_s = \frac{h \times \nu}{\mu_B \times B_0}
+\end{equation} 
+
+\qq The magnetic field used in calculating equation \ref{eq:exp_gs} must be calculated as well. It is determined from the measured current using equation \ref{eq:exp_B}, where $\mu_0 = 4 \pi \times 10^{-7} \frac{Vs}{Am}$, the number of turns is $n=320$, and the radius of the coils is $r=6.8cm$.
+\begin{equation}
+\label{eq:exp_B}
+B_0 = \mu_0 \left( \frac{4}{5} \right) ^{3/2} \times \frac{n}{r} \times I
+\end{equation}
+
+\qq Rather than measuring the current directly, the current is calculated by measuring the voltage drop across a resistor, of which the resistance is also measured. This calculation is shown below in equation.
+\begin{equation}
+\label{eq:exp_I}
+I = \frac{V}{R}
+\end{equation}
+
+\qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and then substituting equation \ref{eq:exp_B} into equation \ref{eq:exp_gs}, we arrive at an expression for the gyromagnetic ratio in terms of known constants and measured quantities. This final expression is shown in equation \ref{eq:exp_gs_combined}.
+\begin{equation}
+\label{eq:exp_gs_combined}
+g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^{3/2} \times \frac{n}{r} \times \frac{V}{R} \right) }
+\end{equation}
 
 \subsection{Propagating Uncertainty in Gyromagnetic Ratio}
-\qq 
+\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}.
+
+\begin{align*}
+\delta g_s &= \\
+\end{align*}
 
 \subsection{Determining Line Width of Resonance Signal}
 \qq 
