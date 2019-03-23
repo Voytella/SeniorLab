@@ -87,10 +87,42 @@ g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^
 \end{equation}
 
 \subsection{Propagating Uncertainty in Gyromagnetic Ratio}
-\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}.
+\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}. There are no uncertainties associated with fundamental constants such as $h$, $\mu_B$, and $\mu_0$. It is assumed that the number of coil turns, $n$, also has no associated uncertainty because it was reported in the manual as such. The uncertainty in the radius is constant for all measurements, ,but the frequency, voltage, and resistance will differ for each measurement. Equation \ref{eq:delta_gs} shows this error propagation.
+
+\begin{equation}
+\label{eq:delta_gs}
+\delta g_s = g_s \times 
+              \sqrt {
+              		  \left( \frac{\delta \nu}{\nu} \right) ^2
+              		+ \left( \frac{\delta r}{r} \right) ^2
+              		+ \left( \frac{\delta V}{V} \right) ^2
+              		+ \left( \frac{\delta R}{R} \right) ^2
+					} \\
+\end{equation}
+
+An example calculation for the value of $g_s$ and its propagated uncertainty is shown below for a measurement taken with the large coil:
 
 \begin{align*}
-\delta g_s &= \\
+g_s &= \\
+    &= 1.93 \\
+\end{align*}
+
+\begin{align*}
+\delta g_s &=
+		   g_s \times 
+              \sqrt {
+              		  \left( \frac{1.00 \times 10^4 \text{Hz}}{3.00 \times 10^47 \text{Hz}} \right) ^2
+              		+ \left( \frac{0.5 \text{cm}}{6.7 \text{cm}} \right) ^2
+              		+ \left( \frac{0.1 \text{V}}{2 \text{V}} \right) ^2
+              		+ \left( \frac{0.1 \Omega}{1.7 \Omega} \right) ^2
+					} \\
+		  &= g_s \times 
+              \sqrt {
+              		  \left( num \right) ^2
+              		+ \left( 0.006 \right) ^2
+              		+ \left( num \right) ^2
+              		+ \left( num \right) ^2
+					}
 \end{align*}
 
 \subsection{Determining Line Width of Resonance Signal}
