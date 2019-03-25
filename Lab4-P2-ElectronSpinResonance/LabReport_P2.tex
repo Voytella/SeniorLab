@@ -46,14 +46,19 @@ resonance field. The line width of the resonance signal was then calculated.
 \subsection{Frequency Dependence of Resonance Field}
 
 \qq Voltage was compared to frequency to obtain a graphical
-relationship of the frequency dependence of the resonance field. The
+relationship for the frequency dependence of the resonance field. The
 amplitude voltage was obtained by measuring the peak-to-peak voltage
 from the oscilloscope and dividing it in half. The peak of
-\ref{FrequencyDependence} is the specific resonance frequency for the field.
+\ref{FrequencyDependece} is the specific resonance frequency for the
+field. This value is a voltage amplitude of 1.01 V and a frequency of $4.18*10^7$ Hz. It is important to note that the electron spin resonance device
+divides the frequency by a factor of a thousand, and thus the
+Hewlett-Packard frequency counter displayed a corrected frequency. The
+calculations require an uncorrected frequency, i.e. the counter's
+frequency multiplied by one thousand.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[scale=2.0]{freq_depen.png}
+\includegraphics[scale=1.0]{Plots/ExpFreqVsVolt/freq_depen.pdf}
 \captionof{figure}{Graphic representation of the frequency dependence
   of the resonance field.}
 \label{FrequencyDependence}
@@ -87,14 +92,74 @@ g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^
 \end{equation}
 
 \subsection{Propagating Uncertainty in Gyromagnetic Ratio}
-\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}.
+\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}. There are no uncertainties associated with fundamental constants such as $h$, $\mu_B$, and $\mu_0$. It is assumed that the number of coil turns, $n$, also has no associated uncertainty because it was reported in the manual as such. The uncertainty in the radius is constant for all measurements, ,but the frequency, voltage, and resistance will differ for each measurement. Equation \ref{eq:delta_gs} shows this error propagation.
+
+\begin{equation}
+\label{eq:delta_gs}
+\delta g_s = g_s \times 
+              \sqrt {
+              		  \left( \frac{\delta \nu}{\nu} \right) ^2
+              		+ \left( \frac{\delta r}{r} \right) ^2
+              		+ \left( \frac{\delta V}{V} \right) ^2
+              		+ \left( \frac{\delta R}{R} \right) ^2
+					} \\
+\end{equation}
+
+An example calculation for the value of $g_s$ and its propagated uncertainty is shown below for a measurement taken with the large coil:
 
 \begin{align*}
-\delta g_s &= \\
+g_s &= \\
+    &= 1.93 \\
+\end{align*}
+
+\begin{align*}
+\delta g_s &=
+		   g_s \times 
+              \sqrt {
+              		  \left( \frac{1.00 \times 10^4 \text{Hz}}{3.00 \times 10^47 \text{Hz}} \right) ^2
+              		+ \left( \frac{0.5 \text{cm}}{6.7 \text{cm}} \right) ^2
+              		+ \left( \frac{0.1 \text{V}}{2 \text{V}} \right) ^2
+              		+ \left( \frac{0.1 \Omega}{1.7 \Omega} \right) ^2
+					} \\
+		  &= g_s \times 
+              \sqrt {
+              		  \left( num \right) ^2
+              		+ \left( 0.006 \right) ^2
+              		+ \left( num \right) ^2
+              		+ \left( num \right) ^2
+					}
 \end{align*}
 
 \subsection{Determining Line Width of Resonance Signal}
-\qq 
+\qq $\delta$B_0 is representative of an absorption line, and is
+obtained when the energy is measured at a fixed frequency as function
+of the magnetic field. The line width $\delta$B_0 is used as an
+expression of the uncertainty in the energy of the transition. This is
+best represented by the equation $\delatE = g \times \mu_0 \times
+\deltaB_0$. Using the uncertainty principle a relation is then found
+for $\delta$B_0
+\begin{align*}
+\delta B_0 = \frac{\hbar}{2 \times g_J \times \mu_B \times T}
+\end{align*}
+where T is the lifetime of the level and g_J is the Land\acute{e}
+factor. Experimentally $\delta$B_0 can be determined by the following equation:
+\begin{align*}
+\delta B_0 = B \times (\frac{\delta I}{I_{mod}})
+\end{align*}
+where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2}$. 
+
+\begin{align*}
+\delta I = \frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2}
+\delta I = \frac{0.55}{2} \times 0.156 \times 2\sqrt{2}
+\delta I = 0.121
+\end{align*}
+
+\begin{align*}
+\delta B_0 = B \times (\frac{\delta I}{I_{mod}})
+\delta B_0 = (6.23\times10^{-4} \times (\frac{0.121}{0.156})
+\delta B_0 = 4.85\times10^{-4} T
+\delta B_0 = 4.85\times10^-1} mT
+\end{align*} 
 
 \section{Results}
 %Discuss results and uncertainties
@@ -102,10 +167,18 @@ g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^
 %Approximations to theory
 \qq
 
+\subsection{Discrepancy in the Resonance Field}
+\qq
+
 \subsection{Discrepancy in Gyromagnetic Ratio}
 \qq 
 
 \subsection{Discrepancy in Line Width}
+\qq 
+
+\section{Sources of Error}
+%Discuss the radius/seperation
+%Discuss the equipment heating
 \qq 
 
 \section{Conclusion}

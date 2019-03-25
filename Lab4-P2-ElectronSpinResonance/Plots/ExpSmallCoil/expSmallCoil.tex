@@ -1,0 +1,29 @@
+\documentclass{standalone}
+
+\input{../../../plotPream}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title=G-Factor of DPPH with Small Coil,
+    ylabel=G-Factor (\si{\hertz\per\tesla}),
+    xlabel=Frequency (\si{\hertz}),
+    width=15cm,
+    ]
+    \addplot+ [only marks,
+    error bars/.cd,
+    x dir=both,
+    x explicit,
+    y dir=both,
+    y explicit
+    ] table[
+    x=CorrFreq,
+    y=gFactor,
+    x error expr=\thisrow{FreqError},
+    y error expr=\thisrow{gFactorErr}
+    ] {expSmallCoil.tsv};
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}
