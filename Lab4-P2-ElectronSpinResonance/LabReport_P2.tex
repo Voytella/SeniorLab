@@ -26,7 +26,7 @@
 %Results
 
 \qq Electron spin resonance allows the structure of paramagnetic materials (such as diphenyl-picryl-hydrazyl or DPPH) to be investigated, as they have a nonzero momentum. The ratio of the magnetic moment and angular momentum is the gyromagnetic ratio of spin, $g_s$. Such a value for the
-electron was determined by applying various resonance frequencies and recording the magnetic field produced via Helmholtz coil, and determined to be $g_s = 1.49 \pm .13$.  A resonance curve was produced by plotting voltage amplitude against the frequency seen from a resonance circuit box. The line width of the resonance signal was then calculated to be $0.49mT$.
+electron was determined by applying various resonance frequencies and recording the magnetic field produced via Helmholtz coil, and determined to be $g_s = 1.49 \pm 0.13$.  A resonance curve was produced by plotting voltage amplitude against the frequency seen from a resonance circuit box. The line width of the resonance signal was then calculated to be $0.49mT$.
 
 \end{abstract}
 
@@ -53,31 +53,28 @@ electron was determined by applying various resonance frequencies and recording 
 \subsection{Frequency Dependence of Resonance Field}
 
 \qq Voltage was compared to frequency to obtain a graphical
-relationship for the frequency dependence of the resonance field. The
-amplitude voltage was obtained by measuring the peak-to-peak voltage
-from the oscilloscope and dividing it in half. The peak of
-\ref{FrequencyDependence} is the specific resonance frequency for the
-field. This value is a voltage amplitude of 1.01 V and a frequency of
+relationship for the frequency dependence of the resonance field. Such a relationship is shown below in figure \ref{FrequencyDependence}.
+The amplitude of the voltage was obtained by measuring the peak-to-peak voltage from the oscilloscope and dividing it in half. The peak in the data distribution graphed in figure \ref{FrequencyDependence} is the resonance frequency for the
+field. This value occurs at a voltage of 1.01 V and a frequency of
 $4.18*10^7$ Hz. It is important to note that the electron spin
-resonance device divides the frequency by a factor of a thousand, and
-thus the Hewlett-Packard frequency counter displayed a corrected
-frequency. The calculations require an uncorrected frequency, i.e. the
-counter's frequency multiplied by one thousand.
+resonance device divides the frequency by a factor of a thousand, which is reflected in the measurements taken with the
+ Hewlett-Packard frequency counter. Thus the measurements needed to be corrected before analysis is carried out, i.e. the
+counter's frequency are multiplied by one thousand.
+
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-\includegraphics[width=1.0\textwidth]{Plots/ExpFreqVsVolt/freq_depen.pdf}
-\captionof{figure}{Graphic representation of the frequency dependence
+\includegraphics[width=1.0]{Plots/ExpFreqVsVolt/freq_depen.pdf}
+\captionof{figure}{Voltage amplitude versus frequency: a graphic representation of the frequency dependence
   of the resonance field.}
 \label{FrequencyDependence}
 \end{figure}
 
-\subsection{Propagation of Uncertainty in the Frequency Dependence of the Resonance Field}
-
 \subsection{Experimental Value of Gyromagnetic Ratio}
-\qq The gyromagnetic ratio is calculated using the following equation,
+\qq The gyromagnetic ratio is calculated using equation \ref{eq:exp_gs},
 where $\nu$ is the frequency, $h$ is Planck's constant, $\mu_B$ is the
 Bohr magneton, and $B_0$ is the magnetic field strength.
+
 \begin{equation}
 \label{eq:exp_gs}
 g_s = \frac{h \times \nu}{\mu_B \times B_0}
@@ -102,7 +99,7 @@ equation.
 I = \frac{V}{R}
 \end{equation}
 
-\qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and
+\qq By substituting equation \ref{eq:exp_I} into equation \ref{eq:exp_B}, and
 then substituting equation \ref{eq:exp_B} into equation
 \ref{eq:exp_gs}, we arrive at an expression for the gyromagnetic ratio
 in terms of known constants and measured quantities. This final
@@ -132,7 +129,7 @@ and resistance will differ for each measurement. Equation
               		+ \left( \frac{\delta r}{r} \right) ^2
               		+ \left( \frac{\delta V}{V} \right) ^2
               		+ \left( \frac{\delta R}{R} \right) ^2
-					} \\
+					} \\ \\
 \end{equation}
 
 An example calculation for the value of $g_s$ and its propagated
@@ -147,9 +144,11 @@ g_s &= \frac
 						     \times \frac{320}{0.068}
 						     \times \frac{0.44}{1.7} \right)
 	     } \\
-    &= 1.93 \\
+    &= 1.93
 \end{align*}
-
+%
+Again, the associated uncertainty is as follows:
+%
 \begin{align*}
 \delta g_s &=
 		   g_s \times
@@ -169,6 +168,8 @@ g_s &= \frac
 		  &= .15
 \end{align*}
 
+\newpage
+
 We can calculate the discrepancy between the experimental and
 theoretical values as follows. Recall the theoretical value of $g_s$
 for DPPH is 2.0036, which is approximated as 2.00 due to the limited
@@ -180,10 +181,10 @@ precision of the experimental value.
 \\ &= 0.074 \\
 \end{align*}
 
-Evidently, this difference $\Delta g_s$ is less than $1 \sigma = .15$.
+Evidently, this difference $\Delta g_s$ is less than $1 \sigma$, which is taken to be $\delta g_s = 0.15$.
 
 \subsection{Rejection of Data}
-\qq During the data taking process for the "big coil", a measurement
+\qq During the data-taking process for the "big coil", a measurement
 at a particular frequency produced an experimental $g_s$ value that
 seemed anomalous; most measurements fall between 1 and 4, but this
 measurement is around 13. Chauvenet's criterion will be used to
@@ -208,7 +209,7 @@ interval is effectively zero. Therefore, we can discard the anomalous
 datum with extremely high confidence.
 
 \subsection{Determining Line Width of Resonance Signal}
-\qq $\delta B_0$ is representative of an absorption line, and is
+\qq The quantity $\delta B_0$ is representative of an absorption line, and is
 obtained when the energy is measured at a fixed frequency as function
 of the magnetic field. The line width $\delta B_0$ is used as an
 expression of the uncertainty in the energy of the transition. This is
@@ -217,30 +218,39 @@ best represented by the equation $\delta E = g \times \mu_0 \times
 for $\delta B_0$.
 
 \begin{align*}
-\delta B_0 = \frac{\hbar}{2 \times g_J \times \mu_B \times T}
+\delta B_0 = \frac{\hbar}{2 \times g_J \times \mu_B \times T},
 \end{align*}
-where T is the lifetime of the level and $g_J$ is the Land $\acute{e}$
-factor. Experimentally $\delta B_0$ can be determined by the following equation:
-\begin{align*}
-\delta B_0 = B \times \left( \frac{\delta I}{I_{mod}} \right)
-\end{align*}
-where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2}$.
+where T is the lifetime of the level and $g_J$ is the Land$\acute{e}$
+factor.
 
+\newpage
+
+Experimentally $\delta B_0$ can be determined by equation \ref{eq:line_width}, where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2}$.
+
+\begin{equation}
+\label{eq:line_width}
+\delta B_0 = B \times \left( \frac{\delta I}{I_{mod}} \right)
+\end{equation}
+%
+This first requires an intermittent calculation of $\delta I$ as follows:
+%
 \begin{align*}
 \delta I &= \frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2} \\
          &= \frac{0.55}{2} \times 0.156 \times 2\sqrt{2} \\
          &= 0.121
 \end{align*}
-
+%
+Substituting into equation \ref{eq:line_width} yields the following calculation:
+%
 \begin{align*}
 \delta B_0 &= B \times \left( \frac {\delta I} {I_{mod}} \right) \\
            &= 6.23 \times 10^{-4} \times \left( \frac {0.121} {0.156} \right) \\
            &= 4.85 \times 10^{-4} T \\
            &= 0.49 mT
-\end{align*} 
+\end{align*}
 
 
-\section{Results: Comparing Discrepancies and Uncertainties}
+\section{Results: Discrepancies and Uncertainties}
 %Discuss results and uncertainties
 %Compare results with theory
 %Approximations to theory
@@ -254,18 +264,20 @@ small coil is:
 
 \begin{align*}
   \Delta g_{s_{\text{small}}} =& \left| (2.00) - (1.44) \right| \\
-  \Delta g_{s_{\text{small}}} =& 0.56 \\
+   =& 0.56 \\
 \end{align*}
 
 Since the standard deviation of the calculated values is
-\( \sigma_{g_s, \text{small}} = 0.393 \), the experimental value of \( g_s \) is \(
+\( \sigma_{g_s, \text{small}} = 0.393 \), the experimental value of \( g_s \) is $$
 \frac{\Delta g_{s_{\text{small}}}}{\sigma_{g_s, \text{small}}} = \frac{0.56}{0.393} = 1.42
-\sigma \) from the theoretical value.
+\sigma $$ from the theoretical value of $g_s = 2.00$.
+
+\newpage
 
 \qq The discrepancies for the medium and big coils were calculated in the same
-way, and the results are detailed in Table \ref{tab:discrepancyG}. The results
+manner, and the results are detailed in table \ref{tab:discrepancyG}. The results
 from the three coils are then used to calculate a true average value of \( g_s
-\). The uncertainty in this value is the standard deviation of all the data
+\). The uncertainty in this value is the standard deviation of the mean, computed from all the data
 points across all the coils.
 
 \begin{table}[H]
@@ -301,7 +313,7 @@ points across all the coils.
 
 
 \subsection{Discrepancy in Line Width}
-\qq The line width itself is representative as an error in the energy,
+\qq The line width itself is representative of an error in the energy,
 as discussed above. Therefore, an uncertainty will not be calculated
 in the line width, as it is already a calculation involving
 uncertainties of constituent quantities. However, the experimental
@@ -313,22 +325,17 @@ mT, thus the experimental value is within the acceptable range.
 \section{Sources of Error}
 %Discuss the radius/seperation
 %Discuss the equipment heating
-\qq A true Helmholtz coil should have a separation distance equal to
-that of the radius of the coil. The width of basic unit, which holds
-the coil, was larger than the radius of the coil. Due to this the
-separation was larger than the radius of the coil meaning that the
-magnetic field is systematically lowered, as a true Helmhotz coil is
-designed to maximize the constructive interference.  Furthermore,
+\qq An ideal Helmholtz coil has a separation distance equal to its coil radii. The width of the "basic unit" module, which holds
+the coil samples, was larger than the radius of the coil. Thus the
+separation distance was limited to this width, and was larger than the coil radius. This restriction of the experimental set-up results in a magnetic field systematically lower than that indicated by calculations, as a true Helmholtz coil is
+designed with such a separation distance in order to maximize constructive interference of the constituent coils' fields. Any deviation from this set-up will result in a weaker field.  Furthermore,
 because the magnetic field is systematically lower than the
-prediction, the calculated $g_s$ is systematically raised in
-value. Both the Helmholtz coil and the 1 $M \Omega$ resistor heated up
-during the experimentation process. The heating of the equipment
-causes the energy in the system to be systematically lowered as the
-thermal energy transfers from the system to the surrounding region. This means
-that the value of the $g_s$ is lowered compared to prediction. As the
-resistor heats up the resistance changes, however this was accounted
-for, and the resistance was remeasured for every trial and the
-measured value was used in the calculations.
+prediction, the calculated $g_s$ is systematically higher that calculations predits, since the two quantities are inversely proportional.
+
+\qq Both the Helmholtz coil and the 1 $M \Omega$ resistor began heating up throughout the course of the experiment. The heating of the equipment
+causes energy loss in the system as the
+thermal energy transfers from the system to the surrounding region. This means that less energy is translated into the magnetic field, and since this quantity is directly proportional to the calculation of $g_s$, the value for $g_s$ will be systematically lower than predicted. As the
+resistor heats up, its resistivity and thus resistance increases, however this effect was mitigated in the calculations by repeatedly measuring the resistance of the resistor, before every trial, and using each resistance for its respective calculation of $g_s$.
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
