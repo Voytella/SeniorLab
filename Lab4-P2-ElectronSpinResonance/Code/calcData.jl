@@ -105,7 +105,10 @@ meanGFac = mean(gFacVals)
 meanGFacErr = std(gFacVals) / sqrt(length(gFacVals))
 
 # display mean g-factor info
-@printf("%.4e %.4e\n", meanGFac, meanGFacErr)
+#@printf("%.4e %.4e\n", meanGFac, meanGFacErr)
+
+# display standard deviation of g-factors
+@printf("%.4e\n", std(gFacVals))
 
 # display g-factor error
 #for fac in gFacErrs

@@ -205,13 +205,56 @@ where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \tim
 %Discuss results and uncertainties
 %Compare results with theory
 %Approximations to theory
-\qq
-
-\subsection{Discrepancy in the Resonance Field}
-\qq
+\qq 
 
 \subsection{Discrepancy in Gyromagnetic Ratio}
-\qq 
+\qq The discrepancy between the experimental and theoretical values of G for
+each of the coils can be calculated with \( \Delta g_s = | g_{s_t} - g_{s_e} |
+\), where \( g_{s_t} \) is the theoretical value of \( g_s \) and \( g_{s_e} \)
+is the experimental value. The discrepancy in the value of \( g_s \) for the
+small coil is:
+
+\begin{align*}
+  \Delta g_{s_{small}} =& \left| (2.00) - (1.44) \right| \\
+  \Delta g_{s_{small}} =& 0.56 \\
+\end{align*}
+
+Since the standard deviation of the calculated values is
+\( \sigma_{g_s, small} = 0.393 \), the experimental value of \( g_s \) is \(
+\frac{\Delta g_{s_{small}}}{\sigma_{g_s, small}} = \frac{0.56}{0.393} = 1.42
+\sigma \) from the theoretical value.
+
+\qq The discrepancies for the medium and big coils were calculated in the same
+way, and the results are detailed in Table \ref{tab:discrepancyG}. 
+
+\begin{table}[H]
+  \caption{The discrepancies between the theoretical and experimental values for
+    \( g_s \) for the small, medium, and big coils.}
+  \begin{center}
+    \begin{tabular}{l|l|l|l|l|l|}
+      \hline 
+      Coil & Theoretical \( g_s \) & Experimental \( g_s \) & \( \Delta g_s \) &
+                                                                                 Standard
+                                                                                 Deviation
+                                                                                 (\(
+                                                                                 \sigma
+                                                                                 \)) &
+                                                                                 \(
+                                                                                 \sigma
+                                                                                 \Delta
+                                                                                 g_s
+                                                                                 \)
+      \\
+      \hline
+      Small & 2.00 & 1.44 & 0.56 & 0.393 & 1.42 \( \sigma \) \\
+      Medium & 2.00 & 1.16 & 0.84 & 0.125 & 6.72 \( \sigma \) \\
+      Big & 2.00 & 1.89 & 0.11 & 0.825 & 0.133 \( \sigma \) \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:discrepancyG}
+\end{table}
+
 
 \subsection{Discrepancy in Line Width}
 \qq 
