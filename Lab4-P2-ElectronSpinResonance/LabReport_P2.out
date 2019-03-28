@@ -12,4 +12,9 @@
 \BOOKMARK [1][-]{section.4}{Conclusion}{}% 12
 \BOOKMARK [1][-]{section.5}{Appendices}{}% 13
 \BOOKMARK [2][-]{subsection.5.1}{Appendix A: Data}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.2}{Appendix B: Source Code}{section.5}% 15
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Frequency \046 Voltage}{subsection.5.1}% 15
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Small Coil}{subsection.5.1}% 16
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Medium Coil}{subsection.5.1}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Big Coil}{subsection.5.1}% 18
+\BOOKMARK [2][-]{subsection.5.2}{Appendix B: Source Code}{section.5}% 19
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Error Propagation and Data Processing}{subsection.5.2}% 20
