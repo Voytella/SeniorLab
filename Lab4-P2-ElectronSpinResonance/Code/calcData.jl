@@ -1,3 +1,5 @@
+# Run calculations on the recorded data.
+
 # ----------BEGIN PACKAGES----------
 
 # for reading data
@@ -16,12 +18,8 @@ using Statistics
 
 # ----------BEGIN EXTRACT DATA----------
 
-# check for variable containing CL arguments without overwriting system ARGS
-#locARGS = isdefined(:newARGS,1) ? newARGS : ARGS
-
 # get path to the data file from the command line
 filepath = ARGS[1]
-#filepath = "../Plots/ExpSmallCoil/expSmallCoil.csv"
 
 # throw the data into a DataFrame
 dataRaw = CSV.File(filepath) |> DataFrame
@@ -71,7 +69,7 @@ currs = getListOfPairs(currVals, currUncerts)
 # ----------BEGIN MAGNETIC FIELD----------
 
 # given a current, find the resultant magnetic field using:
-# \( B = \mu_0 \frac{4}{5}^{\frac{3}{2}} \frac{n}{r} I
+# \( B = \mu_0 \frac{4}{5}^{\frac{3}{2}} \frac{n}{r} \)
 magField(curr) = (4e-7 * pi) * ((4/5)^(3/2)) * (320 / 0.067) * curr
 
 # get the value-uncertainty pairs for the magnetic field
@@ -96,21 +94,25 @@ gFacErrs = [ propUncertMult(gFacVals[ii], [ freqs[ii], magFields[ii] ])
 # combine the values and errors into a list of pairs
 gFacs = getListOfPairs(gFacVals, gFacErrs)
 
-# -----------END G-FACTOR-----------
-
 # the mean of the g-factors
 meanGFac = mean(gFacVals)
 
 # the mean of the uncertainties of the g-factors
 meanGFacErr = std(gFacVals) / sqrt(length(gFacVals))
 
+# -----------END G-FACTOR-----------
+
+# ----------BEGIN MISC DATA DISPLAY----------
+
 # display mean g-factor info
-#@printf("%.4e %.4e\n", meanGFac, meanGFacErr)
+@printf("%.4e %.4e\n", meanGFac, meanGFacErr)
 
 # display standard deviation of g-factors
 @printf("%.4e\n", std(gFacVals))
 
 # display g-factor error
-#for fac in gFacErrs
-#    @printf("%.4e\n", fac)
-#end
+for fac in gFacErrs
+    @printf("%.4e\n", fac)
+end
+
+# -----------END MISC DATA DISPLAY-----------
