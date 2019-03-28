@@ -9,7 +9,7 @@
 
 \title{PHY 4210-01 Senior Lab \\Lab P2: Electron Spin Resonance}
 
-\author{Sarah Arends \\ 
+\author{Sarah Arends \\
         Jacquelyne Miksanek \\
         Ryan Wojtyla \\ \\
         Instructor: Jerry Collins}
@@ -17,7 +17,7 @@
 \date{March 28, 2019}
 
 \begin{document}
-\maketitle 
+\maketitle
 
 \begin{abstract}
 %physics of experiment
@@ -59,14 +59,6 @@ resonance field. The line width of the resonance signal was then calculated.
 relationship for the frequency dependence of the resonance field. The
 amplitude voltage was obtained by measuring the peak-to-peak voltage
 from the oscilloscope and dividing it in half. The peak of
-<<<<<<< HEAD
-\ref{FrequencyDependence} is the specific resonance frequency for the
-field. This value is a voltage amplitude of 1.01 V and a frequency of $4.18*10^7$ Hz. It is important to note that the electron spin resonance device
-divides the frequency by a factor of a thousand, and thus the
-Hewlett-Packard frequency counter displayed a corrected frequency. The
-calculations require an uncorrected frequency, i.e. the counter's
-frequency multiplied by one thousand.
-=======
 \ref{FrequencyDependece} is the specific resonance frequency for the
 field. This value is a voltage amplitude of 1.01 V and a frequency of
 $4.18*10^7$ Hz. It is important to note that the electron spin
@@ -74,7 +66,6 @@ resonance device divides the frequency by a factor of a thousand, and
 thus the Hewlett-Packard frequency counter displayed a corrected
 frequency. The calculations require an uncorrected frequency, i.e. the
 counter's frequency multiplied by one thousand.
->>>>>>> master
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
@@ -93,7 +84,7 @@ Bohr magneton, and $B_0$ is the magnetic field strength.
 \begin{equation}
 \label{eq:exp_gs}
 g_s = \frac{h \times \nu}{\mu_B \times B_0}
-\end{equation} 
+\end{equation}
 
 \qq The magnetic field used in calculating equation \ref{eq:exp_gs}
 must be calculated as well. It is determined from the measured current
@@ -114,19 +105,11 @@ equation.
 I = \frac{V}{R}
 \end{equation}
 
-<<<<<<< HEAD
-\qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and then
-substituting equation \ref{eq:exp_B} into equation \ref{eq:exp_gs}, we arrive at
-an expression for the gyromagnetic ratio in terms of known constants and
-measured quantities. This final expression is shown in equation
-\ref{eq:exp_gs_combined}.
-=======
 \qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and
 then substituting equation \ref{eq:exp_B} into equation
 \ref{eq:exp_gs}, we arrive at an expression for the gyromagnetic ratio
 in terms of known constants and measured quantities. This final
 expression is shown in equation \ref{eq:exp_gs_combined}.
->>>>>>> master
 \begin{equation}
 \label{eq:exp_gs_combined}
 g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5}
@@ -134,15 +117,6 @@ g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5}
 \end{equation}
 
 \subsection{Propagating Uncertainty in Gyromagnetic Ratio}
-<<<<<<< HEAD
-\qq The error in the experimental value of the gyromagnetic ratio is determined
-by propagating uncertainty in equation \ref{eq:exp_gs_combined}. There are no
-uncertainties associated with fundamental constants such as $h$, $\mu_B$, and
-$\mu_0$. It is assumed that the number of coil turns, $n$, also has no
-associated uncertainty because it was reported in the manual as such. The
-uncertainty in the radius is constant for all measurements, ,but the frequency,
-voltage, and resistance will differ for each measurement. Equation
-=======
 \qq The error in the experimental value of the gyromagnetic ratio is
 determined by propagating uncertainty in equation
 \ref{eq:exp_gs_combined}. There are no uncertainties associated with
@@ -151,12 +125,14 @@ that the number of coil turns, $n$, also has no associated uncertainty
 because it was reported in the manual as such. The uncertainty in the
 radius is constant for all measurements, ,but the frequency, voltage,
 and resistance will differ for each measurement. Equation
->>>>>>> master
 \ref{eq:delta_gs} shows this error propagation.
+=======
+\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}. There are no uncertainties associated with fundamental constants such as $h$, $\mu_B$, and $\mu_0$. It is assumed that the number of coil turns, $n$, also has no associated uncertainty because it was reported in the manual as such. The uncertainty in the radius is constant for all measurements, but the frequency, voltage, and resistance will differ for each measurement. Equation \ref{eq:delta_gs} shows this error propagation.
+>>>>>>> SarahBranch
 
 \begin{equation}
 \label{eq:delta_gs}
-\delta g_s = g_s \times 
+\delta g_s = g_s \times
               \sqrt {
               		  \left( \frac{\delta \nu}{\nu} \right) ^2
               		+ \left( \frac{\delta r}{r} \right) ^2
@@ -165,21 +141,16 @@ and resistance will differ for each measurement. Equation
 					} \\
 \end{equation}
 
-<<<<<<< HEAD
-An example calculation for the value of $g_s$ and its propagated uncertainty is
-shown below for a measurement taken with the large coil:
-=======
 An example calculation for the value of $g_s$ and its propagated
 uncertainty is shown below for a measurement taken with the large
 coil:
->>>>>>> master
 
 \begin{align*}
 g_s &= \frac
 		{6.626 \times 10^{-34} \times  \left( 3 \times 10^7 \right) }
 		{\mu_B \times \left( 4 \pi \times 10^{-7}
 						     \left( \frac{4}{5} \right) ^{3/2}
-						     \times \frac{320}{0.068} 
+						     \times \frac{320}{0.068}
 						     \times \frac{0.44}{1.7} \right)
 	     } \\
     &= 1.93 \\
@@ -187,34 +158,28 @@ g_s &= \frac
 
 \begin{align*}
 \delta g_s &=
-		   g_s \times 
+		   g_s \times
               \sqrt {
               		  \left( \frac{1.00 \times 10^4 \text{Hz}}{3.00 \times 10^7 \text{Hz}} \right) ^2
               		+ \left( \frac{0.5 \text{cm}}{6.7 \text{cm}} \right) ^2
               		+ \left( \frac{0.1 \text{V}}{2 \text{V}} \right) ^2
               		+ \left( \frac{0.1 \Omega}{1.7 \Omega} \right) ^2
 					} \\
-		  &= 1.93 \times 
+		  &= 1.93 \times
               \sqrt {
               		  \left( 3.3 \times 10^{-4} \right) ^2
               		+ \left( 0.006 \right) ^2
               		+ \left( 0.05 \right) ^2
               		+ \left( 0.06 \right) ^2
 					} \\
-		  &= .15	
+		  &= .15
 \end{align*}
 
-<<<<<<< HEAD
-We can calculate the discrepancy between the experimental and theoretical values
-as follows. Recall the theoretical value of $g_s$ for DPPH is 2.0036, which is
-approximated as 2.00 due to the limited precision of the experimental value.
-=======
 We can calculate the discrepancy between the experimental and
 theoretical values as follows. Recall the theoretical value of $g_s$
 for DPPH is 2.0036, which is approximated as 2.00 due to the limited
 precision of the experimental value.
 
->>>>>>> master
 
 \begin{align*}
 \Delta g_s &= | g_{s_{exp}} - g_{s_{theo}} | \\ &= | 1.93 - 2.00 |
@@ -265,7 +230,7 @@ factor. Experimentally $\delta B_0$ can be determined by the following equation:
 \begin{align*}
 \delta B_0 = B \times \left( \frac{\delta I}{I_{mod}} \right)
 \end{align*}
-where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2}$. 
+where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2}$.
 
 \begin{align*}
 \delta I &= \frac{\delta U}{U_{mod}} \times  I_{mod} \times 2\sqrt{2} \\
@@ -278,13 +243,13 @@ where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \tim
            &= 6.23 \times 10^{-4} \times \left( \frac {0.121} {0.156} \right) \\
            &= 4.85 \times 10^{-4} T \\
            &= 4.85 \times 10^{-1} mT
-\end{align*} 
+\end{align*}
 
-\section{Results}
+\section{Results: Comparing Discrepancies and Uncertainties}
 %Discuss results and uncertainties
 %Compare results with theory
 %Approximations to theory
-\qq 
+\qq
 
 \subsection{Discrepancy in Gyromagnetic Ratio}
 \qq The discrepancy between the experimental and theoretical values of G for
@@ -304,14 +269,14 @@ Since the standard deviation of the calculated values is
 \sigma \) from the theoretical value.
 
 \qq The discrepancies for the medium and big coils were calculated in the same
-way, and the results are detailed in Table \ref{tab:discrepancyG}. 
+way, and the results are detailed in Table \ref{tab:discrepancyG}.
 
 \begin{table}[H]
   \caption{The discrepancies between the theoretical and experimental values for
     \( g_s \) for the small, medium, and big coils.}
   \begin{center}
     \begin{tabular}{|l|l|l|l|l|l|}
-      \hline 
+      \hline
       Coil & Theoretical \( g_s \) & Experimental \( g_s \) & \( \Delta g_s \) &
                                                                                  Standard
                                                                                  Deviation
@@ -336,7 +301,7 @@ way, and the results are detailed in Table \ref{tab:discrepancyG}.
 
 
 \subsection{Discrepancy in Line Width}
-\qq 
+\qq The line width itself is representative as an error in the energy, as discussed above. Therefore, an uncertainty will not be calculated in the line width, as it is already a calculation involving uncertainties of constituent quantities. However, the experimental value can be compared to an acceptable range given by literature sources. The experimental line width was determined to be $\delta B_0 = 0.49 mT$. The range given for theoretical line width was [0.15,0.81] mT, thus the experimental value is within the acceptable range.
 
 \section{Sources of Error}
 %Discuss the radius/seperation
@@ -360,7 +325,7 @@ measured value was used in the calculations.
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
-\qq 
+\qq
 
 \section{Appendices}
 
