@@ -59,12 +59,22 @@ resonance field. The line width of the resonance signal was then calculated.
 relationship for the frequency dependence of the resonance field. The
 amplitude voltage was obtained by measuring the peak-to-peak voltage
 from the oscilloscope and dividing it in half. The peak of
+<<<<<<< HEAD
 \ref{FrequencyDependence} is the specific resonance frequency for the
 field. This value is a voltage amplitude of 1.01 V and a frequency of $4.18*10^7$ Hz. It is important to note that the electron spin resonance device
 divides the frequency by a factor of a thousand, and thus the
 Hewlett-Packard frequency counter displayed a corrected frequency. The
 calculations require an uncorrected frequency, i.e. the counter's
 frequency multiplied by one thousand.
+=======
+\ref{FrequencyDependece} is the specific resonance frequency for the
+field. This value is a voltage amplitude of 1.01 V and a frequency of
+$4.18*10^7$ Hz. It is important to note that the electron spin
+resonance device divides the frequency by a factor of a thousand, and
+thus the Hewlett-Packard frequency counter displayed a corrected
+frequency. The calculations require an uncorrected frequency, i.e. the
+counter's frequency multiplied by one thousand.
+>>>>>>> master
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
@@ -77,35 +87,54 @@ frequency multiplied by one thousand.
 \subsection{Propagation of Uncertainty in the Frequency Dependence of the Resonance Field}
 
 \subsection{Experimental Value of Gyromagnetic Ratio}
-\qq The gyromagnetic ratio is calculated using the following equation, where $\nu$ is the frequency, $h$ is Planck's constant, $\mu_B$ is the Bohr magneton, and $B_0$ is the magnetic field strength.
+\qq The gyromagnetic ratio is calculated using the following equation,
+where $\nu$ is the frequency, $h$ is Planck's constant, $\mu_B$ is the
+Bohr magneton, and $B_0$ is the magnetic field strength.
 \begin{equation}
 \label{eq:exp_gs}
 g_s = \frac{h \times \nu}{\mu_B \times B_0}
 \end{equation} 
 
-\qq The magnetic field used in calculating equation \ref{eq:exp_gs} must be calculated as well. It is determined from the measured current using equation \ref{eq:exp_B}, where $\mu_0 = 4 \pi \times 10^{-7} \frac{Vs}{Am}$, the number of turns is $n=320$, and the radius of the coils is $r=6.8cm$.
+\qq The magnetic field used in calculating equation \ref{eq:exp_gs}
+must be calculated as well. It is determined from the measured current
+using equation \ref{eq:exp_B}, where $\mu_0 = 4 \pi \times 10^{-7}
+\frac{Vs}{Am}$, the number of turns is $n=320$, and the radius of the
+coils is $r=6.8cm$.
 \begin{equation}
 \label{eq:exp_B}
 B_0 = \mu_0 \left( \frac{4}{5} \right) ^{3/2} \times \frac{n}{r} \times I
 \end{equation}
 
-\qq Rather than measuring the current directly, the current is calculated by measuring the voltage drop across a resistor, of which the resistance is also measured. This calculation is shown below in equation.
+\qq Rather than measuring the current directly, the current is
+calculated by measuring the voltage drop across a resistor, of which
+the resistance is also measured. This calculation is shown below in
+equation.
 \begin{equation}
 \label{eq:exp_I}
 I = \frac{V}{R}
 \end{equation}
 
+<<<<<<< HEAD
 \qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and then
 substituting equation \ref{eq:exp_B} into equation \ref{eq:exp_gs}, we arrive at
 an expression for the gyromagnetic ratio in terms of known constants and
 measured quantities. This final expression is shown in equation
 \ref{eq:exp_gs_combined}.
+=======
+\qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and
+then substituting equation \ref{eq:exp_B} into equation
+\ref{eq:exp_gs}, we arrive at an expression for the gyromagnetic ratio
+in terms of known constants and measured quantities. This final
+expression is shown in equation \ref{eq:exp_gs_combined}.
+>>>>>>> master
 \begin{equation}
 \label{eq:exp_gs_combined}
-g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^{3/2} \times \frac{n}{r} \times \frac{V}{R} \right) }
+g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5}
+  \right) ^{3/2} \times \frac{n}{r} \times \frac{V}{R} \right) }
 \end{equation}
 
 \subsection{Propagating Uncertainty in Gyromagnetic Ratio}
+<<<<<<< HEAD
 \qq The error in the experimental value of the gyromagnetic ratio is determined
 by propagating uncertainty in equation \ref{eq:exp_gs_combined}. There are no
 uncertainties associated with fundamental constants such as $h$, $\mu_B$, and
@@ -113,6 +142,16 @@ $\mu_0$. It is assumed that the number of coil turns, $n$, also has no
 associated uncertainty because it was reported in the manual as such. The
 uncertainty in the radius is constant for all measurements, ,but the frequency,
 voltage, and resistance will differ for each measurement. Equation
+=======
+\qq The error in the experimental value of the gyromagnetic ratio is
+determined by propagating uncertainty in equation
+\ref{eq:exp_gs_combined}. There are no uncertainties associated with
+fundamental constants such as $h$, $\mu_B$, and $\mu_0$. It is assumed
+that the number of coil turns, $n$, also has no associated uncertainty
+because it was reported in the manual as such. The uncertainty in the
+radius is constant for all measurements, ,but the frequency, voltage,
+and resistance will differ for each measurement. Equation
+>>>>>>> master
 \ref{eq:delta_gs} shows this error propagation.
 
 \begin{equation}
@@ -126,8 +165,14 @@ voltage, and resistance will differ for each measurement. Equation
 					} \\
 \end{equation}
 
+<<<<<<< HEAD
 An example calculation for the value of $g_s$ and its propagated uncertainty is
 shown below for a measurement taken with the large coil:
+=======
+An example calculation for the value of $g_s$ and its propagated
+uncertainty is shown below for a measurement taken with the large
+coil:
+>>>>>>> master
 
 \begin{align*}
 g_s &= \frac
@@ -159,41 +204,49 @@ g_s &= \frac
 		  &= .15	
 \end{align*}
 
+<<<<<<< HEAD
 We can calculate the discrepancy between the experimental and theoretical values
 as follows. Recall the theoretical value of $g_s$ for DPPH is 2.0036, which is
 approximated as 2.00 due to the limited precision of the experimental value.
+=======
+We can calculate the discrepancy between the experimental and
+theoretical values as follows. Recall the theoretical value of $g_s$
+for DPPH is 2.0036, which is approximated as 2.00 due to the limited
+precision of the experimental value.
+
+>>>>>>> master
 
 \begin{align*}
-\Delta g_s &= | g_{s_{exp}} - g_{s_{theo}} | \\
-		   &= | 1.93 - 2.00 | \\
-		   &= 0.074 \\
+\Delta g_s &= | g_{s_{exp}} - g_{s_{theo}} | \\ &= | 1.93 - 2.00 |
+\\ &= 0.074 \\
 \end{align*}
 
 Evidently, this difference $\Delta g_s$ is less than $1 \sigma = .15$.
 
 \subsection{Rejection of Data}
-\qq During the data taking process for the "big coil", a measurement at a
-particular frequency produced an experimental $g_s$ value that seemed anomalous;
-most measurements fall between 1 and 4, but this measurement is around
-13. Chauvenet's criterion will be used to determine if this datum should be
-discarded.
+\qq During the data taking process for the "big coil", a measurement
+at a particular frequency produced an experimental $g_s$ value that
+seemed anomalous; most measurements fall between 1 and 4, but this
+measurement is around 13. Chauvenet's criterion will be used to
+determine if this datum should be discarded.
 
-\qq If one assumes this measurement to be valid, the resultant average and
-standard deviation are $2.59 \pm 2.91$ (quite an atrocity). The measurement in
-question, 13.08, differs from the average by $4.49 \sigma$. If a Gaussian
-distribution is assumed for the $g_s$ values, the probability of obtaining a
-measurement that differs from the mean by this quantity is determined as
-follows:
+\qq If one assumes this measurement to be valid, the resultant average
+and standard deviation are $2.59 \pm 2.91$ (quite an atrocity). The
+measurement in question, 13.08, differs from the average by $4.49
+\sigma$. If a Gaussian distribution is assumed for the $g_s$ values,
+the probability of obtaining a measurement that differs from the mean
+by this quantity is determined as follows:
+
 \begin{align*}
 Prob(\text{outside }  4.49 \sigma) &= 1 - Prob(\text{within } 4.49 \sigma) \\
 							  &= 1 -  .9999994 \\
 							  &= 0 \\
 \end{align*}
 
-\qq Since the probability of a measurement being withing $4.49 \sigma$ is so
-high, the probability of this measurement being outside this interval is
-effectively zero. Therefore, we can discard the anomalous datum with extremely
-high confidence.
+\qq Since the probability of a measurement being withing $4.49 \sigma$
+is so high, the probability of this measurement being outside this
+interval is effectively zero. Therefore, we can discard the anomalous
+datum with extremely high confidence.
 
 \subsection{Determining Line Width of Resonance Signal}
 \qq $\delta B_0$ is representative of an absorption line, and is
@@ -288,7 +341,22 @@ way, and the results are detailed in Table \ref{tab:discrepancyG}.
 \section{Sources of Error}
 %Discuss the radius/seperation
 %Discuss the equipment heating
-\qq 
+\qq A true Helmholtz coil shoud have a separation distance equal to
+that of the radius of the coil. The width of basic unit, which holds
+the coil, was larger than the radius of the coil. Due to this the
+separation was larger than the radius of the coil meaning that the
+magnetic field is systematically lowered, as a true Helmhotz coil is
+designed to maximize the constructive interference.  Futhermore,
+because the magnetic field is systematically lower than the
+prediction, the calculated $g_s$ is systematically raised in
+value. Both the Helmholtz coil and the 1 $M \ohm$ resistor heated up
+during the experimentation process. The heating of the equipment
+causes the energy in the system to be systematically lowered as the
+thermal energy leaves the system to the surrounding region. This means
+that the value of the $g_s$ is lowered compared to prediction. As the
+resistor heats up the resistance changes, however this was accounted
+for, and the resistance was remeasured for every trial and the
+measured value was used in the calculations.
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
