@@ -50,11 +50,12 @@ relationship for the frequency dependence of the resonance field. The
 amplitude voltage was obtained by measuring the peak-to-peak voltage
 from the oscilloscope and dividing it in half. The peak of
 \ref{FrequencyDependece} is the specific resonance frequency for the
-field. This value is a voltage amplitude of 1.01 V and a frequency of $4.18*10^7$ Hz. It is important to note that the electron spin resonance device
-divides the frequency by a factor of a thousand, and thus the
-Hewlett-Packard frequency counter displayed a corrected frequency. The
-calculations require an uncorrected frequency, i.e. the counter's
-frequency multiplied by one thousand.
+field. This value is a voltage amplitude of 1.01 V and a frequency of
+$4.18*10^7$ Hz. It is important to note that the electron spin
+resonance device divides the frequency by a factor of a thousand, and
+thus the Hewlett-Packard frequency counter displayed a corrected
+frequency. The calculations require an uncorrected frequency, i.e. the
+counter's frequency multiplied by one thousand.
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
@@ -67,32 +68,54 @@ frequency multiplied by one thousand.
 \subsection{Propagation of Uncertainty in the Frequency Dependence of the Resonance Field}
 
 \subsection{Experimental Value of Gyromagnetic Ratio}
-\qq The gyromagnetic ratio is calculated using the following equation, where $\nu$ is the frequency, $h$ is Planck's constant, $\mu_B$ is the Bohr magneton, and $B_0$ is the magnetic field strength.
+\qq The gyromagnetic ratio is calculated using the following equation,
+where $\nu$ is the frequency, $h$ is Planck's constant, $\mu_B$ is the
+Bohr magneton, and $B_0$ is the magnetic field strength.
 \begin{equation}
 \label{eq:exp_gs}
 g_s = \frac{h \times \nu}{\mu_B \times B_0}
 \end{equation} 
 
-\qq The magnetic field used in calculating equation \ref{eq:exp_gs} must be calculated as well. It is determined from the measured current using equation \ref{eq:exp_B}, where $\mu_0 = 4 \pi \times 10^{-7} \frac{Vs}{Am}$, the number of turns is $n=320$, and the radius of the coils is $r=6.8cm$.
+\qq The magnetic field used in calculating equation \ref{eq:exp_gs}
+must be calculated as well. It is determined from the measured current
+using equation \ref{eq:exp_B}, where $\mu_0 = 4 \pi \times 10^{-7}
+\frac{Vs}{Am}$, the number of turns is $n=320$, and the radius of the
+coils is $r=6.8cm$.
 \begin{equation}
 \label{eq:exp_B}
 B_0 = \mu_0 \left( \frac{4}{5} \right) ^{3/2} \times \frac{n}{r} \times I
 \end{equation}
 
-\qq Rather than measuring the current directly, the current is calculated by measuring the voltage drop across a resistor, of which the resistance is also measured. This calculation is shown below in equation.
+\qq Rather than measuring the current directly, the current is
+calculated by measuring the voltage drop across a resistor, of which
+the resistance is also measured. This calculation is shown below in
+equation.
 \begin{equation}
 \label{eq:exp_I}
 I = \frac{V}{R}
 \end{equation}
 
-\qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and then substituting equation \ref{eq:exp_B} into equation \ref{eq:exp_gs}, we arrive at an expression for the gyromagnetic ratio in terms of known constants and measured quantities. This final expression is shown in equation \ref{eq:exp_gs_combined}.
+\qq By substituting equation \ref{eq:exp_I} into \ref{eq:exp_B}, and
+then substituting equation \ref{eq:exp_B} into equation
+\ref{eq:exp_gs}, we arrive at an expression for the gyromagnetic ratio
+in terms of known constants and measured quantities. This final
+expression is shown in equation \ref{eq:exp_gs_combined}.
 \begin{equation}
 \label{eq:exp_gs_combined}
-g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^{3/2} \times \frac{n}{r} \times \frac{V}{R} \right) }
+g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5}
+  \right) ^{3/2} \times \frac{n}{r} \times \frac{V}{R} \right) }
 \end{equation}
 
 \subsection{Propagating Uncertainty in Gyromagnetic Ratio}
-\qq The error in the experimental value of the gyromagnetic ratio is determined by propagating uncertainty in equation \ref{eq:exp_gs_combined}. There are no uncertainties associated with fundamental constants such as $h$, $\mu_B$, and $\mu_0$. It is assumed that the number of coil turns, $n$, also has no associated uncertainty because it was reported in the manual as such. The uncertainty in the radius is constant for all measurements, ,but the frequency, voltage, and resistance will differ for each measurement. Equation \ref{eq:delta_gs} shows this error propagation.
+\qq The error in the experimental value of the gyromagnetic ratio is
+determined by propagating uncertainty in equation
+\ref{eq:exp_gs_combined}. There are no uncertainties associated with
+fundamental constants such as $h$, $\mu_B$, and $\mu_0$. It is assumed
+that the number of coil turns, $n$, also has no associated uncertainty
+because it was reported in the manual as such. The uncertainty in the
+radius is constant for all measurements, ,but the frequency, voltage,
+and resistance will differ for each measurement. Equation
+\ref{eq:delta_gs} shows this error propagation.
 
 \begin{equation}
 \label{eq:delta_gs}
@@ -105,7 +128,9 @@ g_s = \frac{h \times \nu}{\mu_B \times \left( \mu_0 \left( \frac{4}{5} \right) ^
 					} \\
 \end{equation}
 
-An example calculation for the value of $g_s$ and its propagated uncertainty is shown below for a measurement taken with the large coil:
+An example calculation for the value of $g_s$ and its propagated
+uncertainty is shown below for a measurement taken with the large
+coil:
 
 \begin{align*}
 g_s &= \frac
@@ -137,7 +162,9 @@ g_s &= \frac
 		  &= .15	
 \end{align*}
 
-We can calculate the discrepancy between the experimental and theoretical values as follows. Recall the theoretical value of $g_s$ for DPPH is 2.0036.
+We can calculate the discrepancy between the experimental and
+theoretical values as follows. Recall the theoretical value of $g_s$
+for DPPH is 2.0036.
 
 \begin{align*}
 \Delta g_s &= | g_{s_{exp}} - g_{s_{theo}} | \\
@@ -199,7 +226,22 @@ where $\delta$I is represented as $\frac{\delta U}{U_{mod}} \times  I_{mod} \tim
 \section{Sources of Error}
 %Discuss the radius/seperation
 %Discuss the equipment heating
-\qq 
+\qq A true Helmholtz coil shoud have a separation distance equal to
+that of the radius of the coil. The width of basic unit, which holds
+the coil, was larger than the radius of the coil. Due to this the
+separation was larger than the radius of the coil meaning that the
+magnetic field is systematically lowered, as a true Helmhotz coil is
+designed to maximize the constructive interference.  Futhermore,
+because the magnetic field is systematically lower than the
+prediction, the calculated $g_s$ is systematically raised in
+value. Both the Helmholtz coil and the 1 $M \ohm$ resistor heated up
+during the experimentation process. The heating of the equipment
+causes the energy in the system to be systematically lowered as the
+thermal energy leaves the system to the surrounding region. This means
+that the value of the $g_s$ is lowered compared to prediction. As the
+resistor heats up the resistance changes, however this was accounted
+for, and the resistance was remeasured for every trial and the
+measured value was used in the calculations.
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
