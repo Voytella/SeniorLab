@@ -137,17 +137,27 @@ g_s &= \frac
 		  &= .15	
 \end{align*}
 
-We can calculate the discrepancy between the experimental and theoretical values as follows. Recall the theoretical value of $g_s$ for DPPH is 2.0036.
+We can calculate the discrepancy between the experimental and theoretical values as follows. Recall the theoretical value of $g_s$ for DPPH is 2.0036, which is approximated as 2.00 due to the limited precision of the experimental value.
 
 \begin{align*}
 \Delta g_s &= | g_{s_{exp}} - g_{s_{theo}} | \\
-		   &= | 1.93 - 2.0036 | \\
+		   &= | 1.93 - 2.00 | \\
 		   &= 0.074 \\
 \end{align*}
 
 Evidently, this difference $\Delta g_s$ is less than $1 \sigma = .15$.
 
 \subsection{Rejection of Data}
+\qq During the data taking process for the "big coil", a measurement at a particular frequency produced an experimental $g_s$ value that seemed anomalous; most measurements fall between 1 and 4, but this measurement is around 13. Chauvenet's criterion will be used to determine if this datum should be discarded. 
+
+\qq If one assumes this measurement to be valid, the resultant average and standard deviation are $2.59 \pm 2.91$ (quite an atrocity). The measurement in question, 13.08, differs from the average by $4.49 \sigma$. If a Gaussian distribution is assumed for the $g_s$ values, the probability of obtaining a measurement that differs from the mean by this quantity is determined as follows:
+\begin{align*}
+Prob(\text{outside }  4.49 \sigma) &= 1 - Prob(\text{within } 4.49 \sigma) \\
+							  &= 1 -  .9999994 \\
+							  &= 0 \\
+\end{align*}
+
+\qq Since the probability of a measurement being withing $4.49 \sigma$ is so high, the probability of this measurement being outside this interval is effectively zero. Therefore, we can discard the anomalous datum with extremely high confidence.
 
 \subsection{Determining Line Width of Resonance Signal}
 \qq $\delta B_0$ is representative of an absorption line, and is
