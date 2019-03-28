@@ -11,7 +11,7 @@
 rW = 5.65e-4 
 
 # resistance of bulb (\( \si{\Ohm} \))
-resBulb = 
+resBulb = 0.93
 
 # -----------END CONSTANTS-----------
 
@@ -21,6 +21,9 @@ resBulb =
 inVolt = ARGS[1]
 
 # current applied to the bulb
-inAmp = ARGS[2]
+inCurr = ARGS[2]
 
 # -----------END INPUT-----------
+
+# get the resistivity
+r = rW * ( ((inVolt / inCurr)) / () )

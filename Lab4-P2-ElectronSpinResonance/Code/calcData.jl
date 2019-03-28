@@ -9,6 +9,9 @@ using DataFrames
 # for displaying data
 using Printf
 
+# for getting the mean
+using Statistics
+
 # -----------END PACKAGES-----------
 
 # ----------BEGIN EXTRACT DATA----------
@@ -18,6 +21,7 @@ using Printf
 
 # get path to the data file from the command line
 filepath = ARGS[1]
+#filepath = "../Plots/ExpSmallCoil/expSmallCoil.csv"
 
 # throw the data into a DataFrame
 dataRaw = CSV.File(filepath) |> DataFrame
@@ -94,7 +98,16 @@ gFacs = getListOfPairs(gFacVals, gFacErrs)
 
 # -----------END G-FACTOR-----------
 
+# the mean of the g-factors
+meanGFac = mean(gFacVals)
+
+# the mean of the uncertainties of the g-factors
+meanGFacErr = std(gFacVals) / sqrt(length(gFacVals))
+
+# display mean g-factor info
+@printf("%.4e %.4e\n", meanGFac, meanGFacErr)
+
 # display g-factor error
-for fac in gFacErrs
-    @printf("%.4e\n", fac)
-end
+#for fac in gFacErrs
+#    @printf("%.4e\n", fac)
+#end

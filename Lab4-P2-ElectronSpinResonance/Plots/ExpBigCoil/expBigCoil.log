@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  25 MAR 2019 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  27 MAR 2019 20:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -790,9 +790,9 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write4
-runsystem(touch w18-test-20193251083.tex)...executed.
+runsystem(touch w18-test-20193271254.tex)...executed.
 
-runsystem(rm -f w18-test-20193251083.tex)...executed.
+runsystem(rm -f w18-test-20193271254.tex)...executed.
 
 runsystem(rm -f "expBigCoil.gnuploterrors")...executed.
 
@@ -891,10 +891,10 @@ PGFPlots: reading {expBigCoil.tsv}
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 (./expBigCoil.aux) ) 
 Here is how much of TeX's memory you used:
- 32261 strings out of 494936
- 816212 string characters out of 6180785
- 972585 words of memory out of 5000000
- 35132 multiletter control sequences out of 15000+600000
+ 32259 strings out of 494936
+ 816160 string characters out of 6180785
+ 970645 words of memory out of 5000000
+ 35130 multiletter control sequences out of 15000+600000
  5049 words of font info for 20 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,15n,103p,10388b,2369s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -903,7 +903,7 @@ Here is how much of TeX's memory you used:
 mr10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr7.pf
 b></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></o
 pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on expBigCoil.pdf (1 page, 49113 bytes).
+Output written on expBigCoil.pdf (1 page, 49410 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  22 compressed objects within 1 object stream
