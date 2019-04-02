@@ -1,6 +1,7 @@
 # ----------BEGIN PACKAGES----------
 
-
+# pretty displaying formatting
+using Printf
 
 # -----------END PACKAGES-----------
 
@@ -25,5 +26,15 @@ inCurr = ARGS[2]
 
 # -----------END INPUT-----------
 
+# ----------BEGIN TEMPERATURE CALCULATIONS----------
+
 # get the resistivity
-r = rW * ( ((inVolt / inCurr)) / () )
+r = rW * ( ((inVolt / inCurr) - 0.2) / (resBulb) )
+
+# get the temperature from the resistivity
+temp(r) = 103 + (38.1 * r) - (0.095 * (r ^ 2)) + ( 2.48e-4 * (r ^ 3))
+
+# -----------END TEMPERATURE CALCULATIONS-----------
+
+# display temperature
+@printf("%.2e\n", temp(r))
