@@ -37,7 +37,7 @@ angs = getListOfPairs(angVals, fill(1.0, (1,length(angVals))))
 # ----------BEGIN ERROR PROPAGATION----------
 
 # get the bit of error for a variable into a 1-variable function
-sqDer1Var(func, val, err) = (derivative(func, val)* err) ^ 2
+sqDer1Var(func, val, err) = (derivative(func, val) * err) ^ 2
 
 # the propagated uncertainty of a particular value with 1-var function
 propUncert1Var(func, valErrs) = sqrt(sum([ sqDer1Var(func, valErr[1], valErr[2]) 
