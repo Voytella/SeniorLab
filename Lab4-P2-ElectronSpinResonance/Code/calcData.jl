@@ -44,7 +44,7 @@ freqs = getListOfPairsDF(dataRaw, :CorrFreq, :FreqError)
 
 # ----------BEGIN GENERAL ERROR PROPAGATION----------
 
-# get \( \frac{\delta x}{x}^2 \)
+# get \( \left( \frac{\delta x}{x} \right)^2 \)
 sqErrRatio(dataPt) = (dataPt[2] / dataPt[1]) ^ 2
 
 # get the uncertainty of a value calculated via multiplication of measurements
@@ -69,7 +69,7 @@ currs = getListOfPairs(currVals, currUncerts)
 # ----------BEGIN MAGNETIC FIELD----------
 
 # given a current, find the resultant magnetic field using:
-# \( B = \mu_0 \frac{4}{5}^{\frac{3}{2}} \frac{n}{r} \)
+# \( B = \mu_0 \left( \frac{4}{5} \right) ^{\frac{3}{2}} \frac{n}{r} \)
 magField(curr) = (4e-7 * pi) * ((4/5)^(3/2)) * (320 / 0.067) * curr
 
 # get the value-uncertainty pairs for the magnetic field
