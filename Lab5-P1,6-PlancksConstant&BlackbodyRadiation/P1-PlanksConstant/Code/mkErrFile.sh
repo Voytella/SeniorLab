@@ -4,11 +4,11 @@
 
 # ----------BEGIN ERRORS----------
 
-# uncertainty in current
-AErr="0.1"
+# uncertainty in first column
+col1="$2"
 
-# uncertainty in voltage
-VErr="1"
+# uncertainty in second column
+col2="$3"
 
 # -----------END ERRORS-----------
 
@@ -17,8 +17,14 @@ VErr="1"
 # first argument is the data file
 dataFile="$1"
 
+# name of data file omitting extension
+dataNoExt="$(echo ${dataFile} | awk -F'.' 'sub(FS $NF,x)')"
+
+# extension of data file
+dataExt="$(echo ${dataFile} | awk -F'.' '{print $NF}')"
+
 # the name of the file containing the error data
-errFile=$(echo $dataFile | awk -F'.' '{print $1"Err."$2}')
+errFile="${dataNoExt}Err${dataExt}"
 
 # -----------END FILENAMES-----------
 
