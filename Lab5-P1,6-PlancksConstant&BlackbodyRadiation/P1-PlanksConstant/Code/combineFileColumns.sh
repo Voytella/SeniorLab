@@ -43,6 +43,7 @@ sed s/^" "//g ${baseFile}JNL > "${baseNoExt}Comb.${baseExt}"
 
 # remove bridge files
 rm ${baseFile}L
+rm ${appFile}L
 rm ${baseFile}J
 rm ${baseFile}JN
 rm ${baseFile}JNL

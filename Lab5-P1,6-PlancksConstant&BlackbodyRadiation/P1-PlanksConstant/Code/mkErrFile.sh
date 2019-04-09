@@ -24,7 +24,7 @@ dataNoExt="$(echo ${dataFile} | awk -F'.' 'sub(FS $NF,x)')"
 dataExt="$(echo ${dataFile} | awk -F'.' '{print $NF}')"
 
 # the name of the file containing the error data
-errFile="${dataNoExt}Err${dataExt}"
+errFile="${dataNoExt}Err.${dataExt}"
 
 # -----------END FILENAMES-----------
 
@@ -45,7 +45,7 @@ echo "VErr AErr" > $errFile
 
 # insert uncertainties into file
 for (( ii=0; ii<$numUncerts; ii++ )); do
-    echo "$VErr $AErr" >> $errFile
+    echo "$col1 $col2" >> $errFile
 done
 
 # -----------END CREATE FILE-----------
