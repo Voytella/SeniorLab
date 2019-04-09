@@ -1,0 +1,38 @@
+\documentclass{standalone}
+
+\input{../../../../plotPream}
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title=No Filter,
+    ylabel=Current (\si{\micro\ampere}),
+    xlabel=Voltage (\si{\milli\volt}),
+    width=15cm
+    ]
+    \addplot table[
+    mark=none,
+    y={create col/linear regression={y=I}},
+    x=V
+    ] {noFilter.tsv};
+    \addlegendentry{%
+      \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\milli\volt}
+      \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
+      \sigma_{V_0} = 0.081 \si{\milli\volt} \)}%
+    \addplot+[only marks,
+    error bars/.cd,
+    x dir=both,
+    x explicit,
+    y dir=both,
+    y explicit
+    ] table[
+    x=V,
+    y=I
+    %x error expr=\thisrow{invTempErr},
+    %y error expr=\thisrow{lnInvVoltErr},
+    ] {noFilter.tsv};
+  \end{axis}
+\end{tikzpicture}
+%
+\end{document}
