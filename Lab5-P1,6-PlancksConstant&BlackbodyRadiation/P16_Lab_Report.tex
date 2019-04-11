@@ -268,8 +268,18 @@ being measured by the sensor.
 bulb. Although no clear pattern can be readily discerned from the plot, Figure
 \ref{gph:3volt}, at lower wavelengths, a clear peak of intensity occurs at
 \( 939 \pm 1 \si{\nano\meter} \). This value is within the range of the
-theoretical peak wavelength of \( 1734 \pm 1292 \si{\nano\meter} \). The
-discrepancy between the theoretical and experimental values of the peak
+theoretical peak wavelength of \( 1734 \pm 1292 \si{\nano\meter} \). 
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{P6-BlackbodyRadiation/Plots/3Volt/3volt.pdf}
+  \end{center}
+  \label{gph:3volt}
+  \caption{The relative intensity was plotted against the wavelengths in order
+    to find the peak wavelength.}
+\end{figure}
+
+\qq The discrepancy between the theoretical and experimental values of the peak
 wavelength is calculated with
 \( \Delta_{\lambda} = | \lambda_t - \lambda_e | \), where \( d \) is the
 discrepancy, \( \lambda_t = 939 \pm 1 \si{\nano\meter} \) is the theoretical
@@ -284,11 +294,15 @@ the peak wavelength.
 
 Since the standard deviation of the wavelengths at \SI{3}{\volt} is \(
 \sigma_{\lambda} = \SI{306}{\nano\meter} \), the experimental value of \(
-\lambda \) at \SI{3}{\volt} is:
+\lambda_e = 1734 \pm 1292 \si{\nano\meter} \) at \SI{3}{\volt} is
 
 \begin{equation*}
-  \frac{\Delta_{\lambda}
+  \frac{\Delta_{\lambda}}{\sigma_{\lambda}} = \frac{795}{306} = 2.60 \sigma
 \end{equation*}
+
+from the theoretical value of \( \lambda_t = 939 \pm 1 \si{\nano\meter} \).
+
+\qq 
 
 \subsection{Source of Error}
 
