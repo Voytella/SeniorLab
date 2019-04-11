@@ -33,20 +33,20 @@ kB = 1.38e-23
 # ----------BEGIN DATA IMPORT----------
 
 # get the voltage applied to the bulb
-voltIn = parse(Float64, ARGS[1])
-#voltIn = newARGS[1]
+#voltIn = parse(Float64, ARGS[1])
+voltIn = newARGS[1]
 
 # get the uncertainty in the applied voltage
-voltErr = parse(Float64, ARGS[2])
-#voltErr = newARGS[2]
+#voltErr = parse(Float64, ARGS[2])
+voltErr = newARGS[2]
 
 # get the current applied to the bulb
-currIn = parse(Float64, ARGS[3])
-#currIn = newARGS[3]
+#currIn = parse(Float64, ARGS[3])
+currIn = newARGS[3]
 
 # get the uncertainty in the applied current
-currErr = parse(Float64, ARGS[4])
-#currErr = newARGS[4]
+#currErr = parse(Float64, ARGS[4])
+currErr = newARGS[4]
 
 # -----------END DATA IMPORT-----------
 
@@ -93,25 +93,25 @@ wlErr = 0.002898 / tempErr
 # -----------END WAVELENGTH CALCULATIONS-----------
 
 # display results
-@printf("%e %e\n", wlVal * 1e9, wlErr * 1e9)
+#@printf("%e %e\n", wlVal * 1e9, wlErr * 1e9)
 
-## ----------BEGIN INTENSITY FUNCTIONS----------
-#
-## calculate the intensity with wavelength and temperature
-#getIntensity(wl, temp) = 
-#    ((2 * pi * (cLight ^ 2) * h) / (wl ^ 5)) *
-#    ( 1 / (exp((h * cLight) / (wl * kB * temp)) - 1) )
-#
-## wl and temp are val-err pairs
-#intGrad = Calculus.gradient(x -> getIntensity(x[1], x[2]), [wlVal, tempVal]) 
-#
-## a partial multiplied by the error of the partial's value, all squared
-#mkErrSq(part, err) = (part * err) ^ 2
-#
-## get the intensity
-#intensityVal = getIntensity(wlVal, tempVal)
-#
-## calculate the uncertainty in the intensity
-#intensityErr = sqrt(mkErrSq(intGrad[1], wlErr) + mkErrSq(intGrad[2], tempErr))
-#    
-## -----------END INTENSITY FUNCTIONS-----------
+# ----------BEGIN INTENSITY FUNCTIONS----------
+
+# calculate the intensity with wavelength and temperature
+getIntensity(wl, temp) = 
+    ((2 * pi * (cLight ^ 2) * h) / (wl ^ 5)) *
+    ( 1 / (exp((h * cLight) / (wl * kB * temp)) - 1) )
+
+# wl and temp are val-err pairs
+intGrad = Calculus.gradient(x -> getIntensity(x[1], x[2]), [wlVal, tempVal]) 
+
+# a partial multiplied by the error of the partial's value, all squared
+mkErrSq(part, err) = (part * err) ^ 2
+
+# get the intensity
+intensityVal = getIntensity(wlVal, tempVal)
+
+# calculate the uncertainty in the intensity
+intensityErr = sqrt(mkErrSq(intGrad[1], wlErr) + mkErrSq(intGrad[2], tempErr))
+    
+# -----------END INTENSITY FUNCTIONS-----------

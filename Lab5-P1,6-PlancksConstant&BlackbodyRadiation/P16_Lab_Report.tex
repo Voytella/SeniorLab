@@ -279,30 +279,61 @@ theoretical peak wavelength of \( 1734 \pm 1292 \si{\nano\meter} \).
     to find the peak wavelength.}
 \end{figure}
 
+\qq The plots for \SI{5}{\volt} (Figure \ref{gph:5volt}), \SI{7}{\volt} (Figure
+\ref{gph:7volt}), and \SI{9}{\volt} (Figure \ref{gph:9volt}) all exhibit
+behavior similar to that of the \SI{3}{\volt} plot. There is a clustered
+grouping of points at the lower wavelengths with a well defined peak around the
+higher wavelengths. The experimental and theoretical values of the peak
+wavelengths may be found in Table \ref{tab:peakWavelengths}. 
+
 \qq The discrepancy between the theoretical and experimental values of the peak
 wavelength is calculated with
-\( \Delta_{\lambda} = | \lambda_t - \lambda_e | \), where \( d \) is the
-discrepancy, \( \lambda_t = 939 \pm 1 \si{\nano\meter} \) is the theoretical
+\( \Delta \lambda = | \lambda_t - \lambda_e | \), where \( d \) is the
+discrepancy, \( \lambda_t = 1734 \pm 1292 \si{\nano\meter} \) is the theoretical
 value of the peak wavelength, and
-\( \lambda_e = 1734 \pm 1292 \si{\nano\meter} \) is the experimental value of
+\( \lambda_e = 939 \pm 7 \si{\nano\meter} \) is the experimental value of
 the peak wavelength.
 
 \begin{align*}
-  \Delta_{\lambda} =& \left| (939) - (1734) \right| \\
-  \Delta_{\lambda} =& 795 \si{\nano\meter} \\
+  \Delta \lambda =& \left| (1734) - (939) \right| \\
+  \Delta \lambda =& 795 \si{\nano\meter} \\
 \end{align*}
 
 Since the standard deviation of the wavelengths at \SI{3}{\volt} is \(
 \sigma_{\lambda} = \SI{306}{\nano\meter} \), the experimental value of \(
-\lambda_e = 1734 \pm 1292 \si{\nano\meter} \) at \SI{3}{\volt} is
+\lambda_e = 939 \pm 7 \si{\nano\meter} \) at \SI{3}{\volt} is
 
 \begin{equation*}
-  \frac{\Delta_{\lambda}}{\sigma_{\lambda}} = \frac{795}{306} = 2.60 \sigma
+  \frac{\Delta \lambda}{\sigma_{\lambda}} = \frac{795}{306} = 2.60 \sigma
 \end{equation*}
 
-from the theoretical value of \( \lambda_t = 939 \pm 1 \si{\nano\meter} \).
+from the theoretical value of \( \lambda_t = 1734 \pm 1292 \si{\nano\meter} \).
 
-\qq 
+\qq The discrepancies for the other voltages were calculated in the same way,
+and the results of those calculations may be found in Table
+\ref{tab:peakWavelengths}.
+
+\begin{table}[H]
+  \caption{The values of the theoretical and experimental peak wavelengths and
+    the discrepancies between them.}
+  \label{tab:peakWavelengths}
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|l|l|}
+      \hline
+      Voltage (\si{\volt}) & \( \lambda_t (\si{\nano\meter}) \) & 
+      \( \lambda_e (\si{\nano\meter}) \) & 
+      \( \Delta \lambda (\si{\nano\meter}) \) & 
+      \( \sigma_{\lambda} (\si{\nano\meter}) \) &
+      \( \sigma \Delta \lambda \) \\
+      \hline
+      3.0 & \( 1734 \pm 1292 \) & \( 939 \pm 7 \) & 795 & 306 & 2.60 \( \sigma
+                                                                \) \\
+      5.0 & \( 1427 \pm 2461 \) & \( 1500 \pm 129 \) & 73 & 306 & 0.24 \( \sigma
+                                                                  \) \\
+      7.1 & 
+    \end{tabular}
+  \end{center}
+\end{table}
 
 \subsection{Source of Error}
 
