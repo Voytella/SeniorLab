@@ -7,19 +7,20 @@
 \begin{tikzpicture}
   \begin{axis}[
     title=No Filter,
-    ylabel=Current (\si{\micro\ampere}),
-    xlabel=Voltage (\si{\milli\volt}),
-    width=15cm
+    xlabel=Current (\si{\micro\ampere}),
+    ylabel=Voltage (\si{\milli\volt}),
+    xticklabel style={rotate=0},
+    width=10cm
     ]
     \addplot table[
     mark=none,
-    y={create col/linear regression={y=I}},
-    x=V
-    ] {noFilter.tsv};
+    y={create col/linear regression={y=V}},
+    x=I
+    ] {noFilterComb.tsv};
     \addlegendentry{%
-      \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\milli\volt}
+      \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\micro\ampere}
       \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
-      \sigma_{V_0} = 0.081 \si{\milli\volt} \)}%
+      \sigma_{V_0} = 22.6 \si{\milli\volt} \)}%
     \addplot+[only marks,
     error bars/.cd,
     x dir=both,
@@ -27,11 +28,11 @@
     y dir=both,
     y explicit
     ] table[
-    x=V,
-    y=I
-    %x error expr=\thisrow{invTempErr},
-    %y error expr=\thisrow{lnInvVoltErr},
-    ] {noFilter.tsv};
+    x=I,
+    y=V,
+    x error expr=\thisrow{IErr},
+    y error expr=\thisrow{VErr},
+    ] {noFilterComb.tsv};
   \end{axis}
 \end{tikzpicture}
 %

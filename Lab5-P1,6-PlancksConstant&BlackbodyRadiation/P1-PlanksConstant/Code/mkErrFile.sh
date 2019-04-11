@@ -41,7 +41,7 @@ numUncerts=$(($lenDataFile-1))
 # ----------BEGIN CREATE FILE----------
 
 # throw headers onto the file
-echo "VErr AErr" > $errFile
+echo "VErr IErr" > $errFile
 
 # insert uncertainties into file
 for (( ii=0; ii<$numUncerts; ii++ )); do

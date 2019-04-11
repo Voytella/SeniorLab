@@ -6,20 +6,21 @@
 
 \begin{tikzpicture}
   \begin{axis}[
-    title=Red25,
-    ylabel=Current,
-    xlabel=Voltage,
-    width=15cm
+    title=Red 25,
+    xlabel=Current (\si{\micro\ampere}),
+    ylabel=Voltage (\si{\milli\volt}),
+    xticklabel style={rotate=0},
+    width=10cm
     ]
     \addplot table[
     mark=none,
     y={create col/linear regression={y=V}},
     x=I
-    ] {red25.tsv};
+    ] {red25Comb.tsv};
     \addlegendentry{%
-      \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\ampere}
+      \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\micro\ampere}
       \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
-      \sigma_{\text{fit}} = 0.00239 \)}%
+      \sigma_{V_0} = 28.5 \si{\milli\volt} \)}%
     \addplot+[only marks,
     error bars/.cd,
     x dir=both,
@@ -28,10 +29,10 @@
     y explicit
     ] table[
     x=I,
-    y=V
-    %x error expr=\thisrow{invTempErr},
-    %y error expr=\thisrow{lnInvVoltErr},
-    ] {noFilter.tsv};
+    y=V,
+    x error expr=\thisrow{IErr},
+    y error expr=\thisrow{VErr},
+    ] {red25Comb.tsv};
   \end{axis}
 \end{tikzpicture}
 %

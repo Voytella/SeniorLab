@@ -25,7 +25,7 @@ dataRaw = CSV.read(filepath, delim=' ') |> DataFrame
 # ----------BEGIN LINEAR REGRESSION----------
 
 # assume Potential: "V", Current: "I"
-linReg = lm(@formula(I ~ V), dataRaw)
+linReg = lm(@formula(V ~ I), dataRaw)
 
 # -----------END LINEAR REGRESSION-----------
 
