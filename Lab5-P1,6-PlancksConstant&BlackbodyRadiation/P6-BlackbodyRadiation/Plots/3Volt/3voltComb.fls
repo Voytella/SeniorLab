@@ -1,0 +1,5 @@
+PWD /Users/Voytella/Documents/SeniorLab/Experiments/Lab5-P1,6-PlancksConstant&BlackbodyRadiation/P6-BlackbodyRadiation/Plots/3Volt
+INPUT /opt/local/etc/texmf/texmf.cnf
+INPUT /opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt
+INPUT 3voltComb.tsv
+OUTPUT 3voltComb.log

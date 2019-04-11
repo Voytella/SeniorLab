@@ -1,0 +1,9 @@
+# Fdb version 3
+["pdflatex"] 1554948293 "3voltComb.tsv" "3voltComb.pdf" "3voltComb" 1554948293
+  "/opt/local/etc/texmf/texmf.cnf" 1526053094 30503 9a61e6893861ec0a56455c8e9c9c514e ""
+  "/opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt" 1526053119 723151 13059fc6e2f6e9a067c035a039dadbdb ""
+  "3voltComb.aux" 1554947149 8 a94a2480d3289e625eea47cd1b285758 ""
+  "3voltComb.tsv" 1554946948 381 9d229815049f03f25c52261926eb8b86 ""
+  (generated)
+  "3voltComb.pdf"
+  "3voltComb.log"

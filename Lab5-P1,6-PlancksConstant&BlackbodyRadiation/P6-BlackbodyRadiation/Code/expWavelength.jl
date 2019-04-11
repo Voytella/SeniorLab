@@ -1,3 +1,12 @@
+# Read the data file and calculate the peak wavelength.
+
+# ----------BEGIN CONSTANTS----------
+
+# error in angle
+angErr = 1.0
+
+# -----------END CONSTANTS-----------
+
 # ----------BEGIN PACKAGES----------
 
 # read CSVs
@@ -17,8 +26,8 @@ using Printf
 # ----------BEGIN INPUT DATA----------
 
 # get the file path from the command line
-#filepath = ARGS[1]
-filepath = newARGS[1]
+filepath = ARGS[1]
+#filepath = newARGS[1]
 
 # throw the data from the CSV into a DataFrame
 dataRaw = CSV.File(filepath) |> DataFrame
@@ -30,25 +39,30 @@ getListOfPairs(l1, l2) = [ (l1[ii], l2[ii]) for ii in 1:length(l1) ]
 angVals = dataRaw[:Angle]
 
 # get value-uncertainty pairs for angles
-angs = getListOfPairs(angVals, fill(1.0, (1,length(angVals))))
+angs = getListOfPairs(angVals, fill(angErr, (1,length(angVals))))
 
 # -----------END INPUT DATA-----------
 
 # ----------BEGIN ERROR PROPAGATION----------
 
 # get the bit of error for a variable into a 1-variable function
-sqDer1Var(func, val, err) = (derivative(func, val) * err) ^ 2
+propUncert1Var(func, (val, err)) = (derivative(func, val) * err) ^ 2
 
 # the propagated uncertainty of a particular value with 1-var function
-propUncert1Var(func, valErrs) = sqrt(sum([ sqDer1Var(func, valErr[1], valErr[2]) 
-                                       for valErr in valErrs ])) 
+#propUncert1Var(func, valErrs) = sqrt(sum([ sqDer1Var(func, valErr[1], valErr[2]) 
+#                                       for valErr in valErrs ])) 
+
+# run a list of val-err pairs through a function
+getValErrs(func, pairs) = 
+    getListOfPairs(map(func, map(x -> x[1], pairs)), 
+                   map(x -> propUncert1Var(func, x), pairs))
 
 # -----------END ERROR PROPAGATION-----------
 
 # ----------BEGIN WAVELENGTH FUNCTIONS----------
 
 # index of refraction of prism
-indRef(ang) = sqrt(((((2 * sin(ang)) / sqrt(3)) + (1/2)) ^ 2) + (3/4))
+indRef(ang) = sqrt(((((2 * sin(deg2rad(ang))) / sqrt(3)) + (1/2)) ^ 2) + (3/4))
 
 # wavelength of light with constants A=13900 and B=1.689
 wl(indRef) = sqrt(13900 / (indRef - 1.689))
@@ -57,13 +71,15 @@ wl(indRef) = sqrt(13900 / (indRef - 1.689))
 
 # ----------BEGIN CALCULATE WAVELENGTH----------
 
-# make the value-uncertainty pairs for wavelength, given the angles
-wls = getListOfPairs(map(indRef, map(x -> x[1], angs)), 
-                     propUncert1Var(indRef, angs))
+# make the value-uncertainty pairs for indices of refraction, given the angles
+indRefs = getValErrs(indRef, angs)
+
+# get the value-uncertainty pairs for the wavelengths, given the indices of ref.
+wls = getValErrs(wl, indRefs) 
 
 # -----------END CALCULATE WAVELENGTH-----------
 
-# display wavelengths
+## display wavelengths
 for wl in wls
     @printf("%.2e %.2e\n", wl[1], wl[2])
 end
