@@ -231,7 +231,7 @@ INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/catchfile.sty
 INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/catchfile.sty
 INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
 INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
-INPUT w18-test-2019411209.tex
+INPUT w18-test-2019411246.tex
 INPUT red25.aux
 INPUT red25.aux
 OUTPUT red25.aux

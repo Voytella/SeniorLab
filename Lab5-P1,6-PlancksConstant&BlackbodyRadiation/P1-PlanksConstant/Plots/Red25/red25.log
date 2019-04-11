@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 APR 2019 03:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 APR 2019 04:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -790,9 +790,9 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write4
-runsystem(touch w18-test-2019411209.tex)...executed.
+runsystem(touch w18-test-2019411246.tex)...executed.
 
-runsystem(rm -f w18-test-2019411209.tex)...executed.
+runsystem(rm -f w18-test-2019411246.tex)...executed.
 
 runsystem(rm -f "red25.gnuploterrors")...executed.
 
@@ -896,11 +896,11 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 Here is how much of TeX's memory you used:
  32354 strings out of 494936
  818663 string characters out of 6180785
- 956236 words of memory out of 5000000
+ 955621 words of memory out of 5000000
  35218 multiletter control sequences out of 15000+600000
  6062 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,20n,103p,10386b,2686s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,23n,103p,10386b,2686s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/
 opt/local/share/texmf-texlive/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</opt/l
 ocal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/
@@ -911,7 +911,7 @@ texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/local/share/texmf-texlive
 type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/fonts/type1
 /public/amsfonts/cm/cmsy7.pfb></opt/local/share/texmf-texlive/fonts/type1/publi
 c/cm-super/sfrm1000.pfb>
-Output written on red25.pdf (1 page, 69413 bytes).
+Output written on red25.pdf (1 page, 69460 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream
