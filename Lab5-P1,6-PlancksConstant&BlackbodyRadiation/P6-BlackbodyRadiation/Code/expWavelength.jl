@@ -26,8 +26,8 @@ using Printf
 # ----------BEGIN INPUT DATA----------
 
 # get the file path from the command line
-#filepath = ARGS[1]
-filepath = newARGS[1]
+filepath = ARGS[1]
+#filepath = newARGS[1]
 
 # throw the data from the CSV into a DataFrame
 dataRaw = CSV.File(filepath) |> DataFrame
@@ -36,7 +36,10 @@ dataRaw = CSV.File(filepath) |> DataFrame
 getListOfPairs(l1, l2) = [ (l1[ii], l2[ii]) for ii in 1:length(l1) ]
 
 # get the angles in degrees
-angVals = dataRaw[:Angle]
+angValsWrong = dataRaw[:Angle]
+
+# correct angles
+angVals = map(x -> 180 - x, angValsWrong)
 
 # get value-uncertainty pairs for angles
 angs = getListOfPairs(angVals, fill(angErr, (1,length(angVals))))
