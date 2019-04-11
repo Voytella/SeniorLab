@@ -85,27 +85,29 @@ Picoammeter will read the resultant current. A Mercury Lamp will be
 placed a distance apart from the photocell, with the circular bulb
 opening in alignment with the photocell's receptor window. When the
 spectral filters are applied, they will be slid into the slotted grove
-directly in front of the circular bulb opening on the Mercury Lamp.
+directly in front of the circular bulb opening on the Mercury Lamp. \\
+
+Equipment utilized is listed below:
 
 % List of specs
 \begin{itemize}
-\item Phototube \\
-\item Mercury Lamp \\
-\item Spectral Filters \\
-\item Daedelon Corporation Photocell \\
-\item DC Power Supply \\
-\item Keithley Picoammeter \\
-\item Voltmeter \\
+\item Phototube 
+\item Mercury Lamp 
+\item Spectral Filters 
+\item Daedelon Corporation Photocell 
+\item DC Power Supply 
+\item Keithley Picoammeter 
+\item Voltmeter 
 \end{itemize}
 
 %Labeled sketch of the experimental setup
 \begin{figure}[H]
 \centering
 % uncomment the line below to add image
-%\includegraphics[width=1\textwidth]{diagram.png}
-\captionof{figure}{Schematic for circuit diagram for the Photoelectric
-  Effect}
-\label{Photoelectric Effect Circuit Diagram}
+\includegraphics[width=0.75\textwidth]{photo_circuit.png}
+\captionof{figure}{Circuit diagram for the photoelectric
+  effect experiment}
+\label{photo_circuit}
 \end{figure}
 
 \section{Procedure}
@@ -341,9 +343,9 @@ For the $3V$ case discusses above, for example, the temperature was determined t
 Voltage & Temperature & Theoretical $\lambda_{peak}$ \topVspace \bottomVspace \\
 \hline
 3V & 1671 K & $1.73 \times 10^{-6}$ m \\
-5V & TEMP K & WAV m\\
-7V & TEMP K & WAV m\\
-9V & TEMP K & WAV m\\
+5V & 2031 K & $1.43 \times 10^{-6}$ m\\
+7V & 2317 K & $1.25 \times 10^{-6}$ m\\
+9V & 2540 K & $1.14 \times 10^{-6}$ m\\
 \hline
 \end{tabular}
 \label{table:temps}
@@ -352,7 +354,9 @@ Voltage & Temperature & Theoretical $\lambda_{peak}$ \topVspace \bottomVspace \\
 
 DO THESE WAVELENGTHS COINCIDE WITH THE PEAKS ON OUR GRAPHS?
 
-\qq Substituting the sun's temperature into Wien's law, it is determined that the peak wavelength is around 500nm, which is in the green spectrum of visible light. However, the emission spectrum is a continuum throughout the visible light region, and the colors will combine to appear why for an observer.
+\qq Substituting the sun's temperature into Wien's law, it is determined that the peak wavelength is around 500nm, which is in the green spectrum of visible light. However, sun clearly does not appear green. This is because the emission spectrum is a continuum throughout the visible light region, and the colors will combine to appear white to an observer.
+
+\qq The highest temperature tested was 2540 K, associated with a voltage of 9 V. For this temperature, more of the intensity is in the [VISIBLE/INFRARED] portion of the spectrum. If the goal of the light bulb is to produce the most light for a given voltage, the intensity should peak in the visible light spectrum. To move the portion of the spectrum in the infrared region to the visible region, the temperature can be increased to shift the distribution to lower wavelengths.
 
 \section{Results}
 
