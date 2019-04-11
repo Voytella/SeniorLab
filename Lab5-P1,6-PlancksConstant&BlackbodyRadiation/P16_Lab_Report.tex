@@ -186,7 +186,44 @@ the same filters and every filter was indeed labeled differently. The
 darker filters reduced the intensity of the light that interacts with
 the photocell and does affect the stopping potential for these
 filters. These darker filters have a stopping potential of a higher
-absolute value, then the filters that were lighter in appearance. 
+absolute value, then the filters that were lighter in appearance. Table \ref{tab:observed_colors} shows how the apparent colors of the filters changed when put in front of the Mercury lamp.
+
+\begin{table}[H]
+  \caption{Colors of various filters observed under a standard light source, and under a Mercury Lamp source}
+  \begin{center}
+    \begin{tabular}{|l|l|l|}
+      \hline
+		Filter Label	&	Color 	&	Color under Mercury Lamp	\\
+\hline					
+25	&	Red	&	Red	\\
+23A	&	Red	&	Golden Yellow	\\
+22	&	Blood Orange	&	Yellow 	\\
+16	&	Orange	&	Chartruese	\\
+2A15	&	Marigold	&	Chartruese	\\
+2A12	&	Yellow	&	Chartruese	\\
+8	&	Yellow	&	Chartruese	\\
+3	&	Canary Yellow	&	Light Chartruese	\\
+4	&	Yellow	&	Lime Green	\\
+58	&	Green	&	Green	\\
+65A	&	Teal	&	Teal	\\
+48	&	Cobalt	&	Blue	\\
+GB390H($\theta$)	&	Dark Blue	&	Indigo	\\
+47B	&	Dark Blue	&	Dark Inidgo	\\
+MH5	&	Olive	&	Olive	\\
+1010	&	Slate	&	Grey	\\
+160	&	Blue Grey	&	Seafoam	\\
+7-54	&	Black	&	Purple	\\
+1090	&	Grey	&	Grey	\\
+405	&	Black	&	Purple	\\
+Unlabeled	&	Blood Orange	&	Yellow Orange 	\\
+5469	&	Peridot	&	Lime Green	\\
+Plaster Covered	&	Aqua	&	Army Green / Yellow	\\
+546	&	Forest Green	&	Lime Green	\\
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:observed_colors}
+\end{table}
 
 %%%%%%% NEEDS GRAPHS I_V AND I_F!
 
@@ -204,45 +241,6 @@ uncertainty of the stopping potential --- the uncertainty of the y-intercept ---
 was determined using linear regression through Julia within Program
 \ref{cod:stoppingPotential}.
 
-\begin{table}[H]
-  \caption{The stopping potentials and their corresponding errors for each of
-    the filters.}
-  \begin{center}
-    \begin{tabular}{|l|l|l|l|}
-      \hline
-      Name & Color & Wavelength (\si{\nano\meter}) & Stopping Potential
-                                                     (\si{\milli\volt})  \\
-      \hline
-      noFilter & white & 537 & 1089 \( \pm \) 22.6 \\
-      red25 & red & 690.8 & 388 \( \pm \) 28.5 \\
-      red23A & red & 623.5 & 525 \( \pm \) 29.4 \\
-      bloodOrange22 & red-yellow & 596 & 516 \( \pm \) 21.8 \\
-      orange16 & red-yellow & 600 & 613 \( \pm \) 22.6 \\
-      marigold2A15 & red-yellow & 595 & 588 \( \pm \) 24.6 \\
-      yellow2A12 & yellow & 579 & 620 \( \pm \) 39.3 \\
-      yellow8 & yellow & 578 & 616 \( \pm \) 29.3 \\
-      canaryYellow3 & yellow & 577 & 622 \( \pm \) 29.4 \\
-      yellow4 & yellow & 579 & 623 \( \pm \) 31.3 \\
-      green58 & green & 546.1 & 584 \( \pm \) 27.3 \\
-      teal65A & blue-green & 491.6 & 695 \( \pm \) 33.6 \\
-      colbalt48 & blue-green & 463.7 & 884 \( \pm \) 38.8 \\
-      darkBlueGB390HTheta & blue & 435.9 & 1100 \( \pm \) 51.5 \\
-      darkBlue47B & blue-violet & 422 & 914 \( \pm \) 35.4 \\
-      circleOliveM5H & green-yellow & 562 & 714 \( \pm \) 30.0 \\
-      slate1010 & gray & 537 & 780 \( \pm \) 33.6 \\
-      blueGray160 & blue & 435.9 & 970 \( \pm \) 35.4 \\
-      black754 & violet & 404.7 & 1000 \( \pm \) 47.2 \\
-      grey1090 & gray & 537 & 849 \( \pm \) 60.1 \\
-      black405 & violet & 404.7 & 865 \( \pm \) 54.7 \\
-      bloodOrange & YELLOW-red & 589 & 556 \( \pm \) 31.0 \\
-      peridot5469 & green & 562 & 568 \( \pm \) 28 \\
-      aquaPlaster & blue & 491.6 & 743 \( \pm \) 44.9 \\
-      forestGreen546 & green & 546.1 & 630 \( \pm \) 36.4 \\
-      \hline
-    \end{tabular}
-  \end{center}
-  \label{tab:stoppingPotentials}
-\end{table}
  
 \qq The wavelengths and stopping potentials from Table
 \ref{tab:stoppingPotentials} can be used to calculate Planck's constant using 
@@ -253,45 +251,6 @@ voltage, \( W \) is the work function of Mercury, and \( f = \frac{c}{\lambda}
 the Planck constants and their uncertainties were calculated using Program
 \ref{cod:planck}, and are displayed in Table \ref{tab:plancks}.
 
-\begin{table}[H]
-  \caption{The calculated values of Planck's constant for each of the filters
-    and their corresponding uncertainties.}
-  \begin{center}
-    \begin{tabular}{|l|l|}
-      \hline
-      Name &                   Planck's Constant
-             (\si{\square\meter\kilo\gram\per\second}) \\
-      \hline
-      noFilter &               1.600690e-33 \( \pm \) 6.472640e-36 \\
-      red25 &                  1.800870e-33 \( \pm \) 1.050016e-35 \\
-      red23A &                 1.670980e-33 \( \pm \) 9.776480e-36 \\
-      bloodOrange22 &          1.594419e-33 \( \pm \) 6.929493e-36 \\
-      orange16 &               1.636160e-33 \( \pm \) 7.232000e-36 \\
-      marigold2A15 &           1.614592e-33 \( \pm \) 7.806400e-36 \\
-      yellow2A12 &             1.581056e-33 \( \pm \) 1.213584e-35 \\
-      yellow8 &                1.577092e-33 \( \pm \) 9.032213e-36 \\
-      canaryYellow3 &          1.576210e-33 \( \pm \) 9.047360e-36 \\
-      yellow4 &                1.581982e-33 \( \pm \) 9.665440e-36 \\
-      green58 &                1.480732e-33 \( \pm \) 7.951216e-36 \\
-      teal65A &                1.362060e-33 \( \pm \) 8.809472e-36 \\
-      colbalt48 &              1.331499e-33 \( \pm \) 9.595499e-36 \\
-      darkBlueGB390HTheta &    1.301888e-33 \( \pm \) 1.197272e-35 \\
-      darkBlue47B &            1.218511e-33 \( \pm \) 7.967360e-36 \\
-      circleOliveM5H &         1.562810e-33 \( \pm \) 8.992000e-36 \\
-      slate1010 &              1.512192e-33 \( \pm \) 9.623040e-36 \\
-      blueGray160 &            1.271666e-33 \( \pm \) 8.229792e-36 \\
-      black754 &               1.187120e-33 \( \pm \) 1.018765e-35 \\
-      grey1090 &               1.531954e-33 \( \pm \) 1.721264e-35 \\
-      black405 &               1.157982e-33 \( \pm \) 1.180645e-35 \\
-      bloodOrange &            1.588258e-33 \( \pm \) 9.738133e-36 \\
-      peridot5469 &            1.519049e-33 \( \pm \) 8.392533e-36 \\
-      aquaPlaster &            1.374645e-33 \( \pm \) 1.177218e-35 \\
-      forestGreen546 &         1.494130e-33 \( \pm \) 1.060162e-35 \\
-      \hline
-    \end{tabular} 
-  \end{center} 
-  \label{tab:plancks}
-\end{table}
 
 The mean calculated value of Planck's constant is \( h = \num{1.49e-33} \pm
 \num{3.30e-35} \si{\square\meter\kilo\gram\per\second} \), where the uncertainty
@@ -301,6 +260,48 @@ root of the set's cardinality.
 %%%%%%% NEEDS PROPAGATED ERROR! 
 
 \subsection{Results}
+
+For each filter, the difference between the theoretical and experimental values of Planck's constant can be computed, and quantified by the error in the experimental value. This information is shown in table \ref{tab:plancks}. Note the theoretical value of Planck's constant is $6.626 \times 10^{-34} m^2kg s^{-1}$.
+
+\begin{table}[H]
+  \caption{The calculated values of Planck's constant for each of the filters
+    and their corresponding uncertainties.}
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Name &    Planck's Constant  (\si{\square\meter\kilo\gram\per\second}) & d & $\sigma_d$\\
+      \hline
+   noFilter	&	1.60069E-33	\( \pm \)	6.47264E-36	&	9.38083E-34	&	145	\\
+red25	&	1.80087E-33	\( \pm \)	1.05002E-35	&	1.13826E-33	&	108	\\
+red23A	&	1.67098E-33	\( \pm \)	9.77648E-36	&	1.00837E-33	&	103	\\
+bloodOrange22	&	1.59442E-33	\( \pm \)	6.92949E-36	&	9.31812E-34	&	134	\\
+orange16	&	1.63616E-33	\( \pm \)	7.23200E-36	&	9.73553E-34	&	135	\\
+marigold2A15	&	1.61459E-33	\( \pm \)	7.80640E-36	&	9.51985E-34	&	122	\\
+yellow2A12	&	1.58106E-33	\( \pm \)	1.21358E-35	&	9.18449E-34	&	76	\\
+yellow8	&	1.57709E-33	\( \pm \)	9.03221E-36	&	9.14485E-34	&	101	\\
+canaryYellow3	&	1.57621E-33	\( \pm \)	9.04736E-36	&	9.13603E-34	&	101	\\
+yellow4	&	1.58198E-33	\( \pm \)	9.66544E-36	&	9.19375E-34	&	95	\\
+green58	&	1.48073E-33	\( \pm \)	7.95122E-36	&	8.18125E-34	&	103	\\
+teal65A	&	1.36206E-33	\( \pm \)	8.80947E-36	&	6.99453E-34	&	79	\\
+cobalt48	&	1.33150E-33	\( \pm \)	9.59550E-36	&	6.68892E-34	&	70	\\
+darkBlueGB390H $\theta$	&	1.30189E-33	\( \pm \)	1.19727E-35	&	6.39281E-34	&	53	\\
+darkBlue47B	&	1.21851E-33	\( \pm \)	7.96736E-36	&	5.55904E-34	&	70	\\
+circleOliveM5H	&	1.56281E-33	\( \pm \)	8.99200E-36	&	9.00203E-34	&	100	\\
+slate1010	&	1.51219E-33	\( \pm \)	9.62304E-36	&	8.49585E-34	&	88	\\
+blueGray160	&	1.27167E-33	\( \pm \)	8.22979E-36	&	6.09059E-34	&	74	\\
+black754	&	1.18712E-33	\( \pm \)	1.01877E-35	&	5.24513E-34	&	51	\\
+gray1090	&	1.53195E-33	\( \pm \)	1.72126E-35	&	8.69347E-34	&	51	\\
+black405	&	1.15798E-33	\( \pm \)	1.18065E-35	&	4.95375E-34	&	42	\\
+bloodOrange	&	1.58826E-33	\( \pm \)	9.73813E-36	&	9.25651E-34	&	95	\\
+peridot5469 	&	1.51905E-33	\( \pm \)	8.39253E-36	&	8.56442E-34	&	102	\\
+aquaPlaster	&	1.37465E-33	\( \pm \)	1.17722E-35	&	7.12038E-34	&	60	\\
+forestGreen546	&	1.49413E-33	\( \pm \)	1.06016E-35	&	8.31523E-34	&	78	\\
+
+      \hline
+    \end{tabular} 
+  \end{center} 
+  \label{tab:plancks}
+\end{table}
 
 %%%%%% NEEDS SIGMA STUFF!
 
@@ -337,7 +338,7 @@ ideal source.
 \subsection{Conclusion}
 %Brief summary, discussion of theory
 
-\qq %%%%%%%%%%% NEEDS CONCLUSION
+\qq Experimental values of the stopping potential and Planck's constant were obtained using various colored filters in front of a Mercury lamp. Experimental values for Planck's constant were obtained within one or two orders of magnitude. The very large $\sigma$ discrepancies seem to indicate that not all sources of error were counted for in the uncertainty in the experimental values of Planck's constant, such as unquantified random and systematic errors.
 
 \section{Experiment P6: Blackbody Radiation}
 
@@ -622,6 +623,7 @@ therefore the bulb temperature.
 
 \subsection{Conclusion}
 %Brief summary, discussion of theory
+Blackbody curves were produced for varying temperatures of a light bulb "blackbody radiator". While the data was not a good fit to the theoretical curve, a reasonable peak was still obtained for each data set.
 
 \section{Appendices}
 
