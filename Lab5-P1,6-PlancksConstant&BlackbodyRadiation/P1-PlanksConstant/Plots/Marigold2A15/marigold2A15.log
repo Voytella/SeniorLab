@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 APR 2019 03:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 APR 2019 03:43
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**noFilter.tex
-(./noFilter.tex
+**marigold2A15.tex
+(./marigold2A15.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 3 language(s) loaded.
 (/opt/local/share/texmf-texlive/tex/latex/standalone/standalone.cls
@@ -790,18 +790,18 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write4
-runsystem(touch w18-test-2019411210.tex)...executed.
+runsystem(touch w18-test-2019411223.tex)...executed.
 
-runsystem(rm -f w18-test-2019411210.tex)...executed.
+runsystem(rm -f w18-test-2019411223.tex)...executed.
 
-runsystem(rm -f "noFilter.gnuploterrors")...executed.
+runsystem(rm -f "marigold2A15.gnuploterrors")...executed.
 
 Package gnuplottex Info: Automatically converting gnuplot files. on input line 
 110.
 \c@fignum=\count179
 )
-(./noFilter.aux)
-\openout1 = `noFilter.aux'.
+(./marigold2A15.aux)
+\openout1 = `marigold2A15.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -884,32 +884,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
 \c__siunitx_mathtt_int=\count187
-PGFPlots: reading {noFilterComb.tsv}
-PGFPlots: reading {noFilterComb.tsv}
+PGFPlots: reading {marigold2A15Comb.tsv}
+PGFPlots: reading {marigold2A15Comb.tsv}
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 36.
 
 (/opt/local/share/texmf-texlive/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1
 
-{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./noFilter.aux) 
-) 
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./marigold2A15.a
+ux) ) 
 Here is how much of TeX's memory you used:
- 32354 strings out of 494936
- 818699 string characters out of 6180785
- 1060017 words of memory out of 5000000
- 35218 multiletter control sequences out of 15000+600000
+ 32355 strings out of 494936
+ 818768 string characters out of 6180785
+ 959205 words of memory out of 5000000
+ 35219 multiletter control sequences out of 15000+600000
  6062 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,23n,103p,10389b,2686s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/opt/local/share/texmf-texlive/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</op
-t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/loc
-al/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/local/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/local/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/f
-onts/type1/public/cm-super/sfrm1000.pfb>
-Output written on noFilter.pdf (1 page, 59232 bytes).
+ 71i,23n,103p,10393b,2686s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/opt/local/share/texmf-texlive/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
+</opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt
+/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></opt/local/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texli
+ve/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on marigold2A15.pdf (1 page, 55644 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream

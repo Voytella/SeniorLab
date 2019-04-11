@@ -6,7 +6,7 @@
 
 \begin{tikzpicture}
   \begin{axis}[
-    title=Red 25,
+    title=Red 23A,
     xlabel=Current (\si{\micro\ampere}),
     ylabel=Voltage (\si{\milli\volt}),
     xticklabel style={rotate=0},
@@ -16,11 +16,11 @@
     mark=none,
     y={create col/linear regression={y=V}},
     x=I
-    ] {red25Comb.tsv};
+    ] {red23AComb.tsv};
     \addlegendentry{%
       \( \pgfmathprintnumber{\pgfplotstableregressiona} \si{\micro\ampere}
       \pgfmathprintnumber[print sign]{\pgfplotstableregressionb},
-      \sigma_{V_0} = 28.5 \si{\milli\volt} \)}%
+      \sigma_{V_0} = 29.4 \si{\milli\volt} \)}%
     \addplot+[only marks,
     error bars/.cd,
     x dir=both,
@@ -32,7 +32,7 @@
     y=V,
     x error expr=\thisrow{IErr},
     y error expr=\thisrow{VErr},
-    ] {red25Comb.tsv};
+    ] {red23AComb.tsv};
   \end{axis}
 \end{tikzpicture}
 %
