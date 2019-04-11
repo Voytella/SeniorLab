@@ -190,10 +190,114 @@ absolute value, then the filters that were lighter in appearance.
 
 %%%%%%% NEEDS GRAPHS I_V AND I_F!
 
-\qq The y-intercept of the graph of the voltage versus the
-frequency corresponds to the stopping potential at that wavelength. 
+\qq As the resistance of the photocell is changed, the voltage and current
+flowing through are altered accordingly. When the current disappears, the
+voltage across the photocell is equal to its stopping potential. By plotting
+voltage against current, a line whose equation is of the form \( V = mA + V_0 \)
+is produced, where the y-intercept, \( V_0 \), is the sought-after stopping
+potential. Since several measurements of the voltage and corresponding current
+were taken, these plots can be plotted and operated on in order to create a line
+of best fit whose equation is of the form described. The plots are located in
+Section \ref{app:stoppingPotentialPlots}, but the found stopping potentials for
+each of the filters may be seen below in Table \ref{tab:stoppingPotentials}. The
+uncertainty of the stopping potential --- the uncertainty of the y-intercept ---
+was determined using linear regression through Julia within Program
+\ref{cod:stoppingPotential}.
+
+\begin{table}[H]
+  \caption{The stopping potentials and their corresponding errors for each of
+    the filters.}
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|}
+      \hline
+      Name & Color & Wavelength (\si{\nano\meter}) & Stopping Potential
+                                                     (\si{\milli\volt})  \\
+      \hline
+      noFilter & white & 537 & 1089 \( \pm \) 22.6 \\
+      red25 & red & 690.8 & 388 \( \pm \) 28.5 \\
+      red23A & red & 623.5 & 525 \( \pm \) 29.4 \\
+      bloodOrange22 & red-yellow & 596 & 516 \( \pm \) 21.8 \\
+      orange16 & red-yellow & 600 & 613 \( \pm \) 22.6 \\
+      marigold2A15 & red-yellow & 595 & 588 \( \pm \) 24.6 \\
+      yellow2A12 & yellow & 579 & 620 \( \pm \) 39.3 \\
+      yellow8 & yellow & 578 & 616 \( \pm \) 29.3 \\
+      canaryYellow3 & yellow & 577 & 622 \( \pm \) 29.4 \\
+      yellow4 & yellow & 579 & 623 \( \pm \) 31.3 \\
+      green58 & green & 546.1 & 584 \( \pm \) 27.3 \\
+      teal65A & blue-green & 491.6 & 695 \( \pm \) 33.6 \\
+      colbalt48 & blue-green & 463.7 & 884 \( \pm \) 38.8 \\
+      darkBlueGB390HTheta & blue & 435.9 & 1100 \( \pm \) 51.5 \\
+      darkBlue47B & blue-violet & 422 & 914 \( \pm \) 35.4 \\
+      circleOliveM5H & green-yellow & 562 & 714 \( \pm \) 30.0 \\
+      slate1010 & gray & 537 & 780 \( \pm \) 33.6 \\
+      blueGray160 & blue & 435.9 & 970 \( \pm \) 35.4 \\
+      black754 & violet & 404.7 & 1000 \( \pm \) 47.2 \\
+      grey1090 & gray & 537 & 849 \( \pm \) 60.1 \\
+      black405 & violet & 404.7 & 865 \( \pm \) 54.7 \\
+      bloodOrange & YELLOW-red & 589 & 556 \( \pm \) 31.0 \\
+      peridot5469 & green & 562 & 568 \( \pm \) 28 \\
+      aquaPlaster & blue & 491.6 & 743 \( \pm \) 44.9 \\
+      forestGreen546 & green & 546.1 & 630 \( \pm \) 36.4 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \label{tab:stoppingPotentials}
+\end{table}
  
-%%%%%%% NEEDS PLANCK'S CONSTANT! 
+\qq The wavelengths and stopping potentials from Table
+\ref{tab:stoppingPotentials} can be used to calculate Planck's constant using 
+\( h = \frac{e V_0 + W}{f} \), where \( h \) is Planck's constant, \( e =
+\SI{1.6e-19}{\coulomb} \) is the elementary charge, \( V_0 \) is the stopping
+voltage, \( W \) is the work function of Mercury, and \( f = \frac{c}{\lambda}
+\) is the frequency of the incident photons through the filter. The values for
+the Planck constants and their uncertainties were calculated using Program
+\ref{cod:planck}, and are displayed in Table \ref{tab:plancks}.
+
+\begin{table}[H]
+  \caption{The calculated values of Planck's constant for each of the filters
+    and their corresponding uncertainties.}
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      Name &                   Planck's Constant
+             (\si{\square\meter\kilo\gram\per\second}) \\
+      \hline
+      noFilter &               1.600690e-33 \( \pm \) 6.472640e-36 \\
+      red25 &                  1.800870e-33 \( \pm \) 1.050016e-35 \\
+      red23A &                 1.670980e-33 \( \pm \) 9.776480e-36 \\
+      bloodOrange22 &          1.594419e-33 \( \pm \) 6.929493e-36 \\
+      orange16 &               1.636160e-33 \( \pm \) 7.232000e-36 \\
+      marigold2A15 &           1.614592e-33 \( \pm \) 7.806400e-36 \\
+      yellow2A12 &             1.581056e-33 \( \pm \) 1.213584e-35 \\
+      yellow8 &                1.577092e-33 \( \pm \) 9.032213e-36 \\
+      canaryYellow3 &          1.576210e-33 \( \pm \) 9.047360e-36 \\
+      yellow4 &                1.581982e-33 \( \pm \) 9.665440e-36 \\
+      green58 &                1.480732e-33 \( \pm \) 7.951216e-36 \\
+      teal65A &                1.362060e-33 \( \pm \) 8.809472e-36 \\
+      colbalt48 &              1.331499e-33 \( \pm \) 9.595499e-36 \\
+      darkBlueGB390HTheta &    1.301888e-33 \( \pm \) 1.197272e-35 \\
+      darkBlue47B &            1.218511e-33 \( \pm \) 7.967360e-36 \\
+      circleOliveM5H &         1.562810e-33 \( \pm \) 8.992000e-36 \\
+      slate1010 &              1.512192e-33 \( \pm \) 9.623040e-36 \\
+      blueGray160 &            1.271666e-33 \( \pm \) 8.229792e-36 \\
+      black754 &               1.187120e-33 \( \pm \) 1.018765e-35 \\
+      grey1090 &               1.531954e-33 \( \pm \) 1.721264e-35 \\
+      black405 &               1.157982e-33 \( \pm \) 1.180645e-35 \\
+      bloodOrange &            1.588258e-33 \( \pm \) 9.738133e-36 \\
+      peridot5469 &            1.519049e-33 \( \pm \) 8.392533e-36 \\
+      aquaPlaster &            1.374645e-33 \( \pm \) 1.177218e-35 \\
+      forestGreen546 &         1.494130e-33 \( \pm \) 1.060162e-35 \\
+      \hline
+    \end{tabular} 
+  \end{center} 
+  \label{tab:plancks}
+\end{table}
+
+The mean calculated value of Planck's constant is \( h = \num{1.49e-33} \pm
+\num{3.30e-35} \si{\square\meter\kilo\gram\per\second} \), where the uncertainty
+was calculated by dividing the standard deviation of the data set by the square
+root of the set's cardinality.
+ 
 %%%%%%% NEEDS PROPAGATED ERROR! 
 
 \subsection{Results}
@@ -520,5 +624,27 @@ therefore the bulb temperature.
 %Brief summary, discussion of theory
 
 \section{Appendices}
+
+\subsection{Appendix A: Data Tables}
+
+\subsection{Appendix B: Plots}
+\label{app:stoppingPotentialPlots}
+
+\subsection{Appendix C: Code}
+
+\subsubsection{Stopping Potential}
+\label{cod:stoppingPotential}
+
+\subsubsection{Planck's Constant}
+\label{cod:planck}
+
+\subsubsection{Experimental Wavelength}
+\label{cod:expWavelength}
+
+\subsubsection{Theoretical Wavelength}
+\label{cod:theoWavelength}
+
+\subsubsection{Theoretical Intensity}
+\label{cod:theoIntensity}
 
 \end{document}

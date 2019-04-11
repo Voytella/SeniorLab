@@ -14,6 +14,9 @@ using Calculus
 # pretty printing
 using Printf
 
+# for convenient mean calculation
+using Statistics
+
 # -----------END PACKAGES-----------
 
 # ----------BEGIN CONSTANTS----------
@@ -79,7 +82,10 @@ plancks = getListOfPairs(planckVals, planckErrs)
 # -----------END PLANCK CONSTANT-----------
 
 # display results
-@printf("PVal PErr\n")
-for pair in plancks
-    @printf("%e %e\n", pair[1], pair[2])
-end
+#@printf("PVal PErr\n")
+#for pair in plancks
+#    @printf("%e %e\n", pair[1], pair[2])
+#end
+
+# display mean
+@printf("%e %e\n", mean(planckVals), std(planckVals) / sqrt(length(planckVals)))

@@ -1,10 +1,3 @@
-  Updating registry at `~/.julia/registries/General`
-  Updating git-repo `https://github.com/JuliaRegistries/General.git`
-[?25l[2K[?25h Resolving package versions...
-  Updating `~/.julia/environments/v1.0/Project.toml`
- [no changes]
-  Updating `~/.julia/environments/v1.0/Manifest.toml`
- [no changes]
 PVal PErr
 1.600690e-33 6.472640e-36
 1.800870e-33 1.050016e-35
