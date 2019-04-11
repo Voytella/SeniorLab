@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  10 APR 2019 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  11 APR 2019 01:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -790,9 +790,9 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 ))
 \verbatim@out=\write4
-runsystem(touch w18-test-20194101336.tex)...executed.
+runsystem(touch w18-test-2019411118.tex)...executed.
 
-runsystem(rm -f w18-test-20194101336.tex)...executed.
+runsystem(rm -f w18-test-2019411118.tex)...executed.
 
 runsystem(rm -f "5volt.gnuploterrors")...executed.
 
@@ -800,7 +800,7 @@ Package gnuplottex Info: Automatically converting gnuplot files. on input line
 110.
 \c@fignum=\count179
 )
-(./5volt.aux)
+No file 5volt.aux.
 \openout1 = `5volt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -815,7 +815,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
-
 (/opt/local/share/texmf-texlive/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count180
@@ -884,24 +883,25 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 5.
 \c__siunitx_mathtt_int=\count187
+PGFPlots: reading {5voltCombComb.tsv}
 PGFPlots: reading {5voltComb.tsv}
 
 [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./5volt.aux) ) 
 Here is how much of TeX's memory you used:
- 32234 strings out of 494936
- 815098 string characters out of 6180785
- 943854 words of memory out of 5000000
- 35104 multiletter control sequences out of 15000+600000
+ 32255 strings out of 494936
+ 815639 string characters out of 6180785
+ 942262 words of memory out of 5000000
+ 35125 multiletter control sequences out of 15000+600000
  5049 words of font info for 20 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,10n,103p,10386b,2361s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,18n,103p,10386b,2363s stack positions out of 5000i,500n,10000p,200000b,80000s
 </
 opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/l
 ocal/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/s
 hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 5volt.pdf (1 page, 33952 bytes).
+Output written on 5volt.pdf (1 page, 35344 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream

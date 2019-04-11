@@ -11,6 +11,12 @@
     xlabel=Wavelength (\si{\nano\meter}),
     width=15cm
     ]
+    \addplot table[
+    mark=none,
+    y=CalcInts,
+    x=wlVal,
+    ] {9voltCombComb.tsv};
+    \addlegendentry{Expected Blackbody Curve}
     \addplot+[only marks,
     error bars/.cd,
     x dir=both,

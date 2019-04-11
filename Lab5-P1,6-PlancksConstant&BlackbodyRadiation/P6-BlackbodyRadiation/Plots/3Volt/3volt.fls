@@ -231,7 +231,7 @@ INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/catchfile.sty
 INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/catchfile.sty
 INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
 INPUT /opt/local/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
-INPUT w18-test-20194101325.tex
+INPUT w18-test-2019411102.tex
 INPUT 3volt.aux
 INPUT 3volt.aux
 OUTPUT 3volt.aux
@@ -261,7 +261,8 @@ INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/cm/cmss8.tfm
 INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/cm/cmtt8.tfm
 INPUT /opt/local/share/texmf-texlive/fonts/tfm/public/cm/cmtt8.tfm
-INPUT 3voltComb.tsv
+INPUT 3voltCombComb.tsv
+INPUT 3voltCombComb.tsv
 OUTPUT 3volt.pdf
 INPUT /opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT 3volt.aux

@@ -11,6 +11,12 @@
     xlabel=Wavelength (\si{\nano\meter}),
     width=15cm
     ]
+    \addplot table[
+    mark=none,
+    y=CalcInts,
+    x=wlVal,
+    ] {5voltCombComb.tsv};
+    \addlegendentry{Expected Blackbody Curve}
     \addplot+[only marks,
     error bars/.cd,
     x dir=both,
@@ -22,7 +28,7 @@
     y=Intensity,
     x error expr=\thisrow{wlErr}
     %y error expr=\thisrow{lnInvVoltErr},
-    ] {5voltComb.tsv};
+    ] {5voltCombComb.tsv};
   \end{axis}
 \end{tikzpicture}
 %
