@@ -26,8 +26,8 @@ using Printf
 # ----------BEGIN INPUT DATA----------
 
 # get the file path from the command line
-filepath = ARGS[1]
-#filepath = newARGS[1]
+#filepath = ARGS[1]
+filepath = newARGS[1]
 
 # throw the data from the CSV into a DataFrame
 dataRaw = CSV.File(filepath) |> DataFrame
