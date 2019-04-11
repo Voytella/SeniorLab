@@ -33,18 +33,18 @@
 
 \newpage
 
-P1 Planck's Constant Experiment
+\section{P1 Planck's Constant Experiment}
 
 \newpage
 
-\section{Objective of the Experiment}
+\subsection{Objective of the Experiment}
 %A brief statement on the main purpose of the experiment
 \qq When demonstrating the photoelectric effect, the stopping
 potential for a multitude of wavelengths is measured. The resultant
 data is used to determine a value for Planck's constant through
 experimentation with a photocell's cathode and a mercury lamp.
 
-\section{Theory of the Experiment}
+\subsection{Theory of the Experiment}
 \qq A photon is a quantized bundle of energy that carries momentum,
 but has no mass. These photons make up a general term of light. When
 light comes into contact with metals, the photon energizes the atom of
@@ -70,7 +70,7 @@ stopping potential, and $e \times V_0$ is the kinetic energy. The work
 function describes the quantity of energy that is necessary for a
 photon to release an electron from the metal.
 
-\section{Equipment Utilized}
+\subsection{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and
 %serial number. When it may be important, list principal
 %specifications of certain pieces of equipment (e.g. the focal length
@@ -110,7 +110,7 @@ Equipment utilized is listed below:
 \label{photo_circuit}
 \end{figure}
 
-\section{Procedure}
+\subsection{Procedure}
 
 % Describe the main steps in the experimental procedures. Be sure to include any
 % precautions. Sufficient details should be given such that another student can
@@ -163,7 +163,7 @@ varying filters that accompanied the Mercury Lamp. A graph of the
 potential versus the light frequency is then created. The slope of
 this graph is the experimental Planck's constant value.
 
-\subsection{Procedural Modifications}
+\subsubsection{Procedural Modifications}
 
 \qq It is important to note that the potentiometer on the photocell
 had a range of 0 to -1.5 volts, and thus the whole range was not
@@ -172,7 +172,7 @@ also important to note that the stopping potential was not determined
 for all filters as some had a stopping potential greater than the
 absolute value of the -1.5 volt maximum of the photocell.
 
-\subsection{Safety Tips}
+\subsubsection{Safety Tips}
 
 \qq Please note that the Mercury Lamp emits ultra-violet light and
 looking directly at the bulb can cause cataracts in the eyes. Always
@@ -180,7 +180,7 @@ ensure that the Mercury Lamp is facing a wall and is not shining on
 anyone in the laboratory.
 
 
-\section{Data Analysis}
+\subsection{Data Analysis}
 
 %Graphs, figures, and tables with captions
 %Results with error analysis
@@ -201,11 +201,11 @@ frequency corresponds to the stopping potential at that wavelength.
 %%%%%%% NEEDS PLANCK'S CONSTANT! 
 %%%%%%% NEEDS PROPAGATED ERROR! 
 
-\section{Results}
+\subsection{Results}
 
 %%%%%% NEEDS SIGMA STUFF!
 
-\subsection{Sources of Error}
+\subsubsection{Sources of Error}
 
 \qq Build-up and contaminants on certain filters causes random
 intrinsic error in the measurements. The blue-grey filter labeled 160
@@ -235,22 +235,22 @@ occur if the Mercury Lamp did not warm-up properly or for a long
 enough time or if it is non-uniform by nature. This lab assumes an
 ideal source.
 
-\section{Conclusion}
+\subsection{Conclusion}
 %Brief summary, discussion of theory
 
 \qq %%%%%%%%%%% NEEDS CONCLUSION
 
 \newpage
 
-P6: Blackbody Radiation
+\section{P6: Blackbody Radiation}
 
 \newpage
 
-\section{Objective of the Experiment}
+\subsection{Objective of the Experiment}
 %A brief statement on the main purpose of the experiment
 \qq An incandescent light bulb is used in this experiment as an example of a blackbody radiator. The emission spectrum of the light bulb was measured for various temperatures. The peak wavelength of each emission spectrum was compared to a theoretical peak wavelength, derived using Wien's law and a calculated temperature of the bulb.
 
-\section{Theory of the Experiment}
+\subsection{Theory of the Experiment}
 
 \qq Any object with nonzero temperature emits electromagnetic radiation. An idealized version of such an object is a "blackbody", which is a perfect absorber and emitter of radiation for all wavelengths. The distribution of emitted thermal energy depends only on the temperature of the blackbody. The temperature of the blackbody can be varied by changing the voltage, and therefore the intensity, of the light bulb. Thus, a series of emission spectra can be produced for a series of temperatures. When relative intensity is plotted against wavelength, a blackbody emission curve is produced that follows Planck's radiation law, given by equation \ref{eq:planck_law}, where $c$ is the speed of light, $k$ is Boltzmann's constant, $T$ is the temperature of the blackbody, and $\lambda$ is the wavelength of the electromagnetic radiation.
 
@@ -268,7 +268,7 @@ I \left( \lambda \right) =
 \lambda_{max} = \frac{0.002898 \: mK}{T}
 \end{equation}
 
-\section{Equipment Utilized}
+\subsection{Equipment Utilized}
 %List principal pieces of apparatus used by manufacturer, model and
 %serial number. When it may be important, list principal
 %specifications of certain pieces of equipment (e.g. the focal length
@@ -297,20 +297,59 @@ Below is a list of some of the key pieces of equipment used in this experiment:
 \label{blackbody_circuit}
 \end{figure}
 
-\section{Procedure}
+\subsection{Procedure}
 % Describe the main steps in the experimental procedures. Be sure to include any
 % precautions. Sufficient details should be given such that another student can
 % follow and do the experiment.
 
 \qq By having the "blackbody" light source incident on the prism, this set-up allows the entire spectrum to be measured without running into issues caused by diffraction grating. Based on the geometry of the prism, Snell's law will be used to determine the index of refraction, and therefore the wavelength of the incident light (discussed further in the data analysis section). For each incident angle, the corresponding relative intensity is measured with a spectrophotometer, connected to the Pasco Capstone data acquisition software. The spectrophotometer is grounded to the power supply being used to power the light bulb. Two multimeters are used to monitor the current and voltage of the light bulb. The applied voltage was limited to 10 volts to avoid damaging the bulb. The angle was changed in increments of one degree in order to scan through the resultant emission spectrum.
 
-\subsection{Procedural Modifications}
-\qq 
-
-\section{Data Analysis}
+\subsection{Data Analysis}
 %Graphs, figures, and tables with captions
 %Results with error analysis
 %Calculate discrepancies from theory
+
+% Calculating wavelength from angle
+Measurements of incident angle are used to calculate wavelength in order to produce an experimental graph of intensity versus wavelength. The index of refraction is calculated from the angle at which the light leaves the prism using the following formula:
+$$
+n = \sqrt{
+		\left( \frac{2}{\sqrt{3}} \sin \theta 
+			   + \frac{1}{2} 
+		\right)^2
+		+ \frac{3}{4}
+	}
+$$
+The Cauchy equation then gives a formula for converting this index to a wavelength of electromagnetic radiation:
+$$ \lambda = \sqrt{\frac{13900}{n-1.689}} $$
+An associated uncertainty in $\lambda$ can be propagated from the uncertainty associated with the angle $\theta$, first by propagating the error in $n( \theta )$:
+
+\begin{align*}
+\delta_n &= \frac{\partial n}{\partial \theta} \times \delta_{\theta} \\
+&= \frac{\partial}{\partial \theta}
+   \sqrt{
+		\left( \frac{2}{\sqrt{3}} \sin \theta 
+			   + \frac{1}{2} 
+		\right)^2
+		+ \frac{3}{4}
+	}
+    \times \delta_{\theta} \\
+&= \frac{1.15 \sin \theta + 0.433 \cos \theta}{\sqrt{\sin^2 \theta + 0.866 \sin \theta + 0.75}} 
+   \times \delta_{\theta} \\
+\end{align*}
+
+This is then used to propagate error from the equation for $\lambda (n)$:
+
+\begin{align*}
+\delta_{\lambda} 
+&= \frac{\partial \lambda}{\partial n} \times \delta_n \\
+&= -5 \sqrt{139} 
+    \left( \frac{1}{x-1.689} \right) ^{3/2} 
+    \times \delta_n \\
+&= -5 \sqrt{139} 
+    \left( \frac{1}{x-1.689} \right) ^{3/2} 
+    \times \frac{1.15 \sin \theta + 0.433 \cos \theta}{\sqrt{\sin^2 \theta + 0.866 \sin \theta + 0.75}} 
+   \times \delta_{\theta} \\
+\end{align*}
 
 \qq As the temperature of the light bulb is lowered, the peak of the blackbody curve shifts towards [HIGHER/LOWER] wavelength. Equation \ref{eq:wien} predicts that a lower temperature corresponds to a peak in the longer/greater wavelength spectrum, since the wavelength is inversely proportional to the temperature. Experimental data indicated that as temperature of the light bulb was lowered, the overall intensity of the distribution [INCREASES/DECREASES]. Planck's radiation law also theorizes that decreasing temperature corresponds to decreasing intensity, since the two quantitites are directly proportional.
 
@@ -358,7 +397,7 @@ DO THESE WAVELENGTHS COINCIDE WITH THE PEAKS ON OUR GRAPHS?
 
 \qq The highest temperature tested was 2540 K, associated with a voltage of 9 V. For this temperature, more of the intensity is in the [VISIBLE/INFRARED] portion of the spectrum. If the goal of the light bulb is to produce the most light for a given voltage, the intensity should peak in the visible light spectrum. To move the portion of the spectrum in the infrared region to the visible region, the temperature can be increased to shift the distribution to lower wavelengths.
 
-\section{Results}
+\subsection{Results}
 
 \qq For each of the four voltages, the relative intensity of light incident upon
 the broad spectrum light sensor was plotted against the wavelength of the light
@@ -466,7 +505,7 @@ and the results of those calculations may be found in Table
   \end{center}
 \end{table}
 
-\subsection{Sources of Error}
+\subsubsection{Sources of Error}
 
 \qq A misalignment of the collimating slit is a systematic error in
 measurement because the sensor is not receiving all of the light. If
@@ -488,7 +527,7 @@ the voltage and the current result in a random error in measurement
 that propagates through calculations in the bulb resistance and
 therefore the bulb temperature.
 
-\section{Conclusion}
+\subsection{Conclusion}
 %Brief summary, discussion of theory
 
 \section{Appendices}
