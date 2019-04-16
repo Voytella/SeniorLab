@@ -13,10 +13,10 @@ using Printf
 # ----------BEGIN CONSTANTS----------
 
 # resistivity of tungsten at room temperature
-# (\( \frac{\si{\micro\Ohm}}{\si{\centi\meter}} \))
+# (\( \frac{\si{\micro\ohm}}{\si{\centi\meter}} \))
 resW = 5.65
 
-# resistance of bulb (\( \si{\Ohm} \))
+# resistance of bulb (\( \si{\ohm} \))
 resBulb = 0.93
 
 # speed of light \( \si{\meter\per\second} \)
@@ -93,7 +93,7 @@ wlErr = 0.002898 / tempErr
 # -----------END WAVELENGTH CALCULATIONS-----------
 
 # display results
-#@printf("%e %e\n", wlVal * 1e9, wlErr * 1e9)
+
 
 # ----------BEGIN INTENSITY FUNCTIONS----------
 

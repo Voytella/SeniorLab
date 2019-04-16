@@ -21,10 +21,10 @@ using Statistics
 
 # ----------BEGIN CONSTANTS----------
 
-# elementary charge (\si{\coloumb})
+# elementary charge (\si{\coulomb})
 eleChg = 1.60e-19
 
-# work function of Mercury (\si{\electron\volt})
+# work function of Mercury (\si{\electronvolt})
 WHg = 4.5 * eleChg
 
 # speed of light ( \si{\meter\per\second} )
@@ -82,10 +82,6 @@ plancks = getListOfPairs(planckVals, planckErrs)
 # -----------END PLANCK CONSTANT-----------
 
 # display results
-#@printf("PVal PErr\n")
-#for pair in plancks
-#    @printf("%e %e\n", pair[1], pair[2])
-#end
 
 # display mean
 @printf("%e %e\n", mean(planckVals), std(planckVals) / sqrt(length(planckVals)))
