@@ -5,8 +5,8 @@
 \contentsline {section}{\numberline {4}Visualization of Chaos}{3}{section.4}
 \contentsline {section}{\numberline {5}Water Drop Experiment}{4}{section.5}
 \contentsline {section}{\numberline {6}Sources of Error}{5}{section.6}
-\contentsline {section}{\numberline {7}Conclusion}{5}{section.7}
-\contentsline {section}{\numberline {8}Appendices}{5}{section.8}
-\contentsline {subsection}{\numberline {8.1}Appendix A: Source Code}{5}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Lyapunov Exponent Calculation}{5}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}\( x_n \) Calculations for Different \( r \)s}{5}{subsubsection.8.1.2}
+\contentsline {section}{\numberline {7}Conclusion}{6}{section.7}
+\contentsline {section}{\numberline {8}Appendices}{6}{section.8}
+\contentsline {subsection}{\numberline {8.1}Appendix A: Source Code}{6}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Lyapunov Exponent Calculation}{6}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}\( x_n \) Calculations for Different \( r \)s}{6}{subsubsection.8.1.2}
