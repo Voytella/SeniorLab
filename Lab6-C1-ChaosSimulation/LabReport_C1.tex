@@ -56,6 +56,37 @@ x_{n+1} = r x_n (1-x_n)
 \label{pdoub1}
 \end{figure}
 
+% feigenbaum
+In the period doubling region, the period doubling parameters allows for a limit on the quantity $\frac{r_i - r_{i-1}}{r_{i+1} - r_i}$ equal to the Feigenbaum number, 4.66920. Here, $r_i$ is the value of $r$ during the $i^{th}$ period doubling. As mentioned previously, the data set will oscillate between two points for some r, then oscillate between four points for a greater r, and so on. Figure \ref{fein} shows the r values that correspond to oscillation between 2, 4, and 8 values. Their associated parameters will constitute $r_{i-1}$, $r_i$, and $r_{i+1}$, respectively.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{fein.png}
+\captionof{figure}{Series of $x_n$ vs $x$ for three r values, used to compute the Feigenbaum number.}
+\label{fein}
+\end{figure}
+
+The experimental value for the Feigenbaum number is calculated as follows:
+\begin{align*}
+F
+&= \frac{r_i - r_{i-1}}{r_{i+1} - r_i} \\
+&= \frac{3.5-3}{3.6-3.5} \\
+&= 5 \\
+\end{align*}
+
+This is roughly equal to the expected value of $F=4.6692$, with a percent error of $\delta F = 7.08 \%$. This error is a result of the approximation of the $r$ values that correspond to the start of each successive period doubling region, as there is no clear demarcation between these regions. Thus, there exists a random error in the determination of $r_{i-1}$, $r_i$, and $r_{i+1}$.
+
+%n+1 vs n description
+The period doubling region is further investigated by constructing a plot of $x_{n+1}$ versus $x_n$. For larger values of the parameter $r$, where periodicity begins emerging, ordered pairs $( x_n , x_{n+1} )$ began overlapping, as they repeat the same values in a given period. For smaller values of $r$, nearby $x_n$ values will also have nearby values for $x_{n+1}$. This trend is shown in figure \ref{pdoub1_n1vn}.
+
+%n+1 vs n plot
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pdoub_n1vn.png}
+\captionof{figure}{The data from figure \ref{pdoub1} was re-processed for three $r$ values to show the relationship between $x_n$ values for adjacent iterations}
+\label{pdoub1_n1vn}
+\end{figure}
+
 \subsection{Chaotic Region of the Logistic Equation}
 % Part b and c
 \qq A chaotic region occurs for $r>3.56994$. Plots of $x_n$ versus $x$ are produced for this region and graphed in figure \ref{chaos1}. The distributions for each $r$ value appear seemingly random because, although the system is deterministic, it is very sensitive to small changes.
@@ -77,6 +108,17 @@ The behavior of $x_n$ is investigated by varying the initial condition $x_0$ by 
 \includegraphics[width=1\textwidth]{varyx0.png}
 \captionof{figure}{Series of $x_n$ vs $x$ for varying initial conditions $x_0$. Plots of $x_n$ versus $x$ are produced for $r=3.91$, which falls in the chaotic region.}
 \label{varyx0}
+\end{figure}
+
+%n+1 vs n description
+The chaotic region is further investigated by constructing a plot of $x_{n+1}$ versus $x_n$. An interesting pattern emerges, as shown in figure \ref{chaos_n1vn}, that depicts how a chaotic process is still deterministic. For all three $r$ values, the relationship between $x_{n+1}$ and $x_n$ follows the same roughly quadratic distribution. Thus, there is a relatively predictable relationship between $x_n$ and $x_{n+1}$. For a small neighborhood of variation around $x_n$, we can also define a small neighborhood of variation around the corresponding values of $x_{n+1}$.
+
+%n+1 vs n plot
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{chaos_n1vn.png}
+\captionof{figure}{The data from figure \ref{chaos1} was re-processed for three $r$ values to show the relationship between $x_n$ values for adjacent iterations}
+\label{chaos_n1vn}
 \end{figure}
 
 \section{Lyapunov Experiments}
