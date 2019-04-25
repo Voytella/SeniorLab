@@ -1,10 +1,11 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Data Analysis}{3}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}Water Drop Experiment}{3}{subsection.1.1}% 
-\contentsline {section}{\numberline {2}Results: Discrepancies and Uncertainties}{4}{section.2}% 
-\contentsline {section}{\numberline {3}Sources of Error}{4}{section.3}% 
-\contentsline {section}{\numberline {4}Conclusion}{4}{section.4}% 
-\contentsline {section}{\numberline {5}Appendices}{4}{section.5}% 
-\contentsline {subsection}{\numberline {5.1}Appendix A: Data}{4}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Appendix B: Source Code}{4}{subsection.5.2}% 
-\contentsline {subsubsection}{\numberline {5.2.1}Error Propagation and Data Processing}{4}{subsubsection.5.2.1}% 
+\contentsline {section}{\numberline {1}Period Doubling Region of the Logistic Equation}{3}{section.1}% 
+\contentsline {section}{\numberline {2}Chaotic Region of the Logistic Equation}{3}{section.2}% 
+\contentsline {section}{\numberline {3}Lyapunov Experiments}{3}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Water Drop Experiment}{3}{subsection.3.1}% 
+\contentsline {section}{\numberline {4}Sources of Error}{4}{section.4}% 
+\contentsline {section}{\numberline {5}Conclusion}{4}{section.5}% 
+\contentsline {section}{\numberline {6}Appendices}{4}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Appendix A: Data}{4}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Appendix B: Source Code}{4}{subsection.6.2}% 
+\contentsline {subsubsection}{\numberline {6.2.1}Error Propagation and Data Processing}{4}{subsubsection.6.2.1}% 
