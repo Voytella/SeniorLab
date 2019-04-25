@@ -36,11 +36,48 @@
 
 \newpage
 
-\section{Period Doubling Region of the Logistic Equation}
-% Part a
+\section{The Logistic Equation}
+\qq A population model can be represented with equation \ref{eq:log}, where $0<x_n<1$ and $r<4$. These parameters can be modified to observe the onset of chaotic behavior. The period doubling and chaotic regions will be investigated.
 
-\section{Chaotic Region of the Logistic Equation}
+\begin{equation}
+x_{n+1} = r x_n (1-x_n)
+\label{eq:log}
+\end{equation}
+
+\subsection{Period Doubling Region of the Logistic Equation}
+% progression of x_n for perioud doubling
+\qq A period doubling region exists for $r<3.56994$. Plots of $x_n$ versus $x$ are produced for $0<r<3.56994$. Figure \ref{pdoub1} shows this behavior for a range of $r$ values. For $r<3$, the set of $x_n$ converge to a particular value, although they may fluctuate for the first few iterations. Around $r=3$ the values of $x_n$ oscillate between two values, as seen in figure \ref{pdoub1}. Around $r=3.5$, the values of $x_n$ begin oscillating between 4 values. This exhibits the period doubling region.
+
+% xn vs n graph
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{pdoub.png}
+\captionof{figure}{Series of $x_n$ vs $x$ for varying parameters $r<3.56994$. Plots of $x_n$ versus $x$ are produced for initial condition $x_0=0.5$. This is the period doubling region.}
+\label{pdoub1}
+\end{figure}
+
+\subsection{Chaotic Region of the Logistic Equation}
 % Part b and c
+\qq A chaotic region occurs for $r>3.56994$. Plots of $x_n$ versus $x$ are produced for this region and graphed in figure \ref{chaos1}. The distributions for each $r$ value appear seemingly random because, although the system is deterministic, it is very sensitive to small changes.
+
+% xn vs n graph, varying r
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{chaos1.png}
+\captionof{figure}{Series of $x_n$ vs $x$ for varying parameters $r>3.56994$. Plots of $x_n$ versus $x$ are produced for initial condition $x_0=0.5$. This is the chaotic region.}
+\label{chaos1}
+\end{figure}
+
+% varying x_0
+The behavior of $x_n$ is investigated by varying the initial condition $x_0$ by small amounts. A small change in this initial condition will produce even greater variations as $n$ gets large. For the range of $n$ values shown in figure \ref{varyx0}, the percent change in $x_n$ values was computed between the series corresponding to initial conditions $x_0=0.8$ and $x_0=0.801$. The percent change was minimized for the zeroth iteration, at $0.125\%$. The difference was at a maximum of $437\%$ for the fourteenth iteration, and the change was closest to $1\%$ for the eighth iteration.
+
+% xn vs n graph, varying x0
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{varyx0.png}
+\captionof{figure}{Series of $x_n$ vs $x$ for varying initial conditions $x_0$. Plots of $x_n$ versus $x$ are produced for $r=3.91$, which falls in the chaotic region.}
+\label{varyx0}
+\end{figure}
 
 \section{Lyapunov Experiments}
 % Part d and e
