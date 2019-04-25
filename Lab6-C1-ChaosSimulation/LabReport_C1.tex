@@ -124,8 +124,57 @@ The chaotic region is further investigated by constructing a plot of $x_{n+1}$ v
 \section{Lyapunov Experiments}
 % Part d and e
 
-\subsection{Water Drop Experiment}
-% words on what we did
+\qq The function provided for determining Lyapunov exponents
+
+\begin{equation*}
+  \lambda = \lim\limits_{x \rightarrow \infty} \frac{1}{n} \sum^n_{k=0} 
+  \ln \left( \left| \frac{d f(x_k)}{dx} \right| \right)
+\end{equation*}
+
+has been implemented in Julia; the source code is shown in Section
+\ref{cod:lyapunov}. In the regular region, \( r < 3.56994 \), while in the
+chaotic region, \( r \geq 3.56994 \). While the inflection point of \( r \) has
+been shown to be closer to \( r = 3 \), it is clearly seen that \( \lambda < 0
+\) in the regular region and \( \lambda > 0 \) in the chaotic region.
+
+\qq To calculate \( \lambda \) for \( x_0 = 0.7 \), \( r = 2.5 \), and \( n = 20
+\), the argument array {\tt lyaARGS = [0.7, 2.5, 20]} is constructed and used by
+the program. Since \( r \) is well within the regular region, a call to the
+function that calculates the Lyapunov exponent, {\tt lya(iters, x -> logFunc(r,x),
+  initCond, r)}, produces a negative value, \( \lambda = -0.853 \). Similarly,
+for \( r = 3.7 \), \( \lambda = 0.420 \), a positive value indicative of this
+larger \( r \)'s chaotic nature. 
+
+\section{Visualization of Chaos}
+
+\qq The difference between the regular and chaotic regions can be clearly seen
+by plotting the logistic function \( f(x_n) = x_{n+1} = r x_n (1 - x_n) \) for different
+values of \( r \). Such a plot is shown in Figure \ref{gph:xnVr}. While the
+inflection point displayed in the graph is less than the theoretical \( r =
+3.56994 \), a dramatic distinction between the two regions can nonetheless be
+clearly seen.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=1.0\textwidth]{Plots/PartE/xnVr.pdf}
+  \end{center}
+  \caption{The plot of \( x_n \) for several values of \( r \), where \( x_0 =
+    0.7 \) and \( n = 20 \). The Julia program seen in Section \ref{cod:xnVr}
+    was called with the command line arguments {\tt 0.7 20} to generate the
+    values.}
+  \label{gph:xnVr}
+\end{figure}
+
+\section{Water Drop Experiment}
+
+\qq To collect chaotic data, the frequency with which drops formed at a sink was
+recorded for a specified number of total drops. Six trials were conducted, and the
+results are plotted below. Although the results were meant to be chaotic,
+some of the trials show drops being produced at a fairly regular rate. The
+trials in Figures \ref{fig:test3} and \ref{fig:test4} produced more regular
+results than the other trials; the data points exhibit less variety than in the
+other plots, which, although they are less than totally chaotic, scatter fairly
+widely. 
 
 % plots 1 and 2
 \begin{figure}[H]
@@ -133,13 +182,13 @@ The chaotic region is further investigated by constructing a plot of $x_{n+1}$ v
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{sink1.png}
-  \captionof{figure}{sink1}
+  \captionof{figure}{Trial 1}
   \label{fig:test1}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{sink2.png}
-  \captionof{figure}{sink2}
+  \captionof{figure}{Trial 2}
   \label{fig:test2}
 \end{minipage}
 \end{figure}
@@ -150,31 +199,14 @@ The chaotic region is further investigated by constructing a plot of $x_{n+1}$ v
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{sink3.png}
-  \captionof{figure}{sink3}
-  \label{fig:test1}
+  \captionof{figure}{Trial 3}
+  \label{fig:test3}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{sink4.png}
-  \captionof{figure}{sink4}
-  \label{fig:test2}
-\end{minipage}
-\end{figure}
-
-% plots 3 and 4
-\begin{figure}[H]
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{sink3.png}
-  \captionof{figure}{sink3}
-  \label{fig:test1}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{sink4.png}
-  \captionof{figure}{sink4}
-  \label{fig:test2}
+  \captionof{figure}{Trial 4}
+  \label{fig:test4}
 \end{minipage}
 \end{figure}
 
@@ -184,21 +216,23 @@ The chaotic region is further investigated by constructing a plot of $x_{n+1}$ v
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{sink5.png}
-  \captionof{figure}{sink5}
-  \label{fig:test1}
+  \captionof{figure}{Trial 5}
+  \label{fig:test5}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{sink6.png}
-  \captionof{figure}{sink6}
-  \label{fig:test2}
+  \captionof{figure}{Trial 6}
+  \label{fig:test6}
 \end{minipage}
 \end{figure}
 
 \section{Sources of Error}
-%Discuss the radius/seperation
-%Discuss the equipment heating
-\qq 
+
+\qq The only source of error in the experiment is present in the times at which
+the water drops formed at the sink. This is random error in measurement because
+it is dependent upon the reaction time of the observer. It has the nominal
+effect of introducing slightly more chaos than there otherwise would have been. 
 
 \section{Conclusion}
 %Brief summary, discussion of results and theory
@@ -206,10 +240,14 @@ The chaotic region is further investigated by constructing a plot of $x_{n+1}$ v
 
 \section{Appendices}
 
-\subsection{Appendix A: Data}
+\subsection{Appendix A: Source Code}
 
-\subsection{Appendix B: Source Code}
+\subsubsection{Lyapunov Exponent Calculation}
+\label{cod:lyapunov}
+%Lyapunov.jl
 
-\subsubsection{Error Propagation and Data Processing}
+\subsubsection{\( x_n \) Calculations for Different \( r \)s}
+\label{cod:xnVr}
+%xnVr.jl
 
 \end{document}
