@@ -2,6 +2,8 @@
 
 \input{../reportPreamble}
 
+\usepackage{subfigure}
+
 \usepackage{caption}
 \renewcommand{\thetable}{\arabic{section}.\arabic{table}}
 \newcommand\T{\rule{0pt}{2.6ex}}       % Top strut
@@ -12,7 +14,7 @@
 \author{Sarah Arends \\
         Jacquelyne Miksanek \\
         Ryan Wojtyla \\ \\
-        Instructor: Jerry Collins}
+        Instructor: Gus Azelis}
 
 \date{\today}
 
@@ -24,8 +26,7 @@
 %apparatus used
 %what was measured
 %Results
-
-\qq 
+\qq Chaotic behavior was studied by creating mathematical models and altering key parameters. A simple chaotic model was then observed by measuring time intervals of droplet formation from a leaking faucet. A small change in initial conditions can equate to much larger changes in the behavior of a system.
 
 \end{abstract}
 
@@ -40,13 +41,78 @@
 %Results with error analysis
 %Calculate discrepancies from theory
 
+
+\subsection{Water Drop Experiment}
+% words on what we did
+
+% plots 1 and 2
 \begin{figure}[H]
 \centering
-% uncomment the line below to add image
-%\includegraphics[width=1\textwidth]{filename.png}
-\captionof{figure}{caption}
-\label{labelname}
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink1.png}
+  \captionof{figure}{sink1}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink2.png}
+  \captionof{figure}{sink2}
+  \label{fig:test2}
+\end{minipage}
 \end{figure}
+
+% plots 3 and 4
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink3.png}
+  \captionof{figure}{sink3}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink4.png}
+  \captionof{figure}{sink4}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+% plots 3 and 4
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink3.png}
+  \captionof{figure}{sink3}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink4.png}
+  \captionof{figure}{sink4}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+% plots 5 and 6
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink5.png}
+  \captionof{figure}{sink5}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{sink6.png}
+  \captionof{figure}{sink6}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
 
 \section{Results: Discrepancies and Uncertainties}
 %Discuss results and uncertainties
